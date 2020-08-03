@@ -1,21 +1,29 @@
-.. analitica texto documentation master file, created by
-   sphinx-quickstart on Mon Aug  3 17:40:27 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to analitica texto's documentation!
-===========================================
+LEILA - Libreria de calidad de datos
+====================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: CALIDAD DE DATOS:
+   :hidden:
 
-   vectorizacion_texto
+   introduccion
+   genindex
+   instalacion
+   ejemplos
+      
+.. toctree::
+   :maxdepth: 2
+   :caption: Módulos y funciones:
+   :hidden:
 
-Indices and tables
-==================
+   calidad_datos
+   datos_gov
+   reporte   
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. figure:: _static/image/LEILA.jpg
+    :align: center
+    :alt: 
+    :figclass: align-center
 
+
+.. include:: introduccion.rst
