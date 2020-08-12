@@ -96,7 +96,15 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="vectorizacion_texto.html">vectorizacion texto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparacion_textos.html">comparación de textos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correccion_texto.html">corrección de textos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploracion_visualizacion.html">exploración visualizacion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectura_escritura.html">lectura y escritura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lematizacion.html">lematización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenguajes.html">lenguajes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limpieza_texto.html">limpieza de textos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stemming.html">stemming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vectorizacion_texto.html">vectorización de textos</a></li>
 </ul>
 
             
@@ -165,12 +173,19 @@
 
 <div class="genindex-jumpbox">
  <a href="#A"><strong>A</strong></a>
+ | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#V"><strong>V</strong></a>
@@ -179,7 +194,45 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.actualizar_diccionario">actualizar_diccionario() (método de correccion_texto.Corrector)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.agregar_palabras">agregar_palabras() (método de correccion_texto.Corrector)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorFrecuencias.ajustar">ajustar() (método de vectorizacion_texto.VectorizadorFrecuencias)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector.archivo_a_texto">archivo_a_texto() (método de lectura_escritura.Lector)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="limpieza_texto.html#limpieza_texto.cargar_stopwords">cargar_stopwords() (en el módulo limpieza_texto)</a>
+</li>
+      <li>
+    comparacion_textos
+
+      <ul>
+        <li><a href="comparacion_textos.html#module-comparacion_textos">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.correccion_ortografia">correccion_ortografia() (método de correccion_texto.Corrector)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    correccion_texto
+
+      <ul>
+        <li><a href="correccion_texto.html#module-correccion_texto">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector">Corrector (clase en correccion_texto)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.corregir_texto">corregir_texto() (en el módulo correccion_texto)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -187,7 +240,17 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorWord2Vec.definir_lenguaje">definir_lenguaje() (método de vectorizacion_texto.VectorizadorWord2Vec)</a>
+      <li><a href="lenguajes.html#lenguajes.definir_lenguaje">definir_lenguaje() (en el módulo lenguajes)</a>
+</li>
+      <li><a href="lenguajes.html#lenguajes.detectar_lenguaje">detectar_lenguaje() (en el módulo lenguajes)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.diag_superior">diag_superior() (en el módulo exploracion_visualizacion)</a>
+</li>
+      <li><a href="comparacion_textos.html#comparacion_textos.DistanciaCaracteres">DistanciaCaracteres (clase en comparacion_textos)</a>
+</li>
+      <li><a href="comparacion_textos.html#comparacion_textos.DistanciaFonemas">DistanciaFonemas (clase en comparacion_textos)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -197,6 +260,47 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorDoc2Vec.entrenar_modelo">entrenar_modelo() (método de vectorizacion_texto.VectorizadorDoc2Vec)</a>
 </li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor.escribir_pdf">escribir_pdf() (método de lectura_escritura.Escritor)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.escribir_texto">escribir_texto() (en el módulo lectura_escritura)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor.escribir_txt">escribir_txt() (método de lectura_escritura.Escritor)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor.escribir_word">escribir_word() (método de lectura_escritura.Escritor)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor">Escritor (clase en lectura_escritura)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.establecer_distancia">establecer_distancia() (método de correccion_texto.Corrector)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.establecer_lenguaje">establecer_lenguaje() (método de correccion_texto.Corrector)</a>
+
+      <ul>
+        <li><a href="lematizacion.html#lematizacion.Lematizador_spacy.establecer_lenguaje">(método de lematizacion.Lematizador_spacy)</a>
+</li>
+        <li><a href="lematizacion.html#lematizacion.Lematizador_stanza.establecer_lenguaje">(método de lematizacion.Lematizador_stanza)</a>
+</li>
+        <li><a href="stemming.html#stemming.Stemmer.establecer_lenguaje">(método de stemming.Stemmer)</a>
+</li>
+        <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorWord2Vec.establecer_lenguaje">(método de vectorizacion_texto.VectorizadorWord2Vec)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor.establecer_texto">establecer_texto() (método de lectura_escritura.Escritor)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor.establecer_ubicacion">establecer_ubicacion() (método de lectura_escritura.Escritor)</a>
+
+      <ul>
+        <li><a href="lectura_escritura.html#lectura_escritura.Lector.establecer_ubicacion">(método de lectura_escritura.Lector)</a>
+</li>
+      </ul></li>
+      <li>
+    exploracion_visualizacion
+
+      <ul>
+        <li><a href="exploracion_visualizacion.html#module-exploracion_visualizacion">módulo</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -206,16 +310,122 @@
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorFrecuencias.fit">fit() (método de vectorizacion_texto.VectorizadorFrecuencias)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.frecuencia_ngramas">frecuencia_ngramas() (en el módulo exploracion_visualizacion)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.frecuencia_palabra">frecuencia_palabra() (método de correccion_texto.Corrector)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.grafica_barchart_frecuencias">grafica_barchart_frecuencias() (en el módulo exploracion_visualizacion)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.grafica_nube">grafica_nube() (en el módulo exploracion_visualizacion)</a>
+</li>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.graficar_coocurrencias">graficar_coocurrencias() (en el módulo exploracion_visualizacion)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.iniciar_corrector">iniciar_corrector() (método de correccion_texto.Corrector)</a>
+</li>
+      <li><a href="lematizacion.html#lematizacion.Lematizador_spacy.iniciar_lematizador">iniciar_lematizador() (método de lematizacion.Lematizador_spacy)</a>
+
+      <ul>
+        <li><a href="lematizacion.html#lematizacion.Lematizador_stanza.iniciar_lematizador">(método de lematizacion.Lematizador_stanza)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="stemming.html#stemming.Stemmer.iniciar_stemmer">iniciar_stemmer() (método de stemming.Stemmer)</a>
+</li>
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorWord2Vec.iniciar_vectorizador">iniciar_vectorizador() (método de vectorizacion_texto.VectorizadorWord2Vec)</a>
+</li>
+      <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorFrecuencias.inversa">inversa() (método de vectorizacion_texto.VectorizadorFrecuencias)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector">Lector (clase en lectura_escritura)</a>
+</li>
+      <li>
+    lectura_escritura
+
+      <ul>
+        <li><a href="lectura_escritura.html#module-lectura_escritura">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector.leer_imagen">leer_imagen() (método de lectura_escritura.Lector)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector.leer_pdf">leer_pdf() (método de lectura_escritura.Lector)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector.leer_rtf">leer_rtf() (método de lectura_escritura.Lector)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.leer_texto">leer_texto() (en el módulo lectura_escritura)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector.leer_txt">leer_txt() (método de lectura_escritura.Lector)</a>
+</li>
+      <li><a href="lectura_escritura.html#lectura_escritura.Lector.leer_word">leer_word() (método de lectura_escritura.Lector)</a>
+</li>
+      <li>
+    lematizacion
+
+      <ul>
+        <li><a href="lematizacion.html#module-lematizacion">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="lematizacion.html#lematizacion.Lematizador_spacy">Lematizador_spacy (clase en lematizacion)</a>
+</li>
+      <li><a href="lematizacion.html#lematizacion.Lematizador_stanza">Lematizador_stanza (clase en lematizacion)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorFrecuencias.inversa">inversa() (método de vectorizacion_texto.VectorizadorFrecuencias)</a>
+      <li><a href="lematizacion.html#lematizacion.Lematizador_spacy.lematizar">lematizar() (método de lematizacion.Lematizador_spacy)</a>
+
+      <ul>
+        <li><a href="lematizacion.html#lematizacion.Lematizador_stanza.lematizar">(método de lematizacion.Lematizador_stanza)</a>
+</li>
+      </ul></li>
+      <li><a href="lematizacion.html#lematizacion.lematizar_texto">lematizar_texto() (en el módulo lematizacion)</a>
+</li>
+      <li>
+    lenguajes
+
+      <ul>
+        <li><a href="lenguajes.html#module-lenguajes">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="limpieza_texto.html#limpieza_texto.limpiar_extremos">limpiar_extremos() (en el módulo limpieza_texto)</a>
+</li>
+      <li><a href="limpieza_texto.html#limpieza_texto.limpieza_basica">limpieza_basica() (en el módulo limpieza_texto)</a>
+</li>
+      <li>
+    limpieza_texto
+
+      <ul>
+        <li><a href="limpieza_texto.html#module-limpieza_texto">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="limpieza_texto.html#limpieza_texto.limpieza_texto">limpieza_texto() (en el módulo limpieza_texto)</a>
+</li>
+      <li><a href="limpieza_texto.html#limpieza_texto.lista_apellidos">lista_apellidos() (en el módulo limpieza_texto)</a>
+</li>
+      <li><a href="limpieza_texto.html#limpieza_texto.lista_geo_colombia">lista_geo_colombia() (en el módulo limpieza_texto)</a>
+</li>
+      <li><a href="limpieza_texto.html#limpieza_texto.lista_nombres">lista_nombres() (en el módulo limpieza_texto)</a>
+</li>
+      <li><a href="limpieza_texto.html#limpieza_texto.lista_stopwords">lista_stopwords() (en el módulo limpieza_texto)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -223,20 +433,98 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.matriz_coocurrencias">matriz_coocurrencias() (en el módulo exploracion_visualizacion)</a>
+</li>
+      <li><a href="lematizacion.html#lematizacion.Lematizador_spacy.modificar_lemmas">modificar_lemmas() (método de lematizacion.Lematizador_spacy)</a>
+
+      <ul>
+        <li><a href="lematizacion.html#lematizacion.Lematizador_stanza.modificar_lemmas">(método de lematizacion.Lematizador_stanza)</a>
+</li>
+      </ul></li>
       <li>
     módulo
 
       <ul>
+        <li><a href="comparacion_textos.html#module-comparacion_textos">comparacion_textos</a>
+</li>
+        <li><a href="correccion_texto.html#module-correccion_texto">correccion_texto</a>
+</li>
+        <li><a href="exploracion_visualizacion.html#module-exploracion_visualizacion">exploracion_visualizacion</a>
+</li>
+        <li><a href="lectura_escritura.html#module-lectura_escritura">lectura_escritura</a>
+</li>
+        <li><a href="lematizacion.html#module-lematizacion">lematizacion</a>
+</li>
+        <li><a href="lenguajes.html#module-lenguajes">lenguajes</a>
+</li>
+        <li><a href="limpieza_texto.html#module-limpieza_texto">limpieza_texto</a>
+</li>
+        <li><a href="stemming.html#module-stemming">stemming</a>
+</li>
         <li><a href="vectorizacion_texto.html#module-vectorizacion_texto">vectorizacion_texto</a>
 </li>
       </ul></li>
   </ul></td>
 </tr></table>
 
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.nube_palabras">nube_palabras() (en el módulo exploracion_visualizacion)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.obtener_ngramas">obtener_ngramas() (en el módulo exploracion_visualizacion)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.palabras_candidatas">palabras_candidatas() (método de correccion_texto.Corrector)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.palabras_conocidas">palabras_conocidas() (método de correccion_texto.Corrector)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.palabras_desconocidas">palabras_desconocidas() (método de correccion_texto.Corrector)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.par_nubes">par_nubes() (en el módulo exploracion_visualizacion)</a>
+</li>
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorDoc2Vec.preparar_textos">preparar_textos() (método de vectorizacion_texto.VectorizadorDoc2Vec)</a>
+</li>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.probabilidad_palabra">probabilidad_palabra() (método de correccion_texto.Corrector)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="correccion_texto.html#correccion_texto.Corrector.quitar_palabras">quitar_palabras() (método de correccion_texto.Corrector)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="limpieza_texto.html#limpieza_texto.quitar_repetidos">quitar_repetidos() (en el módulo limpieza_texto)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="limpieza_texto.html#limpieza_texto.remover_acentos">remover_acentos() (en el módulo limpieza_texto)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="limpieza_texto.html#limpieza_texto.remover_palabras_cortas">remover_palabras_cortas() (en el módulo limpieza_texto)</a>
+</li>
+      <li><a href="limpieza_texto.html#limpieza_texto.remover_stopwords">remover_stopwords() (en el módulo limpieza_texto)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -246,11 +534,34 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorWord2Vec.similitud_textos">similitud_textos() (método de vectorizacion_texto.VectorizadorWord2Vec)</a>
 </li>
+      <li><a href="comparacion_textos.html#comparacion_textos.SimilitudCoseno">SimilitudCoseno (clase en comparacion_textos)</a>
+</li>
+      <li><a href="stemming.html#stemming.stem_texto">stem_texto() (en el módulo stemming)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="stemming.html#stemming.Stemmer">Stemmer (clase en stemming)</a>
+</li>
+      <li>
+    stemming
+
+      <ul>
+        <li><a href="stemming.html#module-stemming">módulo</a>
+</li>
+      </ul></li>
+      <li><a href="stemming.html#stemming.Stemmer.stemming">stemming() (método de stemming.Stemmer)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lectura_escritura.html#lectura_escritura.Escritor.texto_a_archivo">texto_a_archivo() (método de lectura_escritura.Escritor)</a>
+</li>
+      <li><a href="lenguajes.html#lenguajes.traducir_texto">traducir_texto() (en el módulo lenguajes)</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="vectorizacion_texto.html#vectorizacion_texto.VectorizadorFrecuencias.transform">transform() (método de vectorizacion_texto.VectorizadorFrecuencias)</a>
 

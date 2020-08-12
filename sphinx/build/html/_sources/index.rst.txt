@@ -10,6 +10,14 @@ Welcome to analitica texto's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   comparacion_textos
+   correccion_texto
+   exploracion_visualizacion
+   lectura_escritura
+   lematizacion
+   lenguajes
+   limpieza_texto
+   stemming
    vectorizacion_texto
 
 Indices and tables

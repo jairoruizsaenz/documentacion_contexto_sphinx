@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>vectorizacion texto &mdash; documentación de analitica texto - 0.1</title>
+  <title>vectorización de textos &mdash; documentación de analitica texto - 0.1</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="prev" title="Welcome to analitica texto’s documentation!" href="index.html" /> 
+    <link rel="prev" title="stemming" href="stemming.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,7 +97,15 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">vectorizacion texto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparacion_textos.html">comparación de textos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correccion_texto.html">corrección de textos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploracion_visualizacion.html">exploración visualizacion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectura_escritura.html">lectura y escritura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lematizacion.html">lematización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenguajes.html">lenguajes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limpieza_texto.html">limpieza de textos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stemming.html">stemming</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">vectorización de textos</a></li>
 </ul>
 
             
@@ -144,7 +152,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>vectorizacion texto</li>
+      <li>vectorización de textos</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,7 +170,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-vectorizacion_texto">
-<span id="vectorizacion-texto"></span><h1>vectorizacion texto<a class="headerlink" href="#module-vectorizacion_texto" title="Enlazar permanentemente con este título">¶</a></h1>
+<span id="vectorizacion-de-textos"></span><h1>vectorización de textos<a class="headerlink" href="#module-vectorizacion_texto" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
 <dt id="vectorizacion_texto.VectorizadorDoc2Vec">
 <em class="property">class </em><code class="descclassname">vectorizacion_texto.</code><code class="descname">VectorizadorDoc2Vec</code><span class="sig-paren">(</span><em><span class="n">n_elementos</span><span class="o">=</span><span class="default_value">100</span></em>, <em><span class="n">minima_cuenta</span><span class="o">=</span><span class="default_value">5</span></em>, <em><span class="n">epocas</span><span class="o">=</span><span class="default_value">20</span></em>, <em><span class="n">semilla</span><span class="o">=</span><span class="default_value">1</span></em>, <em><span class="n">archivo_modelo</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorDoc2Vec" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -170,22 +178,82 @@
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorDoc2Vec.entrenar_modelo">
 <code class="descname">entrenar_modelo</code><span class="sig-paren">(</span><em><span class="n">corpus_entrenamiento</span></em>, <em><span class="n">actualizar</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">archivo_salida</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorDoc2Vec.entrenar_modelo" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>corpus_entrenamiento</strong> – </li>
+<li><strong>actualizar</strong> – </li>
+<li><strong>archivo_salida</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorDoc2Vec.preparar_textos">
 <code class="descname">preparar_textos</code><span class="sig-paren">(</span><em><span class="n">lista_textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorDoc2Vec.preparar_textos" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lista_textos</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorDoc2Vec.vectorizar">
 <code class="descname">vectorizar</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.025</span></em>, <em><span class="n">num_pasos</span><span class="o">=</span><span class="default_value">50</span></em>, <em><span class="n">semilla</span><span class="o">=</span><span class="default_value">13</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorDoc2Vec.vectorizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>textos</strong> – </li>
+<li><strong>alpha</strong> – </li>
+<li><strong>num_pasos</strong> – </li>
+<li><strong>semilla</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorDoc2Vec.vectorizar_texto">
 <code class="descname">vectorizar_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.025</span></em>, <em><span class="n">num_pasos</span><span class="o">=</span><span class="default_value">50</span></em>, <em><span class="n">semilla</span><span class="o">=</span><span class="default_value">13</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorDoc2Vec.vectorizar_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>texto</strong> – </li>
+<li><strong>alpha</strong> – </li>
+<li><strong>num_pasos</strong> – </li>
+<li><strong>semilla</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
@@ -196,32 +264,110 @@
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorFrecuencias.ajustar">
 <code class="descname">ajustar</code><span class="sig-paren">(</span><em><span class="n">x</span></em>, <em><span class="n">archivo_salida</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorFrecuencias.ajustar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> – </li>
+<li><strong>archivo_salida</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorFrecuencias.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em><span class="n">x</span></em>, <em><span class="n">archivo_salida</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorFrecuencias.fit" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> – </li>
+<li><strong>archivo_salida</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorFrecuencias.inversa">
 <code class="descname">inversa</code><span class="sig-paren">(</span><em><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorFrecuencias.inversa" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>x</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorFrecuencias.transform">
 <code class="descname">transform</code><span class="sig-paren">(</span><em><span class="n">x</span></em>, <em><span class="n">disperso</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorFrecuencias.transform" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> – </li>
+<li><strong>disperso</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorFrecuencias.vectorizar">
 <code class="descname">vectorizar</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">disperso</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorFrecuencias.vectorizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>textos</strong> – </li>
+<li><strong>disperso</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorFrecuencias.vocabulario">
 <code class="descname">vocabulario</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorFrecuencias.vocabulario" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
@@ -232,12 +378,42 @@
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorHash.transform">
 <code class="descname">transform</code><span class="sig-paren">(</span><em><span class="n">x</span></em>, <em><span class="n">disperso</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorHash.transform" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> – </li>
+<li><strong>disperso</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorHash.vectorizar">
 <code class="descname">vectorizar</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">disperso</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorHash.vectorizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>textos</strong> – </li>
+<li><strong>disperso</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
@@ -246,34 +422,114 @@
 <em class="property">class </em><code class="descclassname">vectorizacion_texto.</code><code class="descname">VectorizadorWord2Vec</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">dim_modelo</span><span class="o">=</span><span class="default_value">'md'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="vectorizacion_texto.VectorizadorWord2Vec.definir_lenguaje">
-<code class="descname">definir_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.definir_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dt id="vectorizacion_texto.VectorizadorWord2Vec.establecer_lenguaje">
+<code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorWord2Vec.iniciar_vectorizador">
 <code class="descname">iniciar_vectorizador</code><span class="sig-paren">(</span><em><span class="n">dim_modelo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.iniciar_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>dim_modelo</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorWord2Vec.similitud_textos">
 <code class="descname">similitud_textos</code><span class="sig-paren">(</span><em><span class="n">t1</span></em>, <em><span class="n">t2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.similitud_textos" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>t1</strong> – </li>
+<li><strong>t2</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorWord2Vec.vectores_palabras">
 <code class="descname">vectores_palabras</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'diccionario'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.vectores_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>texto</strong> – </li>
+<li><strong>tipo</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorWord2Vec.vectorizar">
 <code class="descname">vectorizar</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">quitar_desconocidas</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.vectorizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>textos</strong> – </li>
+<li><strong>quitar_desconocidas</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="vectorizacion_texto.VectorizadorWord2Vec.vectorizar_texto">
 <code class="descname">vectorizar_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">quitar_desconocidas</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion_texto.VectorizadorWord2Vec.vectorizar_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>texto</strong> – </li>
+<li><strong>quitar_desconocidas</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
@@ -288,7 +544,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to analitica texto’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="stemming.html" class="btn btn-neutral float-left" title="stemming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

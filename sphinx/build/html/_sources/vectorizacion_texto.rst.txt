@@ -1,6 +1,6 @@
 
-vectorizacion texto
-===================
+vectorización de textos
+=======================
 
 .. automodule:: vectorizacion_texto
    :members:
