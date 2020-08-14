@@ -1,6 +1,6 @@
 
-exploración visualizacion
-=========================
+exploración y visualizacion
+===========================
 
 .. automodule:: exploracion_visualizacion
    :members:

@@ -13,12 +13,12 @@
 import os
 import sys
 # sys.path.insert(0, os.path.abspath('../..'))
-sys.path.insert(0, os.path.abspath('../../scripts'))
+sys.path.insert(0, os.path.abspath('../../contexto'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'analitica texto'
+project = 'ConTexto'
 copyright = '2020, UCD - DNP'
 author = 'UCD - DNP'
 
