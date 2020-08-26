@@ -107,7 +107,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">comparación</a></li>
 <li class="toctree-l1"><a class="reference internal" href="correccion.html">corrección</a></li>
 <li class="toctree-l1"><a class="reference internal" href="escritura.html">escritura</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploracion_visualizacion.html">exploración y visualizacion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploracion.html">exploración</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lectura.html">lectura</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lematizacion.html">lematización</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lenguajes.html">lenguajes</a></li>
@@ -180,17 +180,53 @@
   <div class="section" id="module-comparacion">
 <span id="comparacion"></span><h1>comparación<a class="headerlink" href="#module-comparacion" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
-<dt id="comparacion.Distancia">
-<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">Distancia</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">vectorizador</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt id="comparacion.DiferenciaStrings">
+<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">DiferenciaStrings</code><a class="headerlink" href="#comparacion.DiferenciaStrings" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="comparacion.Distancia.L1">
-<code class="descname">L1</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.L1" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt id="comparacion.DiferenciaStrings.comparacion_lista">
+<code class="descname">comparacion_lista</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'levenshtein'</span></em>, <em><span class="n">norm</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_lista" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="comparacion.DiferenciaStrings.comparacion_pares">
+<code class="descname">comparacion_pares</code><span class="sig-paren">(</span><em><span class="n">texto1</span></em>, <em><span class="n">texto2</span></em>, <em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'levenshtein'</span></em>, <em><span class="n">norm</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.DiferenciaStrings.distancia_damerau_levenshtein">
+<code class="descname">distancia_damerau_levenshtein</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">norm</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_damerau_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.DiferenciaStrings.distancia_hamming">
+<code class="descname">distancia_hamming</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">norm</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.DiferenciaStrings.distancia_levenshtein">
+<code class="descname">distancia_levenshtein</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">norm</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.DiferenciaStrings.similitud_jaro">
+<code class="descname">similitud_jaro</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.DiferenciaStrings.similitud_jaro_winkler">
+<code class="descname">similitud_jaro_winkler</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro_winkler" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="comparacion.Distancia">
+<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">Distancia</code><span class="sig-paren">(</span><em><span class="n">vectorizador</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
 <dt id="comparacion.Distancia.distancia_pares">
-<code class="descname">distancia_pares</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">tipo_distancia</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.distancia_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descname">distancia_pares</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">tipo_distancia</span></em>, <em><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.distancia_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -213,24 +249,42 @@
 <code class="descname">establecer_vectorizador</code><span class="sig-paren">(</span><em><span class="n">vectorizador</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.establecer_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
+<dl class="py method">
+<dt id="comparacion.Distancia.hamming">
+<code class="descname">hamming</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="py class">
-<dt id="comparacion.DistanciaCaracteres">
-<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">DistanciaCaracteres</code><a class="headerlink" href="#comparacion.DistanciaCaracteres" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
+<dl class="py method">
+<dt id="comparacion.Distancia.jaccard">
+<code class="descname">jaccard</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="py class">
-<dt id="comparacion.DistanciaFonemas">
-<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">DistanciaFonemas</code><a class="headerlink" href="#comparacion.DistanciaFonemas" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="comparacion.Distancia.l1">
+<code class="descname">l1</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l1" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.Distancia.l2">
+<code class="descname">l2</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l2" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="comparacion.Distancia.minkowski">
+<code class="descname">minkowski</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.minkowski" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt id="comparacion.Similitud">
-<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">Similitud</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">vectorizador</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<em class="property">class </em><code class="descclassname">comparacion.</code><code class="descname">Similitud</code><span class="sig-paren">(</span><em><span class="n">vectorizador</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="comparacion.Similitud.coseno">
+<code class="descname">coseno</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.coseno" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt id="comparacion.Similitud.establecer_lenguaje">
 <code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -252,13 +306,8 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Similitud.similitud_coseno">
-<code class="descname">similitud_coseno</code><span class="sig-paren">(</span><em><span class="n">textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.similitud_coseno" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="comparacion.Similitud.similitud_jaccard">
-<code class="descname">similitud_jaccard</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">vectorizar</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.similitud_jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt id="comparacion.Similitud.jaccard">
+<code class="descname">jaccard</code><span class="sig-paren">(</span><em><span class="n">textos</span></em>, <em><span class="n">vectorizar</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

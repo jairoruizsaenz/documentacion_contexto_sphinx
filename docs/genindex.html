@@ -105,7 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="comparacion.html">comparación</a></li>
 <li class="toctree-l1"><a class="reference internal" href="correccion.html">corrección</a></li>
 <li class="toctree-l1"><a class="reference internal" href="escritura.html">escritura</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exploracion_visualizacion.html">exploración y visualizacion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploracion.html">exploración</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lectura.html">lectura</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lematizacion.html">lematización</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lenguajes.html">lenguajes</a></li>
@@ -185,6 +185,7 @@
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
  | <a href="#L"><strong>L</strong></a>
@@ -227,6 +228,12 @@
         <li><a href="comparacion.html#module-comparacion">módulo</a>
 </li>
       </ul></li>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.comparacion_lista">comparacion_lista() (método de comparacion.DiferenciaStrings)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.comparacion_pares">comparacion_pares() (método de comparacion.DiferenciaStrings)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     correccion
 
@@ -234,13 +241,13 @@
         <li><a href="correccion.html#module-correccion">módulo</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="correccion.html#correccion.Corrector.correccion_ortografia">correccion_ortografia() (método de correccion.Corrector)</a>
 </li>
       <li><a href="correccion.html#correccion.Corrector">Corrector (clase en correccion)</a>
 </li>
       <li><a href="correccion.html#correccion.corregir_texto">corregir_texto() (en el módulo correccion)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.Similitud.coseno">coseno() (método de comparacion.Similitud)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -252,17 +259,21 @@
 </li>
       <li><a href="lenguajes.html#lenguajes.detectar_lenguaje">detectar_lenguaje() (en el módulo lenguajes)</a>
 </li>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.diag_superior">diag_superior() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.diag_superior">diag_superior() (en el módulo exploracion)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings">DiferenciaStrings (clase en comparacion)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="comparacion.html#comparacion.Distancia">Distancia (clase en comparacion)</a>
 </li>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.distancia_damerau_levenshtein">distancia_damerau_levenshtein() (método de comparacion.DiferenciaStrings)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.distancia_hamming">distancia_hamming() (método de comparacion.DiferenciaStrings)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.distancia_levenshtein">distancia_levenshtein() (método de comparacion.DiferenciaStrings)</a>
+</li>
       <li><a href="comparacion.html#comparacion.Distancia.distancia_pares">distancia_pares() (método de comparacion.Distancia)</a>
-</li>
-      <li><a href="comparacion.html#comparacion.DistanciaCaracteres">DistanciaCaracteres (clase en comparacion)</a>
-</li>
-      <li><a href="comparacion.html#comparacion.DistanciaFonemas">DistanciaFonemas (clase en comparacion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -324,10 +335,10 @@
 </li>
       </ul></li>
       <li>
-    exploracion_visualizacion
+    exploracion
 
       <ul>
-        <li><a href="exploracion_visualizacion.html#module-exploracion_visualizacion">módulo</a>
+        <li><a href="exploracion.html#module-exploracion">módulo</a>
 </li>
       </ul></li>
   </ul></td>
@@ -340,7 +351,7 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.frecuencia_ngramas">frecuencia_ngramas() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.frecuencia_ngramas">frecuencia_ngramas() (en el módulo exploracion)</a>
 </li>
       <li><a href="correccion.html#correccion.Corrector.frecuencia_palabra">frecuencia_palabra() (método de correccion.Corrector)</a>
 </li>
@@ -350,13 +361,21 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.grafica_barchart_frecuencias">grafica_barchart_frecuencias() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.grafica_barchart_frecuencias">grafica_barchart_frecuencias() (en el módulo exploracion)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.grafica_nube">grafica_nube() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.grafica_nube">grafica_nube() (en el módulo exploracion)</a>
 </li>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.graficar_coocurrencias">graficar_coocurrencias() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.graficar_coocurrencias">graficar_coocurrencias() (en el módulo exploracion)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="comparacion.html#comparacion.Distancia.hamming">hamming() (método de comparacion.Distancia)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -386,6 +405,14 @@
 <h2 id="J">J</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="comparacion.html#comparacion.Distancia.jaccard">jaccard() (método de comparacion.Distancia)</a>
+
+      <ul>
+        <li><a href="comparacion.html#comparacion.Similitud.jaccard">(método de comparacion.Similitud)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="comparacion.html#comparacion.jaccard_textos">jaccard_textos() (en el módulo comparacion)</a>
 </li>
   </ul></td>
@@ -394,7 +421,9 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="comparacion.html#comparacion.Distancia.L1">L1() (método de comparacion.Distancia)</a>
+      <li><a href="comparacion.html#comparacion.Distancia.l1">l1() (método de comparacion.Distancia)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.Distancia.l2">l2() (método de comparacion.Distancia)</a>
 </li>
       <li><a href="lectura.html#lectura.Lector">Lector (clase en lectura)</a>
 </li>
@@ -426,10 +455,10 @@
       </ul></li>
       <li><a href="lematizacion.html#lematizacion.LematizadorSpacy">LematizadorSpacy (clase en lematizacion)</a>
 </li>
-      <li><a href="lematizacion.html#lematizacion.LematizadorStanza">LematizadorStanza (clase en lematizacion)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lematizacion.html#lematizacion.LematizadorStanza">LematizadorStanza (clase en lematizacion)</a>
+</li>
       <li><a href="lematizacion.html#lematizacion.LematizadorSpacy.lematizar">lematizar() (método de lematizacion.LematizadorSpacy)</a>
 
       <ul>
@@ -472,7 +501,9 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.matriz_coocurrencias">matriz_coocurrencias() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.matriz_coocurrencias">matriz_coocurrencias() (en el módulo exploracion)</a>
+</li>
+      <li><a href="comparacion.html#comparacion.Distancia.minkowski">minkowski() (método de comparacion.Distancia)</a>
 </li>
       <li><a href="lematizacion.html#lematizacion.LematizadorSpacy.modificar_lemmas">modificar_lemmas() (método de lematizacion.LematizadorSpacy)</a>
 
@@ -490,7 +521,7 @@
 </li>
         <li><a href="escritura.html#module-escritura">escritura</a>
 </li>
-        <li><a href="exploracion_visualizacion.html#module-exploracion_visualizacion">exploracion_visualizacion</a>
+        <li><a href="exploracion.html#module-exploracion">exploracion</a>
 </li>
         <li><a href="lectura.html#module-lectura">lectura</a>
 </li>
@@ -511,7 +542,7 @@
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.nube_palabras">nube_palabras() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.nube_palabras">nube_palabras() (en el módulo exploracion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -519,7 +550,7 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.obtener_ngramas">obtener_ngramas() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.obtener_ngramas">obtener_ngramas() (en el módulo exploracion)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -535,7 +566,7 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="exploracion_visualizacion.html#exploracion_visualizacion.par_nubes">par_nubes() (en el módulo exploracion_visualizacion)</a>
+      <li><a href="exploracion.html#exploracion.par_nubes">par_nubes() (en el módulo exploracion)</a>
 </li>
       <li><a href="vectorizacion.html#vectorizacion.VectorizadorDoc2Vec.preparar_textos">preparar_textos() (método de vectorizacion.VectorizadorDoc2Vec)</a>
 </li>
@@ -575,9 +606,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="comparacion.html#comparacion.Similitud">Similitud (clase en comparacion)</a>
 </li>
-      <li><a href="comparacion.html#comparacion.Similitud.similitud_coseno">similitud_coseno() (método de comparacion.Similitud)</a>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.similitud_jaro">similitud_jaro() (método de comparacion.DiferenciaStrings)</a>
 </li>
-      <li><a href="comparacion.html#comparacion.Similitud.similitud_jaccard">similitud_jaccard() (método de comparacion.Similitud)</a>
+      <li><a href="comparacion.html#comparacion.DiferenciaStrings.similitud_jaro_winkler">similitud_jaro_winkler() (método de comparacion.DiferenciaStrings)</a>
 </li>
       <li><a href="vectorizacion.html#vectorizacion.VectorizadorWord2Vec.similitud_textos">similitud_textos() (método de vectorizacion.VectorizadorWord2Vec)</a>
 </li>

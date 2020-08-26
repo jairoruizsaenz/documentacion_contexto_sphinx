@@ -18,7 +18,7 @@ ConTexto - Librería de procesamiento y análisis de textos
    comparacion
    correccion
    escritura
-   exploracion_visualizacion
+   exploracion
    lectura
    lematizacion
    lenguajes
