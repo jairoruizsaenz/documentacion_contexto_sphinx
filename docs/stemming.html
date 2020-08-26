@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                ago. 25 10:46 p. m.
+                ago. 26 09:01 a. m.
               </div>
             
           
@@ -186,13 +186,12 @@
 <dl class="py method">
 <dt id="stemming.Stemmer.establecer_lenguaje">
 <code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Permite definir o cambiar el lenguaje de los textos sobre los cuales             va a aplicarse el objeto de la case Stemmer.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – </td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (string) {“es”, “en”, “fr”, “de”}. Lenguaje de los            textos a los que se va a aplicar stemming.</td>
 </tr>
 </tbody>
 </table>
@@ -201,30 +200,24 @@
 <dl class="py method">
 <dt id="stemming.Stemmer.iniciar_stemmer">
 <code class="descname">iniciar_stemmer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.iniciar_stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+<dd><p>Inicializa el objeto de la clase <cite>SnowballStemmer</cite>, de la librería NLTk,             para el lenguaje definido previamente.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="stemming.Stemmer.stemming">
 <code class="descname">stemming</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">limpiar</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.stemming" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Aplica <em>stemming</em> sobre un texto de entrada, y devuelve el texto             resultante.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>texto</strong> – </li>
-<li><strong>limpiar</strong> – </li>
+<li><strong>texto</strong> – (string). Texto al que se le desea aplicar el <em>stemming</em>.</li>
+<li><strong>limpiar</strong> – (bool) {True, False}. Valor por defecto: True. Argumento             opcional que define si se desea hacer una limpieza básica (            aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al             texto antes de aplicar el <em>stemming</em>.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">Texto luego de la aplicación del <em>stemming</em>.</p>
 </td>
 </tr>
 </tbody>
@@ -236,19 +229,21 @@
 <dl class="py function">
 <dt id="stemming.stem_texto">
 <code class="descclassname">stemming.</code><code class="descname">stem_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">limpiar</span><span class="o">=</span><span class="default_value">True</span></em>, <em><span class="n">stemmer</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.stem_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Función que aprovecha la clase Stemmer para realizar <em>stemming</em>, o         reducción de palabras a su raíz, en un texto de entrada.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>texto</strong> – </li>
-<li><strong>lenguaje</strong> – </li>
-<li><strong>limpiar</strong> – </li>
-<li><strong>stemmer</strong> – </li>
+<li><strong>texto</strong> – (string). Texto al que se le desea aplicar el <em>stemming</em>.</li>
+<li><strong>lenguaje</strong> – (string) {“es”, “en”, “fr”, “de”}. Lenguaje del         texto al que se va a aplicar <em>stemming</em>.</li>
+<li><strong>limpiar</strong> – (bool) {True, False}. Valor por defecto: True. Define         si se desea hacer una limpieza básica (aplicando la función          <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al texto de entrada,          antes de aplicar el <em>stemming</em>.</li>
+<li><strong>stemmer</strong> – Parámetro opcional. Objeto de la clase 
+<cite>nltk.stem.SnowballStemmer</cite> para aplicar <em>stemming</em> sobre el texto         de entrada. Se puede utilizar para aplicar <em>stemming</em> a varios textos         a la vez, sin necesidad de inicializar un SnowballStemmer en cada         texto. Esto puede representar ahorro en tiempos al momento de aplicar         la función.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">Texto luego de la aplicación del <em>stemming</em>.</p>
 </td>
 </tr>
 </tbody>
