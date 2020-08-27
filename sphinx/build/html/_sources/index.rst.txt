@@ -15,16 +15,16 @@ ConTexto - Librería de procesamiento y análisis de textos
    :caption: Módulos y funciones:
    :hidden:
    
-   comparacion
-   correccion
-   escritura
-   exploracion
-   lectura
-   lematizacion
-   lenguajes
-   limpieza   
-   stemming
-   vectorizacion
+   funciones/comparacion
+   funciones/correccion
+   funciones/escritura
+   funciones/exploracion
+   funciones/lectura
+   funciones/lematizacion
+   funciones/lenguajes
+   funciones/limpieza   
+   funciones/stemming
+   funciones/vectorizacion
 
 .. figure:: _static/image/contexto.jpg
     :align: center
