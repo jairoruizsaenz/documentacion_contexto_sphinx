@@ -1,5 +1,5 @@
 
-corrección
+Corrección
 ==========
 
 .. automodule:: correccion

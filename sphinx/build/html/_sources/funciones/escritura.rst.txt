@@ -1,5 +1,5 @@
 
-escritura
+Escritura
 =========
 
 .. automodule:: escritura

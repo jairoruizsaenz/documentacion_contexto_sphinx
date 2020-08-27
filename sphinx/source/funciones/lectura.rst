@@ -1,5 +1,5 @@
 
-lectura
+Lectura
 =======
 
 .. automodule:: lectura

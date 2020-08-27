@@ -1,5 +1,5 @@
 
-lematización
+Lematización
 ============
 
 .. automodule:: lematizacion

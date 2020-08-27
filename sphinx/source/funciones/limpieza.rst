@@ -1,5 +1,5 @@
 
-limpieza
+Limpieza
 ========
 
 .. automodule:: limpieza

@@ -1,5 +1,5 @@
 
-vectorización
+Vectorización
 =============
 
 .. automodule:: vectorizacion

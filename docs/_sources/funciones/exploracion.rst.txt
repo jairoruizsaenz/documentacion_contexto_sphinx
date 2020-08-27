@@ -1,5 +1,5 @@
 
-exploración
+Exploración
 ===========
 
 .. automodule:: exploracion

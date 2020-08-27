@@ -1,5 +1,5 @@
 
-comparación
+Comparación
 ===========
 
 .. automodule:: comparacion

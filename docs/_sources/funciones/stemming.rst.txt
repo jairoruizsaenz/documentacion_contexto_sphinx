@@ -1,5 +1,5 @@
 
-stemming
+Stemming
 =========
 
 .. automodule:: stemming

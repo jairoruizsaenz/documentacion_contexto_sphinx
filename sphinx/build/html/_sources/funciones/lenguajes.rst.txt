@@ -1,5 +1,5 @@
 
-lenguajes
+Lenguajes
 =========
 
 .. automodule:: lenguajes
