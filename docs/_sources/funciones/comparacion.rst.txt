@@ -6,4 +6,4 @@ Comparación
    :members:
    :undoc-members:
    :show-inheritance:
-   :exclude-members: 
+   :exclude-members: jaccard_textos

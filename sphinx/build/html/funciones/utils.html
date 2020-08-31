@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Utils &mdash; documentación de ConTexto - 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Vectorización" href="vectorizacion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConTexto
+          
+
+          
+            
+            <img src="../_static/logo_400.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                ago. 31 03:13 p. m.
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">ConTexto:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instalacion.html">Instalación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos.html">Ejemplos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Módulos y funciones:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="comparacion.html">Comparación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="correccion.html">Corrección</a></li>
+<li class="toctree-l1"><a class="reference internal" href="escritura.html">Escritura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exploracion.html">Exploración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectura.html">Lectura</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lematizacion.html">Lematización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenguajes.html">Lenguajes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limpieza.html">Limpieza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stemming.html">Stemming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vectorizacion.html">Vectorización</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.auxiliares">Auxiliares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.quitar_repetidos">Quitar repetidos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils.tokenizacion">Tokenizacion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ConTexto</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="utils">
+<h1>Utils<a class="headerlink" href="#utils" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="section" id="module-utils.auxiliares">
+<span id="auxiliares"></span><h2>Auxiliares<a class="headerlink" href="#module-utils.auxiliares" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="py function">
+<dt id="utils.auxiliares.cargar_objeto">
+<code class="descclassname">utils.auxiliares.</code><code class="descname">cargar_objeto</code><span class="sig-paren">(</span><em><span class="n">nombre_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.cargar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="utils.auxiliares.guardar_objeto">
+<code class="descclassname">utils.auxiliares.</code><code class="descname">guardar_objeto</code><span class="sig-paren">(</span><em><span class="n">objeto</span></em>, <em><span class="n">nombre_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.guardar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="utils.auxiliares.verificar_crear_dir">
+<code class="descclassname">utils.auxiliares.</code><code class="descname">verificar_crear_dir</code><span class="sig-paren">(</span><em><span class="n">ubicacion_directorio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.verificar_crear_dir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-utils.quitar_repetidos">
+<span id="quitar-repetidos"></span><h2>Quitar repetidos<a class="headerlink" href="#module-utils.quitar_repetidos" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="py function">
+<dt id="utils.quitar_repetidos.detectar_coincidencias">
+<code class="descclassname">utils.quitar_repetidos.</code><code class="descname">detectar_coincidencias</code><span class="sig-paren">(</span><em><span class="n">lista_textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.quitar_repetidos.detectar_coincidencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="utils.quitar_repetidos.maximo_substring">
+<code class="descclassname">utils.quitar_repetidos.</code><code class="descname">maximo_substring</code><span class="sig-paren">(</span><em><span class="n">str1</span></em>, <em><span class="n">str2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.quitar_repetidos.maximo_substring" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="utils.quitar_repetidos.quitar_repetidos">
+<code class="descclassname">utils.quitar_repetidos.</code><code class="descname">quitar_repetidos</code><span class="sig-paren">(</span><em><span class="n">lista_textos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.quitar_repetidos.quitar_repetidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-utils.tokenizacion">
+<span id="tokenizacion"></span><h2>Tokenizacion<a class="headerlink" href="#module-utils.tokenizacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="py class">
+<dt id="utils.tokenizacion.TokenizadorNLTK">
+<em class="property">class </em><code class="descclassname">utils.tokenizacion.</code><code class="descname">TokenizadorNLTK</code><span class="sig-paren">(</span><em><span class="n">tokenizador</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">destokenizador</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="utils.tokenizacion.TokenizadorNLTK.destokenizar">
+<code class="descname">destokenizar</code><span class="sig-paren">(</span><em><span class="n">lista_tokens</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="utils.tokenizacion.TokenizadorNLTK.establecer_destokenizador">
+<code class="descname">establecer_destokenizador</code><span class="sig-paren">(</span><em><span class="n">destokenizador</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.establecer_destokenizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="utils.tokenizacion.TokenizadorNLTK.establecer_tokenizador">
+<code class="descname">establecer_tokenizador</code><span class="sig-paren">(</span><em><span class="n">tokenizador</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.establecer_tokenizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="utils.tokenizacion.TokenizadorNLTK.post_destokenizacion">
+<code class="descname">post_destokenizacion</code><span class="sig-paren">(</span><em><span class="n">texto</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.post_destokenizacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="utils.tokenizacion.TokenizadorNLTK.tokenizar">
+<code class="descname">tokenizar</code><span class="sig-paren">(</span><em><span class="n">texto</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="utils.tokenizacion.destokenizar">
+<code class="descclassname">utils.tokenizacion.</code><code class="descname">destokenizar</code><span class="sig-paren">(</span><em><span class="n">tokens</span></em>, <em><span class="n">tokenizador</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="utils.tokenizacion.tokenizar">
+<code class="descclassname">utils.tokenizacion.</code><code class="descname">tokenizar</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">tokenizador</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="vectorizacion.html" class="btn btn-neutral float-left" title="Vectorización" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, UCD - DNP
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

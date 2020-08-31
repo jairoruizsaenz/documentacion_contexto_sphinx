@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                ago. 27 06:26 p. m.
+                ago. 31 03:13 p. m.
               </div>
             
           
@@ -114,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="limpieza.html">Limpieza</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stemming.html">Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vectorizacion.html">Vectorización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
 </ul>
 
             
@@ -214,7 +215,7 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 
 <dl class="py method">
 <dt id="correccion.Corrector.correccion_ortografia">
-<code class="descname">correccion_ortografia</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">limpieza</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.correccion_ortografia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descname">correccion_ortografia</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">limpieza</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.correccion_ortografia" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Realiza corrección ortográfica sobre un texto de entrada, identificando las palabras             que no están en el diccionario del corrector y cambiándolas por su candidata más             frecuente o probable, siempre y cuando haya por lo menos una palabra candidata             que cumpla con la máxima distancia de Levenshtein permitida.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -222,7 +223,7 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (string). Texto al cuál se desea aplicar corrección ortográfica.</li>
-<li><strong>limpieza</strong> – (bool) {True, False}. Valor por defecto: True. Argumento             opcional que define si se desea hacer una limpieza básica (            aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al             texto antes de aplicar la corrección ortográfica.</li>
+<li><strong>limpieza</strong> – (bool) {True, False}. Valor por defecto: False. Argumento             opcional que define si se desea hacer una limpieza básica (            aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al             texto antes de aplicar la corrección ortográfica.</li>
 </ul>
 </td>
 </tr>
@@ -378,7 +379,7 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 
 <dl class="py function">
 <dt id="correccion.corregir_texto">
-<code class="descclassname">correccion.</code><code class="descname">corregir_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">corrector</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">diccionario</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">distancia</span><span class="o">=</span><span class="default_value">2</span></em>, <em><span class="n">limpieza</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.corregir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descclassname">correccion.</code><code class="descname">corregir_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">corrector</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">diccionario</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">distancia</span><span class="o">=</span><span class="default_value">2</span></em>, <em><span class="n">limpieza</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.corregir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que aprovecha la clase Corrector para realizar corrección         ortográfica sobre un texto de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -394,7 +395,7 @@ alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}<
 <li><strong>diccionario</strong> – (dict, list o string). Valor por defecto: None. Diccionario (o string con ubicación del         archivo JSON que lo contiene), o lista que permite modificar y agregar palabras.         Si es una lista, contiene las palabras que serán consideradas como válidas o correctas.         Si es un diccionario, las llaves del diccionario son las palabras que serán consideradas
 como válidas o correctas, y los valores del diccionario son las frecuencias de cada palabra         en el diccionario. Las frecuencias son utilizadas como criterio de desempate, cuando una         palabra incorrecta tiene más de una palabra candidata para la corrección. Si se deja este         parámetro como None, se cargará el diccionario por defecto que trae la librería <cite>spellchecker</cite>         para el lenguaje determinado.</li>
 <li><strong>distancia</strong> – (int). Valor por defecto: 2. Máxima distancia de Levenshtein que puede haber         entre una palabra incorrecta (o no reconocida) y las palabras del diccionario para         determinar si hay palabras candidatas para realizar la corrección.</li>
-<li><strong>limpieza</strong> – (bool) {True, False}. Valor por defecto: True. Argumento         opcional que define si se desea hacer una limpieza básica (        aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al         texto antes de aplicar la corrección ortográfica.</li>
+<li><strong>limpieza</strong> – (bool) {True, False}. Valor por defecto: False. Argumento         opcional que define si se desea hacer una limpieza básica (        aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al         texto antes de aplicar la corrección ortográfica.</li>
 </ul>
 </td>
 </tr>

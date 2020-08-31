@@ -6,4 +6,4 @@ Vectorización
    :members:
    :undoc-members:
    :show-inheritance:
-   :exclude-members: 
+   :exclude-members: preparar_textos

@@ -6,4 +6,4 @@ Exploración
    :members:
    :undoc-members:
    :show-inheritance:
-   :exclude-members: 
+   :exclude-members: grafica_nube, diag_superior

@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                ago. 27 06:26 p. m.
+                ago. 31 03:13 p. m.
               </div>
             
           
@@ -114,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="limpieza.html">Limpieza</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stemming.html">Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vectorizacion.html">Vectorización</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
 </ul>
 
             
@@ -180,22 +181,6 @@
   <div class="section" id="module-exploracion">
 <span id="exploracion"></span><h1>Exploración<a class="headerlink" href="#module-exploracion" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py function">
-<dt id="exploracion.diag_superior">
-<code class="descclassname">exploracion.</code><code class="descname">diag_superior</code><span class="sig-paren">(</span><em><span class="n">df</span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.diag_superior" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función que acepta una dataframe y devuelve la versión diagonal superior de la misma.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>df</strong> – (dataframe) dataset de insumo.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">dataframe transformado.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="py function">
 <dt id="exploracion.frecuencia_ngramas">
 <code class="descclassname">exploracion.</code><code class="descname">frecuencia_ngramas</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">n_grama</span><span class="o">=</span><span class="default_value">1</span></em>, <em><span class="n">n_max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.frecuencia_ngramas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Genera un diccionario de n-gramas más frecuentes con sus respectivas frecuencias de ocurrencias en el texto.</p>
@@ -234,27 +219,6 @@
 <li><strong>ubicacion_archivo</strong> – (str) valor por defecto: vacío. Ruta donde desea exportar la gráfica como archivo tipo imagen. Al nombrar el archivo se recomienda utilizar la extensión jpg. Si no se especifica una ruta, la gráfica no se exporta.</li>
 <li><strong>graficar</strong> – (bool) {True, False} valor por defecto: True. Permite visualizar la gráfica en el IDE que esté utilizando.</li>
 <li><strong>n_terminos</strong> – (int) valor por defecto: 15. Cantidad de n-gramas a graficar.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="py function">
-<dt id="exploracion.grafica_nube">
-<code class="descclassname">exploracion.</code><code class="descname">grafica_nube</code><span class="sig-paren">(</span><em><span class="n">nube</span></em>, <em><span class="n">dim_figura</span><span class="o">=</span><span class="default_value">10, 10</span></em>, <em><span class="n">titulo</span><span class="o">=</span><span class="default_value">'Términos más frecuentes'</span></em>, <em><span class="n">ubicacion_archivo</span><span class="o">=</span><span class="default_value">''</span></em>, <em><span class="n">graficar</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.grafica_nube" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite graficar o guardar una nube de palabras.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
-<li><strong>nube</strong> – (WordCloud) Objeto tipo WordCloud correspondiente a la nube de palabras.</li>
-<li><strong>dim_figura</strong> – (float, float) valor por defecto: (10, 10). Corresponden al ancho y alto de la figura en pulgadas.</li>
-<li><strong>titulo</strong> – (str) valor por defecto: “Términos más frecuentes”. Corresponde al título de la nube de palabras.</li>
-<li><strong>ubicacion_archivo</strong> – (str) valor por defecto: “”. Ruta donde desea exportar la gráfica como archivo tipo imagen. Al nombrar el archivo se recomienda utilizar la extensión jpg. Si no se especifica una ruta, la gráfica no se exporta.</li>
-<li><strong>graficar</strong> – (bool) {True, False} valor por defecto: True. Permite visualizar la gráfica en el IDE que esté utilizando.</li>
 </ul>
 </td>
 </tr>

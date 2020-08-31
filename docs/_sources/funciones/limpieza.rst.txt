@@ -6,4 +6,4 @@ Limpieza
    :members:
    :undoc-members:
    :show-inheritance:
-   :exclude-members: 
+   :exclude-members: limpiar_extremos

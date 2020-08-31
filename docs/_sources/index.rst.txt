@@ -11,7 +11,7 @@ ConTexto - Librería de procesamiento y análisis de textos
    ejemplos
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Módulos y funciones:
    :hidden:
    
@@ -23,8 +23,9 @@ ConTexto - Librería de procesamiento y análisis de textos
    funciones/lematizacion
    funciones/lenguajes
    funciones/limpieza   
-   funciones/stemming
+   funciones/stemming   
    funciones/vectorizacion
+   funciones/utils
 
 .. figure:: _static/image/contexto.jpg
     :align: center
