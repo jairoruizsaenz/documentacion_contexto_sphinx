@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                ago. 31 03:13 p. m.
+                ago. 31 10:07 p. m.
               </div>
             
           
@@ -184,6 +184,27 @@
 <dt id="lematizacion.LematizadorSpacy">
 <em class="property">class </em><code class="descclassname">lematizacion.</code><code class="descname">LematizadorSpacy</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em>, <em><span class="n">dict_lemmas</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">dim_modelo</span><span class="o">=</span><span class="default_value">'md'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lematizacion.LematizadorSpacy" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Constructor por defecto de la clase LematizadorSpacy. Esta clase se         encarga de manejar todas las funciones asociadas a la lematización         del texto con la librería Spacy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>lenguaje</strong> – (string) {“es”, “en”, “fr”, “de”}  Se define el             lenguaje del texto a ser tratado. Los lenguajes posibles son español             (“es”), inglés (“en”), francés (“fr”) y alemán (“de”). Se aceptan las             siguientes variaciones para cada idioma (sin importar acentos ni mayúsculas):                 <ul>  <li> español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”} </li>
+<li> inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”} </li>
+<li> francés: {“fr”, “fra”, “fre”, “french”, “francés”} </li>
+<li> alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”} </li>  </ul></li>
+<li><strong>diccionario</strong> – (dict o string). Diccionario (o <em>string</em> con ubicación del             archivo JSON que lo contiene) que permite modificar y agregar lemas. Las             llaves del diccionario son las palabras completas y los valores del             diccionario son los lemas escogidos para cada palabra.</li>
+<li><strong>dim_modelo</strong> – (string) {“lg”, “md”, “sm”}. Se define el tamaño 
+del modelo. “lg” es grande (large), “md” es mediano (medium) y “sm” es             pequeño (small). Los modelos más grandes obtienen mejores predicciones             pero requieren mayor tiempo de carga</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">objeto del tipo de la clase LematizadorSpacy</p>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="lematizacion.LematizadorSpacy.establecer_lenguaje">
 <code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lematizacion.LematizadorSpacy.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -192,11 +213,10 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (string). {“es”, “en”, “fr”, “de”}.  Se define el 
-lenguaje del texto a ser tratado. Los lenguajes posibles son español             (“es”), inglés (“en”), francés (“fr”) y alemán (“de”). Se aceptan las             siguientes variaciones para cada idioma (sin importar acentos ni mayúsculas):             español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”}
-inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”}
-francés: {“fr”, “fra”, “fre”, “french”, “francés”}
-alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (string) {“es”, “en”, “fr”, “de”}.  Se define el             lenguaje del texto a ser tratado. Los lenguajes posibles son español             (“es”), inglés (“en”), francés (“fr”) y alemán (“de”). Se aceptan las             siguientes variaciones para cada idioma (sin importar acentos ni mayúsculas):                 <ul>  <li> español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”} </li>
+<li> inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”} </li>
+<li> francés: {“fr”, “fra”, “fre”, “french”, “francés”} </li>
+<li> alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”} </li>  </ul></td>
 </tr>
 </tbody>
 </table>
@@ -257,6 +277,24 @@ alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}<
 <dt id="lematizacion.LematizadorStanza">
 <em class="property">class </em><code class="descclassname">lematizacion.</code><code class="descname">LematizadorStanza</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em>, <em><span class="n">modelo_lemas</span><span class="o">=</span><span class="default_value">''</span></em>, <em><span class="n">dict_lemmas</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">archivo_salida</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lematizacion.LematizadorStanza" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Constructor por defecto de la clase LematizadorStanza. Esta clase se         encarga de manejar todas las funciones asociadas a la lematización         del texto con la librería Stanza</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lenguaje</strong> – (string). {“es”, “en”, “fr”, “de”}. Se define el             lenguaje del texto a ser tratado. Los lenguajes posibles son español             (“es”), inglés (“en”), francés (“fr”) y alemán (“de”). Se aceptan las             siguientes variaciones para cada idioma (sin importar acentos ni mayúsculas):                 <ul>  <li> español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”} </li>
+<li> inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”} </li>
+<li> francés: {“fr”, “fra”, “fre”, “french”, “francés”} </li>
+<li> alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”} </li>  </ul></li>
+<li><strong>modelo_lemas</strong> – (string). Valor por defecto: None. Especifica la ruta             de un modelo de lemas personalizado. En caso de ser vacío, se utiliza             el modelo genérico de lemas de Stanza</li>
+<li><strong>diccionario</strong> – (dict o string). Diccionario (o <em>string</em> con ubicación del             archivo JSON que lo contiene) que permite modificar y agregar lemas. Las             llaves del diccionario son las palabras completas y los valores del             diccionario son los lemas escogidos para cada palabra.</li>
+<li><strong>archivo_salida</strong> – (string). Valor por defecto: None. Especifica la ruta             del archivo de salida del modelo de lemas modificado. En caso de ser             vacío, el resultado de la lematizacción se guarda en un archivo             temporal que eventualmente será borrado</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="lematizacion.LematizadorStanza.establecer_lenguaje">
 <code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lematizacion.LematizadorStanza.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -265,11 +303,10 @@ alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}<
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (string). {“es”, “en”, “fr”, “de”}  Se define el 
-lenguaje del texto a ser tratado. Los lenguajes posibles son español             (“es”), inglés (“en”), francés (“fr”) y alemán (“de”). Se aceptan las             siguientes variaciones para cada idioma (sin importar acentos ni mayúsculas):             español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”}
-inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”}
-francés: {“fr”, “fra”, “fre”, “french”, “francés”}
-alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (string). {“es”, “en”, “fr”, “de”}  Se define el             lenguaje del texto a ser tratado. Los lenguajes posibles son español             (“es”), inglés (“en”), francés (“fr”) y alemán (“de”). Se aceptan las             siguientes variaciones para cada idioma (sin importar acentos ni mayúsculas):                 <ul>  <li> español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”} </li>
+<li> inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”} </li>
+<li> francés: {“fr”, “fra”, “fre”, “french”, “francés”} </li>
+<li> alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”} </li>  </ul></td>
 </tr>
 </tbody>
 </table>
@@ -330,11 +367,10 @@ alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}<
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (string). Texto de entrada a ser lematizado</li>
-<li><strong>lenguaje</strong> – (string). {“es”, “en”, “fr”, “de”, “auto”}  Se define el 
-lenguaje del texto a ser tratado. Los lenguajes posibles son español         (“es”), inglés (“en”), francés (“fr”), alemán (“de”) y automático (“auto”,         se adivina el lenguaje). Se aceptan las siguientes variaciones para cada         idioma (sin importar acentos ni mayúsculas):         español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”}
-inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”}
-francés: {“fr”, “fra”, “fre”, “french”, “francés”}
-alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”}</li>
+<li><strong>lenguaje</strong> – (string). {“es”, “en”, “fr”, “de”, “auto”}  Se define el         lenguaje del texto a ser tratado. Los lenguajes posibles son español         (“es”), inglés (“en”), francés (“fr”), alemán (“de”) y automático (“auto”,         se adivina el lenguaje). Se aceptan las siguientes variaciones para cada         idioma (sin importar acentos ni mayúsculas):             <ul>  <li> español: {“es”, “español”, “esp”, “spanish”, “sp”, “spa”} </li>
+<li> inglés: {“en”, “eng” .”english”, “inglés”, “ing”, “in”} </li>
+<li> francés: {“fr”, “fra”, “fre”, “french”, “francés”} </li>
+<li> alemán: {“ge”, “de”, “german”, “al”, “alemán”, “ale”} </li>  </ul></li>
 <li><strong>libreria</strong> – (string). {“spacy”, “stanza”}. Valor por defecto: “spacy”         Se define la librería de Python de lematización para ser utilizada en “
 el texto. Las opciones son las librerías Spacy y Stanza</li>
 <li><strong>limpiar</strong> – (bool) {True, False}. Valor por defecto: True. Especifica         si se desea hacer una limpieza básica del texto antes de la lematización</li>

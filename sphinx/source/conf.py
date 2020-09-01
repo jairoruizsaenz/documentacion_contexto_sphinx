@@ -73,7 +73,8 @@ language = 'es'
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-
+# configuración para agregar documentación de __init__ de las clases
+autoclass_content = 'both'
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

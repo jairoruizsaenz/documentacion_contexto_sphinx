@@ -6,6 +6,10 @@ li {
     text-align: justify;    
 }
 
+.first li {
+    padding-bottom: 5px;
+}
+
 p[class="caption"] {
     text-align: center;
 }

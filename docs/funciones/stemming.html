@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                ago. 31 03:13 p. m.
+                ago. 31 10:07 p. m.
               </div>
             
           
@@ -184,6 +184,17 @@
 <dt id="stemming.Stemmer">
 <em class="property">class </em><code class="descclassname">stemming.</code><code class="descname">Stemmer</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Constructor por defecto de la clase Stemmer. Esta clase se encarga         de hacer la operación de <em>stemming</em>, o reducción de palabras a su         raíz, en textos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (string) {“es”, “en”, “fr”, “de”}. Lenguaje de los            textos a los que se va a aplicar <em>stemming</em>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(Stemmer). Objeto del tipo de la clase Stemmer</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="stemming.Stemmer.establecer_lenguaje">
 <code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -206,7 +217,7 @@
 
 <dl class="py method">
 <dt id="stemming.Stemmer.stemming">
-<code class="descname">stemming</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">limpiar</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.stemming" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descname">stemming</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">limpiar</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.stemming" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Aplica <em>stemming</em> sobre un texto de entrada, y devuelve el texto             resultante.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -214,7 +225,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (string). Texto al que se le desea aplicar el <em>stemming</em>.</li>
-<li><strong>limpiar</strong> – (bool) {True, False}. Valor por defecto: True. Argumento             opcional que define si se desea hacer una limpieza básica (            aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al             texto antes de aplicar el <em>stemming</em>.</li>
+<li><strong>limpiar</strong> – (bool) {True, False}. Valor por defecto: False. Argumento             opcional que define si se desea hacer una limpieza básica (            aplicando la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al             texto antes de aplicar el <em>stemming</em>.</li>
 </ul>
 </td>
 </tr>
@@ -229,7 +240,7 @@
 
 <dl class="py function">
 <dt id="stemming.stem_texto">
-<code class="descclassname">stemming.</code><code class="descname">stem_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">limpiar</span><span class="o">=</span><span class="default_value">True</span></em>, <em><span class="n">stemmer</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.stem_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descclassname">stemming.</code><code class="descname">stem_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">limpiar</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">stemmer</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.stem_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que aprovecha la clase Stemmer para realizar <em>stemming</em>, o         reducción de palabras a su raíz, en un texto de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

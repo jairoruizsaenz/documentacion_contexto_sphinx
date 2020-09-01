@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                ago. 31 03:13 p. m.
+                ago. 31 10:07 p. m.
               </div>
             
           
@@ -184,6 +184,21 @@
 <dt id="vectorizacion.VectorizadorDoc2Vec">
 <em class="property">class </em><code class="descclassname">vectorizacion.</code><code class="descname">VectorizadorDoc2Vec</code><span class="sig-paren">(</span><em><span class="n">n_elementos</span><span class="o">=</span><span class="default_value">100</span></em>, <em><span class="n">minima_cuenta</span><span class="o">=</span><span class="default_value">5</span></em>, <em><span class="n">epocas</span><span class="o">=</span><span class="default_value">20</span></em>, <em><span class="n">semilla</span><span class="o">=</span><span class="default_value">1</span></em>, <em><span class="n">archivo_modelo</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorDoc2Vec" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n_elementos</strong> – </li>
+<li><strong>minima_cuenta</strong> – </li>
+<li><strong>epocas</strong> – </li>
+<li><strong>semilla</strong> – </li>
+<li><strong>archivo_modelo</strong> – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="vectorizacion.VectorizadorDoc2Vec.entrenar_modelo">
 <code class="descname">entrenar_modelo</code><span class="sig-paren">(</span><em><span class="n">corpus_entrenamiento</span></em>, <em><span class="n">actualizar</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">archivo_salida</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorDoc2Vec.entrenar_modelo" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -255,6 +270,21 @@
 <dt id="vectorizacion.VectorizadorFrecuencias">
 <em class="property">class </em><code class="descclassname">vectorizacion.</code><code class="descname">VectorizadorFrecuencias</code><span class="sig-paren">(</span><em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'bow'</span></em>, <em><span class="n">rango_ngramas</span><span class="o">=</span><span class="default_value">1, 1</span></em>, <em><span class="n">max_elementos</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">idf</span><span class="o">=</span><span class="default_value">True</span></em>, <em><span class="n">archivo_modelo</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorFrecuencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tipo</strong> – </li>
+<li><strong>rango_ngramas</strong> – </li>
+<li><strong>max_elementos</strong> – </li>
+<li><strong>idf</strong> – </li>
+<li><strong>archivo_modelo</strong> – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="vectorizacion.VectorizadorFrecuencias.ajustar">
 <code class="descname">ajustar</code><span class="sig-paren">(</span><em><span class="n">x</span></em>, <em><span class="n">archivo_salida</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorFrecuencias.ajustar" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -369,6 +399,18 @@
 <dt id="vectorizacion.VectorizadorHash">
 <em class="property">class </em><code class="descclassname">vectorizacion.</code><code class="descname">VectorizadorHash</code><span class="sig-paren">(</span><em><span class="n">n_elementos</span><span class="o">=</span><span class="default_value">100</span></em>, <em><span class="n">rango_ngramas</span><span class="o">=</span><span class="default_value">1, 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorHash" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>n_elementos</strong> – </li>
+<li><strong>rango_ngramas</strong> – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="vectorizacion.VectorizadorHash.transform">
 <code class="descname">transform</code><span class="sig-paren">(</span><em><span class="n">x</span></em>, <em><span class="n">disperso</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorHash.transform" title="Enlazar permanentemente con esta definición">¶</a></dt>
@@ -415,6 +457,18 @@
 <dt id="vectorizacion.VectorizadorWord2Vec">
 <em class="property">class </em><code class="descclassname">vectorizacion.</code><code class="descname">VectorizadorWord2Vec</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'es'</span></em>, <em><span class="n">dim_modelo</span><span class="o">=</span><span class="default_value">'md'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorWord2Vec" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lenguaje</strong> – </li>
+<li><strong>dim_modelo</strong> – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="py method">
 <dt id="vectorizacion.VectorizadorWord2Vec.establecer_lenguaje">
 <code class="descname">establecer_lenguaje</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#vectorizacion.VectorizadorWord2Vec.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
