@@ -8,6 +8,6 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-.. include:: utils_auxiliares.rst
-.. include:: utils_quitar_repetidos.rst
-.. include:: utils_tokenizacion.rst
+.. include:: utils/auxiliares.rst
+.. include:: utils/quitar_repetidos.rst
+.. include:: utils/tokenizacion.rst

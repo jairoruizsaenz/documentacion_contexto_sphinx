@@ -1,4 +1,4 @@
-.. _instalacion:
+.. _seccion_instalacion:
 
 Instalación
 ===========

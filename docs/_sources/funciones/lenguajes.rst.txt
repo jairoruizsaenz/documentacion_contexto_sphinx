@@ -6,4 +6,4 @@ Lenguajes
    :members:
    :undoc-members:
    :show-inheritance:
-   :exclude-members: definir_lenguaje
+   :exclude-members: definir_lenguaje   

@@ -71,7 +71,7 @@ language = 'es'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['funciones/utils/*.rst', 'ejemplos/*.rst']
 
 # configuración para agregar documentación de __init__ de las clases
 autoclass_content = 'both'

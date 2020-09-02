@@ -2,12 +2,6 @@ Ejemplos - lenguajes
 ====================
 
 
-definir_lenguaje
-----------------
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Ver documentación :py:meth:`lenguajes.definir_lenguaje`
-
-
 detectar_lenguaje
 -----------------
 
