@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                sept. 01 07:21 p. m.
+                sept. 02 09:14 p. m.
               </div>
             
           
@@ -186,29 +186,75 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dt id="lectura.Lector">
 <em class="property">class </em><code class="descclassname">lectura.</code><code class="descname">Lector</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Constructor por defecto de la clase Lector. Esta clase se encarga de extraer             el texto de archivos de distintos tipos como Word, PDF, CSV, TXT, RTF e             imágenes</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>ubicacion_archivo</strong> – </td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>ubicacion_archivo</strong> – (string). Ruta del archivo que se desea leer</td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt id="lectura.Lector.archivo_a_texto">
 <code class="descname">archivo_a_texto</code><span class="sig-paren">(</span><em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'inferir'</span></em>, <em><span class="n">extraer_medios</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">dir_medios</span><span class="o">=</span><span class="default_value">'temp/img_dir/'</span></em>, <em><span class="n">por_paginas</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">encoding</span><span class="o">=</span><span class="default_value">'utf-8'</span></em>, <em><span class="n">ocr</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">preprocesamiento</span><span class="o">=</span><span class="default_value">3</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'spa'</span></em>, <em><span class="n">oem</span><span class="o">=</span><span class="default_value">2</span></em>, <em><span class="n">psm</span><span class="o">=</span><span class="default_value">3</span></em>, <em><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.archivo_a_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Se lleva a cabo la lectura del texto de un archivo y permite escoger el tipo, si por páginas,             la codificación, si utilizar OCR, el tipo de preprocesamiento, entre otros.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>tipo</strong> – (string) {“inferir”, “txt”, “csv”, “pdf”, “rtf”, “doc”, “docx”, “npg”,             “jpg”, “jpeg”} Valor por defecto: “inferir”. Se define el tipo (o extensión) del             archivo que se desea leer</li>
+<li><strong>extraer_medios</strong> – (bool) {True, False}. Valor por defecto: False. Especifica si se desean extraer las             imágenes dentro del archivo de Word para ser guardadas aparte como archivos             de imágenes. Funciona únicamente para archivos “.docx” (no “.doc”) y si el             parámetro “por_paginas” es False.</li>
+<li><strong>dir_medios</strong> – (string). Valor por defecto: “temp/img_dir/” Ruta de la carpeta             donde se guardan las imágenes del archivo Word cuyas imágenes se decidieron extraer (se especificó             extraer_medios = True)</li>
+<li><strong>por_paginas</strong> – (bool) {True, False}. Valor por defecto: False. Se define si se             desea extraer el texto por páginas.</li>
+<li><strong>encoding</strong> – (string). Valor por defecto: “utf-8”. Especifica la codificación             del texto que se desea leer</li>
+<li><strong>ocr</strong> – (bool) {True, False}. Valor por defecto: False Especifica si se desea utilizar reconocimiento             óptico de caracteres sobre el archivo cuyo texto se desea extraer. Se utiliza             usualmente cuando el archivo es una imagen o documento escaneado</li>
+<li><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Valor por defecto: 3 Especifica el nivel de preprocesamiento             que se lleva a cabo antes de extraer el texto del archivo. Aplica cuando se utiliza             reconocimiento óptico de caracteres (parámetro ocr es True). Las opciones son las siguientes:             1: se convierte la imagen a escala de grises
+2: se convierte la imagen a escala de grises y se aplica blurring
+3: se convierte la imagen a escala de grises y se aplica el umbral de imagen con el                     método de OTSU
+4: se endereza el texto, se convierte la imagen a escala de grises y se aplica umbral                 adaptativo
+5: se endereza el texto, se convierte la imagen a escala de grises, se aplica umbral                 de imagen con el método de OTSU, blurring y umbral adaptativo</li>
+<li><strong>lenguaje</strong> – (string). {“es”, “en”}. Valor por defecto: “spa”  Se define el lenguaje del texto que se desea extraer.             Tiene las opciones de español (“es”) e inglés (“en”). Aplica cuando se extrae el texto de             imágenes o archivos escaneados</li>
+<li><strong>oem</strong> – (int) {0, 1, 2, 3}. Valor por defecto: 2. OEM hace referencia al modo del motor OCR (OCR engine mode             en inglés). Tesseract tiene 2 motores, Legacy Tesseract y LSTM, y los parámetros de “oem”             permiten escoger cada uno de estos motores por separado, ambos al tiempo o             automáticamente: 
+0: utilizar únicamente el motor Legacy
+1: utilizar únicamente el motor de redes neuronales LSTM  
+2: utilizar los motores Legacy y LSTM
+3: escoger el motor según lo que hay disponible</li>
+<li><strong>psm</strong> – (int) {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}. Valor por defecto: 3 PSM hace referencia a             los modos de segmentación de las páginas (page segmentation modes, en inglés) de la             librería Pytesseract. Cada número hace referencia a un modo de segmentación:             0: orientation y detección de script (OSD) únicamente
+1: segmentación automática de páginas con OSD
+2: segmentación automática de págpinas sin OSD ni OCR
+3: segmentación completamente automática de páginas sin OSD
+4: supone una única columna de texto de tamaños variables
+5: supone un único bloque uniforme de texto alineado de forma vertical
+6: asume un único bloque uniforme de texto
+7: trata la imagen como una única línea de texto
+8: trata la imagen como una única palabra
+9: trata la imagen como una única palabra dentro de un círculo
+10: trata la imagen como un único carácter
+11: Buscador de texto disperso. Encontrar la mayor cantidad de texto posible sin un orden en particular
+12: Buscador de texto disperso con OSD
+13: trata el texto como una única línea, sin utilizar métodos específicos de Tesseract</li>
+<li><strong>password</strong> – (string). Valor por defecto: None. Contraseña del archivo cuyo texto se desea             extraer, en caso de requerirlo</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto extraído del archivo con la clase Lector</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="py method">
 <dt id="lectura.Lector.establecer_ubicacion">
 <code class="descname">establecer_ubicacion</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.establecer_ubicacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Define la ubicación del archivo que se desea leer</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>ubicacion_archivo</strong> – </td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>ubicacion_archivo</strong> – (string). Ruta del archivo que se desea leer</td>
 </tr>
 </tbody>
 </table>
@@ -217,19 +263,41 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_imagen">
 <code class="descname">leer_imagen</code><span class="sig-paren">(</span><em><span class="n">preprocesamiento</span></em>, <em><span class="n">lenguaje</span></em>, <em><span class="n">oem</span></em>, <em><span class="n">psm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_imagen" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Se lleva a cabo la lectura del texto de archivos de tipo imagen, con extensión “png”, “jpg” o “jpeg”</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>preprocesamiento</strong> – </li>
-<li><strong>lenguaje</strong> – </li>
-<li><strong>oem</strong> – </li>
-<li><strong>psm</strong> – </li>
+<li><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Especifica el nivel de preprocesamiento             que se lleva a cabo antes de extraer el texto del archivo. Aplica cuando se utiliza             reconocimiento óptico de caracteres (parámetro ocr es True). Las opciones son las siguientes:             1: se convierte la imagen a escala de grises
+2: se convierte la imagen a escala de grises y se aplica blurring
+3: se convierte la imagen a escala de grises y se aplica el umbral de imagen con el                  método de OTSU
+4: se endereza el texto, se convierte la imagen a escala de grises y se aplica umbral                 adaptativo
+5: se endereza el texto, se convierte la imagen a escala de grises, se aplica umbral                 de imagen con el método de OTSU, blurring y umbral adaptativo</li>
+<li><strong>lenguaje</strong> – (string). {“es”, “en”}  Se define el lenguaje del texto que se desea extraer.             Tiene las opciones de español (“es”) e inglés (“en”)</li>
+<li><strong>oem</strong> – (int) {0, 1, 2, 3}. OEM hace referencia al modo del motor OCR (OCR engine mode             en inglés). Tesseract tiene 2 motores, Legacy Tesseract y LSTM, y los parámetros de “oem”             permiten escoger cada uno de estos motores por separado, ambos al tiempo o             automáticamente: 
+0: utilizar únicamente el motor Legacy
+1: utilizar únicamente el motor de redes neuronales LSTM  
+2: utilizar los motores Legacy y LSTM
+3: escoger el motor según lo que hay disponible</li>
+<li><strong>psm</strong> – (int) {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}. PSM hace referencia a             los modos de segmentación de las páginas (page segmentation modes, en inglés) de la             librería Pytesseract. Cada número hace referencia a un modo de segmentación:             0: orientation y detección de script (OSD) únicamente
+1: segmentación automática de páginas con OSD
+2: segmentación automática de págpinas sin OSD ni OCR
+3: segmentación completamente automática de páginas sin OSD
+4: supone una única columna de texto de tamaños variables
+5: supone un único bloque uniforme de texto alineado de forma vertical
+6: asume un único bloque uniforme de texto
+7: trata la imagen como una única línea de texto
+8: trata la imagen como una única palabra
+9: trata la imagen como una única palabra dentro de un círculo
+10: trata la imagen como un único carácter
+11: Buscador de texto disperso. Encontrar la mayor cantidad de texto posible sin un orden en particular
+12: Buscador de texto disperso con OSD
+13: trata el texto como una única línea, sin utilizar métodos específicos de Tesseract</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo tipo imagen leído con la clase Lector</p>
 </td>
 </tr>
 </tbody>
@@ -239,21 +307,45 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_pdf">
 <code class="descname">leer_pdf</code><span class="sig-paren">(</span><em><span class="n">por_paginas</span></em>, <em><span class="n">ocr</span></em>, <em><span class="n">preprocesamiento</span></em>, <em><span class="n">lenguaje</span></em>, <em><span class="n">oem</span></em>, <em><span class="n">psm</span></em>, <em><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.pdf”</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>por_paginas</strong> – </li>
-<li><strong>ocr</strong> – </li>
-<li><strong>preprocesamiento</strong> – </li>
-<li><strong>lenguaje</strong> – </li>
-<li><strong>oem</strong> – </li>
-<li><strong>psm</strong> – </li>
+<tr class="field-odd field"><th class="field-name">Por_paginas:</th><td class="field-body"><p class="first">(bool) {True, False}. Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se encuentra como “<span>|**|</span>”             dentro del texto extraído.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>ocr</strong> – (bool) {True, False}. Especifica si se desea utilizar reconocimiento             óptico de caracteres sobre el archivo cuyo texto se desea extraer. Se utiliza             usualmente cuando el archivo es una imagen o documento escaneado</li>
+<li><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Especifica el nivel de preprocesamiento             que se lleva a cabo antes de extraer el texto del archivo. Aplica cuando se utiliza             reconocimiento óptico de caracteres (parámetro ocr es True). Las opciones son las siguientes:             1: se convierte la imagen a escala de grises
+2: se convierte la imagen a escala de grises y se aplica blurring
+3: se convierte la imagen a escala de grises y se aplica el umbral de imagen con el                  método de OTSU
+4: se endereza el texto, se convierte la imagen a escala de grises y se aplica umbral                 adaptativo
+5: se endereza el texto, se convierte la imagen a escala de grises, se aplica umbral                 de imagen con el método de OTSU, blurring y umbral adaptativo</li>
+<li><strong>lenguaje</strong> – (string). {“es”, “en”}  Se define el             lenguaje del texto que se desea extraer. Aplica cuando se utilia reconocimiento             óptico de caracteres (el parámetro ocr es True). Tiene las opciones de español             (“es”) e inglés (“en”)</li>
+<li><strong>oem</strong> – (int) {0, 1, 2, 3}. OEM hace referencia al modo del motor OCR (OCR engine mode             en inglés). Tesseract tiene 2 motores, Legacy Tesseract y LSTM, y los parámetros de “oem”             permiten escoger cada uno de estos motores por separado, ambos al tiempo o             automáticamente: 
+0: utilizar únicamente el motor Legacy
+1: utilizar únicamente el motor de redes neuronales LSTM  
+2: utilizar los motores Legacy y LSTM
+3: escoger el motor según lo que hay disponible</li>
+<li><strong>psm</strong> – (int) {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}. PSM hace referencia a             los modos de segmentación de las páginas (page segmentation modes, en inglés) de la             librería Pytesseract. Cada número hace referencia a un modo de segmentación:             0: orientation y detección de script (OSD) únicamente
+1: segmentación automática de páginas con OSD
+2: segmentación automática de págpinas sin OSD ni OCR
+3: segmentación completamente automática de páginas sin OSD
+4: supone una única columna de texto de tamaños variables
+5: supone un único bloque uniforme de texto alineado de forma vertical
+6: asume un único bloque uniforme de texto
+7: trata la imagen como una única línea de texto
+8: trata la imagen como una única palabra
+9: trata la imagen como una única palabra dentro de un círculo
+10: trata la imagen como un único carácter
+11: Buscador de texto disperso. Encontrar la mayor cantidad de texto posible sin un orden en particular
+12: Buscador de texto disperso con OSD
+13: trata el texto como una única línea, sin utilizar métodos específicos de Tesseract</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo “.pdf” leído con la clase Lector</p>
 </td>
 </tr>
 </tbody>
@@ -263,11 +355,12 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_rtf">
 <code class="descname">leer_rtf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_rtf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.rtf”</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body">(string). Texto del archivo “.rtf” leído con la clase Lector</td>
 </tr>
 </tbody>
 </table>
@@ -276,13 +369,14 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_txt">
 <code class="descname">leer_txt</code><span class="sig-paren">(</span><em><span class="n">encoding</span><span class="o">=</span><span class="default_value">'utf-8'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.txt”</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>encoding</strong> – </td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>encoding</strong> – (string). Valor por defecto: “utf-8”. Especifica la codificación             del texto que se desea leer</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(string). Texto del archivo “.txt” leído con la clase Lector</td>
 </tr>
 </tbody>
 </table>
@@ -291,17 +385,21 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_word">
 <code class="descname">leer_word</code><span class="sig-paren">(</span><em><span class="n">por_paginas</span></em>, <em><span class="n">extraer_medios</span></em>, <em><span class="n">dir_medios</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.docx” o “.doc”</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>extraer_medios</strong> – </li>
-<li><strong>dir_medios</strong> – </li>
+<tr class="field-odd field"><th class="field-name">Por_paginas:</th><td class="field-body"><p class="first">(bool) {True, False}. Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se encuentra como “<span>|**|</span>”             dentro del texto extraído.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>extraer_medios</strong> – (bool) {True, False}. Especifica si se desean extraer las             imágenes dentro del archivo de Word para ser guardadas aparte como archivos             de imágenes. Funciona únicamente para archivos “.docx” (no “.doc”) y si el             parámetro “por_paginas” es False.</li>
+<li><strong>dir_medios</strong> – (string)- Ruta de la carpeta donde se guardan las imágenes del             archivo Word cuyas imágenes se decidieron extraer (se especificó             extraer_medios = True)</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo “.docx” o “.doc” leído con la clase Lector</p>
 </td>
 </tr>
 </tbody>
@@ -313,26 +411,49 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <dl class="py function">
 <dt id="lectura.leer_texto">
 <code class="descclassname">lectura.</code><code class="descname">leer_texto</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em>, <em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'inferir'</span></em>, <em><span class="n">extraer_medios</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">dir_medios</span><span class="o">=</span><span class="default_value">'temp/img_dir/'</span></em>, <em><span class="n">por_paginas</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">encoding</span><span class="o">=</span><span class="default_value">'utf-8'</span></em>, <em><span class="n">ocr</span><span class="o">=</span><span class="default_value">False</span></em>, <em><span class="n">preprocesamiento</span><span class="o">=</span><span class="default_value">3</span></em>, <em><span class="n">lenguaje</span><span class="o">=</span><span class="default_value">'spa'</span></em>, <em><span class="n">oem</span><span class="o">=</span><span class="default_value">2</span></em>, <em><span class="n">psm</span><span class="o">=</span><span class="default_value">3</span></em>, <em><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.leer_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Función que se encarga de extraer el texto de un archivo. Permite especificar la ruta del archivo,         escoger el tipo, si por páginas, la codificación, si utilizar OCR, el tipo de preprocesamiento, entre otros.</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>ubicacion_archivo</strong> – </li>
-<li><strong>tipo</strong> – </li>
-<li><strong>extraer_medios</strong> – </li>
-<li><strong>dir_medios</strong> – </li>
-<li><strong>por_paginas</strong> – </li>
-<li><strong>encoding</strong> – </li>
-<li><strong>ocr</strong> – </li>
-<li><strong>preprocesamiento</strong> – </li>
-<li><strong>lenguaje</strong> – </li>
-<li><strong>oem</strong> – </li>
-<li><strong>psm</strong> – </li>
+<li><strong>ubicacion_archivo</strong> – (string). Ruta del archivo que se desea leer</li>
+<li><strong>tipo</strong> – (string) {“inferir”, “txt”, “csv”, “pdf”, “rtf”, “doc”, “docx”, “npg”,         “jpg”, “jpeg”} Valor por defecto: “inferir”. Se define el tipo (o extensión) del         archivo que se desea leer</li>
+<li><strong>extraer_medios</strong> – (bool) {True, False}. Valor por defecto: False. Especifica si se desean extraer las         imágenes dentro del archivo de Word para ser guardadas aparte como archivos         de imágenes. Funciona únicamente para archivos “.docx” (no “.doc”) y si el         parámetro “por_paginas” es False.</li>
+<li><strong>dir_medios</strong> – (string). Valor por defecto: “temp/img_dir/” Ruta de la carpeta         donde se guardan las imágenes del archivo Word cuyas imágenes se decidieron extraer (se especificó         extraer_medios = True)</li>
+<li><strong>por_paginas</strong> – (bool) {True, False}. Valor por defecto: False. Se define si se         desea extraer el texto por páginas.</li>
+<li><strong>encoding</strong> – (string). Valor por defecto: “utf-8”. Especifica la codificación         del texto que se desea leer</li>
+<li><strong>ocr</strong> – (bool) {True, False}. Valor por defecto: False Especifica si se desea utilizar reconocimiento         óptico de caracteres sobre el archivo cuyo texto se desea extraer. Se utiliza         usualmente cuando el archivo es una imagen o documento escaneado</li>
+<li><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Valor por defecto: 3 Especifica el nivel de preprocesamiento         que se lleva a cabo antes de extraer el texto del archivo. Aplica cuando se utiliza         reconocimiento óptico de caracteres (parámetro ocr es True). Las opciones son las siguientes:         1: se convierte la imagen a escala de grises
+2: se convierte la imagen a escala de grises y se aplica blurring
+3: se convierte la imagen a escala de grises y se aplica el umbral de imagen con el                 método de OTSU
+4: se endereza el texto, se convierte la imagen a escala de grises y se aplica umbral             adaptativo
+5: se endereza el texto, se convierte la imagen a escala de grises, se aplica umbral             de imagen con el método de OTSU, blurring y umbral adaptativo</li>
+<li><strong>lenguaje</strong> – (string). {“es”, “en”}. Valor por defecto: “spa”  Se define el lenguaje del texto que se desea extraer.         Tiene las opciones de español (“es”) e inglés (“en”). Aplica cuando se extrae el texto de         imágenes o archivos escaneados</li>
+<li><strong>oem</strong> – (int) {0, 1, 2, 3}. Valor por defecto: 2. OEM hace referencia al modo del motor OCR (OCR engine mode         en inglés). Tesseract tiene 2 motores, Legacy Tesseract y LSTM, y los parámetros de “oem”         permiten escoger cada uno de estos motores por separado, ambos al tiempo o         automáticamente: 
+0: utilizar únicamente el motor Legacy
+1: utilizar únicamente el motor de redes neuronales LSTM  
+2: utilizar los motores Legacy y LSTM
+3: escoger el motor según lo que hay disponible</li>
+<li><strong>psm</strong> – (int) {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}. Valor por defecto: 3 PSM hace referencia a         los modos de segmentación de las páginas (page segmentation modes, en inglés) de la         librería Pytesseract. Cada número hace referencia a un modo de segmentación:         0: orientation y detección de script (OSD) únicamente
+1: segmentación automática de páginas con OSD
+2: segmentación automática de págpinas sin OSD ni OCR
+3: segmentación completamente automática de páginas sin OSD
+4: supone una única columna de texto de tamaños variables
+5: supone un único bloque uniforme de texto alineado de forma vertical
+6: asume un único bloque uniforme de texto
+7: trata la imagen como una única línea de texto
+8: trata la imagen como una única palabra
+9: trata la imagen como una única palabra dentro de un círculo
+10: trata la imagen como un único carácter
+11: Buscador de texto disperso. Encontrar la mayor cantidad de texto posible sin un orden en particular
+12: Buscador de texto disperso con OSD
+13: trata el texto como una única línea, sin utilizar métodos específicos de Tesseract</li>
+<li><strong>password</strong> – (string). Valor por defecto: None. Contraseña del archivo cuyo texto se desea         extraer, en caso de requerirlo</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto extraído del archivo especificado con la función “leer_texto”</p>
 </td>
 </tr>
 </tbody>

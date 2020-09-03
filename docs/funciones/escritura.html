@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                sept. 01 07:21 p. m.
+                sept. 02 09:14 p. m.
               </div>
             
           
@@ -184,67 +184,36 @@
 <dt id="escritura.Escritor">
 <em class="property">class </em><code class="descclassname">escritura.</code><code class="descname">Escritor</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em>, <em><span class="n">texto</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
-<li><strong>ubicacion_archivo</strong> – </li>
-<li><strong>texto</strong> – </li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<p>Constructor por defecto de la clase Escritor. Esta clase se encarga de guardar             texto en archivos de distintos tipos como Word, PDF, CSV, TXT, RTF e             imágenes
+:param ubicacion_archivo: (string). Ruta del archivo que será guardado             con el texto deseado
+:param texto: (string). Texto que se desea guardar en un archivo</p>
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_pdf">
 <code class="descname">escribir_pdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con extensión “.pdf”</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_txt">
 <code class="descname">escribir_txt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con extensión “.txt”</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_word">
 <code class="descname">escribir_word</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con extensión “.docx”</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.establecer_texto">
 <code class="descname">establecer_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.establecer_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Define el texto que será guardado en un archivo</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>texto</strong> – </td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>texto</strong> – (string). Texto que será guardado en un archivo</td>
 </tr>
 </tbody>
 </table>
@@ -253,13 +222,12 @@
 <dl class="py method">
 <dt id="escritura.Escritor.establecer_ubicacion">
 <code class="descname">establecer_ubicacion</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.establecer_ubicacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Define la ruta del archivo con el texto que se desea guardar</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>ubicacion_archivo</strong> – </td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>ubicacion_archivo</strong> – (string). Ruta del archivo que será guardado             con el texto deseado</td>
 </tr>
 </tbody>
 </table>
@@ -268,13 +236,12 @@
 <dl class="py method">
 <dt id="escritura.Escritor.texto_a_archivo">
 <code class="descname">texto_a_archivo</code><span class="sig-paren">(</span><em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'inferir'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.texto_a_archivo" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Especifica el tipo de archivo en el que se quiere guardar el texto</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tipo</strong> – </td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tipo</strong> – (string) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”}. Valor por defecto: “inferir”.             Define el tipo del archivo en el que se desea guardar el texto</td>
 </tr>
 </tbody>
 </table>
@@ -285,18 +252,16 @@
 <dl class="py function">
 <dt id="escritura.escribir_texto">
 <code class="descclassname">escritura.</code><code class="descname">escribir_texto</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em>, <em><span class="n">texto</span></em>, <em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'inferir'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.escribir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dd><p>Función que guarda texto en un archivo específico. Permite escoger la         ruta del archivo, su tipo y el texto a ser guardado dentro de este archivo</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>ubicacion_archivo</strong> – </li>
-<li><strong>texto</strong> – </li>
-<li><strong>tipo</strong> – </li>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ubicacion_archivo</strong> – (string). Ruta del archivo que será guardado         con el texto deseado</li>
+<li><strong>texto</strong> – (string). El texto que se desea guardar en un archivo</li>
+<li><strong>tipo</strong> – (string) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”}. Valor por defecto: “inferir”.          Define el tipo del archivo en el que se desea guardar el texto</li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"></p>
 </td>
 </tr>
 </tbody>

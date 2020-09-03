@@ -1,3 +1,6 @@
+.. |**| raw:: html
+
+   <span>|**|</span>
 
 Lectura
 =======
