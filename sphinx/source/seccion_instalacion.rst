@@ -8,3 +8,8 @@ Para la instalación de la librería se debe utilizar el gestor de paquetes ``pi
     .. code-block:: console
 
         pip install contexto
+
+
+proceso de instalación
+- agregar nota de instalación de pytorch
+- agregar nota: para leer un documento de word por páginas se debe tener instalado Microsoft Word en el computador
