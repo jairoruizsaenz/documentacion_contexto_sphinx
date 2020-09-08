@@ -9,6 +9,7 @@ ConTexto - Librería de procesamiento y análisis de textos
    seccion_introduccion
    seccion_instalacion
    seccion_ejemplos
+   pendientes_borrar
 
 .. toctree::
    :maxdepth: 2

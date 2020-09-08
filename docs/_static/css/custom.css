@@ -3,7 +3,11 @@ p {
 }
 
 li {
-    text-align: justify;    
+    text-align: justify;
+}
+
+ol li {
+    padding-bottom: 5px;
 }
 
 p[class="caption"] {

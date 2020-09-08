@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                sept. 08 10:31 a. m.
+                sept. 08 06:55 p. m.
               </div>
             
           
@@ -101,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../seccion_introduccion.html">Introducción</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seccion_instalacion.html">Instalación</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seccion_ejemplos.html">Ejemplos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pendientes_borrar.html">Pendientes - BORRAR</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Módulos y funciones:</span></p>
 <ul class="current">
@@ -312,10 +313,8 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Por_paginas:</th><td class="field-body"><p class="first">(bool) {True, False}. Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se encuentra como “<span>|**|</span>”             dentro del texto extraído.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>por_paginas</strong> – (bool) {True, False}. Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se encuentra como “<span>|**|</span>”             dentro del texto extraído.</li>
 <li><strong>ocr</strong> – (bool) {True, False}. Especifica si se desea utilizar reconocimiento             óptico de caracteres sobre el archivo cuyo texto se desea extraer. Se utiliza             usualmente cuando el archivo es una imagen o documento escaneado</li>
 <li><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Especifica el nivel de preprocesamiento             que se lleva a cabo antes de extraer el texto del archivo. Aplica cuando se utiliza             reconocimiento óptico de caracteres (parámetro ocr es True). Las opciones son las siguientes:             1: se convierte la imagen a escala de grises
 2: se convierte la imagen a escala de grises y se aplica blurring
@@ -345,7 +344,7 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 </ul>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo “.pdf” leído con la clase Lector</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo “.pdf” leído con la clase Lector</p>
 </td>
 </tr>
 </tbody>
@@ -390,16 +389,14 @@ diferentes tipos de archivo (word, txt, rtf, pdf inicialmente).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Por_paginas:</th><td class="field-body"><p class="first">(bool) {True, False}. Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se encuentra como “<span>|**|</span>”             dentro del texto extraído.</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>por_paginas</strong> – (bool) {True, False}. Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se encuentra como “<span>|**|</span>”             dentro del texto extraído.</li>
 <li><strong>extraer_medios</strong> – (bool) {True, False}. Especifica si se desean extraer las             imágenes dentro del archivo de Word para ser guardadas aparte como archivos             de imágenes. Funciona únicamente para archivos “.docx” (no “.doc”) y si el             parámetro “por_paginas” es False.</li>
 <li><strong>dir_medios</strong> – (string)- Ruta de la carpeta donde se guardan las imágenes del             archivo Word cuyas imágenes se decidieron extraer (se especificó             extraer_medios = True)</li>
 </ul>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo “.docx” o “.doc” leído con la clase Lector</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(string). Texto del archivo “.docx” o “.doc” leído con la clase Lector</p>
 </td>
 </tr>
 </tbody>
