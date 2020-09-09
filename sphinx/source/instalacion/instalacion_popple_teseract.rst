@@ -17,37 +17,37 @@ Instalación de Poppler
 
 #. Descargar el ultimo archivo binario de poppler desde http://blog.alivate.com.au/poppler-windows/
 #. Extraer el archivo dentro del disco local 'C:' en la carpeta de archivos de programa 'C:\\Program Files'. Para esto debe tener instalado un programa que permita descomprimir archivos (como `WinRAR`_ o `7zip`_), ya que el archivo binario se descarga en formato comprimido.
-#. Agregar 'C:\\Program Files\\poppler-0.68.0_x86\\bin' al path del sistema haciendo lo siguiente:
+#. Agregar la ruta de la carpeta bin de poppler 'C:\\Program Files\\poppler-0.68.0_x86\\bin' al path del sistema haciendo lo siguiente:
 
-   * En el explorador de archivos hacer clic derecho sobre “Este equipo” y luego clic en propiedades.
+   * En el explorador de archivos hacer clic derecho sobre 'This PC' ('Este equipo') (* se presentarán los nombres en español dentro de paréntesis como referencia para los usuarios que tengan el sistema operativo en ese idioma.) y luego clic en 'Properties' ('Propiedades').
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen01.png
        :align: center
        :alt: 
        :figclass: align-center
 
-   * Hacer clic en la opción configuración avanzada de sistema ubicada en la parte superior izquierda.
+   * Hacer clic en la opción 'Advanced system settings' ('Configuración avanzada del sistema') ubicada en la parte superior izquierda.
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen02.png
        :align: center
        :alt: 
        :figclass: align-center
 
-   * Se abrirá una nueva ventana con las propiedades del sistema, aquí se debe hacer clic en la opción de variables de entorno.
+   * Se abrirá una nueva ventana de 'System Properties' ('Propiedades del sistema'), aquí se debe hacer clic en la opción de 'Environment Variables...' ('Variables de entorno...').
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen03.png
        :align: center
        :alt: 
        :figclass: align-center
 
-   * En la sección de variables de sistema se debe hacer doble clic en la variable path.
+   * En la sección de 'System variables' ('Variables del sistema') se debe hacer doble clic en la variable 'Path'.
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen04.png
        :align: center
        :alt: 
        :figclass: align-center
 
-   * Se abrirá una nueva ventana de edición de las variables de entorno, al hacer clic en el botón nuevo se podrá ingresar la ruta de la carpeta bin que está dentro del archivo que se extrajo previamente.
+   * Se abrirá una nueva ventana de edición de las variables de entorno, al hacer clic en el botón 'New' ('Nuevo') se podrá ingresar la ruta de la carpeta bin que está dentro del archivo que se extrajo previamente.
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen05.png
        :align: center
@@ -61,7 +61,7 @@ Instalación de Poppler
        :alt: 
        :figclass: align-center
 
-   * Finalmente se agrega la ruta 'C:\\Program Files\\poppler-0.68.0\\bin' en la ventana de edición de variables de entorno y se hace clic en aceptar para cerrar todas las ventanas.
+   * Finalmente se agrega la ruta 'C:\\Program Files\\poppler-0.68.0\\bin' en la ventana de edición de variables de entorno y se hace clic en 'OK' ('Aceptar') para guardar los cambios y cerrar las ventanas.
    
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen07.png
        :align: center
@@ -89,23 +89,16 @@ Instalación de Teseract
        :alt: 
        :figclass: align-center
 
-#. Abrir la ventana de variables de entorno de la misma forma que se hizo para la :ref:`Instalación de Poppler`, y hacer doble clic en la variable path, para abrir el editor de las variables de entorno.
+#. Abrir la ventana de variables de entorno de la misma forma que se hizo para la :ref:`Instalación de Poppler`, y hacer doble clic en la variable 'Path', para abrir el editor de las variables de entorno.
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen09.png
        :align: center
        :alt: 
        :figclass: align-center
 
-#. En el editor de las variables de entorno se debe hacer clic cobre el botón nuevo y colocar la ruta que se creó al momento de hacer la instalación de tessereact, la ruta podría verse como 'C:\\Program Files\\Tesseract-OCR'. Hacer clic en Aceptar.
+#. En el editor de las variables de entorno se debe hacer clic cobre el botón 'New' ('Nuevo') y colocar la ruta que se creó al momento de hacer la instalación de tessereact, la ruta podría verse como 'C:\\Program Files\\Tesseract-OCR'. Hacer clic en 'OK' ('Aceptar') para guardar los cambios y cerrar las ventanas.
 
    .. figure:: _static/image/instalacion_poppler_teseract/Imagen10.png
        :align: center
        :alt: 
        :figclass: align-center
-
-#. En la terminal de Python se debe Instalar pytesseract mediante el uso del gestor de paquetes ``pip``
-
-   .. code-block:: console
-
-       pip install pytesseract
-
