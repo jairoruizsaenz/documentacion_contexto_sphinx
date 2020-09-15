@@ -1,10 +1,10 @@
-Instalación de Poppler y Teseract
-=================================
+Instalación de Poppler y Tesseract
+==================================
 
-En esta sección se presenta como instalar las librerías ``Poppler`` y ``Pytesseract`` de Python requeridas para poder ejecutar de manera satisfactoria las funciones :py:meth:`lectura.Lector.archivo_a_texto`, :py:meth:`lectura.Lector.leer_pdf` y :py:meth:`lectura.leer_texto` del módulo :py:meth:`lectura` utilizando el OCR (Reconocimiento óptico de caracteres, OCR por sus siglas en ingles) de la librería ConTexto.
+En esta sección se presenta el proceso de instalación de las librerías ``Poppler`` y ``Pytesseract`` de Python, requeridas para poder ejecutar de manera satisfactoria las funciones :py:meth:`lectura.Lector.archivo_a_texto`, :py:meth:`lectura.Lector.leer_pdf` y :py:meth:`lectura.leer_texto` del módulo :py:meth:`lectura` utilizando el OCR (Reconocimiento óptico de caracteres, OCR por sus siglas en ingles) de la librería ConTexto.
 
 .. note::
-    Los usuarios necesitaran contar con uno de los siguientes sistemas operativos, Windows 7, 8, 8.1 o 10 y contar con permisos de administrador, adicionalmente tener instalado la versión de Python 3.6 o una versión superior.
+    Los usuarios necesitarán contar con uno de los siguientes sistemas operativos, Windows 7, 8, 8.1 o 10 y con permisos de administrador, adicionalmente tener instalada la versión 3.6 de Python o una versión superior.
 
     La guía presentada a continuación se desarrolló utilizando la versión de Python 3.8.5 sobre el sistema operativo de Windows 10.
 
@@ -15,7 +15,7 @@ Instalación de Poppler
 .. _WinRAR: https://www.winrar.es/
 .. _7zip: https://www.7-zip.org/
 
-#. Descargar el ultimo archivo binario de poppler desde http://blog.alivate.com.au/poppler-windows/
+#. Descargar el último archivo binario de poppler desde http://blog.alivate.com.au/poppler-windows/
 #. Extraer el archivo dentro del disco local 'C:' en la carpeta de archivos de programa 'C:\\Program Files'. Para esto debe tener instalado un programa que permita descomprimir archivos (como `WinRAR`_ o `7zip`_), ya que el archivo binario se descarga en formato comprimido.
 #. Agregar la ruta de la carpeta bin de poppler 'C:\\Program Files\\poppler-0.68.0_x86\\bin' al path del sistema haciendo lo siguiente:
 
@@ -69,13 +69,13 @@ Instalación de Poppler
        :figclass: align-center
 
 
-Instalación de Teseract
------------------------
+Instalación de Tesseract
+------------------------
 
-#. Desde https://github.com/UB-Mannheim/tesseract/wiki se debe descargar la versión más reciente de tesseract, aquí se descargara un archivo ejecutable (.exe) el cual se debe instalar haciendo doble clic sobre el archivo descargado y siguiendo las instrucciones de instalación.
+#. Desde https://github.com/UB-Mannheim/tesseract/wiki se debe descargar la versión más reciente de tesseract, aquí se descargará un archivo ejecutable (.exe) el cual se debe instalar haciendo doble clic sobre el archivo descargado y siguiendo las instrucciones de instalación.
 #. Añadir otros idiomas al reconocimiento óptico de caracteres (OCR).
 
-   * Para añadir otros idiomas al OCR se deben descargar los archivos de entrenamiento del idioma deseado, los cuales están disponibles en:  https://github.com/tesseract-ocr/tessdata . (Para el desarrollo de este manual se hará el ejemplo con el idioma español.)
+   * Para añadir otros idiomas al OCR se deben descargar los archivos de entrenamiento en el idioma deseado, los cuales se encuentran disponibles en:  https://github.com/tesseract-ocr/tessdata . (Para el desarrollo de este manual se hará el ejemplo con el idioma español.)
 
        Para el idioma español se descargarán los archivos **spa.traineddata** y **spa_old.traineddata** los cuales están disponibles en los siguientes enlaces:
 

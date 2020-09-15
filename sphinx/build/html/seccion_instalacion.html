@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                sept. 09 12:29 p. m.
+                sept. 14 09:44 p. m.
               </div>
             
           
@@ -101,9 +101,9 @@
 <li class="toctree-l1"><a class="reference internal" href="seccion_introduccion.html">Introducción</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instalación</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#instalacion-contexto">Instalación ConTexto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-poppler-y-teseract">Instalación de Poppler y Teseract</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-poppler-y-tesseract">Instalación de Poppler y Tesseract</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#instalacion-de-poppler">Instalación de Poppler</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#instalacion-de-teseract">Instalación de Teseract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instalacion-de-tesseract">Instalación de Tesseract</a></li>
 </ul>
 </li>
 </ul>
@@ -198,18 +198,18 @@
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="instalacion-de-poppler-y-teseract">
-<h2>Instalación de Poppler y Teseract<a class="headerlink" href="#instalacion-de-poppler-y-teseract" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>En esta sección se presenta como instalar las librerías <code class="docutils literal notranslate"><span class="pre">Poppler</span></code> y <code class="docutils literal notranslate"><span class="pre">Pytesseract</span></code> de Python requeridas para poder ejecutar de manera satisfactoria las funciones <a class="reference internal" href="funciones/lectura.html#lectura.Lector.archivo_a_texto" title="lectura.Lector.archivo_a_texto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura.Lector.archivo_a_texto()</span></code></a>, <a class="reference internal" href="funciones/lectura.html#lectura.Lector.leer_pdf" title="lectura.Lector.leer_pdf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura.Lector.leer_pdf()</span></code></a> y <a class="reference internal" href="funciones/lectura.html#lectura.leer_texto" title="lectura.leer_texto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura.leer_texto()</span></code></a> del módulo <a class="reference internal" href="funciones/lectura.html#module-lectura" title="lectura"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura()</span></code></a> utilizando el OCR (Reconocimiento óptico de caracteres, OCR por sus siglas en ingles) de la librería ConTexto.</p>
+<div class="section" id="instalacion-de-poppler-y-tesseract">
+<h2>Instalación de Poppler y Tesseract<a class="headerlink" href="#instalacion-de-poppler-y-tesseract" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En esta sección se presenta el proceso de instalación de las librerías <code class="docutils literal notranslate"><span class="pre">Poppler</span></code> y <code class="docutils literal notranslate"><span class="pre">Pytesseract</span></code> de Python, requeridas para poder ejecutar de manera satisfactoria las funciones <a class="reference internal" href="funciones/lectura.html#lectura.Lector.archivo_a_texto" title="lectura.Lector.archivo_a_texto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura.Lector.archivo_a_texto()</span></code></a>, <a class="reference internal" href="funciones/lectura.html#lectura.Lector.leer_pdf" title="lectura.Lector.leer_pdf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura.Lector.leer_pdf()</span></code></a> y <a class="reference internal" href="funciones/lectura.html#lectura.leer_texto" title="lectura.leer_texto"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura.leer_texto()</span></code></a> del módulo <a class="reference internal" href="funciones/lectura.html#module-lectura" title="lectura"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lectura()</span></code></a> utilizando el OCR (Reconocimiento óptico de caracteres, OCR por sus siglas en ingles) de la librería ConTexto.</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p>Los usuarios necesitaran contar con uno de los siguientes sistemas operativos, Windows 7, 8, 8.1 o 10 y contar con permisos de administrador, adicionalmente tener instalado la versión de Python 3.6 o una versión superior.</p>
+<p>Los usuarios necesitarán contar con uno de los siguientes sistemas operativos, Windows 7, 8, 8.1 o 10 y con permisos de administrador, adicionalmente tener instalada la versión 3.6 de Python o una versión superior.</p>
 <p class="last">La guía presentada a continuación se desarrolló utilizando la versión de Python 3.8.5 sobre el sistema operativo de Windows 10.</p>
 </div>
 <div class="section" id="instalacion-de-poppler">
 <h3>Instalación de Poppler<a class="headerlink" href="#instalacion-de-poppler" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
-<li><p class="first">Descargar el ultimo archivo binario de poppler desde <a class="reference external" href="http://blog.alivate.com.au/poppler-windows/" target="_blank">http://blog.alivate.com.au/poppler-windows/</a></p>
+<li><p class="first">Descargar el último archivo binario de poppler desde <a class="reference external" href="http://blog.alivate.com.au/poppler-windows/" target="_blank">http://blog.alivate.com.au/poppler-windows/</a></p>
 </li>
 <li><p class="first">Extraer el archivo dentro del disco local “C:” en la carpeta de archivos de programa “C:\Program Files”. Para esto debe tener instalado un programa que permita descomprimir archivos (como <a class="reference external" href="https://www.winrar.es/" target="_blank">WinRAR</a> o <a class="reference external" href="https://www.7-zip.org/" target="_blank">7zip</a>), ya que el archivo binario se descarga en formato comprimido.</p>
 </li>
@@ -259,14 +259,14 @@
 </li>
 </ol>
 </div>
-<div class="section" id="instalacion-de-teseract">
-<h3>Instalación de Teseract<a class="headerlink" href="#instalacion-de-teseract" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="instalacion-de-tesseract">
+<h3>Instalación de Tesseract<a class="headerlink" href="#instalacion-de-tesseract" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
-<li><p class="first">Desde <a class="reference external" href="https://github.com/UB-Mannheim/tesseract/wiki" target="_blank">https://github.com/UB-Mannheim/tesseract/wiki</a> se debe descargar la versión más reciente de tesseract, aquí se descargara un archivo ejecutable (.exe) el cual se debe instalar haciendo doble clic sobre el archivo descargado y siguiendo las instrucciones de instalación.</p>
+<li><p class="first">Desde <a class="reference external" href="https://github.com/UB-Mannheim/tesseract/wiki" target="_blank">https://github.com/UB-Mannheim/tesseract/wiki</a> se debe descargar la versión más reciente de tesseract, aquí se descargará un archivo ejecutable (.exe) el cual se debe instalar haciendo doble clic sobre el archivo descargado y siguiendo las instrucciones de instalación.</p>
 </li>
 <li><p class="first">Añadir otros idiomas al reconocimiento óptico de caracteres (OCR).</p>
 <ul>
-<li><p class="first">Para añadir otros idiomas al OCR se deben descargar los archivos de entrenamiento del idioma deseado, los cuales están disponibles en:  <a class="reference external" href="https://github.com/tesseract-ocr/tessdata" target="_blank">https://github.com/tesseract-ocr/tessdata</a> . (Para el desarrollo de este manual se hará el ejemplo con el idioma español.)</p>
+<li><p class="first">Para añadir otros idiomas al OCR se deben descargar los archivos de entrenamiento en el idioma deseado, los cuales se encuentran disponibles en:  <a class="reference external" href="https://github.com/tesseract-ocr/tessdata" target="_blank">https://github.com/tesseract-ocr/tessdata</a> . (Para el desarrollo de este manual se hará el ejemplo con el idioma español.)</p>
 <blockquote>
 <div><p>Para el idioma español se descargarán los archivos <strong>spa.traineddata</strong> y <strong>spa_old.traineddata</strong> los cuales están disponibles en los siguientes enlaces:</p>
 <ul class="simple">
