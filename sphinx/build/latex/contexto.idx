@@ -1,0 +1,145 @@
+\indexentry{módulo@\spxentry{módulo}!comparacion@\spxentry{comparacion}|hyperpage}{15}
+\indexentry{comparacion@\spxentry{comparacion}!módulo@\spxentry{módulo}|hyperpage}{15}
+\indexentry{DiferenciaStrings (clase en comparacion)@\spxentry{DiferenciaStrings}\spxextra{clase en comparacion}|hyperpage}{15}
+\indexentry{comparacion\_lista() (método de comparacion.DiferenciaStrings)@\spxentry{comparacion\_lista()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{15}
+\indexentry{comparacion\_pares() (método de comparacion.DiferenciaStrings)@\spxentry{comparacion\_pares()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{15}
+\indexentry{distancia\_damerau\_levenshtein() (método de comparacion.DiferenciaStrings)@\spxentry{distancia\_damerau\_levenshtein()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{16}
+\indexentry{distancia\_hamming() (método de comparacion.DiferenciaStrings)@\spxentry{distancia\_hamming()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{16}
+\indexentry{distancia\_levenshtein() (método de comparacion.DiferenciaStrings)@\spxentry{distancia\_levenshtein()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{16}
+\indexentry{similitud\_jaro() (método de comparacion.DiferenciaStrings)@\spxentry{similitud\_jaro()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{16}
+\indexentry{similitud\_jaro\_winkler() (método de comparacion.DiferenciaStrings)@\spxentry{similitud\_jaro\_winkler()}\spxextra{método de comparacion.DiferenciaStrings}|hyperpage}{16}
+\indexentry{Distancia (clase en comparacion)@\spxentry{Distancia}\spxextra{clase en comparacion}|hyperpage}{16}
+\indexentry{distancia\_pares() (método de comparacion.Distancia)@\spxentry{distancia\_pares()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{establecer\_lenguaje() (método de comparacion.Distancia)@\spxentry{establecer\_lenguaje()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{establecer\_vectorizador() (método de comparacion.Distancia)@\spxentry{establecer\_vectorizador()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{hamming() (método de comparacion.Distancia)@\spxentry{hamming()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{jaccard() (método de comparacion.Distancia)@\spxentry{jaccard()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{l1() (método de comparacion.Distancia)@\spxentry{l1()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{l2() (método de comparacion.Distancia)@\spxentry{l2()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{minkowski() (método de comparacion.Distancia)@\spxentry{minkowski()}\spxextra{método de comparacion.Distancia}|hyperpage}{17}
+\indexentry{Similitud (clase en comparacion)@\spxentry{Similitud}\spxextra{clase en comparacion}|hyperpage}{18}
+\indexentry{coseno() (método de comparacion.Similitud)@\spxentry{coseno()}\spxextra{método de comparacion.Similitud}|hyperpage}{18}
+\indexentry{establecer\_lenguaje() (método de comparacion.Similitud)@\spxentry{establecer\_lenguaje()}\spxextra{método de comparacion.Similitud}|hyperpage}{18}
+\indexentry{establecer\_vectorizador() (método de comparacion.Similitud)@\spxentry{establecer\_vectorizador()}\spxextra{método de comparacion.Similitud}|hyperpage}{18}
+\indexentry{jaccard() (método de comparacion.Similitud)@\spxentry{jaccard()}\spxextra{método de comparacion.Similitud}|hyperpage}{18}
+\indexentry{módulo@\spxentry{módulo}!correccion@\spxentry{correccion}|hyperpage}{19}
+\indexentry{correccion@\spxentry{correccion}!módulo@\spxentry{módulo}|hyperpage}{19}
+\indexentry{Corrector (clase en correccion)@\spxentry{Corrector}\spxextra{clase en correccion}|hyperpage}{19}
+\indexentry{actualizar\_diccionario() (método de correccion.Corrector)@\spxentry{actualizar\_diccionario()}\spxextra{método de correccion.Corrector}|hyperpage}{19}
+\indexentry{agregar\_palabras() (método de correccion.Corrector)@\spxentry{agregar\_palabras()}\spxextra{método de correccion.Corrector}|hyperpage}{20}
+\indexentry{correccion\_ortografia() (método de correccion.Corrector)@\spxentry{correccion\_ortografia()}\spxextra{método de correccion.Corrector}|hyperpage}{20}
+\indexentry{establecer\_distancia() (método de correccion.Corrector)@\spxentry{establecer\_distancia()}\spxextra{método de correccion.Corrector}|hyperpage}{20}
+\indexentry{establecer\_lenguaje() (método de correccion.Corrector)@\spxentry{establecer\_lenguaje()}\spxextra{método de correccion.Corrector}|hyperpage}{20}
+\indexentry{frecuencia\_palabra() (método de correccion.Corrector)@\spxentry{frecuencia\_palabra()}\spxextra{método de correccion.Corrector}|hyperpage}{20}
+\indexentry{iniciar\_corrector() (método de correccion.Corrector)@\spxentry{iniciar\_corrector()}\spxextra{método de correccion.Corrector}|hyperpage}{20}
+\indexentry{palabras\_candidatas() (método de correccion.Corrector)@\spxentry{palabras\_candidatas()}\spxextra{método de correccion.Corrector}|hyperpage}{21}
+\indexentry{palabras\_conocidas() (método de correccion.Corrector)@\spxentry{palabras\_conocidas()}\spxextra{método de correccion.Corrector}|hyperpage}{21}
+\indexentry{palabras\_desconocidas() (método de correccion.Corrector)@\spxentry{palabras\_desconocidas()}\spxextra{método de correccion.Corrector}|hyperpage}{21}
+\indexentry{probabilidad\_palabra() (método de correccion.Corrector)@\spxentry{probabilidad\_palabra()}\spxextra{método de correccion.Corrector}|hyperpage}{21}
+\indexentry{quitar\_palabras() (método de correccion.Corrector)@\spxentry{quitar\_palabras()}\spxextra{método de correccion.Corrector}|hyperpage}{21}
+\indexentry{corregir\_texto() (en el módulo correccion)@\spxentry{corregir\_texto()}\spxextra{en el módulo correccion}|hyperpage}{21}
+\indexentry{módulo@\spxentry{módulo}!escritura@\spxentry{escritura}|hyperpage}{23}
+\indexentry{escritura@\spxentry{escritura}!módulo@\spxentry{módulo}|hyperpage}{23}
+\indexentry{Escritor (clase en escritura)@\spxentry{Escritor}\spxextra{clase en escritura}|hyperpage}{23}
+\indexentry{escribir\_pdf() (método de escritura.Escritor)@\spxentry{escribir\_pdf()}\spxextra{método de escritura.Escritor}|hyperpage}{23}
+\indexentry{escribir\_txt() (método de escritura.Escritor)@\spxentry{escribir\_txt()}\spxextra{método de escritura.Escritor}|hyperpage}{23}
+\indexentry{escribir\_word() (método de escritura.Escritor)@\spxentry{escribir\_word()}\spxextra{método de escritura.Escritor}|hyperpage}{23}
+\indexentry{establecer\_texto() (método de escritura.Escritor)@\spxentry{establecer\_texto()}\spxextra{método de escritura.Escritor}|hyperpage}{23}
+\indexentry{establecer\_ubicacion() (método de escritura.Escritor)@\spxentry{establecer\_ubicacion()}\spxextra{método de escritura.Escritor}|hyperpage}{23}
+\indexentry{texto\_a\_archivo() (método de escritura.Escritor)@\spxentry{texto\_a\_archivo()}\spxextra{método de escritura.Escritor}|hyperpage}{23}
+\indexentry{escribir\_texto() (en el módulo escritura)@\spxentry{escribir\_texto()}\spxextra{en el módulo escritura}|hyperpage}{23}
+\indexentry{módulo@\spxentry{módulo}!exploracion@\spxentry{exploracion}|hyperpage}{25}
+\indexentry{exploracion@\spxentry{exploracion}!módulo@\spxentry{módulo}|hyperpage}{25}
+\indexentry{frecuencia\_ngramas() (en el módulo exploracion)@\spxentry{frecuencia\_ngramas()}\spxextra{en el módulo exploracion}|hyperpage}{25}
+\indexentry{grafica\_barchart\_frecuencias() (en el módulo exploracion)@\spxentry{grafica\_barchart\_frecuencias()}\spxextra{en el módulo exploracion}|hyperpage}{25}
+\indexentry{graficar\_coocurrencias() (en el módulo exploracion)@\spxentry{graficar\_coocurrencias()}\spxextra{en el módulo exploracion}|hyperpage}{26}
+\indexentry{matriz\_coocurrencias() (en el módulo exploracion)@\spxentry{matriz\_coocurrencias()}\spxextra{en el módulo exploracion}|hyperpage}{26}
+\indexentry{nube\_palabras() (en el módulo exploracion)@\spxentry{nube\_palabras()}\spxextra{en el módulo exploracion}|hyperpage}{27}
+\indexentry{obtener\_ngramas() (en el módulo exploracion)@\spxentry{obtener\_ngramas()}\spxextra{en el módulo exploracion}|hyperpage}{27}
+\indexentry{par\_nubes() (en el módulo exploracion)@\spxentry{par\_nubes()}\spxextra{en el módulo exploracion}|hyperpage}{28}
+\indexentry{módulo@\spxentry{módulo}!lectura@\spxentry{lectura}|hyperpage}{29}
+\indexentry{lectura@\spxentry{lectura}!módulo@\spxentry{módulo}|hyperpage}{29}
+\indexentry{Lector (clase en lectura)@\spxentry{Lector}\spxextra{clase en lectura}|hyperpage}{29}
+\indexentry{archivo\_a\_texto() (método de lectura.Lector)@\spxentry{archivo\_a\_texto()}\spxextra{método de lectura.Lector}|hyperpage}{29}
+\indexentry{establecer\_ubicacion() (método de lectura.Lector)@\spxentry{establecer\_ubicacion()}\spxextra{método de lectura.Lector}|hyperpage}{30}
+\indexentry{leer\_imagen() (método de lectura.Lector)@\spxentry{leer\_imagen()}\spxextra{método de lectura.Lector}|hyperpage}{30}
+\indexentry{leer\_pdf() (método de lectura.Lector)@\spxentry{leer\_pdf()}\spxextra{método de lectura.Lector}|hyperpage}{31}
+\indexentry{leer\_rtf() (método de lectura.Lector)@\spxentry{leer\_rtf()}\spxextra{método de lectura.Lector}|hyperpage}{32}
+\indexentry{leer\_txt() (método de lectura.Lector)@\spxentry{leer\_txt()}\spxextra{método de lectura.Lector}|hyperpage}{32}
+\indexentry{leer\_word() (método de lectura.Lector)@\spxentry{leer\_word()}\spxextra{método de lectura.Lector}|hyperpage}{32}
+\indexentry{leer\_texto() (en el módulo lectura)@\spxentry{leer\_texto()}\spxextra{en el módulo lectura}|hyperpage}{32}
+\indexentry{módulo@\spxentry{módulo}!lematizacion@\spxentry{lematizacion}|hyperpage}{35}
+\indexentry{lematizacion@\spxentry{lematizacion}!módulo@\spxentry{módulo}|hyperpage}{35}
+\indexentry{LematizadorSpacy (clase en lematizacion)@\spxentry{LematizadorSpacy}\spxextra{clase en lematizacion}|hyperpage}{35}
+\indexentry{establecer\_lenguaje() (método de lematizacion.LematizadorSpacy)@\spxentry{establecer\_lenguaje()}\spxextra{método de lematizacion.LematizadorSpacy}|hyperpage}{35}
+\indexentry{iniciar\_lematizador() (método de lematizacion.LematizadorSpacy)@\spxentry{iniciar\_lematizador()}\spxextra{método de lematizacion.LematizadorSpacy}|hyperpage}{35}
+\indexentry{lematizar() (método de lematizacion.LematizadorSpacy)@\spxentry{lematizar()}\spxextra{método de lematizacion.LematizadorSpacy}|hyperpage}{36}
+\indexentry{modificar\_lemmas() (método de lematizacion.LematizadorSpacy)@\spxentry{modificar\_lemmas()}\spxextra{método de lematizacion.LematizadorSpacy}|hyperpage}{36}
+\indexentry{LematizadorStanza (clase en lematizacion)@\spxentry{LematizadorStanza}\spxextra{clase en lematizacion}|hyperpage}{36}
+\indexentry{establecer\_lenguaje() (método de lematizacion.LematizadorStanza)@\spxentry{establecer\_lenguaje()}\spxextra{método de lematizacion.LematizadorStanza}|hyperpage}{36}
+\indexentry{iniciar\_lematizador() (método de lematizacion.LematizadorStanza)@\spxentry{iniciar\_lematizador()}\spxextra{método de lematizacion.LematizadorStanza}|hyperpage}{37}
+\indexentry{lematizar() (método de lematizacion.LematizadorStanza)@\spxentry{lematizar()}\spxextra{método de lematizacion.LematizadorStanza}|hyperpage}{37}
+\indexentry{modificar\_lemmas() (método de lematizacion.LematizadorStanza)@\spxentry{modificar\_lemmas()}\spxextra{método de lematizacion.LematizadorStanza}|hyperpage}{37}
+\indexentry{lematizar\_texto() (en el módulo lematizacion)@\spxentry{lematizar\_texto()}\spxextra{en el módulo lematizacion}|hyperpage}{37}
+\indexentry{módulo@\spxentry{módulo}!lenguajes@\spxentry{lenguajes}|hyperpage}{39}
+\indexentry{lenguajes@\spxentry{lenguajes}!módulo@\spxentry{módulo}|hyperpage}{39}
+\indexentry{detectar\_lenguaje() (en el módulo lenguajes)@\spxentry{detectar\_lenguaje()}\spxextra{en el módulo lenguajes}|hyperpage}{39}
+\indexentry{traducir\_texto() (en el módulo lenguajes)@\spxentry{traducir\_texto()}\spxextra{en el módulo lenguajes}|hyperpage}{39}
+\indexentry{módulo@\spxentry{módulo}!limpieza@\spxentry{limpieza}|hyperpage}{40}
+\indexentry{limpieza@\spxentry{limpieza}!módulo@\spxentry{módulo}|hyperpage}{40}
+\indexentry{cargar\_stopwords() (en el módulo limpieza)@\spxentry{cargar\_stopwords()}\spxextra{en el módulo limpieza}|hyperpage}{40}
+\indexentry{limpieza\_basica() (en el módulo limpieza)@\spxentry{limpieza\_basica()}\spxextra{en el módulo limpieza}|hyperpage}{40}
+\indexentry{limpieza\_texto() (en el módulo limpieza)@\spxentry{limpieza\_texto()}\spxextra{en el módulo limpieza}|hyperpage}{40}
+\indexentry{lista\_apellidos() (en el módulo limpieza)@\spxentry{lista\_apellidos()}\spxextra{en el módulo limpieza}|hyperpage}{41}
+\indexentry{lista\_geo\_colombia() (en el módulo limpieza)@\spxentry{lista\_geo\_colombia()}\spxextra{en el módulo limpieza}|hyperpage}{41}
+\indexentry{lista\_nombres() (en el módulo limpieza)@\spxentry{lista\_nombres()}\spxextra{en el módulo limpieza}|hyperpage}{41}
+\indexentry{lista\_stopwords() (en el módulo limpieza)@\spxentry{lista\_stopwords()}\spxextra{en el módulo limpieza}|hyperpage}{41}
+\indexentry{quitar\_repetidos() (en el módulo limpieza)@\spxentry{quitar\_repetidos()}\spxextra{en el módulo limpieza}|hyperpage}{41}
+\indexentry{remover\_acentos() (en el módulo limpieza)@\spxentry{remover\_acentos()}\spxextra{en el módulo limpieza}|hyperpage}{42}
+\indexentry{remover\_palabras\_cortas() (en el módulo limpieza)@\spxentry{remover\_palabras\_cortas()}\spxextra{en el módulo limpieza}|hyperpage}{42}
+\indexentry{remover\_stopwords() (en el módulo limpieza)@\spxentry{remover\_stopwords()}\spxextra{en el módulo limpieza}|hyperpage}{42}
+\indexentry{módulo@\spxentry{módulo}!stemming@\spxentry{stemming}|hyperpage}{43}
+\indexentry{stemming@\spxentry{stemming}!módulo@\spxentry{módulo}|hyperpage}{43}
+\indexentry{Stemmer (clase en stemming)@\spxentry{Stemmer}\spxextra{clase en stemming}|hyperpage}{43}
+\indexentry{establecer\_lenguaje() (método de stemming.Stemmer)@\spxentry{establecer\_lenguaje()}\spxextra{método de stemming.Stemmer}|hyperpage}{43}
+\indexentry{iniciar\_stemmer() (método de stemming.Stemmer)@\spxentry{iniciar\_stemmer()}\spxextra{método de stemming.Stemmer}|hyperpage}{43}
+\indexentry{stemming() (método de stemming.Stemmer)@\spxentry{stemming()}\spxextra{método de stemming.Stemmer}|hyperpage}{43}
+\indexentry{stem\_texto() (en el módulo stemming)@\spxentry{stem\_texto()}\spxextra{en el módulo stemming}|hyperpage}{43}
+\indexentry{módulo@\spxentry{módulo}!vectorizacion@\spxentry{vectorizacion}|hyperpage}{45}
+\indexentry{vectorizacion@\spxentry{vectorizacion}!módulo@\spxentry{módulo}|hyperpage}{45}
+\indexentry{VectorizadorDoc2Vec (clase en vectorizacion)@\spxentry{VectorizadorDoc2Vec}\spxextra{clase en vectorizacion}|hyperpage}{45}
+\indexentry{entrenar\_modelo() (método de vectorizacion.VectorizadorDoc2Vec)@\spxentry{entrenar\_modelo()}\spxextra{método de vectorizacion.VectorizadorDoc2Vec}|hyperpage}{45}
+\indexentry{vectorizar() (método de vectorizacion.VectorizadorDoc2Vec)@\spxentry{vectorizar()}\spxextra{método de vectorizacion.VectorizadorDoc2Vec}|hyperpage}{46}
+\indexentry{vectorizar\_texto() (método de vectorizacion.VectorizadorDoc2Vec)@\spxentry{vectorizar\_texto()}\spxextra{método de vectorizacion.VectorizadorDoc2Vec}|hyperpage}{46}
+\indexentry{VectorizadorFrecuencias (clase en vectorizacion)@\spxentry{VectorizadorFrecuencias}\spxextra{clase en vectorizacion}|hyperpage}{46}
+\indexentry{ajustar() (método de vectorizacion.VectorizadorFrecuencias)@\spxentry{ajustar()}\spxextra{método de vectorizacion.VectorizadorFrecuencias}|hyperpage}{47}
+\indexentry{fit() (método de vectorizacion.VectorizadorFrecuencias)@\spxentry{fit()}\spxextra{método de vectorizacion.VectorizadorFrecuencias}|hyperpage}{47}
+\indexentry{inversa() (método de vectorizacion.VectorizadorFrecuencias)@\spxentry{inversa()}\spxextra{método de vectorizacion.VectorizadorFrecuencias}|hyperpage}{47}
+\indexentry{transform() (método de vectorizacion.VectorizadorFrecuencias)@\spxentry{transform()}\spxextra{método de vectorizacion.VectorizadorFrecuencias}|hyperpage}{47}
+\indexentry{vectorizar() (método de vectorizacion.VectorizadorFrecuencias)@\spxentry{vectorizar()}\spxextra{método de vectorizacion.VectorizadorFrecuencias}|hyperpage}{47}
+\indexentry{vocabulario() (método de vectorizacion.VectorizadorFrecuencias)@\spxentry{vocabulario()}\spxextra{método de vectorizacion.VectorizadorFrecuencias}|hyperpage}{47}
+\indexentry{VectorizadorHash (clase en vectorizacion)@\spxentry{VectorizadorHash}\spxextra{clase en vectorizacion}|hyperpage}{48}
+\indexentry{transform() (método de vectorizacion.VectorizadorHash)@\spxentry{transform()}\spxextra{método de vectorizacion.VectorizadorHash}|hyperpage}{48}
+\indexentry{vectorizar() (método de vectorizacion.VectorizadorHash)@\spxentry{vectorizar()}\spxextra{método de vectorizacion.VectorizadorHash}|hyperpage}{48}
+\indexentry{VectorizadorWord2Vec (clase en vectorizacion)@\spxentry{VectorizadorWord2Vec}\spxextra{clase en vectorizacion}|hyperpage}{48}
+\indexentry{establecer\_lenguaje() (método de vectorizacion.VectorizadorWord2Vec)@\spxentry{establecer\_lenguaje()}\spxextra{método de vectorizacion.VectorizadorWord2Vec}|hyperpage}{49}
+\indexentry{iniciar\_vectorizador() (método de vectorizacion.VectorizadorWord2Vec)@\spxentry{iniciar\_vectorizador()}\spxextra{método de vectorizacion.VectorizadorWord2Vec}|hyperpage}{49}
+\indexentry{similitud\_textos() (método de vectorizacion.VectorizadorWord2Vec)@\spxentry{similitud\_textos()}\spxextra{método de vectorizacion.VectorizadorWord2Vec}|hyperpage}{49}
+\indexentry{vectores\_palabras() (método de vectorizacion.VectorizadorWord2Vec)@\spxentry{vectores\_palabras()}\spxextra{método de vectorizacion.VectorizadorWord2Vec}|hyperpage}{49}
+\indexentry{vectorizar() (método de vectorizacion.VectorizadorWord2Vec)@\spxentry{vectorizar()}\spxextra{método de vectorizacion.VectorizadorWord2Vec}|hyperpage}{49}
+\indexentry{vectorizar\_texto() (método de vectorizacion.VectorizadorWord2Vec)@\spxentry{vectorizar\_texto()}\spxextra{método de vectorizacion.VectorizadorWord2Vec}|hyperpage}{49}
+\indexentry{módulo@\spxentry{módulo}!utils.auxiliares@\spxentry{utils.auxiliares}|hyperpage}{51}
+\indexentry{utils.auxiliares@\spxentry{utils.auxiliares}!módulo@\spxentry{módulo}|hyperpage}{51}
+\indexentry{cargar\_objeto() (en el módulo utils.auxiliares)@\spxentry{cargar\_objeto()}\spxextra{en el módulo utils.auxiliares}|hyperpage}{51}
+\indexentry{guardar\_objeto() (en el módulo utils.auxiliares)@\spxentry{guardar\_objeto()}\spxextra{en el módulo utils.auxiliares}|hyperpage}{51}
+\indexentry{verificar\_crear\_dir() (en el módulo utils.auxiliares)@\spxentry{verificar\_crear\_dir()}\spxextra{en el módulo utils.auxiliares}|hyperpage}{51}
+\indexentry{módulo@\spxentry{módulo}!utils.tokenizacion@\spxentry{utils.tokenizacion}|hyperpage}{52}
+\indexentry{utils.tokenizacion@\spxentry{utils.tokenizacion}!módulo@\spxentry{módulo}|hyperpage}{52}
+\indexentry{TokenizadorNLTK (clase en utils.tokenizacion)@\spxentry{TokenizadorNLTK}\spxextra{clase en utils.tokenizacion}|hyperpage}{52}
+\indexentry{destokenizar() (método de utils.tokenizacion.TokenizadorNLTK)@\spxentry{destokenizar()}\spxextra{método de utils.tokenizacion.TokenizadorNLTK}|hyperpage}{52}
+\indexentry{establecer\_destokenizador() (método de utils.tokenizacion.TokenizadorNLTK)@\spxentry{establecer\_destokenizador()}\spxextra{método de utils.tokenizacion.TokenizadorNLTK}|hyperpage}{52}
+\indexentry{establecer\_tokenizador() (método de utils.tokenizacion.TokenizadorNLTK)@\spxentry{establecer\_tokenizador()}\spxextra{método de utils.tokenizacion.TokenizadorNLTK}|hyperpage}{52}
+\indexentry{post\_destokenizacion() (método de utils.tokenizacion.TokenizadorNLTK)@\spxentry{post\_destokenizacion()}\spxextra{método de utils.tokenizacion.TokenizadorNLTK}|hyperpage}{52}
+\indexentry{tokenizar() (método de utils.tokenizacion.TokenizadorNLTK)@\spxentry{tokenizar()}\spxextra{método de utils.tokenizacion.TokenizadorNLTK}|hyperpage}{52}
+\indexentry{destokenizar() (en el módulo utils.tokenizacion)@\spxentry{destokenizar()}\spxextra{en el módulo utils.tokenizacion}|hyperpage}{53}
+\indexentry{tokenizar() (en el módulo utils.tokenizacion)@\spxentry{tokenizar()}\spxextra{en el módulo utils.tokenizacion}|hyperpage}{53}
