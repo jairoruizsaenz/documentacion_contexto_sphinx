@@ -12,15 +12,15 @@ Para la instalación de la librería se debe utilizar el gestor de paquetes ``pi
 
 Para *Python 3.8x* usar:
     .. code-block:: console
-    
-        pip install wheel_0.3
-
+    	
+    	pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py38-none-any.whl?raw=true
+        
 Para *Python 3.7x* usar:
     .. code-block:: console
     
-        pip install wheel_0.2
+        pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py37-none-any.whl?raw=true
 
 Para *Python 3.6x* usar:
     .. code-block:: console
     
-        pip install wheel_0.1
+        pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py36-none-any.whl?raw=true
