@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                sept. 18 03:41 p. m.
+                Versión 0.1
               </div>
             
           
@@ -100,6 +100,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../seccion_introduccion.html">Introducción</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seccion_instalacion.html">Instalación</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seccion_ejemplos.html">Ejemplos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seccion_lenguajes_soportados.html">Lenguajes soportados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seccion_ocr.html">OCR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pendientes_borrar.html">Pendientes - BORRAR</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Módulos y funciones:</span></p>
@@ -115,9 +117,9 @@
 <li class="toctree-l1"><a class="reference internal" href="stemming.html">Stemming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vectorizacion.html">Vectorización</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Utils</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-utils.auxiliares">Auxiliares</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-utils.tokenizacion">Tokenizacion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-utils.limpieza_aux">Limpieza aux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auxiliares">Auxiliares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tokenizacion">Tokenizacion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#limpieza-aux">Limpieza aux</a></li>
 </ul>
 </li>
 </ul>
@@ -185,9 +187,11 @@
             
   <div class="section" id="utils">
 <h1>Utils<a class="headerlink" href="#utils" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="module-utils.auxiliares">
-<span id="auxiliares"></span><h2>Auxiliares<a class="headerlink" href="#module-utils.auxiliares" title="Enlazar permanentemente con este título">¶</a></h2>
-<dl class="py function">
+<p>Esta sección contiene funciones que se utilizan en varios módulos de la librería ConTexto. Se divide en 3 partes: (1) auxiliares, (2) tokenización y (3) limpieza aux.</p>
+<div class="section" id="auxiliares">
+<h2>Auxiliares<a class="headerlink" href="#auxiliares" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Aquí hay funciones para cargar y guardar archivos de formato Pickle y una función para verificar la existencia de un directorio escogido por un usuario.</p>
+<span class="target" id="module-utils.auxiliares"></span><dl class="py function">
 <dt id="utils.auxiliares.cargar_objeto">
 <code class="descclassname">utils.auxiliares.</code><code class="descname">cargar_objeto</code><span class="sig-paren">(</span><em><span class="n">nombre_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.cargar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Carga un objeto en Python, desde un archivo Pickle cuya ubicación es determinada por el usuario.</p>
@@ -236,9 +240,10 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-utils.tokenizacion">
-<span id="tokenizacion"></span><h2>Tokenizacion<a class="headerlink" href="#module-utils.tokenizacion" title="Enlazar permanentemente con este título">¶</a></h2>
-<dl class="py class">
+<div class="section" id="tokenizacion">
+<h2>Tokenizacion<a class="headerlink" href="#tokenizacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Esta sección contiene las funciones de tokenización de texto, las cuales se utilizan durante el preprocesamiento de un texto.</p>
+<span class="target" id="module-utils.tokenizacion"></span><dl class="py class">
 <dt id="utils.tokenizacion.TokenizadorNLTK">
 <em class="property">class </em><code class="descclassname">utils.tokenizacion.</code><code class="descname">TokenizadorNLTK</code><span class="sig-paren">(</span><em><span class="n">tokenizador</span><span class="o">=</span><span class="default_value">None</span></em>, <em><span class="n">destokenizador</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -376,9 +381,10 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-utils.limpieza_aux">
-<span id="limpieza-aux"></span><h2>Limpieza aux<a class="headerlink" href="#module-utils.limpieza_aux" title="Enlazar permanentemente con este título">¶</a></h2>
-<dl class="py function">
+<div class="section" id="limpieza-aux">
+<h2>Limpieza aux<a class="headerlink" href="#limpieza-aux" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las funciones de esta sección se encargan de encontrar caracteres con ciertas características dentro de los textos, como números o letras repetidos, números o letras consecutivos y coincidencias de textos. También permite la eliminación de caracteres no deseados por el usuario, según varios criterios de selección.</p>
+<span class="target" id="module-utils.limpieza_aux"></span><dl class="py function">
 <dt id="utils.limpieza_aux.caracteres_consecutivos">
 <code class="descclassname">utils.limpieza_aux.</code><code class="descname">caracteres_consecutivos</code><span class="sig-paren">(</span><em><span class="n">palabra</span></em>, <em><span class="n">n</span></em>, <em><span class="n">limpiar_palabra</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.limpieza_aux.caracteres_consecutivos" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Determina si en una palabra de entrada hay caracteres (letras o números) consecutivos, uno junto al         otro, por lo menos un número de veces determinado por el usuario. Por ejemplo, si n=4 y palabra=        «1234555», la función va a arrojar positivo, porque hay cinco caracteres consecutivos         (del 1 al 5) que aparecen uno junto al otro.</p>

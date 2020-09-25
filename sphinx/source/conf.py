@@ -26,17 +26,6 @@ author = 'UCD - DNP'
 release = '0.1'
 version = 'Versión ' + release
 
-##############################################################################
-### BORRAR ###
-##############################################################################
-
-from datetime import datetime
-now = datetime.now()
-timestamp = now.strftime("%b %d %I:%M %p")
-version = timestamp
-
-##############################################################################
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
