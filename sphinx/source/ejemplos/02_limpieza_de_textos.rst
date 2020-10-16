@@ -3,7 +3,7 @@
 Limpieza de textos
 ==================
 
-Este ejemplo muestra las principales funcionalidades del módulo :py:mod:`Limpieza <limpieza`, de la librería. También se muestran ejemplos de uso de las funciones de limpieza contenidas en el módulo auxiliar `limpieza_aux`, que hace parte de `utils`.
+Este ejemplo muestra las principales funcionalidades del módulo :py:mod:`Limpieza <limpieza>`, de la librería. También se muestran ejemplos de uso de las funciones de limpieza contenidas en el módulo auxiliar `limpieza_aux`, que hace parte de `utils`.
 
 Funciones de limpieza de textos
 -------------------------------
@@ -19,7 +19,6 @@ Importar módulo de ConTexto y definir texto de prueba
 
     >>> texto_prueba = '''hola, esto es una prueba para verificar que la limpieza
     >>> sea hecha con precisión, empeño y calidad! Esperamos que esté todo de 10.
-
     >>> Desde Amazonas hasta la Guajira y san andrés, desde John y María hasta Ernesto,
     >>> esperamos       que todo funcione de manera correcta.'''
 
@@ -88,7 +87,8 @@ La función :py:func:`limpieza.quitar_repetidos` permite quitar elementos repeti
     >>> # Especificar el separador entre documentos/frases
     >>> quitar_repetidos(texto_repetido, ',')
 
-    'hola tu como estas hola'
+    'hola como estas hola tu'
+    'como estas hola hola tu'
 
 .. code-block:: python
 
@@ -97,7 +97,7 @@ La función :py:func:`limpieza.quitar_repetidos` permite quitar elementos repeti
     >>> # Deshabilitar opción de quitar espacios al inicio y al final
     >>> quitar_repetidos(texto_repetido, ',', remover_espacios=False) 
 
-    ' como estas  hola hola  hola tu'
+    ' hola  hola tu  como estas hola'
 
 
 Cargar listas de *stopwords*, predefinidas y definidas por el usuario
@@ -160,7 +160,7 @@ Importar funciones auxiliares y definir textos de prueba
     >>> # Corpus de prueba
     >>> textos_prueba = [
     >>>     'Este es el primer texto de prueba para la detección de coincidencias.',
-    >>>     'Una segunda oración permite evaluar si hay cadanea de caracteres elementos en común.',
+    >>>     'Una segunda oración permite evaluar si hay coincidencia de caracteres con elementos en común.',
     >>>     'Tercera frase que consiste en un texto complementario con palabras comúnmente utilizadas.',
     >>>     'En esta oración y la siguiente se introducen elementos para completar un grupo de por lo menos 5.',
     >>>     'Finalmente, esta frase cierra un grupo de 5 oraciones para probar la detección de coincidencias.',
