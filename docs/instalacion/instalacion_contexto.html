@@ -111,7 +111,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../seccion_ejemplos.html">Ejemplos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seccion_lenguajes_soportados.html">Lenguajes soportados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../seccion_ocr.html">OCR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../seccion_prueba.html">Prueba</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Módulos y funciones:</span></p>
 <ul>
@@ -204,45 +203,18 @@
 </div>
 <div class="section" id="instalacion-completa">
 <h2><span class="section-number">1.2. </span>Instalación completa<a class="headerlink" href="#instalacion-completa" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Otra alternativa de instalación corresponde a utilizar los archivos compilados wheel que se encuentran cargados en el repositorio de GitHub de la librería. Al utilizar los archivos wheel instalará las dependencias de ConTexto, equivalente a utilizar el comando <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">contexto</span></code> y adicionalmente instalará el framework <a class="reference external" href="https://pytorch.org/" target="_blank">PyTorch</a> (con instalación para uso de CPU) y el paquete <a class="reference external" href="https://stanfordnlp.github.io/stanza/" target="_blank">Stanza</a> , estos últimos se utilizan en el módulo de <a class="reference internal" href="../funciones/lematizacion.html#module-lematizacion" title="lematizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Lematización</span></code></a>.</p>
+<p>Otra alternativa de instalación corresponde a utilizar los archivos compilados wheel que se encuentran cargados en el repositorio de GitHub de la librería. Al utilizar los archivos wheel se instalarán las dependencias de ConTexto, equivalente a utilizar el comando <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">contexto</span></code> y adicionalmente se instalará el framework <a class="reference external" href="https://pytorch.org/" target="_blank">PyTorch</a> (con instalación para uso de CPU) y el paquete <a class="reference external" href="https://stanfordnlp.github.io/stanza/" target="_blank">Stanza</a>, estos últimos se utilizan en el módulo de <a class="reference internal" href="../funciones/lematizacion.html#module-lematizacion" title="lematizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Lematización</span></code></a>, sin embargo, su instalación no es de caracter obligatorio, ya que por defecto se utiliza el lematizador de <a class="reference external" href="https://spacy.io/" target="_blank">spaCy</a>.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Advertencia</p>
 <ul class="last simple">
-<li>La instalación utilizando los archivos wheel solo soportan Python en arquitecturas de 64 bits (x64)</li>
+<li>La instalación utilizando los archivos wheel solo soportan Python en arquitecturas de 64 bits (x64) para Windows. Para Linux no se presenta esta restricción.</li>
 <li>Versión máxima soportada de Python v3.8.5</li>
+<li>Versión mínima soportada de Python v3.6.1</li>
 </ul>
 </div>
-<table border="1" class="docutils align-default">
-<colgroup>
-<col width="13%" />
-<col width="87%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Versión de Python</th>
-<th class="head">Comando a ejecutar</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><em>Python 3.8x</em></td>
-<td><div class="first last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py38-none-any.whl?raw=true</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install contexto -f https://ucd-dnp.github.io/ConTexto/contexto_stable.html</span>
 </pre></div>
 </div>
-</td>
-</tr>
-<tr class="row-odd"><td><em>Python 3.7x</em></td>
-<td><div class="first last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py37-none-any.whl?raw=true</span>
-</pre></div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><em>Python 3.6x</em></td>
-<td><div class="first last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py36-none-any.whl?raw=true</span>
-</pre></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 

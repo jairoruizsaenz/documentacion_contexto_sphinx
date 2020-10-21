@@ -16,24 +16,13 @@ Para la instalación de la librería se debe utilizar el gestor de paquetes ``pi
 Instalación completa
 --------------------
 
-Otra alternativa de instalación corresponde a utilizar los archivos compilados wheel que se encuentran cargados en el repositorio de GitHub de la librería. Al utilizar los archivos wheel instalará las dependencias de ConTexto, equivalente a utilizar el comando ``pip install contexto`` y adicionalmente instalará el framework `PyTorch <https://pytorch.org/>`_ (con instalación para uso de CPU) y el paquete `Stanza <https://stanfordnlp.github.io/stanza/>`_ , estos últimos se utilizan en el módulo de :py:mod:`Lematización <lematizacion>`.
+Otra alternativa de instalación corresponde a utilizar los archivos compilados wheel que se encuentran cargados en el repositorio de GitHub de la librería. Al utilizar los archivos wheel se instalarán las dependencias de ConTexto, equivalente a utilizar el comando ``pip install contexto`` y adicionalmente se instalará el framework `PyTorch <https://pytorch.org/>`_ (con instalación para uso de CPU) y el paquete `Stanza <https://stanfordnlp.github.io/stanza/>`_, estos últimos se utilizan en el módulo de :py:mod:`Lematización <lematizacion>`, sin embargo, su instalación no es de caracter obligatorio, ya que por defecto se utiliza el lematizador de `spaCy <https://spacy.io/>`_.
 
 .. warning::
-        * La instalación utilizando los archivos wheel solo soportan Python en arquitecturas de 64 bits (x64)
+        * La instalación utilizando los archivos wheel solo soportan Python en arquitecturas de 64 bits (x64) para Windows. Para Linux no se presenta esta restricción.
         * Versión máxima soportada de Python v3.8.5
+        * Versión mínima soportada de Python v3.6.1
 
-=================  =================================================================================================================
-Versión de Python  Comando a ejecutar
-=================  =================================================================================================================
-*Python 3.8x*       .. code-block:: console
-        
-                        pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py38-none-any.whl?raw=true
+.. code-block:: console
 
-*Python 3.7x*       .. code-block:: console
-    
-                        pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py37-none-any.whl?raw=true
-
-*Python 3.6x*       .. code-block:: console
-    
-                        pip install https://github.com/ucd-dnp/ConTexto/blob/master/bin/ConTexto-0.1.0-py36-none-any.whl?raw=true
-=================  =================================================================================================================
+        pip install contexto -f https://ucd-dnp.github.io/ConTexto/contexto_stable.html
