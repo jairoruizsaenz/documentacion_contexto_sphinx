@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1. Caso de uso - Agrupar textos por temas &mdash; documentación de ConTexto - 0.1</title>
+  <title>1. Caso de uso - Agrupar textos por temas &mdash; documentación de ConTexto - 0.2</title>
   
 
   
@@ -20,7 +20,10 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -33,7 +36,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/translations.js"></script>
@@ -58,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConTexto
+            <a href="../index.html" class="icon icon-home"> ConTexto
           
 
           
@@ -71,7 +73,7 @@
             
             
               <div class="version">
-                Versión 0.1
+                latest - v0.2
               </div>
             
           
@@ -160,9 +162,11 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content style-external-links">
+        <div class="rst-content">
         
           
+
+
 
 
 
@@ -193,7 +197,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -281,7 +285,7 @@
 <h2><span class="section-number">1.2. </span>Funciones de apoyo<a class="headerlink" href="#funciones-de-apoyo" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>A continuación se definen dos funciones, que se encargan de llevar a cabo lo siguiente:</p>
 <p>-<strong>graficar_textos</strong>: Recibe un arreglo de vectores (de dos dimensiones) y sus respectivas etiquetas (el tema de cada texto). Esta función se encarga de pintar los vectores bidimensionales y asignar un color a cada punto, dependiendo de su respectivo tema. El parámetro <em>dir_salida</em> permite definir la carpeta en donde se guardarán los resultados. El nombre de cada gráfica depende del grupo de temas utilizado, de si se realizó normalización sobre los vectores de los textos y de un título que se asigne a la gráfica (parámetro <em>titulo</em>).</p>
-<p>-<strong>comparacion_vectorizadores</strong>: Recibe el número que indica qué grupo de temas se va a tratar, una lista de vectorizadores a utilizar y un parámetro <em>normalizar</em>, que indica si se quiere hacer normalización min-max sobre los vectores generados para el grupo de textos. Esta normalización puede mejorar los resultados para algunos vectorizadores, en particular los basados en frecuencias (menos el TF-IDF, que ya hace una especie de normalización al tener en cuenta la frecuencia inversa en documentos de los términos). Ests función realiza todo el proceso, que consiste en:</p>
+<p>-<strong>comparacion_vectorizadores</strong>: Recibe el número que indica qué grupo de temas se va a tratar, una lista de vectorizadores a utilizar y un parámetro <em>normalizar</em>, que indica si se quiere hacer normalización min-max sobre los vectores generados para el grupo de textos. Esta normalización puede mejorar los resultados para algunos vectorizadores, en particular los basados en frecuencias (menos el TF-IDF, que ya hace una especie de normalización al tener en cuenta la frecuencia inversa en documentos de los términos). Esta función realiza todo el proceso, que consiste en:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Extraer las noticias de los temas del grupo determinado, utilizando la función <cite>fetch_20newsgroups</cite></li>
@@ -476,37 +480,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="092_caso2.html" class="btn btn-neutral float-right" title="2. Caso de uso - Exploración y comparación de fábulas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="09_casos_de_uso.html" class="btn btn-neutral float-left" title="Casos de uso" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="092_caso2.html" class="btn btn-neutral float-right" title="2. Caso de uso - Exploración y comparación de fábulas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="09_casos_de_uso.html" class="btn btn-neutral float-left" title="Casos de uso" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCD - DNP
+        &#169; Derechos de autor 2020, UCD - DNP.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

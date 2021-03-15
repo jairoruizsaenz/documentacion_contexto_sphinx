@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. Limpieza de textos &mdash; documentación de ConTexto - 0.1</title>
+  <title>2. Limpieza de textos &mdash; documentación de ConTexto - 0.2</title>
   
 
   
@@ -20,7 +20,10 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -33,7 +36,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/translations.js"></script>
@@ -58,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConTexto
+            <a href="../index.html" class="icon icon-home"> ConTexto
           
 
           
@@ -71,7 +73,7 @@
             
             
               <div class="version">
-                Versión 0.1
+                latest - v0.2
               </div>
             
           
@@ -165,9 +167,11 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content style-external-links">
+        <div class="rst-content">
         
           
+
+
 
 
 
@@ -196,7 +200,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -366,7 +370,7 @@
 <div class="section" id="detectar-y-quitar-coincidencias-entre-un-conjunto-de-textos">
 <h3><span class="section-number">2.2.2. </span>Detectar y quitar coincidencias entre un conjunto de textos<a class="headerlink" href="#detectar-y-quitar-coincidencias-entre-un-conjunto-de-textos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En ocasiones un documento puede tener un encabezado o pie de nota común en casi todas sus páginas. Esto puede entorpecer ciertos análisis, al darle un peso demasiado grande a estas coincidencias.</p>
-<p>Para evitar este problema, la función <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.quitar_coincidenias" title="utils.limpieza_aux.quitar_coincidenias"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_coincidenias()</span></code></a> (que a su vez utiliza las funciones <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.substrings_en_comun" title="utils.limpieza_aux.substrings_en_comun"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.substrings_en_comun()</span></code></a> y <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.detectar_coincidencias" title="utils.limpieza_aux.detectar_coincidencias"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.detectar_coincidencias()</span></code></a>) permite, para un conjunto de textos, encontrar y remover coincidencias (cadenas de caracteres) que cumplan una o varias de estas condiciones:</p>
+<p>Para evitar este problema, la función <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_coincidenias()</span></code> (que a su vez utiliza las funciones <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.substrings_en_comun()</span></code> y <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.detectar_coincidencias()</span></code>) permite, para un conjunto de textos, encontrar y remover coincidencias (cadenas de caracteres) que cumplan una o varias de estas condiciones:</p>
 <ul class="simple">
 <li>Que aparezcan en mínimo una proporción determinada de todos los textos</li>
 <li>Que su longitud (cantidad de caracteres) sea mayor o igual a un valor determinado</li>
@@ -396,7 +400,7 @@
 <div class="section" id="detectar-y-quitar-palabras-o-valores-atipicos">
 <h3><span class="section-number">2.2.3. </span>Detectar y quitar palabras o valores atípicos<a class="headerlink" href="#detectar-y-quitar-palabras-o-valores-atipicos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Si se está trabajando con un texto de mala calidad (por ejemplo, porque se aplicó OCR a un documento antiguo y mal escaneado), es posible que haya “ruido” en el texto, como palabras sin sentido, que puede afectar el análisis de este documento. Otro caso posible es trabajar con textos que tengan palabras o valores numéricos sospechosos (como “abcde” o “0000000”). En este caso, puede ser de utilidad poder detectar y/o remover estas palabras sospechosas o de ruido.</p>
-<p>Para evitar este problema, la función <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.quitar_palabras_atipicas" title="utils.limpieza_aux.quitar_palabras_atipicas"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_palabras_atipicas()</span></code></a> (que a su vez utiliza las funciones <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.caracteres_repetidos" title="utils.limpieza_aux.caracteres_repetidos"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_repetidos()</span></code></a>, <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.caracteres_consecutivos" title="utils.limpieza_aux.caracteres_consecutivos"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_consecutivos()</span></code></a> y <a class="reference internal" href="../funciones/utils.html#utils.limpieza_aux.consonantes_consecutivas" title="utils.limpieza_aux.consonantes_consecutivas"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.consonantes_consecutivas()</span></code></a>) permite, para un conjunto de textos, encontrar y remover palabras que cumplan una o varias de estas condiciones:</p>
+<p>Para evitar este problema, la función <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_palabras_atipicas()</span></code> (que a su vez utiliza las funciones <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_repetidos()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_consecutivos()</span></code> y <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.consonantes_consecutivas()</span></code>) permite, para un conjunto de textos, encontrar y remover palabras que cumplan una o varias de estas condiciones:</p>
 <ul class="simple">
 <li>Que tengan un número o letra repetidos de forma seguida más veces de lo permitido</li>
 <li>Que tengan números o letras consecutivas de forma seguida en un número mayor de lo permitido</li>
@@ -472,37 +476,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="03_exploracion_y_visualizacion.html" class="btn btn-neutral float-right" title="3. Análisis exploratorio y visualización" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="01_lectura_y_escritura_de_documentos.html" class="btn btn-neutral float-left" title="1. Lectura y escritura de documentos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="03_exploracion_y_visualizacion.html" class="btn btn-neutral float-right" title="3. Análisis exploratorio y visualización" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="01_lectura_y_escritura_de_documentos.html" class="btn btn-neutral float-left" title="1. Lectura y escritura de documentos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCD - DNP
+        &#169; Derechos de autor 2020, UCD - DNP.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

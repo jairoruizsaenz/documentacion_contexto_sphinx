@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>7. Vectorización de textos &mdash; documentación de ConTexto - 0.1</title>
+  <title>7. Vectorización de textos &mdash; documentación de ConTexto - 0.2</title>
   
 
   
@@ -20,7 +20,10 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -33,7 +36,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/translations.js"></script>
@@ -58,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConTexto
+            <a href="../index.html" class="icon icon-home"> ConTexto
           
 
           
@@ -71,7 +73,7 @@
             
             
               <div class="version">
-                Versión 0.1
+                latest - v0.2
               </div>
             
           
@@ -175,9 +177,11 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content style-external-links">
+        <div class="rst-content">
         
           
+
+
 
 
 
@@ -206,7 +210,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -249,13 +253,13 @@
 <p>La clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a> permite aplicar las técnicas Bag of Words (BOW), Term Frecuency (TF) y Term Frequency – Inverse Document Frequency (TF-IDF) para generar representaciones vectoriales de textos basadas en la frecuencia con la que aparecen ciertas palabras o términos en cada texto.</p>
 <div class="section" id="inicializar-y-ajustar-los-vectorizadores">
 <h3><span class="section-number">7.2.1. </span>Inicializar y ajustar los vectorizadores<a class="headerlink" href="#inicializar-y-ajustar-los-vectorizadores" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Para utilizar estos tipos de vectorización, es necesario definir un objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a>, especificando aspector tales como:</p>
+<p>Para utilizar estos tipos de vectorización, es necesario definir un objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a>, especificando aspectos tales como:</p>
 <ul class="simple">
 <li>Qué tipo de técnica aplicar (BOW, TF o TF-IDF).</li>
 <li>El rango de n-gramas que se desea tener en cuenta (solo palabras, palabras y bigramas, etc.).</li>
 <li>Si se quiere limitar el tamaño del vocabulario del vectorizador a los <em>n</em> términos más frecuentes. Esto puede ser útil cuando se tienen muchos textos de larga longitud, lo que puede llegar a generar un vocabulario demasiado grande si no se acota.</li>
 </ul>
-<p>Una vez se define el objeto del vectorizador, es necesario ajustarlo sobre un corpus, para que aprenda el vocabulario que va a utilizar. Al momento de ajustar el vectorizador se puede utilizar el parámetro <em>archivo_salida</em>. Si este parámetro se utiliza, el vectorizador ajustado va a quedar guardado como un objeto tipo Pickle en la ubicación definida por el usuario.</p>
+<p>Una vez se define el objeto del vectorizador, es necesario ajustarlo sobre un corpus, para que aprenda el vocabulario que va a utilizar. Al momento de ajustar el vectorizador se puede utilizar el parámetro <em>archivo_salida</em>. Si este parámetro se utiliza, el vectorizador ajustado va a quedar guardado como un objeto tipo <em>Pickle</em> en la ubicación definida por el usuario.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Inicializar los vectorizadores</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Vectorizador BOW</span>
@@ -376,7 +380,7 @@
 </div>
 <div class="section" id="vectorizar-textos-utilizando-los-vectorizadores-entrenados">
 <h3><span class="section-number">7.2.3. </span>Vectorizar textos utilizando los vectorizadores entrenados<a class="headerlink" href="#vectorizar-textos-utilizando-los-vectorizadores-entrenados" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Una vez se tiene el vectorizador ajustado, la función <cite>vectorizar</cite> permite obtener, para uno o varios textos de entrada, un arreglo (<em>array</em>) en numpy de 2 dimensiones. La cantidad de filas de este arreglo corresponde al número de textos vectorizados, y la cantidad de columnas corresponde al tamaño del vocabulario del vectorizador. El argumento <em>disperso</em>, por defecto igual a False, permite obtener la salida como una matriz dispersa, en vez de un arreglo de numpy. Esto puede traducirse en un ahorro significativo de memoria en el caso de que se tengan muchos textos y/o un vocabulario muy grande.</p>
+<p>Una vez se tiene el vectorizador ajustado, la función <cite>vectorizar</cite> permite obtener, para uno o varios textos de entrada, un arreglo (<em>array</em>) en numpy de 2 dimensiones. La cantidad de filas de este arreglo corresponde al número de textos vectorizados, y la cantidad de columnas corresponde al tamaño del vocabulario del vectorizador. El argumento <em>disperso</em> permite  obtener como salida una matriz dispersa (disperso=True) o un arreglo de numpy (disperso=False). Esto puede traducirse en un ahorro significativo de memoria en el caso de que se tengan muchos textos y/o un vocabulario muy grande.</p>
 <p>Es importante anotar que si algún texto de entrada tiene palabras que no hacen parte del vocabulario del vectorizador, estas no serán tenidas en cuenta.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vector_bow</span> <span class="o">=</span> <span class="n">v_bow</span><span class="o">.</span><span class="n">vectorizar</span><span class="p">(</span><span class="n">texto_nuevo</span><span class="p">,</span> <span class="n">disperso</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Salida como matriz dispersa</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">vector_tfidf</span> <span class="o">=</span> <span class="n">v_tfidf</span><span class="o">.</span><span class="n">vectorizar</span><span class="p">(</span><span class="n">texto_nuevo</span><span class="p">,</span> <span class="n">disperso</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Salida como un numpy array</span>
@@ -444,7 +448,7 @@ inversa.</p>
 <div class="section" id="vectorizacion-por-medio-de-hashing">
 <h2><span class="section-number">7.3. </span>Vectorización por medio de <em>Hashing</em><a class="headerlink" href="#vectorizacion-por-medio-de-hashing" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorHash" title="vectorizacion.VectorizadorHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorHash</span></code></a> utiliza el <em>hashing trick</em> para determinar directamente (sin necesidad de ajustar sobre un corpus) la posición de cada término de un texto dentro de un vector numérico. Esta técnica es rápida y ligera en memoria, pues no requiere aprender ni guardar un vocabulario. Esto también tiene algunas desventajas; por ejemplo, a partir de un vector no se puede aplicar una transformada inversa para conocer qué palabras contenía el texto.</p>
-<p>Adicionalmente, para muchos textos, o textos muy grandes, existe la posibilidad de que se presenten “colisiones”. Una colisión se da cuando el vectorizador representa de la misma manera a dos términos distinitos, lo cual introduce ambiguedad en la vectorización y disminuye la calidad de la representación numérica de los textos. Para evitar este problema, se puede configurar el objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorHash" title="vectorizacion.VectorizadorHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorHash</span></code></a> para que tenga muchos más elementos (por medio del parámetro <em>n_elementos</em>) a medida que se trabaja con textos de mayor longitud y vocabulario.</p>
+<p>Adicionalmente, cuando se consideran muchos textos, o textos muy grande, existe la posibilidad de que se presenten “colisiones”. Una colisión se da cuando el vectorizador representa de la misma manera a dos términos distinitos, lo cual introduce ambiguedad en la vectorización y disminuye la calidad de la representación numérica de los textos. Para evitar este problema, se puede configurar el objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorHash" title="vectorizacion.VectorizadorHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorHash</span></code></a> para que tenga muchos más elementos (por medio del parámetro <em>n_elementos</em>) a medida que se trabaja con textos de mayor longitud y vocabulario.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Inicializar el vectorizador</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># En este caso se define que los vectores tendrán 50 elementos</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">v_hash</span> <span class="o">=</span> <span class="n">VectorizadorHash</span><span class="p">(</span><span class="n">n_elementos</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -1103,37 +1107,29 @@ inversa.</p>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="08_comparacion_de_textos.html" class="btn btn-neutral float-right" title="8. Comparación de textos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="06_stemming_de_textos.html" class="btn btn-neutral float-left" title="6. Stemming de textos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="08_comparacion_de_textos.html" class="btn btn-neutral float-right" title="8. Comparación de textos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="06_stemming_de_textos.html" class="btn btn-neutral float-left" title="6. Stemming de textos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCD - DNP
+        &#169; Derechos de autor 2020, UCD - DNP.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

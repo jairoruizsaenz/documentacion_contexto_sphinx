@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Lenguajes &mdash; documentación de ConTexto - 0.1</title>
+  <title>Lenguajes &mdash; documentación de ConTexto - 0.2</title>
   
 
   
@@ -20,7 +20,10 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -33,7 +36,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/translations.js"></script>
@@ -58,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConTexto
+            <a href="../index.html" class="icon icon-home"> ConTexto
           
 
           
@@ -71,7 +73,7 @@
             
             
               <div class="version">
-                Versión 0.1
+                latest - v0.2
               </div>
             
           
@@ -139,9 +141,11 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content style-external-links">
+        <div class="rst-content">
         
           
+
+
 
 
 
@@ -168,7 +172,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -184,7 +188,7 @@
 <span id="lenguajes"></span><h1>Lenguajes<a class="headerlink" href="#module-lenguajes" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py function">
 <dt id="lenguajes.detectar_lenguaje">
-<code class="descclassname">lenguajes.</code><code class="descname">detectar_lenguaje</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">devolver_proba</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.detectar_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descclassname"><span class="pre">lenguajes.</span></code><code class="descname"><span class="pre">detectar_lenguaje</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">devolver_proba</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.detectar_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Identifica el lenguaje en el que está escrito el texto de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -192,15 +196,11 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (str) Corresponde al texto que se desea analizar.</li>
-<li><strong>devolver_proba</strong> – (bool) {True, False} Valor por defecto: False. 
-Indica si se retorna el porcentaje de confiabilidad del 
-lenguaje identificado.</li>
+<li><strong>devolver_proba</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se retorna el porcentaje de confiabilidad del lenguaje         identificado.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(str) Texto del lenguaje identificado siguiendo el estandar 
-<a class="reference external" href="https://es.wikipedia.org/wiki/ISO_639-1" target="_blank">ISO 639-1</a>. 
-Si devolver_proba es True retorna una tupla.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(str) Texto del lenguaje identificado siguiendo el estandar         <a class="reference external" href="https://es.wikipedia.org/wiki/ISO_639-1" target="_blank">ISO 639-1</a>.         Si devolver_proba es True retorna una tupla.</p>
 </td>
 </tr>
 </tbody>
@@ -209,15 +209,15 @@ Si devolver_proba es True retorna una tupla.</p>
 
 <dl class="py function">
 <dt id="lenguajes.lenguaje_tesseract">
-<code class="descclassname">lenguajes.</code><code class="descname">lenguaje_tesseract</code><span class="sig-paren">(</span><em><span class="n">lenguaje</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.lenguaje_tesseract" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función auxiliar - Para un lenguaje de entrada, busca su equivalente en Tesseract.</p>
+<code class="descclassname"><span class="pre">lenguajes.</span></code><code class="descname"><span class="pre">lenguaje_tesseract</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.lenguaje_tesseract" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Función auxiliar - Para un lenguaje de entrada, busca su equivalente en     Tesseract.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (str) Corresponde al nombre del lenguaje a definir.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str) Texto correspondiente al lenguaje identificado, de acuerdo a lo aceptado por         Tesseract.</td>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str) Texto correspondiente al lenguaje identificado, de acuerdo         a lo aceptado por Tesseract.</td>
 </tr>
 </tbody>
 </table>
@@ -225,18 +225,18 @@ Si devolver_proba es True retorna una tupla.</p>
 
 <dl class="py function">
 <dt id="lenguajes.traducir_texto">
-<code class="descclassname">lenguajes.</code><code class="descname">traducir_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em>, <em><span class="n">lenguaje_destino</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.traducir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descclassname"><span class="pre">lenguajes.</span></code><code class="descname"><span class="pre">traducir_texto</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">lenguaje_destino</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.traducir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite hacer traducciones a un texto de interés.</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p>Es importante tener en cuenta los siguientes aspectos al utilizar la función <strong>traducir_texto</strong>:</p>
+<p>Es importante tener en cuenta los siguientes aspectos al utilizar la         función <strong>traducir_texto</strong>:</p>
 <ul class="last simple">
-<li>La función utiliza la librería googletrans, que hace uso de la API de Google Translate. Por lo tanto, se requiere tener una conexión a internet para su funcionamiento.</li>
+<li>La función utiliza la librería googletrans, que hace uso de la API             de Google Translate. Por lo tanto, se requiere tener una conexión             a internet para su funcionamiento.</li>
 <li>El límite máximo de caracteres en un solo texto es de 15.000.</li>
-<li>Debido a las limitaciones de la versión web del traductor de Google, el uso de la API no garantiza que la librería funcione correctamente en todo momento.</li>
-<li>Si desea utilizar una API estable, se recomienda el uso de la <a class="reference external" href="https://cloud.google.com/translate/docs" target="_blank">API de traducción oficial de Google</a>.</li>
-<li>Si recibe un error HTTP 5xx, probablemente se deba a que Google ha bloqueado su dirección IP.</li>
-<li>Para mayor información puede consultar la <a class="reference external" href="https://py-googletrans.readthedocs.io/en/latest/" target="_blank">documentación de la librería googletrans</a>.</li>
+<li>Debido a las limitaciones de la versión web del traductor de Google,             el uso de la API no garantiza que la librería funcione correctame            nte en todo momento.</li>
+<li>Si desea utilizar una API estable, se recomienda el uso de la             <a class="reference external" href="https://cloud.google.com/translate/docs" target="_blank">API de traducción oficial de Google</a>.</li>
+<li>Si recibe un error HTTP 5xx, probablemente se deba a que Google ha             bloqueado su dirección IP.</li>
+<li>Para mayor información puede consultar la             <a class="reference external" href="https://py-googletrans.readthedocs.io/en/latest/" target="_blank">documentación de la librería googletrans</a>.</li>
 </ul>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -245,9 +245,7 @@ Si devolver_proba es True retorna una tupla.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (str) Corresponde al texto que se desea traducir.</li>
-<li><strong>lenguaje_destino</strong> – (str)  Indica el lenguaje al que desea 
-traducir el texto. Para mayor información, consultar la 
-sección de <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</li>
+<li><strong>lenguaje_destino</strong> – (str)  Indica el lenguaje al que desea traducir         el texto. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</li>
 </ul>
 </td>
 </tr>
@@ -265,37 +263,29 @@ sección de <a class="reference internal" href="../seccion_lenguajes_soportados.
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="limpieza.html" class="btn btn-neutral float-right" title="Limpieza" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="lematizacion.html" class="btn btn-neutral float-left" title="Lematización" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="limpieza.html" class="btn btn-neutral float-right" title="Limpieza" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lematizacion.html" class="btn btn-neutral float-left" title="Lematización" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCD - DNP
+        &#169; Derechos de autor 2020, UCD - DNP.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

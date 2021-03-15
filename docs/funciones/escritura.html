@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Escritura &mdash; documentación de ConTexto - 0.1</title>
+  <title>Escritura &mdash; documentación de ConTexto - 0.2</title>
   
 
   
@@ -20,7 +20,10 @@
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
   
+
   
+  
+
   
 
   
@@ -33,7 +36,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/translations.js"></script>
@@ -58,7 +60,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ConTexto
+            <a href="../index.html" class="icon icon-home"> ConTexto
           
 
           
@@ -71,7 +73,7 @@
             
             
               <div class="version">
-                Versión 0.1
+                latest - v0.2
               </div>
             
           
@@ -139,9 +141,11 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content style-external-links">
+        <div class="rst-content">
         
           
+
+
 
 
 
@@ -168,7 +172,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -184,9 +188,9 @@
 <span id="escritura"></span><h1>Escritura<a class="headerlink" href="#module-escritura" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
 <dt id="escritura.Escritor">
-<em class="property">class </em><code class="descclassname">escritura.</code><code class="descname">Escritor</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em>, <em><span class="n">texto</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="descclassname"><span class="pre">escritura.</span></code><code class="descname"><span class="pre">Escritor</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Constructor por defecto de la clase Escritor. Esta clase se encarga de guardar         texto en archivos de distintos tipos como Word, PDF, CSV, TXT, RTF e imágenes.</p>
+<p>Constructor por defecto de la clase Escritor. Esta clase se encarga d        e guardar texto en archivos de distintos tipos como Word, PDF, CSV, T        XT, RTF e imágenes.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -201,25 +205,25 @@
 </table>
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_pdf">
-<code class="descname">escribir_pdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Especifica que el texto deseado se guardará en un archivo con extensión “.pdf”.</p>
+<code class="descname"><span class="pre">escribir_pdf</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con extensi        ón “.pdf”.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_txt">
-<code class="descname">escribir_txt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Especifica que el texto deseado se guardará en un archivo con extensión “.txt”.</p>
+<code class="descname"><span class="pre">escribir_txt</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con extensi        ón “.txt”.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_word">
-<code class="descname">escribir_word</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Especifica que el texto deseado se guardará en un archivo con extensión “.docx”.</p>
+<code class="descname"><span class="pre">escribir_word</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con extensi        ón “.docx”.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.establecer_texto">
-<code class="descname">establecer_texto</code><span class="sig-paren">(</span><em><span class="n">texto</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.establecer_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descname"><span class="pre">establecer_texto</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.establecer_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Define el texto que será guardado en un archivo.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -233,7 +237,7 @@
 
 <dl class="py method">
 <dt id="escritura.Escritor.establecer_ubicacion">
-<code class="descname">establecer_ubicacion</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.establecer_ubicacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descname"><span class="pre">establecer_ubicacion</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">ubicacion_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.establecer_ubicacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Define la ruta del archivo con el texto que se desea guardar.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -247,13 +251,13 @@
 
 <dl class="py method">
 <dt id="escritura.Escritor.texto_a_archivo">
-<code class="descname">texto_a_archivo</code><span class="sig-paren">(</span><em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'inferir'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.texto_a_archivo" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="descname"><span class="pre">texto_a_archivo</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.texto_a_archivo" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Especifica el tipo de archivo en el que se quiere guardar el texto.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”} Valor por defecto: “inferir”.             Define el tipo del archivo en el que se desea guardar el texto.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”} Va            lor por defecto: “inferir”. Define el tipo del archivo en el que             se desea guardar el texto.</td>
 </tr>
 </tbody>
 </table>
@@ -263,16 +267,16 @@
 
 <dl class="py function">
 <dt id="escritura.escribir_texto">
-<code class="descclassname">escritura.</code><code class="descname">escribir_texto</code><span class="sig-paren">(</span><em><span class="n">ubicacion_archivo</span></em>, <em><span class="n">texto</span></em>, <em><span class="n">tipo</span><span class="o">=</span><span class="default_value">'inferir'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.escribir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función que guarda texto en un archivo específico. Permite escoger la         ruta del archivo, su tipo y el texto a ser guardado dentro de este archivo.</p>
+<code class="descclassname"><span class="pre">escritura.</span></code><code class="descname"><span class="pre">escribir_texto</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.escribir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Función que guarda texto en un archivo específico. Permite escoger la rut    a del archivo, su tipo y el texto a ser guardado dentro de este archivo.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
-<li><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que será guardado         con el texto deseado.</li>
+<li><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que será guardado con el         texto deseado.</li>
 <li><strong>texto</strong> – (str) El texto que se desea guardar en un archivo.</li>
-<li><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”} Valor por defecto: “inferir”.          Define el tipo del archivo en el que se desea guardar el texto.</li>
+<li><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”} Valor         por defecto: “inferir”. Define el tipo del archivo en el que se desea         guardar el texto.</li>
 </ul>
 </td>
 </tr>
@@ -287,37 +291,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="exploracion.html" class="btn btn-neutral float-right" title="Exploración" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="correccion.html" class="btn btn-neutral float-left" title="Corrección" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="exploracion.html" class="btn btn-neutral float-right" title="Exploración" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="correccion.html" class="btn btn-neutral float-left" title="Corrección" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, UCD - DNP
+        &#169; Derechos de autor 2020, UCD - DNP.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
