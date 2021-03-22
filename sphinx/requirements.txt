@@ -27,7 +27,7 @@ hyperframe==5.2.0
 idna==2.10
 imagesize==1.2.0
 jellyfish==0.8.2
-Jinja2==2.11.2
+Jinja2==2.11.3
 jmespath==0.10.0
 joblib==0.16.0
 kiwisolver==1.2.0
