@@ -190,24 +190,24 @@
 <dt id="comparacion.DiferenciaStrings">
 <em class="property"><span class="pre">class</span> </em><code class="descclassname"><span class="pre">comparacion.</span></code><code class="descname"><span class="pre">DiferenciaStrings</span></code><a class="headerlink" href="#comparacion.DiferenciaStrings" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Esta clase se recomienda para comparaciones de strings relativamente cort    os, como nombres, direcciones y otras cadenas de caracteres similares. Pa    ra textos más extensos, se recomiendan las clases     <a class="reference internal" href="#comparacion.Similitud" title="comparacion.Similitud"><code class="xref py py-meth docutils literal notranslate"><span class="pre">comparacion.Similitud()</span></code></a> o <a class="reference internal" href="#comparacion.Distancia" title="comparacion.Distancia"><code class="xref py py-meth docutils literal notranslate"><span class="pre">comparacion.Distancia()</span></code></a>.</p>
+<p>Esta clase se recomienda para comparaciones de strings relativamente     cortos, como nombres, direcciones y otras cadenas de caracteres     similares. Para textos más extensos, se recomiendan las clases     <a class="reference internal" href="#comparacion.Similitud" title="comparacion.Similitud"><code class="xref py py-meth docutils literal notranslate"><span class="pre">comparacion.Similitud()</span></code></a> o <a class="reference internal" href="#comparacion.Distancia" title="comparacion.Distancia"><code class="xref py py-meth docutils literal notranslate"><span class="pre">comparacion.Distancia()</span></code></a>.</p>
 <dl class="py method">
 <dt id="comparacion.DiferenciaStrings.comparacion_lista">
 <code class="descname"><span class="pre">comparacion_lista</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'levenshtein'</span></span></em>, <em><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_lista" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite hacer comparaciones entre una o dos listas de textos de entra        da.</p>
+<dd><p>Permite hacer comparaciones entre una o dos listas de textos de         entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para r            ealizar las comparaciones.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se harán las comparaciones entre cada uno de             los textos de lista1 con cada uno de los textos de lista2.</li>
-<li><strong>tipo</strong> – (str) {“damerau_levenshtein”, “levenshtein”, “hamming”,             “jaro_winkler”, “jaro”} Valor por defecto: “levenshtein”. Criteri            o de comparación a utilizar entre los textos.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm=            1 se normaliza en función al texto más corto, si norm=2 se normal            iza en función al texto de mayor extensión.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             realizar las comparaciones.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se harán las comparaciones entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.</li>
+<li><strong>tipo</strong> – (str) {“damerau_levenshtein”, “levenshtein”, “hamming”,             “jaro_winkler”, “jaro”} Valor por defecto: “levenshtein”.             Criterio de comparación a utilizar entre los textos.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si             norm=1 se normaliza en función al texto más corto, si norm=2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con los valores de c            omparación (similitud o distancia) calculados entre los textos de             entrada. Sí solo se utilizó el parámetro lista1 con <em>n</em> textos,             devolverá una matriz de <em>nxn</em> simétrica, con las comparaciones en            tre todos los elementos de lista1. Si se utilizan los parámetros             lista1 y lista2 con <em>n1</em> y <em>n2</em> textos respectivamente, devolverá             una matriz de <em>n1xn2</em>, con las comparaciones entre los elementos             de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con los valores de             Comparación (similitud o distancia) calculados entre los textos             de entrada. Sí solo se utilizó el parámetro lista1 con <em>n</em>             textos, devolverá una matriz de <em>nxn</em> simétrica, con las             comparaciones entre todos los elementos de lista1. Si se utilizan             los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las             comparaciones entre los elementos de lista1 y los elementos de             lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -225,8 +225,8 @@
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto1</strong> – (str) Primer texto de interés a comparar.</li>
 <li><strong>texto2</strong> – (str) Segundo texto de interés a comparar.</li>
-<li><strong>tipo</strong> – (str) {“damerau_levenshtein”, “levenshtein”, “hamming”,             “jaro_winkler”, “jaro”} Valor por defecto: “levenshtein”. Criteri            o de comparación a utilizar entre los textos.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm=            1 se normaliza en función al texto más corto, si norm=2 se normal            iza en función al texto de mayor extensión.</li>
+<li><strong>tipo</strong> – (str) {“damerau_levenshtein”, “levenshtein”, “hamming”,             “jaro_winkler”, “jaro”} Valor por defecto: “levenshtein”.             Criterio de comparación a utilizar entre los textos.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si             norm=1 se normaliza en función al texto más corto, si norm=2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
@@ -246,13 +246,13 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para r            ealizar las comparaciones.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se harán las comparaciones entre cada uno de             los textos de lista1 con cada uno de los textos de lista2.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm             = 1 se normaliza en función al texto más corto, si norm = 2 se no            rmaliza en función al texto de mayor extensión.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             realizar las comparaciones.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se harán las comparaciones entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm=1             se normaliza en función al texto más corto, si norm = 2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias e            ntre los textos de entrada. Sí solo se utilizó el parámetro lista            1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica, con la            s distancias entre todos los elementos de lista1. Si se utilizan             los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos respectivam            ente, devolverá una matriz de <em>n1xn2</em>, con las distancias entre l            os elementos de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             entre los textos de entrada. Sí solo se utilizó el parámetro             lista1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica,             con las distancias entre todos los elementos de lista1. Si se             utilizan los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las             distancias entre los elementos de lista1 y los elementos de             lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -262,19 +262,19 @@
 <dl class="py method">
 <dt id="comparacion.DiferenciaStrings.distancia_hamming">
 <code class="descname"><span class="pre">distancia_hamming</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite calcular la distancia de Hamming entre una o dos listas de te        xtos de entrada.</p>
+<dd><p>Permite calcular la distancia de Hamming entre una o dos listas de         textos de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para r            ealizar las comparaciones.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se harán las comparaciones entre cada uno de             los textos de lista1 con cada uno de los textos de lista2.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm             = 1 se normaliza en función al texto más corto. Si norm = 2 se no            rmaliza en función al texto de mayor extensión.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             realizar las comparaciones.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se harán las comparaciones entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si             norm=1 se normaliza en función al texto más corto. Si norm=2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias e            ntre los textos de entrada. Sí solo se utilizó el parámetro lista            1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica, con la            s distancias entre todos los elementos de lista1. Si se utilizan             los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos respectivam            ente, devolverá una matriz de <em>n1xn2</em>, con las distancias entre l            os elementos de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             entre los textos de entrada. Sí solo se utilizó el parámetro             lista1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica,             con las distancias entre todos los elementos de lista1. Si se             utilizan los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las             distancias entre los elementos de lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -284,19 +284,19 @@
 <dl class="py method">
 <dt id="comparacion.DiferenciaStrings.distancia_levenshtein">
 <code class="descname"><span class="pre">distancia_levenshtein</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite calcular la distancia de Levenshtein entre una o dos listas d        e textos de entrada.</p>
+<dd><p>Permite calcular la distancia de Levenshtein entre una o dos listas         de textos de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para r            ealizar las comparaciones.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se harán las comparaciones entre cada uno de             los textos de lista1 con cada uno de los textos de lista2.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm             = 1 se normaliza en función al texto más corto, si norm = 2 se no            rmaliza en función al texto de mayor extensión.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             realizar las comparaciones.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se harán las comparaciones entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si             norm=1 se normaliza en función al texto más corto, si norm=2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias e            ntre los textos de entrada. Sí solo se utilizó el parámetro lista            1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica, con la            s distancias entre todos los elementos de lista1. Si se utilizan             los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos respectivam            ente, devolverá una matriz de <em>n1xn2</em>, con las distancias entre             los elementos de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             Entre los textos de entrada. Sí solo se utilizó el parámetro             lista1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica,             con las distancias entre todos los elementos de lista1. Si se             utilizan los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las             distancias entre los elementos de lista1 y los elementos de             lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -306,19 +306,19 @@
 <dl class="py method">
 <dt id="comparacion.DiferenciaStrings.similitud_jaro">
 <code class="descname"><span class="pre">similitud_jaro</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite calcular la similitud de Jaro entre una o dos listas de texto        s de entrada.</p>
+<dd><p>Permite calcular la similitud de Jaro entre una o dos listas de         textos de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para r            ealizar las comparaciones.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se harán las comparaciones entre cada uno de             los textos de lista1 con cada uno de los textos de lista2.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm             = 1 se normaliza en función al texto más corto, si norm=2 se norm            aliza en función al texto de mayor extensión.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             realizar las comparaciones.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se harán las comparaciones entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm=1             se normaliza en función al texto más corto, si norm=2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             entre los textos de entrada. Sí solo se utilizó el parámetro list            a1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica, con l            as similitudes entre todos los elementos de lista1. Si se utiliza            n los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos respectiv            amente, devolverá una matriz de <em>n1xn2</em>, con las similitudes entr            e los elementos de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             entre los textos de entrada. Sí solo se utilizó el parámetro             lista1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica,             con las similitudes entre todos los elementos de lista1. Si se             utilizan los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las simil            itudes entre los elementos de lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -335,12 +335,12 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             realizar las comparaciones.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se harán las comparaciones entre cada uno de             los textos de lista1 con cada uno de los textos de lista2.</li>
-<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm             = 1 se normaliza en función al texto más corto, si norm = 2 se no            rmaliza en función al texto de mayor extensión.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se harán las comparaciones entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.</li>
+<li><strong>norm</strong> – (int) {1, 2} Valor por defecto: None. Permite normalizar             los resultados en función de la longitud de los textos. Si norm=1             se normaliza en función al texto más corto, si norm = 2 se             normaliza en función al texto de mayor extensión.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             entre los textos de entrada. Sí solo se utilizó el parámetro list            a1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica, con             las similitudes entre todos los elementos de lista1. Si se utiliz            an los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos respecti            vamente, devolverá una matriz de <em>n1xn2</em>, con las similitudes ent            re los elementos de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             entre los textos de entrada. Sí solo se utilizó el parámetro             lista1 con <em>n</em> textos, devolverá una matriz de <em>nxn</em> simétrica,             con las similitudes entre todos los elementos de lista1. Si se             utilizan los parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las             similitudes entre los elementos de lista1 y los elementos de             lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -360,8 +360,8 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
-<li><strong>vectorizador</strong> – Valor por defecto: None. Objeto de tipo vectori            zador, o <em>string</em> con la ubicación del archivo que lo contiene.             Vectorizador que va a ser utilizado para generar representaciones             vectoriales de los textos. Si no se especifica un vectorizador,             se utilizará uno de tipo Word2Vec. Si se pasa un vectorizador al             objeto de clase Distancia, este ya debe estar ajustado.</li>
-<li><strong>lenguaje</strong> – (str) Valor por defecto: “es”. Indica el lenguaje             que utilizará el vectorizador. Para mayor información, consultar             la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizador ya ajustado, este parámetro no será utiliza            do.</li>
+<li><strong>vectorizador</strong> – Valor por defecto: None. Objeto de tipo             vectorizador, o <em>string</em> con la ubicación del archivo que lo             contiene. Vectorizador que va a ser utilizado para generar             representaciones vectoriales de los textos. Si no se especifica             un vectorizador, se utilizará uno de tipo Word2Vec. Si se pasa             un vectorizador al objeto de clase Distancia, este ya debe estar             ajustado.</li>
+<li><strong>lenguaje</strong> – (str) Valor por defecto: “es”. Indica el lenguaje             que utilizará el vectorizador. Para mayor información, consultar             la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizador ya ajustado, este parámetro no será utilizado.</li>
 </ul>
 </td>
 </tr>
@@ -370,20 +370,20 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dl class="py method">
 <dt id="comparacion.Distancia.distancia_pares">
 <code class="descname"><span class="pre">distancia_pares</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">tipo_distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'l2'</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.distancia_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite calcular diferentes métricas de distancias entre uno o dos gr        upos de textos y/o vectores de entrada.</p>
+<dd><p>Permite calcular diferentes métricas de distancias entre uno o dos         grupos de textos y/o vectores de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de las distancias. También es posible ingresar directam            ente los vectores pre-calculados de los textos en un arreglo de n            umpy o una matriz dispersa.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calculará la distancia entre cada uno de l            os textos/vectores de lista1 con cada uno de los elementos de lis            ta2. También es posible ingresar directamente los vectores pre-ca            lculados de los textos en un arreglo de numpy o una matriz disper            sa.</li>
-<li><strong>tipo_distancia</strong> – (str) Valor por defecto: “l2”. Métrica de dist            ancia que se desea calcular.Para una lista de todas las distancia            s que se pueden calcular por medio de esta función, se puede cons            ultar la documentación de scikit-learn y scipy:             <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html" target="_blank">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html</a></li>
-<li><strong>kwargs</strong> – Parámetros opcionales que pueden ser ajustables, depen            diendo de la métrica de distancia elegida.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de las distancias. También es posible ingresar             directamente los vectores pre-calculados de los textos en un             arreglo de numpy o una matriz dispersa.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calculará la distancia entre cada uno             de los textos/vectores de lista1 con cada uno de los elementos de             lista2. También es posible ingresar directamente los vectores             pre-calculados de los textos en un arreglo de numpy o una matriz             dispersa.</li>
+<li><strong>tipo_distancia</strong> – (str) Valor por defecto: “l2”. Métrica de             distancia que se desea calcular.Para una lista de todas las             distancias que se pueden calcular por medio de esta función,             se puede consultar la documentación de scikit-learn y scipy:             <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html" target="_blank">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html</a></li>
+<li><strong>kwargs</strong> – Parámetros opcionales que pueden ser ajustables,             dependiendo de la métrica de distancia elegida.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias c            alculadas entre los textos/vectores de entrada. Sí solo se utiliz            ó el parámetro lista1 con <em>n</em> textos/vectores, devolverá una matr            iz de <em>nxn</em> simétrica, con las distancias entre todos los element            os de lista1. Si se utilizan los parámetros lista1 y lista2 con             <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá una matriz             de <em>n1xn2</em>, con las distancias entre los elementos de lista1 y l            os elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             calculadas entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá             una matriz de <em>nxn</em> simétrica, con las distancias entre todos los             elementos de lista1. Si se utilizan los parámetros lista1 y             lista2 con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá             una matriz de <em>n1xn2</em>, con las distancias entre los elementos de             lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -398,7 +398,7 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (str) Indica el lenguaje que utilizará el vectorizad            or. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizador ya ajustado, este parámetro no será utiliza            do.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (str) Indica el lenguaje que utilizará el             vectorizador. Para mayor información, consultar la             sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizador ya ajustado, este parámetro no será utilizado.</td>
 </tr>
 </tbody>
 </table>
@@ -412,7 +412,7 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>vectorizador</strong> – Objeto de tipo vectorizador, o <em>string</em> con la u            bicación del archivo que lo contiene. Vectorizador que va a ser u            tilizado para generar representaciones vectoriales de los textos.             Si no se especifica un vectorizador, se utilizará uno de tipo Wo            rd2Vec. Si se pasa un vectorizador al objeto de clase Distancia,             este ya debe estar ajustado.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>vectorizador</strong> – Objeto de tipo vectorizador, o <em>string</em> con la             ubicación del archivo que lo contiene. Vectorizador que va a ser             utilizado para generar representaciones vectoriales de los             textos. Si no se especifica un vectorizador, se utilizará uno de             tipo Word2Vec. Si se pasa un vectorizador al objeto de clase             Distancia, este ya debe estar ajustado.</td>
 </tr>
 </tbody>
 </table>
@@ -427,12 +427,12 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de las distancias. También es posible ingresar directam            ente los vectores pre-calculados de los textos.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional         con un segundo texto o lista de textos para comparar. Si se utiliza         este parámetro, se calcularán la distancias entre cada uno de los tex        tos/vectores de lista1 con cada uno de los textos de lista2. También         es posible ingresar directamente los vectores pre-calculados de los t        extos.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de las distancias. También es posible ingresar             directamente los vectores pre-calculados de los textos.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calcularán la distancias entre cada             uno de los textos/vectores de lista1 con cada uno de los textos             de lista2. También es posible ingresar directamente los vectores             pre-calculados de los textos.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias c            alculadas entre los textos/vectores de entrada. Sí solo se utiliz            ó el parámetro lista1 con <em>n</em> textos/vectores, devolverá una matr            iz de <em>nxn</em> simétrica, con las distancias entre todos los element            os de lista1. Si se utilizan los parámetros lista1 y lista2 con             <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá una matriz             de <em>n1xn2</em>, con las distancias entre los elementos de lista1 y l            os elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             calculadas entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá             una matriz de <em>nxn</em> simétrica, con las distancias entre todos los             elementos de lista1. Si se utilizan los parámetros lista1 y             lista2 con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá             una matriz de <em>n1xn2</em>, con las distancias entre los elementos de             lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -448,12 +448,12 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de las distancias. También es posible ingresar directam            ente los vectores pre-calculados de los textos.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calcularán la distancias entre cada uno de             los textos/vectores de lista1 con cada uno de los textos de list            a2. También es posible ingresar directamente los vectores pre-cal            culados de los textos.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de las distancias. También es posible ingresar             directamente los vectores pre-calculados de los textos.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calcularán la distancias entre cada             uno de los textos/vectores de lista1 con cada uno de los textos             de lista2. También es posible ingresar directamente los vectores             pre-calculados de los textos.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias c            alculadas entre los textos/vectores de entrada. Sí solo se utiliz            ó el parámetro lista1 con <em>n</em> textos, devolverá una matriz de             <em>nxn</em> simétrica, con las distancias entre todos los elementos de             lista1. Si se utilizan los parámetros lista1 y lista2 con <em>n1</em> y             <em>n2</em> textos/vectores respectivamente, devolverá una matriz de             <em>n1xn2</em>, con las distancias entre los elementos de lista1 y los e            lementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             calculadas entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos, devolverá una matriz             de <em>nxn</em> simétrica, con las distancias entre todos los elementos             de lista1. Si se utilizan los parámetros lista1 y lista2 con <em>n1</em>             y <em>n2</em> textos/vectores respectivamente, devolverá una matriz de             <em>n1xn2</em>, con las distancias entre los elementos de lista1 y los             elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -463,18 +463,18 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dl class="py method">
 <dt id="comparacion.Distancia.l1">
 <code class="descname"><span class="pre">l1</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l1" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Calcula la distancia L1, también conocida como la distancia Manhattan        , entre uno o dos grupos de textos y/o vectores de entrada.</p>
+<dd><p>Calcula la distancia L1, también conocida como la distancia         Manhattan, entre uno o dos grupos de textos y/o vectores de         entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e        l cálculo de las distancias. También es posible ingresar directamente         los vectores pre-calculados de los textos en un arreglo de numpy o u        na matriz dispersa.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calcularán la distancias entre cada uno de             los textos/vectores de lista1 con cada uno de los elementos de l            ista2. También es posible ingresar directamente los vectores pre-            calculados de los textos en un arreglo de numpy o una matriz disp            ersa.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de las distancias. También es posible ingresar             directamente los vectores pre-calculados de los textos en un             arreglo de numpy o una matriz dispersa.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calcularán la distancias entre cada             uno de los textos/vectores de lista1 con cada uno de los             elementos de lista2. También es posible ingresar directamente los             vectores pre-calculados de los textos en un arreglo de numpy o             una matriz dispersa.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias L            1 calculadas entre los textos/vectores de entrada. Sí solo se uti            lizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá una m            atriz de <em>nxn</em> simétrica, con las distancias L1 entre todos los e            lementos de lista1. Si se utilizan los parámetros lista1 y lista2             con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá una m            atriz de <em>n1xn2</em>, con las distancias entre los elementos de lista            1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             L1 calculadas entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá             una matriz de <em>nxn</em> simétrica, con las distancias L1 entre todos             los elementos de lista1. Si se utilizan los parámetros lista1 y             lista2 con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá             una matriz de <em>n1xn2</em>, con las distancias entre los elementos de             lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -484,18 +484,18 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dl class="py method">
 <dt id="comparacion.Distancia.l2">
 <code class="descname"><span class="pre">l2</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l2" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Calcula la distancia L2, también conocida como la distancia euclidian        a, entre uno o dos grupos de textos y/o vectores de entrada.</p>
+<dd><p>Calcula la distancia L2, también conocida como la distancia         euclidiana, entre uno o dos grupos de textos y/o vectores de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de las distancias. También es posible ingresar directam            ente los vectores pre-calculados de los textos en un arreglo de n            umpy o una matriz dispersa.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calcularán la distancias entre cada uno de             los textos/vectores de lista1 con cada uno de los textos de list            a2. También es posible ingresar directamente los vectores pre-cal            culados de los textos en un arreglo de numpy o una matriz dispersa</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de las distancias. También es posible ingresar             directamente los vectores pre-calculados de los textos en un             arreglo de numpy o una matriz dispersa.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calcularán la distancias entre cada             uno de los textos/vectores de lista1 con cada uno de los textos             de lista2. También es posible ingresar directamente los vectores             pre-calculados de los textos en un arreglo de numpy o una matriz             dispersa.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias L            2 calculadas entre los textos/vectores de entrada. Sí solo se uti            lizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá una m            atriz de <em>nxn</em> simétrica, con las distancias L2 entre todos los e            lementos de lista1. Si se utilizan los parámetros lista1 y lista2             con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá una m            atriz de <em>n1xn2</em>, con las distancias entre los elementos de lista            1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             L2 calculadas entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá             una matriz de <em>nxn</em> simétrica, con las distancias L2 entre todos             los elementos de lista1. Si se utilizan los parámetros lista1 y             lista2 con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá             una matriz de <em>n1xn2</em>, con las distancias entre los elementos de             lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -505,19 +505,19 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dl class="py method">
 <dt id="comparacion.Distancia.minkowski">
 <code class="descname"><span class="pre">minkowski</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.minkowski" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Calcula la distancia de Minkowski entre uno o dos grupos de textos y/        o vectores de entrada.</p>
+<dd><p>Calcula la distancia de Minkowski entre uno o dos grupos de textos         y/o vectores de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de las distancias. También es posible ingresar directam            ente los vectores pre-calculados de los textos. También es posibl            e ingresar directamente los vectores pre-calculados de los textos             en un arreglo de numpy o una matriz dispersa.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calcularán la distancias entre cada uno de             los textos/vectores de lista1 con cada uno de los textos de list            a2. También es posible ingresar directamente los vectores pre-cal            culados de los textos en un arreglo de numpy o una matriz dispersa</li>
-<li><strong>p</strong> – (int) Valor por defecto: 2. Orden o grado de la distancia d            e Minkowski que se desea calcular. Si p=1, la distancia calculada             es equivalente a la distancia de Manhattan (L1) y cuando p=2 la             distancia calculada es equivalente a la distancia euclidiana (L2).</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de las distancias. También es posible ingresar             directamente los vectores pre-calculados de los textos. También             es posible ingresar directamente los vectores pre-calculados de             los textos en un arreglo de numpy o una matriz dispersa.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calcularán la distancias entre cada             uno de los textos/vectores de lista1 con cada uno de los textos             de lista2. También es posible ingresar directamente los vectores             pre-calculados de los textos en un arreglo de numpy o una matriz             dispersa</li>
+<li><strong>p</strong> – (int) Valor por defecto: 2. Orden o grado de la distancia             de Minkowski que se desea calcular. Si p=1, la distancia             calculada es equivalente a la distancia de Manhattan (L1) y             cuando p=2 la distancia calculada es equivalente a la distancia             euclidiana (L2).</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias c            alculadas entre los textos/vectores de entrada. Sí solo se utiliz            ó el parámetro lista1 con <em>n</em> textos/vectores, devolverá una matr            iz de <em>nxn</em> simétrica, con las distancias entre todos los element            os de lista1. Si se utilizan los parámetros lista1 y lista2 con             <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá una matriz             de <em>n1xn2</em>, con las distancias entre los elementos de lista1 y l            os elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las distancias             calculadas entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá             una matriz de <em>nxn</em> simétrica, con las distancias entre todos             los elementos de lista1. Si se utilizan los parámetros lista1 y             lista2 con <em>n1</em> y <em>n2</em> textos/vectores respectivamente, devolverá             una matriz de <em>n1xn2</em>, con las distancias entre los elementos de             lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -530,14 +530,14 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dt id="comparacion.Similitud">
 <em class="property"><span class="pre">class</span> </em><code class="descclassname"><span class="pre">comparacion.</span></code><code class="descname"><span class="pre">Similitud</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">vectorizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Constructor de la clase Similitud. Permite calcular la similitud cose        no y de Jaccard entre textos y/o vectores.</p>
+<p>Constructor de la clase Similitud.        Permite calcular la similitud coseno y de Jaccard entre textos         y/o vectores.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
-<li><strong>vectorizador</strong> – Valor por defecto: None. Objeto de tipo vectoriz            ador, o <em>string</em> con la ubicación del archivo que lo contiene. Ve            ctorizador que va a ser utilizado para generar representaciones v            ectoriales de los textos. Si no se especifica un vectorizador, se             utilizará uno de tipo Word2Vec. Si se pasa un vectorizador al ob            jeto de clase Similitud, este ya debe estar ajustado.</li>
-<li><strong>lenguaje</strong> – (str) Valor por defecto: “es”. Indica el lenguaje qu            e utilizará el vectorizador. Para mayor información, consultar la             sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizador ya ajustado, este parámetro no será utiliza            do.</li>
+<li><strong>vectorizador</strong> – Valor por defecto: None. Objeto de tipo             vectorizador, o <em>string</em> con la ubicación del archivo que lo             contiene. Vectorizador que va a ser utilizado para generar             representaciones vectoriales de los textos. Si no se             especifica un vectorizador, se utilizará uno de tipo Word2Vec.             Si se pasa un vectorizador al objeto de clase Similitud, este ya             debe estar ajustado.</li>
+<li><strong>lenguaje</strong> – (str) Valor por defecto: “es”. Indica el lenguaje             que utilizará el vectorizador. Para mayor información, consultar             la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizador ya ajustado, este parámetro no será             utilizado.</li>
 </ul>
 </td>
 </tr>
@@ -546,18 +546,18 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dl class="py method">
 <dt id="comparacion.Similitud.coseno">
 <code class="descname"><span class="pre">coseno</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista1</span></span></em>, <em><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.coseno" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Calcula la similitud coseno entre uno o dos grupos de textos o vector        es de entrada.</p>
+<dd><p>Calcula la similitud coseno entre uno o dos grupos de textos o         vectores de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de similitud. También es posible ingresar directamente             los vectores pre-calculados de los textos en un arreglo de numpy             o una matriz dispersa.</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calculará la similitud entre cada uno de l            os textos de lista1 con cada uno de los textos de lista2. También             es posible ingresar directamente los vectores pre-calculados de             los textos en un arreglo de numpy o una matriz dispersa.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de similitud. También es posible ingresar directamente             los vectores pre-calculados de los textos en un arreglo de numpy             o una matriz dispersa.</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calculará la similitud entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.             También es posible ingresar directamente los vectores             pre-calculados de los textos en un arreglo de numpy o una matriz             dispersa.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             coseno entre los textos/vectores de entrada. Sí solo se utilizó e            l parámetro lista1 con <em>n</em> textos/vectores, devolverá una matriz             de <em>nxn</em> simétrica, con las similitudes coseno entre todos los el            ementos de lista1. Si se utilizan los parámetros lista1 y lista2             con <em>n1</em> y <em>n2</em> textos respectivamente, devolverá una matriz de             <em>n1xn2</em>, con las similitudes coseno entre los textos/vectores de             lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             coseno entre los textos/vectores de entrada. Sí solo se utilizó             el parámetro lista1 con <em>n</em> textos/vectores, devolverá una             matriz de <em>nxn</em> simétrica, con las similitudes coseno entre todos             los elementos de lista1. Si se utilizan los parámetros lista1 y             lista2 con <em>n1</em> y <em>n2</em> textos respectivamente, devolverá una             matriz de <em>n1xn2</em>, con las similitudes coseno entre los             textos/vectores de lista1 y los elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -567,29 +567,15 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <dl class="py method">
 <dt id="comparacion.Similitud.establecer_lenguaje">
 <code class="descname"><span class="pre">establecer_lenguaje</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Establece el lenguaje del objeto Similitud.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (str) Indica el lenguaje que utilizará el vectorizad            or. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizado ajustado, este parámetro no será usado.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Establece el lenguaje del objeto Similitud.
+:param lenguaje: (str) Indica el lenguaje que utilizará el             vectorizador. Para mayor información, consultar la             sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>. Si se             pasa un vectorizado ajustado, este parámetro no será usado.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="comparacion.Similitud.establecer_vectorizador">
 <code class="descname"><span class="pre">establecer_vectorizador</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">vectorizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Establece el vectorizador del objeto Similitud.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>vectorizador</strong> – Objeto de tipo vectorizador, o <em>string</em> con la u            bicación del archivo que lo contiene. Vectorizador que va a ser u            tilizado para generar representaciones vectoriales de los textos.             Si se pasa un vectorizador al objeto de clase Similitud, este ya             debe estar ajustado.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>Establece el vectorizador del objeto Similitud.
+:param vectorizador: Objeto de tipo vectorizador, o <em>string</em> con la             ubicación del archivo que lo contiene. Vectorizador que va a ser             utilizado para generar representaciones vectoriales de los             textos. Si se pasa un vectorizador al objeto de clase Similitud,             este ya debe estar ajustado.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -601,13 +587,13 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para e            l cálculo de similitud. También es posible ingresar directamente             los vectores pre-calculados de los textos en un arreglo de numpy,             utilizando vectorizadores basados en frecuencias (BOW, TF-IDF,             Hashing).</li>
-<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se util            iza este parámetro, se calculará la similitud entre cada uno de l            os textos de lista1 con cada uno de los textos de lista2. También             es posible ingresar directamente los vectores pre-calculados de             los textos en un arreglo de numpy, utilizando vectorizadores basa            dos en frecuencias (BOW, TF-IDF, Hashing).</li>
-<li><strong>vectorizar</strong> – (bool) {True, False} Valor por defecto: False. Par            ámetro opcional que indica si se desean vectorizar los textos de             entrada pertenecientes a lista1 y (opcionalmente) a lista2. Si ve            ctorizar=False, se calculará la similitud de Jaccard de cada par             de textos directamente, sin obtener sus representaciones vectoria            les.</li>
+<li><strong>lista1</strong> – (str o list) Texto o lista de textos de interés para             el cálculo de similitud. También es posible ingresar directamente             los vectores pre-calculados de los textos en un arreglo de numpy,             utilizando vectorizadores basados en frecuencias (BOW, TF-IDF,             Hashing).</li>
+<li><strong>lista2</strong> – (str o list) Valor por defecto: []. Parámetro opcional             con un segundo texto o lista de textos para comparar. Si se             utiliza este parámetro, se calculará la similitud entre cada uno             de los textos de lista1 con cada uno de los textos de lista2.             También es posible ingresar directamente los vectores             pre-calculados de los textos en un arreglo de numpy, utilizando             vectorizadores basados en frecuencias (BOW, TF-IDF, Hashing).</li>
+<li><strong>vectorizar</strong> – (bool) {True, False} Valor por defecto: False.             Parámetro opcional que indica si se desean vectorizar los textos             de entrada pertenecientes a lista1 y (opcionalmente) a lista2.             Si vectorizar=False, se calculará la similitud de Jaccard de cada             par de textos directamente, sin obtener sus representaciones             vectoriales.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             de Jaccard entre los textos/vectores de entrada. Sí solo se utili            zó el parámetro lista1 con <em>n</em> textos/vectores, devolverá una ma            triz de <em>nxn</em> simétrica, con las similitudes de Jaccard entre to            dos los elementos de lista1. Si se utilizan los   parámetros lis            ta1 y lista2 con <em>n1</em> y <em>n2</em> textos respectivamente, devolverá u            na matriz de <em>n1xn2</em>, con las similitudes de Jaccard entre los e            lementos de lista1 y los elementos de lista2.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(numpy array) Matriz de dos dimensiones con las similitudes             de Jaccard entre los textos/vectores de entrada. Sí solo se             utilizó el parámetro lista1 con <em>n</em> textos/vectores, devolverá             una matriz de <em>nxn</em> simétrica, con las similitudes de Jaccard             entre todos los elementos de lista1. Si se utilizan los             parámetros lista1 y lista2 con <em>n1</em> y <em>n2</em> textos             respectivamente, devolverá una matriz de <em>n1xn2</em>, con las             similitudes de Jaccard entre los elementos de lista1 y los             elementos de lista2.</p>
 </td>
 </tr>
 </tbody>
@@ -632,7 +618,7 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 
   <div role="contentinfo">
     <p>
-        &#169; Derechos de autor 2020, UCD - DNP.
+        &#169; Derechos de autor 2021, UCD - DNP.
 
     </p>
   </div>
@@ -653,6 +639,35 @@ Permite calcular la diferentes medidas de distancia entre textos y/o         vec
 
   </div>
   
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Otras versiones</span>
+        v: desarrollo
+      
+
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Ramas</dt>
+          <dd><a href="../../HEAD/funciones/comparacion.html">HEAD</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/lxml-4.6.3/funciones/comparacion.html">dependabot/pip/sphinx/lxml-4.6.3</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/pillow-8.1.1/funciones/comparacion.html">dependabot/pip/sphinx/pillow-8.1.1</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/urllib3-1.26.4/funciones/comparacion.html">dependabot/pip/sphinx/urllib3-1.26.4</a></dd>
+        
+          <dd><a href="comparacion.html">desarrollo</a></dd>
+        
+          <dd><a href="../../gh-pages/funciones/comparacion.html">gh-pages</a></dd>
+        
+          <dd><a href="../../master/funciones/comparacion.html">latest</a></dd>        
+        
+    </dl>    
+
+  </div>
+</div>
 
   <script type="text/javascript">
       jQuery(function () {

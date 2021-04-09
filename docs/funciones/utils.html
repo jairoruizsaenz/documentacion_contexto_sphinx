@@ -253,14 +253,14 @@
 <dl class="py method">
 <dt id="utils.tokenizacion.TokenizadorEspacios.destokenizar">
 <code class="descname"><span class="pre">destokenizar</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista_tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Realiza la función de detokenización (unir una lista de tokens, produ        ciendo un texto) sobre una o varias listas de tokens de entrada.</p>
+<dd><p>Realiza la función de detokenización (unir una lista de tokens,         produciendo un texto) sobre una o varias listas de tokens de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lista_tokens</strong> – (list). Lista de tokens, si es para un solo text            o. Si es para varios textos, se introduce una lista en la que cad            a elemento (uno para cada texto) es una lista de tokens.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lista_tokens</strong> – (list). Lista de tokens, si es para un solo             texto. Si es para varios textos, se introduce una lista en la que             cada elemento (uno para cada texto) es una lista de tokens.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str o lista de strings) Devuelve un solo string si se intro            dujo solo una lista de tokens. Si se introdujeron varias listas d            e tokens, devuelve una lista de strings.</td>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str o lista de strings) Devuelve un solo string si se             introdujo solo una lista de tokens. Si se introdujeron varias             listas de tokens, devuelve una lista de strings.</td>
 </tr>
 </tbody>
 </table>
@@ -269,14 +269,14 @@
 <dl class="py method">
 <dt id="utils.tokenizacion.TokenizadorEspacios.tokenizar">
 <code class="descname"><span class="pre">tokenizar</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Realiza la función de tokenización (separar un texto en componentes s        ueltos, o tokens) sobre uno o varios textos de entrada.</p>
+<dd><p>Realiza la función de tokenización (separar un texto en componentes         sueltos, o tokens) sobre uno o varios textos de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>texto</strong> – (str o lista de strings). Texto o lista de textos sobre             los cuales se desea aplicar la tokenización.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(list). Si se ingresó un solo texto, devuelve la lista de to            kens del texto. Si se ingresó una lista de textos, se devuelve un            a lista en la que cada elemento es una lista de tokens, con un el            emento para cada texto de entrada.</td>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(list). Si se ingresó un solo texto, devuelve la lista de             tokens del texto. Si se ingresó una lista de textos, se devuelve             una lista en la que cada elemento es una lista de tokens, con un             elemento para cada texto de entrada.</td>
 </tr>
 </tbody>
 </table>
@@ -288,14 +288,14 @@
 <dt id="utils.tokenizacion.TokenizadorNLTK">
 <em class="property"><span class="pre">class</span> </em><code class="descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="descname"><span class="pre">TokenizadorNLTK</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">destokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Constructor por defecto de la clase TokenizadorNLTK. Esta clase se ap        oya en la librería NLTK para definir acciones de tokenización y detok        enización (operación inversa en la que se pasa de tokens a texto) de         textos.</p>
+<p>Constructor por defecto de la clase TokenizadorNLTK. Esta clase se         apoya en la librería NLTK para definir acciones de tokenización y         detokenización (operación inversa en la que se pasa de tokens a         texto) de textos.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
-<li><strong>tokenizador</strong> – (objeto de tokenización de NLTK) Valor por defect            o: None. Objeto encargado de la tokenización de textos. Si el val            or es “None”, se cargará por defecto una instancia de la clase <em>T            oktokTokenizer</em>, de la librería NLTK.</li>
-<li><strong>detokenizador</strong> – (objeto de detokenización de NLTK) Valor por de            fecto: None. Objeto encargado de la detokenización de textos. Si             el valor es “None”, se cargará por defecto una instancia de la cl            ase <em>TreebankWordDetokenizer</em>, de la librería NLTK.</li>
+<li><strong>tokenizador</strong> – (objeto de tokenización de NLTK) Valor por             defecto: None. Objeto encargado de la tokenización de textos. Si             el valor es “None”, se cargará por defecto una instancia de la             clase <cite>ToktokTokenizer</cite>, de la librería NLTK.</li>
+<li><strong>detokenizador</strong> – (objeto de detokenización de NLTK) Valor por             defecto: None. Objeto encargado de la detokenización de textos.             Si el valor es “None”, se cargará por defecto una instancia de la             clase <cite>TreebankWordDetokenizer</cite>, de la librería NLTK.</li>
 </ul>
 </td>
 </tr>
@@ -304,14 +304,14 @@
 <dl class="py method">
 <dt id="utils.tokenizacion.TokenizadorNLTK.destokenizar">
 <code class="descname"><span class="pre">destokenizar</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lista_tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Realiza la función de detokenización (unir una lista de tokens, produ        ciendo un texto) sobre una o varias listas de tokens de entrada.</p>
+<dd><p>Realiza la función de detokenización (unir una lista de tokens,         produciendo un texto) sobre una o varias listas de tokens de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lista_tokens</strong> – (list). Lista de tokens, si es para un solo text            o. Si es para varios textos, se introduce una lista en la que cad            a elemento (uno para cada texto) es una lista de tokens.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lista_tokens</strong> – (list). Lista de tokens, si es para un solo             texto. Si es para varios textos, se introduce una lista en la que             cada elemento (uno para cada texto) es una lista de tokens.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str o lista de strings) Devuelve un solo string si se intro            dujo solo una lista de tokens. Si se introdujeron varias listas d            e tokens, devuelve una lista de strings.</td>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str o lista de strings) Devuelve un solo string si se             introdujo solo una lista de tokens. Si se introdujeron varias             listas de tokens, devuelve una lista de strings.</td>
 </tr>
 </tbody>
 </table>
@@ -325,7 +325,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>detokenizador</strong> – (objeto de detokenización de NLTK). Objeto enca            rgado de la detokenización de textos. Si el valor es “None”, se c            argará por defecto una instancia de la clase <em>TreebankWordDetoken            izer</em>, de la librería NLTK.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>detokenizador</strong> – (objeto de detokenización de NLTK). Objeto             encargado de la detokenización de textos. Si el valor es “None”,             se cargará por defecto una instancia de la clase             <cite>TreebankWordDetokenizer</cite>, de la librería NLTK.</td>
 </tr>
 </tbody>
 </table>
@@ -339,7 +339,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tokenizador</strong> – (objeto de tokenización de NLTK). Objeto encargad            o de la tokenización de textos. Si el valor es “None”, se cargará             por defecto una instancia de la clase <em>ToktokTokenizer</em>, de la l            ibrería NLTK.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tokenizador</strong> – (objeto de tokenización de NLTK). Objeto encargado             de la tokenización de textos. Si el valor es “None”, se cargará             por defecto una instancia de la clase <cite>ToktokTokenizer</cite>, de la             librería NLTK.</td>
 </tr>
 </tbody>
 </table>
@@ -348,12 +348,12 @@
 <dl class="py method">
 <dt id="utils.tokenizacion.TokenizadorNLTK.post_destokenizacion">
 <code class="descname"><span class="pre">post_destokenizacion</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.post_destokenizacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Hace algunos ajustes al texto, una vez ha pasado por la detokenizació        n, para que cumpla con las reglas de puntuación de los idiomas españo        l e inglés. Es posible que para otros idiomas sea necesario incluir a        justes adicionales. Si el texto de entrada no contiene signos de punt        uación (por ejemplo, si fue pasado por alguna función de limpieza pre        viamente), la salida será igual a la entrada.</p>
+<dd><p>Hace algunos ajustes al texto, una vez ha pasado por la         detokenización, para que cumpla con las reglas de puntuación de los         idiomas español e inglés. Es posible que para otros idiomas sea         necesario incluir ajustes adicionales. Si el texto de entrada no         contiene signos de puntuación (por ejemplo, si fue pasado por alguna         función de limpieza previamente), la salida será igual a la entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>texto</strong> – (str). Texto que resulta de detokenizar una lista de to            kens.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>texto</strong> – (str). Texto que resulta de detokenizar una lista de             tokens.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(str) Texto con los signos de puntuación ajustados.</td>
 </tr>
@@ -364,14 +364,14 @@
 <dl class="py method">
 <dt id="utils.tokenizacion.TokenizadorNLTK.tokenizar">
 <code class="descname"><span class="pre">tokenizar</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Realiza la función de tokenización (separar un texto en componentes s        ueltos, o tokens) sobre uno o varios textos de entrada.</p>
+<dd><p>Realiza la función de tokenización (separar un texto en componentes         sueltos, o tokens) sobre uno o varios textos de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>texto</strong> – (str o lista de strings). Texto o lista de textos sobre             los cuales se desea aplicar la tokenización.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(list) Si se ingresó un solo texto, devuelve la lista de tok            ens del texto. Si se ingresó una lista de textos, se devuelve una             lista en la que cada elemento es una lista de tokens, con un ele            mento para cada texto de entrada.</td>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(list) Si se ingresó un solo texto, devuelve la lista de             tokens del texto. Si se ingresó una lista de textos, se devuelve             una lista en la que cada elemento es una lista de tokens, con un             elemento para cada texto de entrada.</td>
 </tr>
 </tbody>
 </table>
@@ -382,14 +382,14 @@
 <dl class="py function">
 <dt id="utils.tokenizacion.destokenizar">
 <code class="descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="descname"><span class="pre">destokenizar</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">tokens</span></span></em>, <em><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función que aprovecha la clase TokenizadorNLTK para realizar la función d    e detokenización (unir una lista de tokens, produciendo un texto) sobre u    na o varias listas de tokens de entrada.</p>
+<dd><p>Función que aprovecha la clase TokenizadorNLTK para realizar la función     de detokenización (unir una lista de tokens, produciendo un texto) sobre     una o varias listas de tokens de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>tokens</strong> – (list). Lista de tokens, si es para un solo texto. Si es p        ara varios textos, se introduce una lista en la que cada elemento (un        o para cada texto) es una lista de tokens.</li>
-<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la token        ización y detokenización de textos. Si el valor es “None”, se cargará         por defecto una instancia de la clase <em>TokenizadorNLTK</em>.</li>
+<li><strong>tokens</strong> – (list). Lista de tokens, si es para un solo texto. Si es         para varios textos, se introduce una lista en la que cada elemento         (uno para cada texto) es una lista de tokens.</li>
+<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la         tokenización y detokenización de textos. Si el valor es “None”, se         cargará por defecto una instancia de la clase <cite>TokenizadorNLTK</cite>.</li>
 </ul>
 </td>
 </tr>
@@ -403,18 +403,18 @@
 <dl class="py function">
 <dt id="utils.tokenizacion.tokenizar">
 <code class="descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="descname"><span class="pre">tokenizar</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función que aprovecha la clase TokenizadorNLTK para realizar la función d    e tokenización (separar un texto en componentes sueltos, o tokens) sobre     uno o varios textos de entrada.</p>
+<dd><p>Función que aprovecha la clase TokenizadorNLTK para realizar la función de     tokenización (separar un texto en componentes sueltos, o tokens) sobre     uno o varios textos de entrada.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (str o lista de strings). Texto o lista de textos sobre los         cuales se desea aplicar la tokenización.</li>
-<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la token        ización y detokenización de textos. Si el valor es “None”, se cargará         por defecto una instancia de la clase <em>TokenizadorNLTK</em>.</li>
+<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la         tokenización y detokenización de textos. Si el valor es “None”, se         cargará por defecto una instancia de la clase <cite>TokenizadorNLTK</cite>.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(list). Si se ingresó un solo texto, devuelve la lista de tokens         del texto. Si se         ingresó una lista de textos, se devuelve una lista en la que cada ele        mento es una lista de tokens, con un elemento para cada texto de entr        ada.</p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last">(list). Si se ingresó un solo texto, devuelve la lista de tokens         del texto. Si se ingresó una lista de textos, se devuelve una lista         en la que cada elemento es una lista de tokens, con un elemento para         cada texto de entrada.</p>
 </td>
 </tr>
 </tbody>
@@ -625,7 +625,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Derechos de autor 2020, UCD - DNP.
+        &#169; Derechos de autor 2021, UCD - DNP.
 
     </p>
   </div>
@@ -646,6 +646,35 @@
 
   </div>
   
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Otras versiones</span>
+        v: desarrollo
+      
+
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Ramas</dt>
+          <dd><a href="../../HEAD/funciones/utils.html">HEAD</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/lxml-4.6.3/funciones/utils.html">dependabot/pip/sphinx/lxml-4.6.3</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/pillow-8.1.1/funciones/utils.html">dependabot/pip/sphinx/pillow-8.1.1</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/urllib3-1.26.4/funciones/utils.html">dependabot/pip/sphinx/urllib3-1.26.4</a></dd>
+        
+          <dd><a href="utils.html">desarrollo</a></dd>
+        
+          <dd><a href="../../gh-pages/funciones/utils.html">gh-pages</a></dd>
+        
+          <dd><a href="../../master/funciones/utils.html">latest</a></dd>        
+        
+    </dl>    
+
+  </div>
+</div>
 
   <script type="text/javascript">
       jQuery(function () {

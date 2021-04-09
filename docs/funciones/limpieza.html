@@ -189,20 +189,24 @@
 <dl class="py function">
 <dt id="limpieza.cargar_stopwords">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">cargar_stopwords</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.cargar_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función para cargar las listas de palabras y expresiones que se desean el    iminar de un texto a partir de un archivo plano.</p>
+<dd><p>Función para cargar las listas de palabras y expresiones que se desean     eliminar de un texto a partir de un archivo plano.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>ubicacion_archivo</strong> – (str) Ubicación del archivo plano que contiene         la lista de palabras y/o lista de palabras separadas por espacios, co        mas o saltos de línea.</li>
-<li><strong>encoding</strong> – (str) Valor por defecto “utf-8”. Codificación del archiv        o de texto.</li>
+<li><strong>ubicacion_archivo</strong> – (str) Ubicación del archivo plano que contiene         la lista de palabras y/o lista de palabras separadas por espacios,         comas o saltos de línea.</li>
+<li><strong>encoding</strong> – (str) Valor por defecto “utf-8”. Codificación del archivo         de texto.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"><p>(tuple) Tupla que contiene: <br /></p>
-<p><ul>  <li> lista_palabras (list): Lista que contiene las palabras que             se desean quitar en un texto. </li>
-<li> lista_expresiones (list): Lista que contiene las expresiones que             se desean quitar de un texto. </li>  </ul></p>
+<tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body"><p class="first last"><p>(tuple) Tupla que contiene: <br />
+<ul></p>
+<blockquote>
+<div><p><li> lista_palabras (list): Lista que contiene las palabras que             se desean quitar en un texto. </li>
+<li> lista_expresiones (list): Lista que contiene las expresiones             que se desean quitar de un texto. </li></p>
+</div></blockquote>
+<p></ul></p>
 </p>
 </td>
 </tr>
@@ -213,14 +217,14 @@
 <dl class="py function">
 <dt id="limpieza.limpieza_basica">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">limpieza_basica</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">quitar_numeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.limpieza_basica" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Limpieza básica del texto. Esta función realiza una limpieza básica del t    exto de entrada, transforma todo el texto a letras minúsculas, quita sign    os de puntuación y caracteres especiales, remueve espacios múltiples deja    ndo solo espacio sencillo y caracteres de salto de línea o tabulaciones.</p>
+<dd><p>Limpieza básica del texto. Esta función realiza una limpieza básica del     texto de entrada, transforma todo el texto a letras minúsculas, quita     signos de puntuación y caracteres especiales, remueve espacios múltiples     dejando solo espacio sencillo y caracteres de salto de línea o     tabulaciones.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>texto</strong> – (str) Texto de entrada al que se le aplicará la limpieza bá        sica.</li>
-<li><strong>quitar_numeros</strong> – (bool) {True, False} Valor por defecto: True. Indi        ca si desea quitar los números dentro del texto.</li>
+<li><strong>texto</strong> – (str) Texto de entrada al que se le aplicará la limpieza         básica.</li>
+<li><strong>quitar_numeros</strong> – (bool) {True, False} Valor por defecto: True.         Indica si desea quitar los números dentro del texto.</li>
 </ul>
 </td>
 </tr>
@@ -234,7 +238,7 @@
 <dl class="py function">
 <dt id="limpieza.limpieza_texto">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">limpieza_texto</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">lista_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">lista_expresiones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em><span class="n"><span class="pre">quitar_numeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em><span class="n"><span class="pre">quitar_acentos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">momento_stopwords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ambos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.limpieza_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Limpieza completa de texto. Esta función hace una limpieza exhaustiva del     texto de entrada. Es capaz de quitar palabras y expresiones contenidas e    n <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>, quita acentos de las palabras,     números y palabras de longitud menor a <cite>n_min</cite>.</p>
+<dd><p>Limpieza completa de texto. Esta función hace una limpieza exhaustiva del     texto de entrada. Es capaz de quitar palabras y expresiones contenidas en     <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>, quita acentos de las palabras,     números y palabras de longitud menor a <cite>n_min</cite>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -243,12 +247,12 @@
 <li><strong>texto</strong> – (str) Texto de entrada al que se le aplicará el proceso de         limpieza.</li>
 <li><strong>lista_palabras</strong> – (list) Parámetro opcional. Lista de palabras que se         quieren quitar del texto. Por ejemplo, la lista <cite>[“hola”, “de”, “a”]</cite>         eliminará esas palabras.</li>
 <li><strong>lista_expresiones</strong> – (list) Parámetro opcional. Lista de expresiones         que se quieren quitar al texto. A diferencia de <cite>lista_palabras</cite>, esta         puede contener expresiones compuestas. Por ejemplo,         [“San juan de Dios”, “Distrito Capital, “fuente de agua”]; esta lista         quitará esas expresiones del texto de entrada.</li>
-<li><strong>ubicacion_archivo</strong> – (str) Valor por defecto: None. Parámetro opcion        al. Indica la ubicación del archivo plano que contiene la lista de pa        labras y/o expresiones separadas por comas o saltos de línea. Si se u        sa este parámetro, no se tendrán en cuenta los parámetros         <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>.</li>
-<li><strong>n_min</strong> – (int) Parámetro opcional. Longitud mínima de las palabras a        ceptadas en el texto de entrada.</li>
+<li><strong>ubicacion_archivo</strong> – (str) Valor por defecto: None. Parámetro         opcional. Indica la ubicación del archivo plano que contiene la lista         de palabras y/o expresiones separadas por comas o saltos de línea. Si         se usa este parámetro, no se tendrán en cuenta los parámetros         <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>.</li>
+<li><strong>n_min</strong> – (int) Parámetro opcional. Longitud mínima de las palabras         aceptadas en el texto de entrada.</li>
 <li><strong>quitar_numeros</strong> – (bool) {True, False} Valor por defecto: True. Si         <cite>False</cite>, no se quitan los números dentro del texto de entrada.</li>
-<li><strong>quitar_acentos</strong> – (bool) {True, False} Valor por defecto: False. Opc        ión para determinar si se quitan acentos (tildes, diéresis, virgulill        a) del texto.</li>
-<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la token        ización y detokenización de textos al momento de quitar stopwords. Si         el valor es “None”, se utilizará por defecto una instancia de la cla        se <em>TokenizadorNLTK</em>.</li>
-<li><strong>momento_stopwords</strong> – (str) {“antes”, “después”, “ambos”} Valor por d        efecto: “ambos”. Indica en qué momento remover las <em>stopwords</em> del te        xto. Las opciones son hacerlo antes o después de las demás operacione        s de limpieza del texto de entrada, eligiendo los valores «antes» o         «después», respectivamente (la función acepta los valores con o sin t        ildes y/o mayúsculas). También es posible remover <em>stopwords</em> de los         textos tanto antes como despúes de las otras operaciones de limpieza,         al asignar el valor «ambos» a este parámetro. Cualquier otro valor q        ue se asigne a este parámetro ocasionará que no se haga remoción de         <em>stopwords</em> en el texto.</li>
+<li><strong>quitar_acentos</strong> – (bool) {True, False} Valor por defecto: False.         Opción para determinar si se quitan acentos (tildes, diéresis,         virgulilla) del texto.</li>
+<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la         tokenización y detokenización de textos al momento de quitar         stopwords. Si el valor es “None”, se utilizará por defecto una         instancia de la clase <cite>TokenizadorNLTK</cite>.</li>
+<li><strong>momento_stopwords</strong> – (str) {“antes”, “después”, “ambos”} Valor por         defecto: “ambos”. Indica en qué momento remover las <em>stopwords</em> del         texto. Las opciones son hacerlo antes o después de las demás         operaciones de limpieza del texto de entrada, eligiendo los valores         «antes» o «después», respectivamente (la función acepta los valores         con o sin tildes y/o mayúsculas). También es posible remover         <cite>stopwords</cite> de los textos tanto antes como despúes de las otras         operaciones de limpieza, al asignar el valor «ambos» a este         parámetro. Cualquier otro valor que se asigne a este parámetro         ocasionará que no se haga remoción de <cite>stopwords</cite> en el texto.</li>
 </ul>
 </td>
 </tr>
@@ -281,7 +285,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tipo</strong> – (str) {“todos”, “municipios”, “departamentos”} Valor por def        ecto “todos”. “todos” genera una lista de nombres de municipios y dep        artamentos de Colombia, “municipios” genera nombres solo de municipio        s y “departamentos” genera nombres solo de departamentos.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>tipo</strong> – (str) {“todos”, “municipios”, “departamentos”} Valor por         defecto “todos”. “todos” genera una lista de nombres de municipios y         departamentos de Colombia, “municipios” genera nombres solo de         municipios y “departamentos” genera nombres solo de departamentos.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(list) Lista de nombres de municipios, departamentos o ambos.</td>
 </tr>
@@ -292,7 +296,7 @@
 <dl class="py function">
 <dt id="limpieza.lista_nombres">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">lista_nombres</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'todos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_nombres" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Genera lista de nombres más comunes del español. Retorna lista con los no    mbres más comunes, tanto para hombre y mujer del idioma español. La funci    ón permite generar lista de nombres solo de mujeres o solo de hombres con     el parámetro <cite>tipo</cite>.</p>
+<dd><p>Genera lista de nombres más comunes del español. Retorna lista con los     nombres más comunes, tanto para hombre y mujer del idioma español. La     función permite generar lista de nombres solo de mujeres o solo de     hombres con el parámetro <cite>tipo</cite>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -308,12 +312,12 @@
 <dl class="py function">
 <dt id="limpieza.lista_stopwords">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">lista_stopwords</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Genera una lista de stopwords (palabras que se quieren quitar de un texto    ). Función que genera una lista de stopwords de un idioma predeterminado.</p>
+<dd><p>Genera una lista de stopwords (palabras que se quieren quitar de un     texto). Función que genera una lista de stopwords de un idioma     predeterminado.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (str) Valor por defecto: “es” (Español). Define el lengu        aje de las stopwords. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</td>
+<tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><strong>lenguaje</strong> – (str) Valor por defecto: “es” (Español). Define el         lenguaje de las stopwords. Para mayor información, consultar la         sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Devuelve:</th><td class="field-body">(list) Lista de palabras stopwords del idioma seleccionado.</td>
 </tr>
@@ -331,7 +335,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (str) Texto de entrada.</li>
-<li><strong>sep</strong> – (str) Valor por defecto: “|”. Separador determinado para enco        ntrar palabras repetidas.</li>
+<li><strong>sep</strong> – (str) Valor por defecto: “|”. Separador determinado para         encontrar palabras repetidas.</li>
 <li><strong>remover_espacios</strong> – (bool) {True, False} Valor por defecto: True. Si         True quita los espacios presentes al inicio y al final de una palabra.</li>
 </ul>
 </td>
@@ -346,7 +350,7 @@
 <dl class="py function">
 <dt id="limpieza.remover_acentos">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">remover_acentos</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_acentos" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Quita los acentos (tildes, diéresis, virgulilla) de un texto de entrada.     Esta reemplaza cada carácter con acento en el texto por su equivalente si    n acento.</p>
+<dd><p>Quita los acentos (tildes, diéresis, virgulilla) de un texto de entrada.     Esta reemplaza cada carácter con acento en el texto por su equivalente sin     acento.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -383,17 +387,17 @@
 <dl class="py function">
 <dt id="limpieza.remover_stopwords">
 <code class="descclassname"><span class="pre">limpieza.</span></code><code class="descname"><span class="pre">remover_stopwords</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">texto</span></span></em>, <em><span class="n"><span class="pre">lista_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">lista_expresiones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Quita las palabras y expresiones determinadas de un texto. Esta función q    uita del texto de entrada, palabras específicas contenidas en     <cite>lista_palabras</cite>, o expresiones de palabras contenidas en     <cite>lista_expresiones</cite>.</p>
+<dd><p>Quita las palabras y expresiones determinadas de un texto. Esta función     quita del texto de entrada, palabras específicas contenidas en     <cite>lista_palabras</cite>, o expresiones de palabras contenidas en     <cite>lista_expresiones</cite>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
-<li><strong>texto</strong> – (str) Texto al cual se le quitarán palabras y expresiones c        ontenidas en <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>.</li>
-<li><strong>lista_palabras</strong> – (list) Parámetro opcional. Lista de palabras que s        e quieren quitar del texto. Por ejemplo, la lista         <cite>[“hola”, “de”, “a”]</cite> eliminará esas palabras.</li>
-<li><strong>lista_expresiones</strong> – (list) Parámetro opcional. Lista de expresiones         que se quieren quitar al texto. A diferencia de <cite>lista_palabras</cite>, es        ta puede contener palabras compuestas. Por ejemplo,         [“San juan de Dios”, “Distrito Capital, “fuente de agua”]; esta lista         quitará esas palabras compuestas del texto de entrada.</li>
-<li><strong>ubicacion_archivo</strong> – (str) Valor por defecto: None. Ubicación del ar        chivo plano que contiene la lista de palabras y/o lista de palabras s        eparadas por espacios, comas o saltos de línea. En caso contrario no         es necesario especificar los parametros <cite>lista_palabras</cite> y         <cite>lista_expresiones</cite>.</li>
-<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la token        ización y detokenización de textos. Si el valor es “None”, se utiliza        rá por defecto una instancia de la clase <em>TokenizadorNLTK</em>.</li>
+<li><strong>texto</strong> – (str) Texto al cual se le quitarán palabras y expresiones         contenidas en <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>.</li>
+<li><strong>lista_palabras</strong> – (list) Parámetro opcional. Lista de palabras que         se desean quitar del texto. Por ejemplo, la lista         <cite>[“hola”, “de”, “a”]</cite> eliminará esas palabras.</li>
+<li><strong>lista_expresiones</strong> – (list) Parámetro opcional. Lista de expresiones         que se quieren quitar al texto. A diferencia de <cite>lista_palabras</cite>,         esta puede contener palabras compuestas. Por ejemplo,         [“San juan de Dios”, “Distrito Capital, “fuente de agua”]; esta lista         quitará esas palabras compuestas del texto de entrada.</li>
+<li><strong>ubicacion_archivo</strong> – (str) Valor por defecto: None. Ubicación del         archivo plano que contiene la lista de palabras y/o lista de palabras         separadas por espacios, comas o saltos de línea. En caso contrario no         es necesario especificar los parametros <cite>lista_palabras</cite> y         <cite>lista_expresiones</cite>.</li>
+<li><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la         tokenización y detokenización de textos. Si el valor es “None”, se         utilizará por defecto una instancia de la clase <em>TokenizadorNLTK</em>.</li>
 </ul>
 </td>
 </tr>
@@ -420,7 +424,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Derechos de autor 2020, UCD - DNP.
+        &#169; Derechos de autor 2021, UCD - DNP.
 
     </p>
   </div>
@@ -441,6 +445,35 @@
 
   </div>
   
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Otras versiones</span>
+        v: desarrollo
+      
+
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Ramas</dt>
+          <dd><a href="../../HEAD/funciones/limpieza.html">HEAD</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/lxml-4.6.3/funciones/limpieza.html">dependabot/pip/sphinx/lxml-4.6.3</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/pillow-8.1.1/funciones/limpieza.html">dependabot/pip/sphinx/pillow-8.1.1</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/urllib3-1.26.4/funciones/limpieza.html">dependabot/pip/sphinx/urllib3-1.26.4</a></dd>
+        
+          <dd><a href="limpieza.html">desarrollo</a></dd>
+        
+          <dd><a href="../../gh-pages/funciones/limpieza.html">gh-pages</a></dd>
+        
+          <dd><a href="../../master/funciones/limpieza.html">latest</a></dd>        
+        
+    </dl>    
+
+  </div>
+</div>
 
   <script type="text/javascript">
       jQuery(function () {

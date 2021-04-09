@@ -217,7 +217,7 @@
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
 <li><strong>corpus_entrenamiento</strong> – (list) Lista de textos de interes para             entrenar el modelo.</li>
 <li><strong>actualizar</strong> – (bool) {True, False} Valor por defecto: False.             Si True, las nuevas palabras en los documentos se agregarán al             vocabulario del modelo.</li>
-<li><strong>archivo_salida</strong> – (str) Valor por defecto: “”. Ruta donde             desea exportar el vectorizador ajustado. Usar formato pickle (pk)</li>
+<li><strong>archivo_salida</strong> – (str) Valor por defecto: “”. Ruta donde             desea exportar el vectorizador ajustado. Usar formato pickle (pk).</li>
 </ul>
 </td>
 </tr>
@@ -288,7 +288,7 @@
 <li><strong>max_elementos</strong> – (int) Valor por defecto: None. Número máximo             de términos a ser tenidos en cuenta, se escogen los max_elementos             términos más frecuentes.</li>
 <li><strong>idf</strong> – (bool) {True, False} Valor por defecto: True. Habilita la             reponderación de pesos de los términos usando IDF.</li>
 <li><strong>archivo_modelo</strong> – (str) Valor por defecto: “”. Ruta de archivo             de un vectorizador en formato pickle (pk). Permite cargar un             vectorizador generado previamente, los demás parámetros de             inicialización no serán tenidos en cuenta, pues se tomarán del             vectorizador cargado.</li>
-<li><strong>kwargs</strong> – Parámetros adicionales que aceptan las clases             <cite>CountVectorizer</cite> y <cite>TfidfVectorizer</cite> de la librería scikit-learn.             Para mayor información sobre estas clases, y los elementos adici            onales que se pueden configurar, se puede consultar su documentac            ion:             <a class="reference external" href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text" target="_blank">https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text</a>.</li>
+<li><strong>kwargs</strong> – Parámetros adicionales que aceptan las clases             <cite>CountVectorizer</cite> y <cite>TfidfVectorizer</cite> de la librería scikit-learn.             Para mayor información sobre estas clases, y los párametros             adicionales que se pueden configurar, consultar su documentacion:            <a class="reference external" href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text" target="_blank">https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text</a>.</li>
 </ul>
 </td>
 </tr>
@@ -377,7 +377,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>textos</strong> – (str o list) Texto o lista con textos de interés             para ser vectorizados.</li>
-<li><strong>disperso</strong> – (bool) {True, False} Valor por defecto: False.             Si es True retorna los resultados como una matriz dispersa (csr_m            atrix). Si es False retorna los resultados como un numpy array.</li>
+<li><strong>disperso</strong> – (bool) {True, False} Valor por defecto: False.             Si es True retorna los resultados como una matriz dispersa             (csr_matrix). Si es False retorna los resultados como un numpy             array.</li>
 </ul>
 </td>
 </tr>
@@ -416,7 +416,7 @@
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first last simple">
 <li><strong>n_elementos</strong> – (int) Hace referencia al número de elementos o              características (columnas) en las matrices de salida.</li>
 <li><strong>rango_ngramas</strong> – (tupla) (int, int) Valor por defecto: (1, 1).             Límite inferior y superior del rango de valores n para los             diferentes n-gramas que se van a extraer. Por ejemplo,             un rango_ngramas de (1, 1) significa solo unigramas, (1, 2)             significa unigramas y bigramas, y (2, 2) significa solo bigramas.</li>
-<li><strong>kwargs</strong> – Parámetros adicionales que acepta la clase             <cite>HashingVectorizer</cite> de la librería scikit-learn. Para mayor infor            mación sobre esta clase, y los elementos adicionales que se puede            n configurar, se puede consultar su documentacion:             <a class="reference external" href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text" target="_blank">https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text</a>.</li>
+<li><strong>kwargs</strong> – Parámetros adicionales que acepta la clase             <cite>HashingVectorizer</cite> de la librería scikit-learn. Para mayor             información sobre esta clase, y los párametros adicionales que se             pueden configurar, consultar su documentacion:             <a class="reference external" href="https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text" target="_blank">https://scikit-learn.org/stable/modules/classes.html#module-sklearn.feature_extraction.text</a>.</li>
 </ul>
 </td>
 </tr>
@@ -568,7 +568,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>textos</strong> – (str o list) Texto o lista con textos de interés             para ser vectorizados.</li>
-<li><strong>quitar_desconocidas</strong> – (bool) {True, False} Valor por defecto:             False. Cuando este argumento es False, para cada palabra desconoc            ida se incluirá un vector de solo ceros, lo que afectará el vector             promedio resultante. Si es True hará que la función sea             ligeramente más demorada, pero quizás más precisa, al no tener             en cuenta palabras que no están incluídas en el modelo.</li>
+<li><strong>quitar_desconocidas</strong> – (bool) {True, False} Valor por defecto:             False. Cuando este argumento es False, para cada palabra             desconocida se incluirá un vector de solo ceros, lo que afectará             el vector promedio resultante. Si es True hará que la función sea             ligeramente más demorada, pero quizás más precisa, al no tener             en cuenta palabras que no están incluídas en el modelo.</li>
 </ul>
 </td>
 </tr>
@@ -589,7 +589,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parámetros:</th><td class="field-body"><ul class="first simple">
 <li><strong>texto</strong> – (str) Texto de interés para ser vectorizado.</li>
-<li><strong>quitar_desconocidas</strong> – (bool) {True, False} Valor por defecto:             False. Cuando este argumento es False, para cada palabra desconoc            ida se incluirá un vector de solo ceros, lo que afectará el vecto            r promedio resultante. Si es True hará que la función sea             ligeramente más demorada, pero quizás más precisa, al no tener             en cuenta palabras que no están incluídas en el modelo.</li>
+<li><strong>quitar_desconocidas</strong> – (bool) {True, False} Valor por defecto:             False. Cuando este argumento es False, para cada palabra             desconocida se incluirá un vector de solo ceros, lo que afectará             el vector promedio resultante. Si es True hará que la función sea             ligeramente más demorada, pero quizás más precisa, al no tener             en cuenta palabras que no están incluídas en el modelo.</li>
 </ul>
 </td>
 </tr>
@@ -618,7 +618,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Derechos de autor 2020, UCD - DNP.
+        &#169; Derechos de autor 2021, UCD - DNP.
 
     </p>
   </div>
@@ -639,6 +639,35 @@
 
   </div>
   
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Otras versiones</span>
+        v: desarrollo
+      
+
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Ramas</dt>
+          <dd><a href="../../HEAD/funciones/vectorizacion.html">HEAD</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/lxml-4.6.3/funciones/vectorizacion.html">dependabot/pip/sphinx/lxml-4.6.3</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/pillow-8.1.1/funciones/vectorizacion.html">dependabot/pip/sphinx/pillow-8.1.1</a></dd>
+        
+          <dd><a href="../../dependabot\pip\sphinx/urllib3-1.26.4/funciones/vectorizacion.html">dependabot/pip/sphinx/urllib3-1.26.4</a></dd>
+        
+          <dd><a href="vectorizacion.html">desarrollo</a></dd>
+        
+          <dd><a href="../../gh-pages/funciones/vectorizacion.html">gh-pages</a></dd>
+        
+          <dd><a href="../../master/funciones/vectorizacion.html">latest</a></dd>        
+        
+    </dl>    
+
+  </div>
+</div>
 
   <script type="text/javascript">
       jQuery(function () {
