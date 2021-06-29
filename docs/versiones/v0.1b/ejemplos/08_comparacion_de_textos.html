@@ -192,12 +192,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -212,7 +206,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -225,24 +222,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="../../desarrollo/ejemplos/08_comparacion_de_textos.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/ejemplos/08_comparacion_de_textos.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="../../desarrollo/ejemplos/08_comparacion_de_textos.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/ejemplos/08_comparacion_de_textos.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="08_comparacion_de_textos.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
@@ -963,7 +957,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     

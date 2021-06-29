@@ -120,12 +120,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -140,7 +134,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -153,24 +150,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="03_exploracion_y_visualizacion.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/ejemplos/03_exploracion_y_visualizacion.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="03_exploracion_y_visualizacion.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/ejemplos/03_exploracion_y_visualizacion.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="../../v0.1b/ejemplos/03_exploracion_y_visualizacion.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p class="caption">
  <span class="caption-text">
@@ -454,59 +448,75 @@
 <div class="align-center figure">
 <img alt="" src="../_images/dispersion_plot_2.png" />
 </div>
+<p>En algunas ocasiones, graficar la dispersión léxica de palabras por si solas, hacen perder el contexto en las que aparecen. Una forma de solucionar este hecho es visualizar la aparición de n-gramas a través del texto.</p>
+<p>Para graficar la dispersión léxica de n-gramas con ConTexto, es necesario, calcular los n-gramas para cada texto y pasarlos como una lista de listas. En el siguiente ejemplo, se muestra la dispersión léxica para bi-gramas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Diferentes textos en una lista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">textos</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;Un campesino alimentaba al mismo tiempo a la cabra y a un asno. La cabra, envidiosa porque su compañero estaba mejor atendido, le dio el siguiente consejo: - La noria y la carga hacen de tu vida un tormento interminable; simula una enfermedad y déjate caer en un foso, pues así te dejarán reposar.&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;Al salir la cabra de su establo encargó a su hijo el cuidado de la casa, advirtiéndole el peligro de los animales que rondaban por los alrededores con intención de entrar a los establos y devorar los ganados.&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;Bien sé que eres nuestro mayor adversario y que, imitando la voz de un campesino, pretendes entrar para devorarme. Puedes marcharte, odiado animal, que no seré yo quien te abra la puerta.&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;la cabra robó un queso y, llevando su botín fue a saborearlo en la copa de un árbol. En estas circunstancias lo vio un asno muy astuto, y comenzó a adularlo con la intención de arrebatárselo.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Limpieza basica para quitar signos de puntuación</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">textos</span> <span class="o">=</span> <span class="p">[</span><span class="n">limpieza_basica</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">textos</span><span class="p">]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Calculo de bigramas sobre el texto</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bigramas</span> <span class="o">=</span> <span class="p">[</span><span class="n">obtener_ngramas</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">textos</span><span class="p">]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#bigramas de interés</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mis_bigramas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;un campesino&#39;</span><span class="p">,</span><span class="s1">&#39;la cabra&#39;</span><span class="p">,</span> <span class="s1">&#39;los ganados&#39;</span><span class="p">,</span> <span class="s1">&#39;un asno&#39;</span><span class="p">]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#graficar la dispersión de bigramas</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_dispersion</span><span class="p">(</span><span class="n">bigramas</span><span class="p">,</span> <span class="n">mis_bigramas</span><span class="p">,</span> <span class="n">titulo</span> <span class="o">=</span> <span class="s1">&#39;Dispersión léxica de bigramas&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>                    <span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">eje_y</span> <span class="o">=</span> <span class="s2">&quot;Bigramas de interés&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="align-center figure">
+<img alt="" src="../_images/dispersion_plot_3.png" />
+</div>
 </div>
 <div class="section" id="calcular-coocurrencias-y-graficarlas">
 <h2><span class="section-number">3.4. </span>Calcular coocurrencias y graficarlas<a class="headerlink" href="#calcular-coocurrencias-y-graficarlas" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En lingüistica, la coocurrencia es la aparición o utilización conjunta de dos unidades léxicas (por ejemplo, palabras o n-gramas) en una unidad superior, como una oración o un documento. La función <a class="reference internal" href="../funciones/exploracion.html#exploracion.matriz_coocurrencias" title="exploracion.matriz_coocurrencias"><code class="xref py py-func docutils literal notranslate"><span class="pre">exploracion.matriz_coocurrencias()</span></code></a> permite calcular las coocurrencias de términos en un mismo documento o en una ventana de +/- n palabras.</p>
 <p>A partir de estas matrices de coocurrencias es posible graficar redes o grafos de coocurrencia. En estos, el tamaño de cada punto es proporcional a la frecuencia de aparición de ese término y el grosor de las lineas entre puntos es proporcional a la cantidad de veces que dos términos aparecen juntos en un documento o una ventana de palabras.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Obtener matrices de coocurrencias</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mat_doc</span> <span class="o">=</span> <span class="n">matriz_coocurrencias</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">max_num</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span>  <span class="s2">&quot;&quot;&quot; el perro está en la casa un perro y un gato están en el carro</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">    el carro entro a la casa el gato salió de la casa para entrar al carro</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">    el carro casi atropella al perro &quot;&quot;&quot;</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Solo se cuenta la coocurrencia si las palabras están a 5 o menos palabras entre sí</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mat_ven</span> <span class="o">=</span> <span class="n">matriz_coocurrencias</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">max_num</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">modo</span><span class="o">=</span><span class="s1">&#39;ventana&#39;</span><span class="p">,</span> <span class="n">ventana</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">## Graficar co-ocurrencias de palabras en el texto</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_doc</span><span class="p">,</span> <span class="n">ubicacion_archivo</span><span class="o">=</span><span class="s1">&#39;salida/grafo_doc_full.jpg&#39;</span><span class="p">,</span> <span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># El parámetro &quot;prop_fuera&quot; se utiliza para quitar líneas de menos coocurrencias del grafo,</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># con el propósito de simplificar un poco la gráfica</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_doc</span><span class="p">,</span> <span class="n">prop_fuera</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">ubicacion_archivo</span><span class="o">=</span><span class="s1">&#39;salida/grafo_doc_top20.jpg&#39;</span><span class="p">,</span> <span class="n">graficar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_ven</span><span class="p">,</span> <span class="n">ubicacion_archivo</span><span class="o">=</span><span class="s1">&#39;salida/grafo_ven_full.jpg&#39;</span><span class="p">,</span> <span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_ven</span><span class="p">,</span> <span class="n">prop_fuera</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">ubicacion_archivo</span><span class="o">=</span><span class="s1">&#39;salida/grafo_ven_top20.jpg&#39;</span><span class="p">,</span> <span class="n">graficar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_ven</span><span class="p">,</span> <span class="n">ubicacion_archivo</span><span class="o">=</span><span class="s1">&#39;salida/grafo_doc_full.jpg&#39;</span><span class="p">,</span> <span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="n">graficar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">seed</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>                      <span class="n">offset_y</span> <span class="o">=</span><span class="mf">0.13</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="align-center figure">
-<img alt="" src="../_images/grafo_doc_full.jpg" />
-</div>
-<div class="align-center figure">
-<img alt="" src="../_images/grafo_ven_full.jpg" />
+<img alt="" src="../_images/grafo_doc_full_b.jpg" />
 </div>
 <p>También se pueden calcular y graficar coocurrencias sobre un conjunto de documentos o textos independientes. Estos textos deben ser pasados como una lista.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Ejemplo con un grupo de textos</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Diferentes textos en una lista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">textos</span> <span class="o">=</span> <span class="p">[</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;el perro está en la casa&#39;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;un perro y un gato están en el carro&#39;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;el carro entro a la casa&#39;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;el gato salió de la casa para entrar al carro&#39;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;el carro casi atropella al perro&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;Un campesino alimentaba al mismo tiempo a la cabra y a un asno. La cabra, envidiosa porque su compañero estaba mejor atendido, le dio el siguiente consejo: - La noria y la carga hacen de tu vida un tormento interminable; simula una enfermedad y déjate caer en un foso, pues así te dejarán reposar.&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;Al salir la cabra de su establo encargó a su hijo el cuidado de la casa, advirtiéndole el peligro de los animales que rondaban por los alrededores con intención de entrar a los establos y devorar los ganados.&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;Bien sé que eres nuestro mayor adversario y que, imitando la voz de un campesino, pretendes entrar para devorarme. Puedes marcharte, odiado animal, que no seré yo quien te abra la puerta.&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;la cabra robó un queso y, llevando su botín fue a saborearlo en la copa de un árbol. En estas circunstancias lo vio un asno muy astuto, y comenzó a adularlo con la intención de arrebatárselo.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">]</span>
 
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># limpieza básica de texto para  quitar puntuaciones</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">textos</span> <span class="o">=</span> <span class="p">[</span><span class="n">limpieza_texto</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">lista_palabras</span><span class="o">=</span><span class="n">lista_stopwords</span><span class="p">())</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">textos</span><span class="p">]</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mat_doc</span> <span class="o">=</span> <span class="n">matriz_coocurrencias</span><span class="p">(</span><span class="n">textos</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mat_ven</span> <span class="o">=</span> <span class="n">matriz_coocurrencias</span><span class="p">(</span><span class="n">textos</span><span class="p">,</span> <span class="n">modo</span><span class="o">=</span><span class="s1">&#39;ventana&#39;</span><span class="p">,</span> <span class="n">ventana</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_doc</span><span class="p">,</span> <span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_ven</span><span class="p">,</span> <span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">graficar_coocurrencias</span><span class="p">(</span><span class="n">mat_doc</span><span class="p">,</span> <span class="n">n_nodos</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">escala</span> <span class="o">=</span> <span class="mi">900</span><span class="p">,</span><span class="n">dim_figura</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>                       <span class="n">node_cmap</span> <span class="o">=</span> <span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">=</span> <span class="mf">0.06</span><span class="p">,</span> <span class="n">seed</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="align-center figure">
-<img alt="" src="../_images/grafo_doc_full_2.jpg" />
-</div>
-<div class="align-center figure">
-<img alt="" src="../_images/grafo_ven_full_2.jpg" />
+<img alt="" src="../_images/grafo_ven_full_b.jpg" />
 </div>
 </div>
 </div>
@@ -541,7 +551,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     

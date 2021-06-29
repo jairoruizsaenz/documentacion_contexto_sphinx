@@ -120,12 +120,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -140,7 +134,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -153,24 +150,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="stemming.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/funciones/stemming.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="stemming.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/funciones/stemming.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="../../v0.1b/funciones/stemming.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p class="caption">
  <span class="caption-text">
@@ -286,18 +280,18 @@
 <span id="stemming"></span><span id="funciones-steamming"></span><h1>Stemming<a class="headerlink" href="#module-stemming" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
 <dt id="stemming.Stemmer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">stemming.</span></code><code class="sig-name descname"><span class="pre">Stemmer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">stemming.</span></code><code class="sig-name descname"><span class="pre">Stemmer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Constructor por defecto de la clase Stemmer. Esta clase se encarga         de hacer la operación de <em>stemming</em>, o reducción de palabras a su         raíz, en textos.</p>
+<p>Constructor por defecto de la clase <cite>Stemmer</cite>. Esta clase se encarga         de hacer la operación de <em>stemming</em>, o reducción de palabras a su         raíz, en textos.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lenguaje</strong> – (str) Lenguaje de los textos a los que se va a aplic            ar <em>stemming</em>. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
-<li><p><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la             tokenización y detokenización de textos. Si el valor es “None”,             se carga por defecto una instancia de la clase <cite>TokenizadorNLTK</cite>.</p></li>
+<li><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Lenguaje de los textos a los que se va a aplicar             <em>stemming</em>. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.</p></li>
+<li><p><strong>tokenizador</strong> (<em>Tokenizer</em><em>, </em><em>opcional</em>) – Objeto encargado de la tokenización y             detokenización de textos. Si el valor es “None”, se utilizará             por defecto una instancia de la clase <cite>TokenizadorNLTK</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(Stemmer) Objeto del tipo de la clase Stemmer.</p>
+<dd class="field-even"><p>(Stemmer) Objeto del tipo de la clase <cite>Stemmer</cite>.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -306,7 +300,7 @@
 <dd><p>Permite definir o cambiar el lenguaje de los textos sobre los cuales         va a aplicarse el objeto de la case Stemmer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>lenguaje</strong> – (str) Lenguaje de los textos a los que se va a             aplicar stemming. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p>
+<dd class="field-odd"><p><strong>lenguaje</strong> – Lenguaje de los textos a los que se va a aplicar             <em>stemming</em>. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.         :type lenguaje: {“es”, “en”, “fr”, “ge”}</p>
 </dd>
 </dl>
 </dd></dl>
@@ -314,7 +308,7 @@
 <dl class="py method">
 <dt id="stemming.Stemmer.iniciar_stemmer">
 <code class="sig-name descname"><span class="pre">iniciar_stemmer</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.iniciar_stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Inicializa el objeto de la clase <cite>SnowballStemmer</cite> de la librería         NLTk, para el lenguaje definido previamente, y lo asigna al atributo         «stemmer» del objeto de clase Stemmer.</p>
+<dd><p>Inicializa el objeto de la clase <cite>SnowballStemmer</cite> de la librería         <cite>NLTk</cite>, para el lenguaje definido previamente, y lo asigna al         atributo «stemmer» del objeto de clase <cite>Stemmer</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -324,8 +318,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Texto al que se desea aplicar el <em>stemming</em>.</p></li>
-<li><p><strong>limpiar</strong> – (bool) {True, False} Valor por defecto: False.             Argumento opcional que define si se desea hacer una limpieza             básica (aplicando la función <cite>limpieza_basica</cite> del módulo             <cite>limpieza</cite>) al texto antes de aplicar el <em>stemming</em>.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto al que se desea aplicar el <em>stemming</em>.</p></li>
+<li><p><strong>limpiar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Define si se desea hacer una limpieza básica             (aplicando la función <cite>limpieza_basica</cite> del módulo             <cite>limpieza</cite>) al texto antes de aplicar el <em>stemming</em>.             Valor por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
@@ -339,14 +333,14 @@
 <dl class="py function">
 <dt id="stemming.stem_texto">
 <code class="sig-prename descclassname"><span class="pre">stemming.</span></code><code class="sig-name descname"><span class="pre">stem_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stemmer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.stem_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función que aprovecha la clase Stemmer para realizar <em>stemming</em>, o     reducción de palabras a su raíz, en un texto de entrada.</p>
+<dd><p>Función que aprovecha la clase <cite>Stemmer</cite> para realizar <em>stemming</em>, o     reducción de palabras a su raíz, en un texto de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Texto al que se desea aplicar el <em>stemming</em>.</p></li>
-<li><p><strong>lenguaje</strong> – (str) Valor por defecto: “es”. Lenguaje del  texto al         que se va a aplicar <em>stemming</em>. Para mayor información, consultar la         sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
-<li><p><strong>limpiar</strong> – (bool) {True, False} Valor por defecto: False. Define         si se desea hacer una limpieza básica (aplicando la función          <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al texto de entrada,          antes de aplicar el <em>stemming</em>.</p></li>
-<li><p><strong>stemmer</strong> – (Stemmer). Parámetro opcional. Objeto de la clase         <em>Stemmer</em> para aplicar <em>stemming</em> sobre el texto de entrada.         Se puede utilizar para aplicar <em>stemming</em> a varios textos a la         vez, sin necesidad de inicializar una instancia de la clase <em>Stemmer</em>         en cada ocasión. Esto puede representar ahorro en tiempos al momento         de aplicar la función.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto al que se desea aplicar el <em>stemming</em>.</p></li>
+<li><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Lenguaje de los textos a los que se va a aplicar         <em>stemming</em>. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.         Valor por defecto <cite>“es”</cite>.</p></li>
+<li><p><strong>limpiar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Define si se desea hacer una limpieza básica         (aplicando la función <cite>limpieza_basica</cite> del módulo         <cite>limpieza</cite>) al texto antes de aplicar el <em>stemming</em>.         Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>stemmer</strong> (<a class="reference internal" href="#stemming.Stemmer" title="stemming.Stemmer"><em>Stemmer</em></a><em>, </em><em>opcional</em>) – Objeto de la clase <cite>Stemmer</cite> para aplicar <em>stemming</em>         sobre el texto de entrada.         Se puede utilizar para aplicar <em>stemming</em> a varios textos a la         vez, sin necesidad de inicializar una instancia de la clase <em>Stemmer</em>         en cada ocasión. Esto puede representar ahorro en tiempos al momento         de aplicar la función. Valor por defecto <cite>None</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
@@ -387,7 +381,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     

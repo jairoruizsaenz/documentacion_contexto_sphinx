@@ -120,12 +120,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -140,7 +134,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -153,24 +150,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="exploracion.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/funciones/exploracion.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="exploracion.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/funciones/exploracion.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="../../v0.1b/funciones/exploracion.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p class="caption">
  <span class="caption-text">
@@ -291,62 +285,72 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Corresponde al texto que se desea analizar.</p></li>
-<li><p><strong>n_grama</strong> – (int) Valor por defecto: 1. Cantidad de elementos a tener          en cuenta en la generación de n-gramas.</p></li>
-<li><p><strong>n_max</strong> – (int) Valor por defecto: None. Cantidad máxima de n-gramas         a generar.</p></li>
+<li><p><strong>texto</strong> – Texto sobre el que se calculará la frecuencia de n-gramas.</p></li>
+<li><p><strong>n_grama</strong> – Cantidad de elementos a tener en cuenta en la generación         de n-gramas. Por ejemplo, si <cite>n_grama = 1</cite> se retornará frecuencia de         palabras, si <cite>n_grama = 2</cite> se retornará frecuencia de bigramas, si         <cite>n_grama = 3</cite> se retornará frecuencia de trigramas y así         sucesivamente. Valor por defecto <cite>2</cite>.</p></li>
+<li><p><strong>n_max</strong> (<em>int</em><em>, </em><em>opcional</em>) – Cantidad máxima de n-gramas a generar. Valor por defecto         <cite>None</cite>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(dict) diccionario de n-gramas más frecuentes.</p>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>(dict) diccionario de n-gramas más frecuentes.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="exploracion.grafica_barchart_frecuencias">
-<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">grafica_barchart_frecuencias</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_grama</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Términos</span> <span class="pre">más</span> <span class="pre">frecuentes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ascendente</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_terminos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.grafica_barchart_frecuencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite graficar o exportar un gráfico de barras horizontales de la     frecuencia de palabras (n-gramas) a partir de un texto.</p>
+<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">grafica_barchart_frecuencias</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_grama</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(8,</span> <span class="pre">5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Términos</span> <span class="pre">más</span> <span class="pre">frecuentes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ascendente</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_terminos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.grafica_barchart_frecuencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Permite graficar o exportar un gráfico de barras horizontales de la     frecuencia de palabras o n-gramas a partir de un texto.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Corresponde al texto que se desea analizar.</p></li>
-<li><p><strong>n_grama</strong> – (int) Valor por defecto: 1. Cantidad de elementos a tener         en cuenta en la generación de n-gramas.</p></li>
-<li><p><strong>dim_figura</strong> – (float, float) Valor por defecto: (8, 5). Corresponden         al ancho y alto de la figura en pulgadas.</p></li>
-<li><p><strong>titulo</strong> – (str) Valor por defecto: “Términos más frecuentes”.         Corresponde al título de la nube de palabras.</p></li>
-<li><p><strong>ascendente</strong> – (bool) {True, False} Valor por defecto: True. Determina         si las barras de términos se muestran de menos (abajo) a más (arriba)         frecuentes en la gráfica.</p></li>
-<li><p><strong>ubicacion_archivo</strong> – (str) Valor por defecto: vacío (“”). Ruta donde         desea exportar la gráfica como archivo tipo imagen. Al nombrar el         archivo se recomienda utilizar la extensión jpg. Si no se especifica         una ruta, la gráfica no se exporta.</p></li>
-<li><p><strong>graficar</strong> – (bool) {True, False} Valor por defecto: True. Permite         visualizar la gráfica en el <cite>IDE</cite> que esté utilizando.</p></li>
-<li><p><strong>n_terminos</strong> – (int) Valor por defecto: 15. Cantidad de n-gramas a         graficar.</p></li>
-<li><p><strong>devolver_grafica</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se desea obtener el gráfico de barras como un objeto de         Matplotlib.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Corresponde al texto que se desea analizar.</p></li>
+<li><p><strong>n_grama</strong> (<em>int</em><em>, </em><em>opcional</em>) – Cantidad de elementos a tener en cuenta en la generación         de n-gramas. Valor por defecto <cite>1</cite>.</p></li>
+<li><p><strong>dim_figura</strong> (<em>(</em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>opcional</em>) – Corresponden al ancho y alto de la figura en pulgadas.         Valor por defecto <cite>(8, 5)</cite>.</p></li>
+<li><p><strong>titulo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Título de la nube de palabras. Valor por defecto         <cite>“Términos más frecuentes”</cite>.</p></li>
+<li><p><strong>ascendente</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Determina si las barras de términos se muestran de         menos (abajo) a más (arriba) frecuentes en la gráfica.         Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>ubicacion_archivo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta donde desea exportar la gráfica como         archivo tipo imagen. Al nombrar el archivo se recomienda utilizar la         extensión <cite>jpg</cite>. Si <cite>ubicacion_archivo = None</cite> la gráfica no se         exporta. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>graficar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite visualizar la gráfica. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>n_terminos</strong> (<em>int</em><em>, </em><em>opcional</em>) – Cantidad de n-gramas que se incluyen en la gráfica.         Se graficarán los <cite>n_terminos</cite> más frecuentes en el texto.         Valor por defecto <cite>15</cite>.</p></li>
+<li><p><strong>devolver_grafica</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Indica si se desea obtener el gráfico de         barras como un objeto de <cite>Matplotlib</cite>.         Valor por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(objeto Figure de Matplotlib) Figura con el gráfico de barras,         solo si devolver_grafica = True.</p>
+<dd class="field-even"><p>(Matplotlib.Figure) Figura con el gráfico de barras,         solo si <cite>devolver_grafica = True</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="exploracion.graficar_coocurrencias">
-<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">graficar_coocurrencias</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop_fuera</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">K</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_borde</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'orchid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_nodo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'silver'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semilla</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">123</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(13,</span> <span class="pre">13)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.graficar_coocurrencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Grafica una matriz de coocurrencias de términos como un grafo no dirigido.</p>
+<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">graficar_coocurrencias</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">escala</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">700</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_nodos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Gráfico</span> <span class="pre">de</span> <span class="pre">co-ocurrencias'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'RdPu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Blues'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.09</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.graficar_coocurrencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Grafica una matriz de coocurrencia como un grafo no dirigido de términos.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mat</strong> – (dataframe) Matriz de coocurrencias que desea graficar.</p></li>
-<li><p><strong>prop_fuera</strong> – (float) (valor entre 0 y 100). Permite eliminar las         conexiones con menor peso para aclarar un poco la imagen.</p></li>
-<li><p><strong>ubicacion_archivo</strong> – (str) Valor por defecto: “”. Ruta donde desea         exportar la gráfica como archivo tipo imagen. Al nombrar el archivo         se recomienda utilizar la extensión jpg. Si no se especifica una         ruta, la gráfica no se exporta.</p></li>
-<li><p><strong>graficar</strong> – (bool) {True, False} Valor por defecto: True. Permite         visualizar la gráfica en el <a class="reference external" href="https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado">IDE</a> que esté utilizando.</p></li>
-<li><p><strong>K</strong> – (float) Valor por defecto: 5. Distancia óptima entre nodos,         aumente este valor para separar los nodos.</p></li>
-<li><p><strong>color_borde</strong> – (str) Valor por defecto: “orchid”. Corresponde al         color de los bordes de la red, se puede asignar el nombre de un color         predefinido o el código hexadecimal de un color.</p></li>
-<li><p><strong>color_nodo</strong> – (str) Valor por defecto: “silver”. Corresponde al color         de los nodos, se puede asignar el nombre de un color predefinido o         el código hexadecimal de un color.</p></li>
-<li><p><strong>semilla</strong> – (int) Valor por defecto: 123. Estado inicial del generador         aleatorio para establecer la posición de los nodos.</p></li>
-<li><p><strong>dim_figura</strong> – (float, float) Valor por defecto: (13, 13).         Corresponden al ancho y alto de la figura en pulgadas.</p></li>
-<li><p><strong>devolver_grafica</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se desea obtener el gráfico de barras como un objeto de         Matplotlib.</p></li>
+<li><p><strong>mat</strong> (<em>pandas.DataFrame</em>) – Matriz de coocurrencia de términos</p></li>
+<li><p><strong>dim_figura</strong> (<em>(</em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>opcional</em>) – Corresponden al ancho y alto de la figura en pulgadas.         Valor por defecto <cite>(10, 6)</cite>.</p></li>
+<li><p><strong>vmin</strong> (<em>int</em><em>, </em><em>opcional</em>) – Tamaño mínimo de un nodo. Valor por defecto <cite>10</cite>.</p></li>
+<li><p><strong>vmax</strong> (<em>int</em><em>, </em><em>opcional</em>) – Tamaño máximo de un nodo. Si  <cite>vmax = None</cite>, se escoge el         número máximo de grados de un nodo. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>n_nodos</strong> (<em>float</em><em>,</em><em>int</em><em>, </em><em>opcional</em>) – Indica el número o porcentaje de nodos que se quieren         mostrar en el gráfico. Si <cite>n_nodos = 0</cite>, todos los nodos son         selecionados. Si <cite>n_nodos</cite> está entre <cite>0</cite> y <cite>1</cite>, representa         el porcentaje de nodos que se desean graficar. Si <cite>n_nodos &gt; 1</cite>,         reresenta el número de nodos que se desean graficar. Valor por         defecto <cite>0</cite>.</p></li>
+<li><p><strong>escala</strong> (<em>int</em><em>, </em><em>opcional</em>) – Valor de escala para aumentar o disminuir el tamaño del         gráfico en general. Valor por defecto <cite>700</cite>.</p></li>
+<li><p><strong>node_cmap</strong> (<em>str</em><em>, </em><em>opcional</em>) – Mapa de color para generar colores de los nodos dado         su número de conexiones. Se aceptan todos los mapas de color         continuos de <cite>Matplotlib</cite>:         (<a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a>).         Valor por defecto: «RdPu».</p></li>
+<li><p><strong>edge_cmap</strong> (<em>str</em><em>, </em><em>opcional</em>) – Mapa de color para generar colores de las conexiones         dado su peso. Se aceptan todos los mapas de color continuos de         <cite>Matplotlib</cite>:         (<a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a>).         Valor por defecto: «Blues».</p></li>
+<li><p><strong>offset_y</strong> (<em>float</em><em>, </em><em>opcional</em>) – Desplazamiento hacia abajo (eje y) de los textos de los         nodos, para evitar el traslape con los nodos. Valor por defecto <cite>0.09</cite>.</p></li>
+<li><p><strong>font_color</strong> (<em>str</em><em>, </em><em>array of colors</em><em>, </em><em>opcional</em>) – Color de la letra dentro de los nodos. El color puede         ser un string o una tupla (rgb) de floats de 0-1. Valor por defecto         <cite>“white”</cite>.</p></li>
+<li><p><strong>node_font_size</strong> (<em>int</em><em>, </em><em>opcional</em>) – Tamaño de letra dentro del nodo. Valor por         defecto <cite>12</cite>.</p></li>
+<li><p><strong>label_font_size</strong> (<em>int</em><em>, </em><em>opcional</em>) – Tamaño de letra de las etiquetas de los nodos.         Valor por defecto <cite>10</cite>.</p></li>
+<li><p><strong>titulo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Título del gráfico de coocurrencias. Valor por defecto         <cite>«Gráfico de co-ocurencias»</cite>.</p></li>
+<li><p><strong>graficar</strong> – Permite visualizar la gráfica después de ejecutar la         función. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>ubicacion_archivo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta donde desea exportar la gráfica como         archivo tipo imagen {png, jpeg, jpg, gif}. Si         <cite>ubicacion_archivo = None</cite>, la gráfica no se exporta. Valor por         defecto <cite>None</cite>.</p></li>
+<li><p><strong>devolver_grafica</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Indica si se desea obtener el gráfico de         coocurrencias como un objeto de <cite>Matplotlib</cite>.         Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>opcional</em>) – Semilla para la generación del grafo. Sirve para cambiar la         distribución aleatoria de aparición de los nodos. Valor por         defecto <cite>12</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(objeto Figure de Matplotlib) Figura con el grafo de         co-ocurrencias, solo si devolver_grafica=True.</p>
+<dd class="field-even"><p>(Matplotlib.Figure) Figura con el gráfico de coocurrencias,         solo si <cite>devolver_grafica = True</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -354,33 +358,33 @@
 <dl class="py function">
 <dt id="exploracion.graficar_dispersion">
 <code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">graficar_dispersion</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">documentos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palabras_clave</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignorar_mayus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Gráfico</span> <span class="pre">de</span> <span class="pre">dispersión</span> <span class="pre">de</span> <span class="pre">términos'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eje_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Distribución</span> <span class="pre">de</span> <span class="pre">términos'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eje_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Palabras</span> <span class="pre">clave'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etiquetas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_etiquetas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">leyenda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotacion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(12,</span> <span class="pre">7)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marcador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tam_marcador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ancho_marcador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapa_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'nipy_spectral'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.graficar_dispersion" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite generar un gráfico de dispersión de términos de interés a lo largo     de uno o varios documentos.</p>
+<dd><p>Permite generar un gráfico de dispersión de términos de interés a lo     largo de uno o varios documentos.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>documentos</strong> – (str o list) Texto del documento o lista de textos de         documentos sobre los cuales se quiere analizar la dispersión de         términos.</p></li>
-<li><p><strong>palabras_clave</strong> – (list) Lista de palabras clave o término de interés         que se quieren encontrar en los textos de los documentos.</p></li>
-<li><p><strong>ignorar_mayus</strong> – (bool) {True, False} Valor por defecto: True. Si         True, no hace diferencia si las palabras tienen mayúsculas, es decir,         ConTexto es igual a contexto.</p></li>
-<li><p><strong>titulo</strong> – (str) Valor por defecto: “Gráfico de dispersión de         términos”. Título de la figura de dispersión de términos.</p></li>
-<li><p><strong>eje_x</strong> – (str) Valor por defecto: “Distribución de términos”. Leyenda         del eje x de la figura.</p></li>
-<li><p><strong>eje_y</strong> – (str) Valor por defecto: “Palabras clave”. Leyenda del eje         y de la figura.</p></li>
-<li><p><strong>etiquetas</strong> – (None o str) Valor por defecto: None. Lista de         identificadores de los documentos analizados. Esta debe ser de la         misma longitud de la lista de documentos de entrada. Si el valor es         None y auto_etiquetas=True, se generan etiquetas automáticas por         defecto.</p></li>
-<li><p><strong>auto_etiquetas</strong> – (bool) {True, False} Valor por defecto: True. Si         etiquetas=None, Genera etiquetas automáticas para los documentos de         entrada {doc1, doc2, …, docn}.</p></li>
-<li><p><strong>leyenda</strong> – (bool) {True, False} Valor por defecto: True. Permite         mostrar los identificadores de los documentos al lado derecho de la         gráfica.</p></li>
-<li><p><strong>rotacion</strong> – (int) Valor por defecto: 30. Permite rotar las etiquetas         de los documentos sobre el eje x de la gráfica de dispersión.</p></li>
-<li><p><strong>dim_figura</strong> – (float, float) Valor por defecto: (12, 7). Corresponden         al ancho y alto de la figura en pulgadas.</p></li>
-<li><p><strong>ubicacion_archivo</strong> – (None o str) Valor por defecto: None.  Ruta         donde desea exportar la gráfica como archivo tipo imagen {png, jpeg,         jpg, gif}. Si no se especifica una ruta, la gráfica no se exporta.</p></li>
-<li><p><strong>graficar</strong> – (bool) {True, False} Valor por defecto: True. Permite         visualizar la gráfica después de ejecutar la función.</p></li>
-<li><p><strong>marcador</strong> – (str) Valor por defecto: “|”. Tipo de marcador utilizado         por el gráfico de dispersión. Se acepta los marcadores disponibles         para Matplotlib (<a class="reference external" href="https://matplotlib.org/stable/api/markers_api.html">https://matplotlib.org/stable/api/markers_api.html</a>).</p></li>
-<li><p><strong>tam_marcador</strong> – (float) Valor por defecto: 20. Tamaño del marcador en        el gráfico de dispersión. Para un gráfico con muchas palabras clave,         se recomienda poner un valor menor.</p></li>
-<li><p><strong>ancho_marcador</strong> – (float) Valor por defecto: 3. Ancho del marcador en         el gráfico de dispersión. Para un gráfico con muchos documentos, se         recomienda utilizar un número menor.</p></li>
-<li><p><strong>colores</strong> – (None o list) Valor por defecto: None. Lista de colores         para identificar cada documento de entrada. Si el valor es None, se         generan colores automáticos para cada documento dependiendo del         “mapa_color” seleccionado.</p></li>
-<li><p><strong>mapa_color</strong> – (str) Valor por defecto: “nipy_spectral”. Mapa de color         para generar colores automáticos para los documentos. Se aceptan         todos los mapas de color continuos de Matplotlib:         (<a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a>)</p></li>
-<li><p><strong>devolver_grafica</strong> – (bool) {True, False} Valor por defecto: False. Si         True, devuelve el gráfico de dispersión como objeto de Matplotlib.</p></li>
+<li><p><strong>documentos</strong> (<em>str</em><em>, </em><em>list</em>) – Texto del documento o lista de textos de         documentos sobre los cuales se quiere analizar la dispersión de         términos. Si desea generar la dispersión con n-gramas, cada texto         debe ser representado como lista de n-gramas.</p></li>
+<li><p><strong>palabras_clave</strong> (<em>list</em>) – Lista de palabras clave, n-gramas claves         o término de interés        que se quieren encontrar en los textos de los documentos.</p></li>
+<li><p><strong>ignorar_mayus</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Si <cite>ignorar_mayus = True</cite>, no hace diferencia         si las palabras tienen mayúsculas, es decir,         ConTexto es igual a contexto. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>titulo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Título de la figura de dispersión de términos. Valor por         defecto <cite>“Gráfico de dispersión de términos”</cite>.</p></li>
+<li><p><strong>eje_x</strong> (<em>str</em><em>, </em><em>opcional</em>) – Leyenda del eje <cite>x</cite> de la figura. Valor por defecto         <cite>“Distribución de términos”</cite>.</p></li>
+<li><p><strong>eje_y</strong> (<em>str</em><em>, </em><em>opcional</em>) – Leyenda del eje <cite>y</cite> de la figura. Valor por defecto         <cite>“Palabras clave”</cite>.</p></li>
+<li><p><strong>etiquetas</strong> (<em>str</em><em>, </em><em>opcional</em>) – Lista de identificadores de los documentos analizados.         Esta debe ser de la misma longitud de la lista de documentos de         entrada. Si <cite>etiquetas = None</cite> y <cite>auto_etiquetas = True</cite>, se generan         etiquetas automáticas. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>auto_etiquetas</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Si <cite>etiquetas = None</cite>, Genera etiquetas         automáticas para los documentos de entrada de tipo {doc1, doc2, …,         docn}. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>leyenda</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite mostrar los identificadores de los documentos         al lado derecho de la gráfica. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>rotacion</strong> (<em>int</em><em>, </em><em>opcional</em>) – Permite rotar las etiquetas de los documentos sobre el         eje <cite>x</cite> de la gráfica de dispersión. Valor por defecto <cite>30</cite>.</p></li>
+<li><p><strong>dim_figura</strong> (<em>(</em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>opcional</em>) – Corresponden al ancho y alto de la figura en pulgadas.         Valor por defecto <cite>(12, 7)</cite>.</p></li>
+<li><p><strong>ubicacion_archivo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta donde desea exportar la gráfica como         archivo tipo imagen {png, jpeg, jpg, gif}. Si         <cite>ubicacion_archivo = None</cite>, la gráfica no se exporta. Valor por         defecto <cite>None</cite>.</p></li>
+<li><p><strong>graficar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite visualizar la gráfica después de ejecutar la         función. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>marcador</strong> (<em>str</em><em>, </em><em>opcional</em>) – Tipo de marcador utilizado por el gráfico de dispersión.         Se acepta los marcadores disponibles para Matplotlib         (<a class="reference external" href="https://matplotlib.org/stable/api/markers_api.html">https://matplotlib.org/stable/api/markers_api.html</a>).         Valor por defecto <cite>“|”</cite>.</p></li>
+<li><p><strong>tam_marcador</strong> (<em>float</em><em>, </em><em>opcional</em>) – Tamaño del marcador en el gráfico de dispersión.         Para un gráfico con muchas palabras clave,         se recomienda poner un valor menor. Valor por defecto <cite>20</cite>.</p></li>
+<li><p><strong>ancho_marcador</strong> (<em>float</em><em>, </em><em>opcional</em>) – Ancho del marcador en el gráfico de dispersión.         Para un gráfico con muchos documentos, se recomienda utilizar un             número menor. Valor por defecto <cite>3</cite>.</p></li>
+<li><p><strong>colores</strong> (<em>list</em><em>, </em><em>opcional</em>) – Lista de colores para identificar cada documento de         entrada. Si <cite>colores = None</cite>, se generan colores automáticos para         cada documento dependiendo del <cite>“mapa_color”</cite> seleccionado.         Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>mapa_color</strong> (<em>str</em><em>, </em><em>opcional</em>) – Mapa de color para generar colores automáticos para         los documentos. Se aceptan todos los mapas de color continuos de         <cite>Matplotlib</cite>:         (<a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a>).         Valor por defecto: “nipy_spectral”.</p></li>
+<li><p><strong>devolver_grafica</strong> – Si <cite>devolver_grafica = True</cite>, devuelve el         gráfico de dispersión como objeto de <cite>Matplotlib</cite>.         Valor por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(objeto Figure de Matplotlib) Objeto de Matplotlib, solo si         devolver_grafica = True.</p>
+<dd class="field-even"><p>(Matplotlib.Figure) Objeto de Matplotlib, solo si         <cite>devolver_grafica = True</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -392,48 +396,48 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str o list) Corresponde al texto (o lista de         textos/documentos) que se desea analizar.</p></li>
-<li><p><strong>min_frec</strong> – (int) Valor por defecto: 1. Frecuencia mínima de         aparición de palabras, si la frecuencia de una palabra es menor a         min_frec, dicha palabra es excluida de la matriz.</p></li>
-<li><p><strong>max_num</strong> – (int) Valor por defecto: 200. Número máximo de palabras         a dejar en la matriz (se eligen las más frecuentes).</p></li>
-<li><p><strong>modo</strong> – (str) {“documento”, “ventana”} Valor por defecto:         “documento”. Corresponde al modo de análisis, con “documento” se         calcula la co-ocurrencia de términos sin importar la distancia entre         estos,  con “ventana” se calcula la co-ocurrencia de términos         teniendo en cuenta una distancia máxima entre estos.</p></li>
-<li><p><strong>ventana</strong> – (int) Valor por defecto: 3. Tamaño de la ventana (solo se         usa cuando modo=”ventana”). Número de palabras anteriores o         posteriores a tener en cuenta con respecto al término de análisis,         equivalente a calcular la co-ocurrencia con n-gramas, siendo         n=ventana+1.</p></li>
-<li><p><strong>tri_sup</strong> – (bool) {True, False} Valor por defecto: True. Si el valor         es True devuelve la versión diagonal superior de la matriz de         co-ocurrencias, si es False devuelve la matriz completa.</p></li>
-<li><p><strong>limpiar</strong> – (bool) {True, False} Valor por defecto: False. Define si         se desea hacer una limpieza básica (aplicando la función         <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al texto de entrada, antes         de calcular las co-ocurrencias.</p></li>
-<li><p><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la         tokenización y detokenización de textos. Si el valor es “None”, se         utilizará por defecto una instancia de la clase <em>TokenizadorNLTK</em>.</p></li>
+<li><p><strong>texto</strong> (<em>str</em><em>, </em><em>list</em>) – Corresponde al texto (o lista de textos/documentos) que         se desea analizar.</p></li>
+<li><p><strong>min_frec</strong> (<em>int</em><em>, </em><em>opcional</em>) – Frecuencia mínima de aparición de palabras, si la         frecuencia de una palabra es menor a <cite>min_frec</cite>, será excluida de la         matriz. Valor por defecto <cite>1</cite>.</p></li>
+<li><p><strong>max_num</strong> (<em>int</em><em>, </em><em>opcional</em>) – Número máximo de palabras que se incluyen en la matriz         (se eligen las más frecuentes). Valor por defecto <cite>200</cite>.</p></li>
+<li><p><strong>modo</strong> (<em>{'documento'</em><em>, </em><em>'ventana'}</em><em>, </em><em>opcional</em>) – Corresponde al modo de análisis, con <cite>“documento”</cite> se         calcula la coocurrencia de términos sin importar la distancia entre         estos,  con <cite>“ventana”</cite> se calcula la coocurrencia de términos         teniendo en cuenta una distancia máxima entre estos.         Valor por defecto <cite>“documento”</cite>.</p></li>
+<li><p><strong>ventana</strong> (<em>int</em><em>, </em><em>opcional</em>) – Tamaño de la ventana (solo cuando <cite>modo = “ventana”</cite>).         Número de palabras anteriores o posteriores a tener en cuenta con         respecto al término de análisis, equivalente a calcular la         coocurrencia con n-gramas, siendo  <cite>n = ventana + 1</cite>.         Valor por defecto <cite>3</cite>.</p></li>
+<li><p><strong>tri_sup</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Si es <cite>True</cite> devuelve la versión diagonal superior de la         matriz de coocurrencias, si es <cite>False</cite> devuelve la matriz completa.         Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>limpiar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Define si se desea hacer una limpieza básica (aplicando         la función <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al texto, antes         de calcular las coocurrencias. Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>tokenizador</strong> (<em>Tokenizador</em><em>, </em><em>opcional</em>) – Objeto encargado de la tokenización y detokenización         de textos. Si el valor es “None”, se utilizará por defecto una         instancia de la clase <em>TokenizadorNLTK</em>. Valor por defecto <cite>None</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(dataframe) Co-ocurrencias de los textos de entrada.</p>
+<dd class="field-even"><p>(pandas.DataFrame) Matriz de coocurrencias de los textos de         entrada.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="exploracion.nube_palabras">
-<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">nube_palabras</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_grama</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_terminos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Términos</span> <span class="pre">más</span> <span class="pre">frecuentes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_fondo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_contorno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grosor_contorno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colores_forma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semilla</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1234</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_nube</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.nube_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">nube_palabras</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_grama</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_terminos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titulo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Términos</span> <span class="pre">más</span> <span class="pre">frecuentes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_fondo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_contorno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grosor_contorno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colores_forma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">semilla</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1234</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_nube</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.nube_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite graficar o exportar una nube de palabras (o n-gramas) a partir de     un texto de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Texto de entrada que se desea analizar.</p></li>
-<li><p><strong>n_grama</strong> – (int) Valor por defecto: 1. Cantidad de elementos a tener         en cuenta en la generación de n-gramas. Por ejemplo, con <cite>n=1</cite> y <cite>n=2</cite>         se graficarán palabras y bigramas, respectivamente.</p></li>
-<li><p><strong>n_terminos</strong> – (int) Valor por defecto: 100. Cantidad de n-gramas a         incluir en la nube. Se graficaran los n_terminos más frecuentes en         el texto.</p></li>
-<li><p><strong>graficar</strong> – (bool) {True, False} Valor por defecto: True. Permite         visualizar la gráfica en el <a class="reference external" href="https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado">IDE</a> que esté utilizando.</p></li>
-<li><p><strong>dim_figura</strong> – (float, float) Valor por defecto: (10, 10).         Corresponden al tamaño (ancho y alto) de la figura a generar.</p></li>
-<li><p><strong>hor</strong> – (float) (valor entre 0 y 1). Proporción de los términos que         se mostrarán de manera horizontal en la nube. Para hor=0 todos los         térmonos se mostrarán verticalmente; para hor=1 todos los términos         se mostrarán horizontalmente, y para valores intermedios habrá una         combinación de términos en ambas representaciones.</p></li>
-<li><p><strong>titulo</strong> – (str) Valor por defecto: “Términos más frecuentes”.         Corresponde al título de la nube de palabras.</p></li>
-<li><p><strong>ubicacion_archivo</strong> – (str) Valor por defecto: vacío (“”). Ruta         donde desea exportar la gráfica como archivo tipo imagen. Al nombrar         el archivo se recomienda utilizar la extensión jpg. Si no se         especifica una ruta, la gráfica no será exportada.</p></li>
-<li><p><strong>forma</strong> – (str o numpy array) o None, Valor por defecto: None.         Arreglo de Numpy o ubicación de archivo de imagen que contenga la         forma que se le desea dar a la nube de palabras. Si forma es None,         se ordenarán los términos de la nube en un círculo.</p></li>
-<li><p><strong>color_fondo</strong> – (str o tuple) Valor por defecto: “white”. Color de         fondo de la nube de palabras. Se puede ingresar como el nombre del         color (si Python lo reconoce), código hexadecimal o como una tupla         con sus valores (R, G, B).</p></li>
-<li><p><strong>color_contorno</strong> – (str o tuple) Valor por defecto: “blue”. Color         del contorno de la forma de la nube de palabras. Se puede ingresar         como el nombre del color (si Python lo reconoce), código hexadecimal         o como una tupla con sus valores (R, G, B).</p></li>
-<li><p><strong>grosor_contorno</strong> – (int) Valor por defecto: 0. Grosor de la línea         (contorno) que define la forma de la nube de palabras. Si         <cite>grosor_contorno=0</cite>, no se graficará el contorno.</p></li>
-<li><p><strong>colores_forma</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se quieren utilizar en la nube de palabras los colores         extraídos de la imagen o numpy array utilizada para definir la forma         de la nube.</p></li>
-<li><p><strong>semilla</strong> – (int) Valor por defecto: 1234. Corresponde al estado         inicial del generador. Este parámetro incide en la posición y color         de las palabras. En caso de querer replicar la nube de palabras, se         recomienda utilizar un mismo valor de semilla.</p></li>
-<li><p><strong>devolver_nube</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se desea obtener la nube de palabras como un objeto tipo         WordCloud.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto de entrada que se desea analizar.</p></li>
+<li><p><strong>n</strong> – Cantidad de elementos a tener en cuenta en la generación         de n-gramas. Por ejemplo, si <cite>n = 1</cite> se retornarán palabras,         y si <cite>n = 2</cite> se retornarán bigramas, si <cite>n = 3</cite> se retornarán         trigramas y así sucesivamente. Valor por defecto <cite>2</cite>.</p></li>
+<li><p><strong>n_terminos</strong> (<em>int</em><em>, </em><em>opcional</em>) – Cantidad de n-gramas que se incluyen en la nube.         Se graficarán los <cite>n_terminos</cite> más frecuentes en         el texto. Valor por defecto <cite>100</cite>.</p></li>
+<li><p><strong>graficar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite visualizar la gráfica en el <a class="reference external" href="https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado">IDE</a> que esté         utilizando. Valor por defecto <cite>True</cite>.</p></li>
+<li><p><strong>dim_figura</strong> (<em>(</em><em>float</em><em>, </em><em>float</em><em>)</em>) – Corresponden al tamaño (ancho y alto) de la figura.         Valor por defecto <cite>(10, 10)</cite>.</p></li>
+<li><p><strong>hor</strong> (<em>float</em><em>, </em><em>opcional</em>) – Valor entre <cite>0</cite> y <cite>1</cite> Proporción de los términos que         se mostrarán de manera horizontal en la nube. Para <cite>hor = 0</cite> todos         los térmonos se mostrarán verticalmente; para <cite>hor = 1</cite> todos los         términos se mostrarán horizontalmente, y para valores intermedios         habrá una combinación de términos en ambas representaciones. Valor         por defecto <cite>0.6</cite></p></li>
+<li><p><strong>titulo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Corresponde al título de la nube de palabras.         Valor por defecto <cite>«Términos más frecuentes»</cite>.</p></li>
+<li><p><strong>ubicacion_archivo</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta donde desea exportar la gráfica como         archivo tipo imagen. Al nombrar el archivo se recomienda utilizar         la extensión <cite>jpg</cite>. Si <cite>ubicacion_archivo = None</cite>, gráfica no será         exportada. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>forma</strong> (<em>numpy.array</em><em>, </em><em>str</em><em>, </em><em>opcional</em>) – Arreglo de Numpy o ubicación de archivo de imagen que         contenga la forma que se le desea dar a la nube de palabras. Si         <cite>forma = None</cite>, se ordenarán los términos de la nube en forma de         círculo. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>color_fondo</strong> (<em>str</em><em>, </em><em>tuple</em><em>, </em><em>opcional</em>) – Color de fondo de la nube de palabras. Se puede         ingresar como el nombre del color (si Python lo reconoce), código         hexadecimal o como una tupla con sus valores (R, G, B). Valor por         defecto <cite>«white»</cite>.</p></li>
+<li><p><strong>color_contorno</strong> (<em>str</em><em>, </em><em>tuple</em><em>, </em><em>opcional</em>) – Color del contorno de la forma de la nube de         palabras. Se puede ingresar como el nombre del color (si Python         lo reconoce), código hexadecimal o como una tupla con sus valores         (R, G, B). Valor por defecto <cite>«blue»</cite>.</p></li>
+<li><p><strong>grosor_contorno</strong> (<em>int</em><em>, </em><em>opcional</em>) – Grosor de la línea (contorno) que define la         forma de la nube de palabras. Si <cite>grosor_contorno = 0</cite>, no se         graficará el contorno. Valor por defecto <cite>0</cite>.</p></li>
+<li><p><strong>colores_forma</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Indica si se quieren utilizar en la nube de         palabras los colores extraídos de la imagen o numpy array utilizada         para definir la forma de la nube. Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>semilla</strong> (<em>int</em><em>, </em><em>opcional</em>) – Corresponde al estado inicial del generador. Este         parámetro incide en la posición y color de las palabras. En caso de         querer replicar la nube de palabras, se recomienda utilizar un mismo         valor de <cite>semilla</cite>. Valor por defecto <cite>1234</cite>.</p></li>
+<li><p><strong>devolver_nube</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Indica si se desea obtener la nube de palabras como         un objeto tipo <cite>WordCloud</cite>. Valor por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>objeto tipo WordCloud, solo si devolver_nube=True.</p>
+<dd class="field-even"><p>(WordCloud) objeto  de tipo <cite>WordCloud</cite>, solo si         <cite>devolver_nube = True</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -445,39 +449,37 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Corresponde al texto que se desea analizar.</p></li>
-<li><p><strong>n</strong> – (int) Cantidad de elementos a tener en cuenta en la generación         de n-gramas. Por ejemplo, si <cite>n=1</cite> se retornarán palabras, y si <cite>n=2</cite>         se retornarán bigramas.</p></li>
-<li><p><strong>devolver_lista</strong> – (bool) {True, False} Valor por defecto: True. Si         el valor es True se retorna un objeto tipo lista; si el valor es         False se retorna un objeto tipo generador.</p></li>
-<li><p><strong>limpiar</strong> – (bool) {True, False} Valor por defecto: False. Define         si se desea hacer una limpieza básica (aplicando la función          <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al texto de entrada, antes         de encontrar los n-gramas.</p></li>
-<li><p><strong>tokenizador</strong> – Valor por defecto: None. Objeto encargado de la         tokenización y detokenización de textos. Si el valor es “None”, se         utilizará por defecto una instancia de la clase <em>TokenizadorNLTK</em>.</p></li>
+<li><p><strong>texto</strong> – Texto sobre el que se calculará los n-gramas.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Cantidad de elementos a tener en cuenta en la generación         de n-gramas. Por ejemplo, si <cite>n = 1</cite> se retornarán palabras,         y si <cite>n = 2</cite> se retornarán bigramas, si <cite>n = 3</cite> se retornarán         trigramas y así sucesivamente. Valor por defecto <cite>2</cite>.</p></li>
+<li><p><strong>devolver_lista</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Si <cite>devolver_lista</cite> es <cite>True</cite> se retorna un         objeto tipo lista; si el valor es <cite>False</cite> se retorna un objeto tipo         generador. Valor por defecto <cite>True</cite></p></li>
+<li><p><strong>limpiar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Define si se desea hacer una limpieza básica (aplicando         la función  <cite>limpieza_basica</cite> del módulo <cite>limpieza</cite>) al texto de         entrada, antes de encontrar los n-gramas. Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>tokenizador</strong> (<em>object</em><em>, </em><em>opcional</em>) – Objeto encargado de la tokenización y         detokenización de textos. Si el valor es <cite>None</cite>, se cargará por         defecto una instancia de la clase <cite>TokenizadorNLTK</cite>. Valor por         defecto <cite>None</cite>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>n-gramas generados con las características especificadas.</p>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>(list, generator) n-gramas generados con las características         especificadas.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt id="exploracion.par_nubes">
-<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">par_nubes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">11)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.par_nubes" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">exploracion.</span></code><code class="sig-name descname"><span class="pre">par_nubes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim_figura</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">11)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graficar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devolver_grafica</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exploracion.par_nubes" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite graficar o exportar un par de nubes de palabras (una junto a     otra) a partir de un texto.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Corresponde al texto que se desea analizar.</p></li>
-<li><p><strong>n1</strong> – (int) Valor por defecto: 1. Cantidad de elementos a tener en         cuenta en la generación de n-gramas de la nube de palabras izquierda.</p></li>
-<li><p><strong>n2</strong> – (int) Valor por defecto: 2. Cantidad de elementos a tener en         cuenta en la generación de n-gramas de la nube de palabras derecha.</p></li>
-<li><p><strong>dim_figura</strong> – (float, float) Valor por defecto: (20, 10).         Corresponden al ancho y alto de la figura en pulgadas.</p></li>
-<li><p><strong>ubicacion_archivo</strong> – (str) Valor por defecto: “”. Ruta donde desea         exportar la gráfica como archivo tipo imagen. Al nombrar el archivo         se recomienda utilizar la extensión jpg. Si no se especifica una ruta,         la gráfica no se exporta.</p></li>
-<li><p><strong>graficar</strong> – (bool) {True, False} Valor por defecto: True. Permite         visualizar la gráfica en el <a class="reference external" href="https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado">IDE</a> que esté utilizando.</p></li>
-<li><p><strong>devolver_grafica</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se desea obtener el gráfico con el par de nubes de palabras         como un objeto de Matplotlib.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(objeto Figure de Matplotlib) Figura con el par de nubes de         palabras, solo si devolver_grafica=True.</p>
-</dd>
-</dl>
+<p>:param texto:Corresponde al texto que se desea analizar.
+:type texto: str
+:param n1: Cantidad de elementos a tener en cuenta en la generación de         n-gramas de la nube de palabras izquierda. Valor por defecto <cite>1</cite>.
+:type n1: int, opcional
+:param n2: Cantidad de elementos a tener en cuenta en la generación de         n-gramas de la nube de palabras derecha. Valor por defecto <cite>2</cite>.
+:type n2: int, opcional
+:param dim_figura: (float, float) Valor por defecto: (20, 10).         Corresponden al ancho y alto de la figura en pulgadas.
+:param ubicacion_archivo: (str) Valor por defecto: “”. Ruta donde desea         exportar la gráfica como archivo tipo imagen. Al nombrar el archivo         se recomienda utilizar la extensión jpg. Si no se especifica una ruta,         la gráfica no se exporta.
+:param graficar: (bool) {True, False} Valor por defecto: True. Permite         visualizar la gráfica en el <a class="reference external" href="https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado">IDE</a> que esté utilizando.
+:param devolver_grafica: (bool) {True, False} Valor por defecto: False.         Indica si se desea obtener el gráfico con el par de nubes de palabras         como un objeto de Matplotlib.
+:return: (objeto Figure de Matplotlib) Figura con el par de nubes de         palabras, solo si devolver_grafica=True.</p>
 </dd></dl>
 
 </div>
@@ -512,7 +514,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     

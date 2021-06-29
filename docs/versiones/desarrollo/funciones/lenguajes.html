@@ -120,12 +120,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -140,7 +134,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -153,24 +150,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="lenguajes.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/funciones/lenguajes.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="lenguajes.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/funciones/lenguajes.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="../../v0.1b/funciones/lenguajes.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p class="caption">
  <span class="caption-text">
@@ -291,12 +285,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Corresponde al texto que se desea analizar.</p></li>
-<li><p><strong>devolver_proba</strong> – (bool) {True, False} Valor por defecto: False.         Indica si se retorna el porcentaje de confiabilidad del lenguaje         identificado.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto de entrada.</p></li>
+<li><p><strong>devolver_proba</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Indica si se retorna el porcentaje de         confiabilidad del lenguaje identificado. Valor por         defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(str) Texto del lenguaje identificado siguiendo el estandar         <a class="reference external" href="https://es.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>.         Si devolver_proba es True retorna una tupla.</p>
+<dd class="field-even"><p>(str) Texto del lenguaje identificado siguiendo el estandar         <a class="reference external" href="https://es.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>.         Si <cite>devolver_proba = True</cite> retorna una tupla.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -318,7 +312,7 @@
 <dl class="py function">
 <dt id="lenguajes.traducir_texto">
 <code class="sig-prename descclassname"><span class="pre">lenguajes.</span></code><code class="sig-name descname"><span class="pre">traducir_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje_destino</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lenguajes.traducir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Permite hacer traducciones a un texto de interés.</p>
+<dd><p>Permite traducir un texto de entrada.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Es importante tener en cuenta los siguientes aspectos al utilizar la         función <strong>traducir_texto</strong>:</p>
@@ -334,8 +328,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>texto</strong> – (str) Corresponde al texto que se desea traducir.</p></li>
-<li><p><strong>lenguaje_destino</strong> – (str)  Indica el lenguaje al que desea traducir         el texto. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto de entrada.</p></li>
+<li><p><strong>lenguaje_destino</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em>) – Indica el lenguaje al que desea traducir         el texto. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
@@ -376,7 +370,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     

@@ -120,12 +120,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -140,7 +134,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -153,24 +150,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="escritura.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/funciones/escritura.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="escritura.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/funciones/escritura.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="../../v0.1b/funciones/escritura.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p class="caption">
  <span class="caption-text">
@@ -288,31 +282,31 @@
 <dt id="escritura.Escritor">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">escritura.</span></code><code class="sig-name descname"><span class="pre">Escritor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Constructor por defecto de la clase Escritor. Esta clase se encarga         de guardar texto en archivos de distintos tipos como Word, PDF, CSV,         TXT, RTF e imágenes.</p>
+<p>Constructor por defecto de la clase <cite>Escritor</cite>. Esta clase se encarga         de guardar texto en archivos de distintos tipos como Word, PDF, CSV,         TXT, RTF e imágenes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que será guardado             con el texto deseado.</p></li>
-<li><p><strong>texto</strong> – (str) Texto que se desea guardar en un archivo.</p></li>
+<li><p><strong>ubicacion_archivo</strong> (<em>str</em>) – Ruta del archivo que será guardado             con el texto deseado.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto que se desea guardar en un archivo.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_pdf">
 <code class="sig-name descname"><span class="pre">escribir_pdf</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Especifica que el texto deseado se guardará en un archivo con         extensión “.pdf”.</p>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con         extensión <cite>.pdf</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_txt">
 <code class="sig-name descname"><span class="pre">escribir_txt</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Especifica que el texto deseado se guardará en un archivo con         extensión “.txt”.</p>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con         extensión <cite>.txt</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="escritura.Escritor.escribir_word">
 <code class="sig-name descname"><span class="pre">escribir_word</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#escritura.Escritor.escribir_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Especifica que el texto deseado se guardará en un archivo con         extensión “.docx”.</p>
+<dd><p>Especifica que el texto deseado se guardará en un archivo con         extensión <cite>.docx</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -321,7 +315,7 @@
 <dd><p>Define el texto que será guardado en un archivo.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>texto</strong> – (str) Texto que será guardado en un archivo.</p>
+<dd class="field-odd"><p><strong>texto</strong> (<em>str</em>) – Texto que será guardado en un archivo.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -332,7 +326,7 @@
 <dd><p>Define la ruta del archivo con el texto que se desea guardar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que será guardado             con el texto deseado.</p>
+<dd class="field-odd"><p><strong>ubicacion_archivo</strong> (<em>str</em>) – Ruta del archivo que será guardado             con el texto deseado.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -343,7 +337,7 @@
 <dd><p>Especifica el tipo de archivo en el que se quiere guardar el texto.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”}             Valor por defecto: “inferir”. Define el tipo del archivo en el             que se desea guardar el texto.</p>
+<dd class="field-odd"><p><strong>tipo</strong> (<em>{'inferir'</em><em>, </em><em>'txt'</em><em>, </em><em>'csv'</em><em>, </em><em>'pdf'</em><em>, </em><em>'doc'</em><em>, </em><em>'docx'}</em><em>, </em><em>opcional</em>) – Define el tipo del archivo en el que se desea guardar             el texto. Si <cite>tipo = “inferir”</cite> se guarda con la extensión del             documento de entrada. Valor por defecto <cite>“inferir”</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -353,13 +347,13 @@
 <dl class="py function">
 <dt id="escritura.escribir_texto">
 <code class="sig-prename descclassname"><span class="pre">escritura.</span></code><code class="sig-name descname"><span class="pre">escribir_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#escritura.escribir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Función que guarda texto en un archivo específico. Permite escoger la     ruta del archivo, su tipo y el texto a ser guardado dentro de este     archivo.</p>
+<dd><p>Función que guarda texto en un archivo específico. Permite escoger la     ruta del archivo, su formato y el texto a ser guardado dentro de este     archivo.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que será guardado con el         texto deseado.</p></li>
-<li><p><strong>texto</strong> – (str) El texto que se desea guardar en un archivo.</p></li>
-<li><p><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “doc”, “docx”} Valor         por defecto: “inferir”. Define el tipo del archivo en el que se desea         guardar el texto.</p></li>
+<li><p><strong>ubicacion_archivo</strong> (<em>str</em>) – Ruta del archivo que será guardado         con el texto deseado.</p></li>
+<li><p><strong>texto</strong> (<em>str</em>) – Texto que se desea guardar en un archivo.</p></li>
+<li><p><strong>tipo</strong> (<em>{'inferir'</em><em>, </em><em>'txt'</em><em>, </em><em>'csv'</em><em>, </em><em>'pdf'</em><em>, </em><em>'doc'</em><em>, </em><em>'docx'}</em><em>, </em><em>opciona</em>) – Define el tipo del archivo en el que se desea guardar         el texto. Si <cite>tipo = “inferir”</cite> se guarda con la extensión del         documento de entrada. Valor por defecto <cite>“inferir”</cite>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -397,7 +391,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     

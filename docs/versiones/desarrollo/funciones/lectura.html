@@ -120,12 +120,6 @@
             <label class="sr-only">Enviar correo</label>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.dnp.gov.co/programas/Desarrollo%20Digital/Paginas/Big%20Data.aspx" rel="noopener" target="_blank" title="Proyectos de analítica">
-            <span><i class="fas fa-box"></i></span>
-            <label class="sr-only">Proyectos de analítica</label>
-          </a>
-        </li>
       </ul>
       </div>
       
@@ -140,7 +134,10 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
+</form>
 
 <a id="versions_anchor" class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     <span class="fa fa-book"></span> Versión
@@ -153,24 +150,21 @@
 <div class="collapse" id="collapseExample">
     <div class="card card-body">
             <dl>
-                <dt>Ramas</dt>
-                    <dd><a href="lectura.html">desarrollo</a></dd>
-                
-                    <dd><a href="../../master/funciones/lectura.html">latest</a></dd>        
-                
-            </dl>
-            <dl>
-                <dt>Tags</dt>
+                <dt>Versiones</dt>
+                        <dd><a href="lectura.html">desarrollo</a></dd>
+                    
+                        <dd><a href="../../master/funciones/lectura.html">latest</a></dd>        
+                    
+            <!-- </dl> -->
+            <!-- <dl> -->
+                <!-- <dt>Tags</dt> -->
 
                     
                         <dd><a href="../../v0.1b/funciones/lectura.html">v0.1</a></dd>
                     
             </dl>
     </div>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar en la documentación ..." aria-label="Buscar en la documentación ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</div><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p class="caption">
  <span class="caption-text">
@@ -290,33 +284,33 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <dt id="lectura.Lector">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lectura.</span></code><code class="sig-name descname"><span class="pre">Lector</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Constructor por defecto de la clase Lector. Esta clase se encarga de         extraer el texto de archivos de distintos tipos como Word, PDF, CSV,         TXT, RTF e imágenes.</p>
+<p>Constructor por defecto de la clase <cite>Lector</cite>. Esta clase se encarga         de extraer el texto de archivos de distintos tipos como Word, PDF,         CSV, TXT, RTF e imágenes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que se desea leer.</p>
+<dd class="field-odd"><p><strong>ubicacion_archivo</strong> (<em>str</em>) – Ruta del archivo que se desea leer.</p>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="lectura.Lector.archivo_a_texto">
-<code class="sig-name descname"><span class="pre">archivo_a_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temp/img_dir/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.archivo_a_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Se lleva a cabo la lectura del texto de un archivo y permite escoger         el tipo, si es por páginas, la codificación, si se utiliza OCR, el         tipo de preprocesamiento, entre otros.</p>
+<code class="sig-name descname"><span class="pre">archivo_a_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temp/img_dir/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.archivo_a_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Lee el texto de un archivo y permite escoger el tipo de archivo,         si es por páginas, la codificación, si se utiliza OCR, el         tipo de preprocesamiento, entre otros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “rtf”, “doc”,             “docx”, “png”, “jpg”, “jpeg”} Valor por defecto: “inferir”. Se             define el tipo (o extensión) del archivo que se desea leer.</p></li>
-<li><p><strong>extraer_medios</strong> – (bool) {True, False} Valor por defecto: False.             Especifíca si se desean extraer las imágenes dentro del archivo             de Word para ser guardadas aparte como archivos de imágenes.             Funciona únicamente para archivos “.docx” (no “.doc”) y si el             parámetro “por_paginas” es False.</p></li>
-<li><p><strong>dir_medios</strong> – (str) Valor por defecto: “temp/img_dir/”. Ruta de             la carpeta donde se guardan las imágenes del archivo Word cuyas             imágenes se extrajeron (si extraer_medios=True).</p></li>
-<li><p><strong>por_paginas</strong> – (bool) {True, False} Valor por defecto: False. Se             define si se desea extraer el texto por páginas.</p></li>
-<li><p><strong>encoding</strong> – (str) Valor por defecto: “utf-8”. Especifica la             codificación del texto que se desea leer.</p></li>
-<li><p><strong>ocr</strong> – (bool) {True, False} Valor por defecto: False. Especifica             si se desea utilizar reconocimiento óptico de caracteres sobre el             archivo cuyo texto se quiere extraer. Se utiliza usualmente cuando             el archivo es una imagen o documento escaneado.</p></li>
-<li><p><strong>preprocesamiento</strong> – (int) {1,2,3,4,5} Valor por defecto: 3.             Especifica el nivel de preprocesamiento que se lleva a cabo antes             de extraer el texto del archivo. Aplica cuando se utiliza             reconocimiento óptico de caracteres <cite>ocr=True</cite>. Las opciones son             las siguientes:              <ul>
+<li><p><strong>tipo</strong> (<em>{'inferir'</em><em>, </em><em>'txt'</em><em>, </em><em>'csv'</em><em>, </em><em>'pdf'</em><em>, </em><em>'rtf'</em><em>, </em><em>'doc'</em><em>,             </em><em>'docx'</em><em>, </em><em>'png'</em><em>, </em><em>'jpg'</em><em>, </em><em>'jpeg'}</em><em>, </em><em>opcional</em>) – Se define el tipo (o extensión) del archivo que se             desea leer. Valor por defecto <cite>“inferir”</cite>.</p></li>
+<li><p><strong>extraer_medios</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desean extraer las imágenes             dentro del archivo de Word para ser guardadase como archivos de             imágenes. Funciona únicamente para archivos <cite>*.docx</cite> y si el             parámetro <cite>por_paginas = False</cite>. Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>dir_medios</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta de la carpeta donde se guardan las             imágenes del archivo Word cuyas imágenes se extrajeron (si             especificó <cite>extraer_medios = True</cite>).             Valor por defecto <cite>“temp/img_dir/”</cite>.</p></li>
+<li><p><strong>por_paginas</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desea extraer el texto del             archivo con separador de páginas. Este separador se             encuentra como <cite>“|**|”</cite> dentro del texto extraído. Valor por             defecto <cite>False</cite>.</p></li>
+<li><p><strong>encoding</strong> (<em>str</em><em>, </em><em>opcional</em>) – Especifica la codificación del texto que se desea             leer. Valor por defecto <cite>“utf-8”</cite>.</p></li>
+<li><p><strong>ocr</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desea utilizar reconocimiento óptico             de caracteres (OCR) sobre el archivo. Se utiliza usualmente             cuando el archivo es una imagen o documento escaneado. Valor por             defecto <cite>False</cite>.</p></li>
+<li><p><strong>preprocesamiento</strong> (<em>{1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>4</em><em>, </em><em>5}</em><em>, </em><em>opcional</em>) – Especifica el nivel de preprocesamiento que             se lleva a cabo antes de extraer el texto del archivo. Aplica             cuando <cite>ocr = True</cite>. Las opciones son las siguientes:              <ul>
 <li> 1: se convierte la imagen a escala de grises. </li>
 <li> 2: se convierte la imagen a escala de grises y se aplica                 blurring. </li>
 <li> 3: se convierte la imagen a escala de grises y se aplica el                 umbral de imagen con el método de OTSU. </li>
-<li> 4: se convierte la imagen a escala de grises y se aplica                 umbral adaptativo. </li>
-<li> 5: se convierte la imagen a escala de grises, se aplica                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
-</ul></p></li>
-<li><p><strong>lenguaje</strong> – (str) Valor por defecto: “spa”.  Aplica cuando se             aplica OCR para extraer el texto de imágenes o archivos             escaneados. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
+<li> 4: se convierte la imagen a escala de grises y se aplica el                 umbral adaptativo. </li>
+<li> 5: se convierte la imagen a escala de grises, se aplica el                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
+</ul>            Valor por defecto <cite>1</cite>.</p></li>
+<li><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Define el lenguaje del texto que se desea             extraer. Aplica cuando <cite>ocr = True</cite>. Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.</p></li>
 <li><p><strong>oem</strong> – (int) Valor por defecto: 2. OEM hace referencia al modo             del motor OCR (OCR engine mode en inglés). Para mayor información,             consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
 <li><p><strong>psm</strong> – (int) Valor por defecto: 3. PSM hace referencia a los             modos de segmentación de las páginas (page segmentation modes, en             inglés) de la librería Pytesseract. Para mayor información,             consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
 <li><p><strong>password</strong> – (str) Valor por defecto: None. Contraseña del archivo             cuyo texto se desea extraer, en caso de requerirlo.</p></li>
@@ -335,29 +329,30 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <dd><p>Define la ubicación del archivo que se desea leer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que se desea leer.</p>
+<dd class="field-odd"><p><strong>ubicacion_archivo</strong> (<em>str</em>) – Ruta del archivo que se desea leer.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="lectura.Lector.leer_imagen">
-<code class="sig-name descname"><span class="pre">leer_imagen</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_imagen" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Se lleva a cabo la lectura del texto de archivos de tipo imagen, con         extensión “png”, “jpg” o “jpeg”.</p>
+<code class="sig-name descname"><span class="pre">leer_imagen</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_imagen" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Lectura de texto de archivos de tipo imagen, con extensión <cite>png</cite>, 
+<cite>jpg</cite> o <cite>jpeg</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Especifica el nivel de             preprocesamiento que se lleva a cabo antes de extraer el texto             del archivo. Aplica cuando se utiliza reconocimiento óptico de             caracteres (ocr=True). Las opciones son las siguientes:              <ul>
+<li><p><strong>preprocesamiento</strong> (<em>{1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>4</em><em>, </em><em>5}</em><em>, </em><em>opcional</em>) – Especifica el nivel de preprocesamiento que             se lleva a cabo antes de extraer el texto del archivo. Aplica             cuando <cite>ocr = True</cite>. Las opciones son las siguientes:              <ul>
 <li> 1: se convierte la imagen a escala de grises. </li>
 <li> 2: se convierte la imagen a escala de grises y se aplica                 blurring. </li>
 <li> 3: se convierte la imagen a escala de grises y se aplica el                 umbral de imagen con el método de OTSU. </li>
 <li> 4: se convierte la imagen a escala de grises y se aplica el                 umbral adaptativo. </li>
-<li> 5: se convierte la imagen a escala de grises, se aplica                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
-</ul></p></li>
-<li><p><strong>lenguaje</strong> – (str) Se define el lenguaje del texto que se desea             extraer. Para mayor información, consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
-<li><p><strong>oem</strong> – (int) OEM hace referencia al modo del motor OCR (OCR             engine mode en inglés). Para mayor información, consultar la             sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
-<li><p><strong>psm</strong> – (int) PSM hace referencia a los modos de segmentación de             las páginas (page segmentation modes, en inglés) de la librería             Pytesseract. Para mayor información consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
-<li><p><strong>enderezar</strong> – (bool) {True, False} Valor por defecto: False.             Permite enderezar texto torcido en la imagen para obtener mejores             resultados durante el proceso de extracción de texto. Este             parámetro solo se utiliza cuando el parámetro preprocesamiento             está entre 1 y 5.</p></li>
+<li> 5: se convierte la imagen a escala de grises, se aplica el                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
+</ul>            Valor por defecto <cite>1</cite>.</p></li>
+<li><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Define el lenguaje del texto que se desea             extraer. Aplica cuando <cite>ocr = True</cite>. Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.</p></li>
+<li><p><strong>oem</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3}</em><em>, </em><em>opcional</em>) – modo del motor OCR (OCR Engine mode en inglés). Para             mayor información, consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>. Valor por defecto <cite>3</cite>.</p></li>
+<li><p><strong>psm</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>4</em><em>, </em><em>5</em><em>, </em><em>6</em><em>, </em><em>7</em><em>, </em><em>8</em><em>, </em><em>9</em><em>, </em><em>10</em><em>, </em><em>11</em><em>, </em><em>12</em><em>, </em><em>13}</em><em>, </em><em>opcional</em>) – Modo de segmentación de las páginas (page segmentation             modes, en inglés) de la librería <cite>Pytesseract</cite>. Para mayor             información consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.             Valor por defecto <cite>0</cite>.</p></li>
+<li><p><strong>enderezar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite enderezar el texto en la imagen para obtener mejores             resultados durante el proceso de extracción de texto,  solo si             <cite>ocr = True</cite> y <cite>preprocesamiento</cite> este entre <cite>1</cite> y <cite>5</cite>. Valor             por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
@@ -368,29 +363,29 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 
 <dl class="py method">
 <dt id="lectura.Lector.leer_pdf">
-<code class="sig-name descname"><span class="pre">leer_pdf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión <code class="docutils literal notranslate"><span class="pre">*.pdf</span></code>.</p>
+<code class="sig-name descname"><span class="pre">leer_pdf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Lectura de texto de archivos con extensión <cite>.pdf</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>por_paginas</strong> – (bool) {True, False}. Especifica si se desea             extraer el texto del archivo Word con separador de páginas. Este             separador se encuentra como “<span>|**|</span>” dentro del texto extraído.</p></li>
-<li><p><strong>ocr</strong> – (bool) {True, False}. Especifica si se desea utilizar             reconocimiento óptico de caracteres sobre el archivo cuyo texto             se quiere extraer. Se utiliza usualmente cuando el archivo es             una imagen o documento escaneado.</p></li>
-<li><p><strong>preprocesamiento</strong> – (int) {1,2,3,4,5}. Especifica el nivel de             preprocesamiento que se lleva a cabo antes de extraer el texto             del archivo. Aplica cuando se utiliza reconocimiento óptico de             caracteres (parámetro ocr es True). Las opciones son las             siguientes:              <ul>
+<li><p><strong>por_paginas</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desea extraer el texto del             archivo pdf con separador de páginas. Este separador se             encuentra como <cite>“|**|”</cite> dentro del texto extraído. Valor por             defecto <cite>False</cite>.</p></li>
+<li><p><strong>ocr</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desea utilizar reconocimiento óptico             de caracteres (OCR) sobre el archivo pdf. Se utiliza usualmente             cuando el archivo es una imagen o documento escaneado. Valor por             defecto <cite>False</cite>.</p></li>
+<li><p><strong>preprocesamiento</strong> (<em>{1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>4</em><em>, </em><em>5}</em><em>, </em><em>opcional</em>) – Especifica el nivel de preprocesamiento que             se lleva a cabo antes de extraer el texto del archivo. Aplica             cuando <cite>ocr = True</cite>. Las opciones son las siguientes:              <ul>
 <li> 1: se convierte la imagen a escala de grises. </li>
 <li> 2: se convierte la imagen a escala de grises y se aplica                 blurring. </li>
 <li> 3: se convierte la imagen a escala de grises y se aplica el                 umbral de imagen con el método de OTSU. </li>
 <li> 4: se convierte la imagen a escala de grises y se aplica el                 umbral adaptativo. </li>
 <li> 5: se convierte la imagen a escala de grises, se aplica el                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
-</ul></p></li>
-<li><p><strong>lenguaje</strong> – (str) Se define el lenguaje del texto que se desea             extraer. Aplica cuando se utiliza reconocimiento óptico de             caracteres (el parámetro ocr es True). Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
-<li><p><strong>oem</strong> – (int) OEM hace referencia al modo del motor OCR (OCR             engine mode en inglés). Para mayor información, consultar la             sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
-<li><p><strong>psm</strong> – (int) PSM hace referencia a los modos de segmentación de             las páginas (page segmentation modes, en inglés) de la librería             Pytesseract. Para mayor información consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
-<li><p><strong>password</strong> – (str) Valor por defecto: None. Contraseña del             documento PDF que se quiere leer, en caso de que se necesite.</p></li>
-<li><p><strong>enderezar</strong> – (bool) {True, False} Valor por defecto: False.             Permite enderezar texto torcido en la imagen para obtener mejores             resultados durante el proceso de extracción de texto. Este             parámetro solo se usa cuando se aplica OCR (ocr=True) y el             parámetro preprocesamiento está entre 1 y 5.</p></li>
+</ul>            Valor por defecto <cite>1</cite>.</p></li>
+<li><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Define el lenguaje del texto que se desea             extraer. Aplica cuando <cite>ocr = True</cite>. Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.</p></li>
+<li><p><strong>oem</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3}</em><em>, </em><em>opcional</em>) – modo del motor OCR (OCR Engine mode en inglés). Para             mayor información, consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>. Valor por defecto <cite>3</cite>.</p></li>
+<li><p><strong>psm</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>4</em><em>, </em><em>5</em><em>, </em><em>6</em><em>, </em><em>7</em><em>, </em><em>8</em><em>, </em><em>9</em><em>, </em><em>10</em><em>, </em><em>11</em><em>, </em><em>12</em><em>, </em><em>13}</em><em>, </em><em>opcional</em>) – Modo de segmentación de las páginas (page segmentation             modes, en inglés) de la librería <cite>Pytesseract</cite>. Para mayor             información consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.             Valor por defecto <cite>0</cite>.</p></li>
+<li><p><strong>password</strong> (<em>str</em><em>, </em><em>opcional</em>) – Contraseña del documento PDF que se quiere leer, en             caso de que se necesite. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>enderezar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite enderezar el texto en la imagen para obtener mejores             resultados durante el proceso de extracción de texto,  solo si             <cite>ocr = True</cite> y <cite>preprocesamiento</cite> este entre <cite>1</cite> y <cite>5</cite>. Valor             por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(str) Texto del archivo “.pdf” leído con la clase Lector.</p>
+<dd class="field-even"><p>(str) Texto del archivo “.pdf” leído con la clase <cite>Lector</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -398,10 +393,10 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_rtf">
 <code class="sig-name descname"><span class="pre">leer_rtf</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_rtf" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.rtf”.</p>
+<dd><p>Lectura de texto de archivos con extensión <cite>.rtf</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Devuelve</dt>
-<dd class="field-odd"><p>(str) Texto del archivo “.rtf” leído con la clase Lector.</p>
+<dd class="field-odd"><p>(str) Texto del archivo “.rtf” leído con la clase <cite>Lector</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -409,31 +404,31 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <dl class="py method">
 <dt id="lectura.Lector.leer_txt">
 <code class="sig-name descname"><span class="pre">leer_txt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.txt”.</p>
+<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión <cite>.txt</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>encoding</strong> – (str) Valor por defecto: “utf-8”. Especifica la             codificación del texto que se desea leer.</p>
+<dd class="field-odd"><p><strong>encoding</strong> (<em>str</em><em>, </em><em>opcional</em>) – Especifica la codificación del texto que se desea             leer. Valor por defecto <cite>“utf-8”</cite>.</p>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(str) Texto del archivo “.txt” leído con la clase Lector.</p>
+<dd class="field-even"><p>(str) Texto del archivo <cite>.txt</cite> leído con la clase <cite>Lector</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="lectura.Lector.leer_word">
-<code class="sig-name descname"><span class="pre">leer_word</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><p>Se lleva a cabo la lectura del texto de archivos con extensión         “<em>.docx” o “</em>.doc”.</p>
+<code class="sig-name descname"><span class="pre">leer_word</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Lectura de texto de archivos con extensión         <cite>.docx</cite> o <cite>.doc</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>por_paginas</strong> – (bool) {True, False}. Especifica si se desea             extraer el texto del archivo Word con separador de páginas.             Este separador se encuentra como “<span>|**|</span>” dentro del texto             extraído.</p></li>
-<li><p><strong>extraer_medios</strong> – (bool) {True, False}. Especifica si se desean             extraer las imágenes dentro del archivo de Word para ser guardadas             aparte como archivos de imágenes. Funciona únicamente para             archivos “<em>.docx” (no “</em>.doc”) y si el parámetro “por_paginas” es             False.</p></li>
-<li><p><strong>dir_medios</strong> – (str) Ruta de la carpeta donde se guardan las             imágenes del archivo Word cuyas imágenes se extrajeron (si             especificó extraer_medios=True).</p></li>
+<li><p><strong>por_paginas</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desea extraer el texto del             archivo Word con separador de páginas. Este separador se             encuentra como <cite>“|**|”</cite> dentro del texto extraído. Valor por             defecto <cite>False</cite>.</p></li>
+<li><p><strong>extraer_medios</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desean extraer las imágenes             dentro del archivo de Word para ser guardadase como archivos de             imágenes. Funciona únicamente para archivos <cite>*.docx</cite> y si el             parámetro <cite>por_paginas = False</cite>. Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>dir_medios</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta de la carpeta donde se guardan las             imágenes del archivo Word cuyas imágenes se extrajeron (si             especificó <cite>extraer_medios = True</cite>). Valor por defecto <cite>None</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
-<dd class="field-even"><p>(str) Texto del archivo “<em>.docx” o “</em>.doc” leído con la clase            <cite>Lector</cite>.</p>
+<dd class="field-even"><p>Texto del archivo “<em>.docx” o “</em>.doc” leído con la clase            <cite>Lector</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -462,11 +457,16 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <li> 4: se convierte la imagen a escala de grises y se aplica                 umbral adaptativo. </li>
 <li> 5: se convierte la imagen a escala de grises, se aplica                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
 </ul></p></li>
-<li><p><strong>lenguaje</strong> – (str) Valor por defecto: “spa”. Define el lenguaje del         texto que se desea extraer. Aplica cuando se utiliza el OCR para         extraer el texto de imágenes o archivos escaneados. Para mayor         información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.</p></li>
-<li><p><strong>oem</strong> – (int) Valor por defecto: 2. OEM hace referencia al modo del         motor OCR (OCR engine mode en inglés). Para mayor información,         consultar la sección de  <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
-<li><p><strong>psm</strong> – (int) Valor por defecto: 3. PSM hace referencia a los modos         de segmentación de las páginas (page segmentation modes, en inglés)         de la librería Pytesseract. Para mayor información, consultar la         sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.</p></li>
-<li><p><strong>password</strong> – (str) Valor por defecto: None. Contraseña del archivo         cuyo texto se desea extraer, en caso de requerirlo.</p></li>
-<li><p><strong>enderezar</strong> – (bool) {True, False} Valor por defecto: False. Permite         enderezar texto torcido en la imagen para obtener mejores resultados         durante el proceso de extracción de texto. Este parámetro solo se         utiliza cuando se aplica OCR y el parámetro preprocesamiento está         entre 1 y 5.</p></li>
+<li><p><strong>lenguaje</strong> – Define el lenguaje del texto que se desea             extraer. Aplica cuando <cite>ocr = True</cite>. Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.
+:type lenguaje: {“es”, “en”, “fr”, “ge”}, opcional</p></li>
+<li><p><strong>oem</strong> – modo del motor OCR (OCR Engine mode en inglés). Para             mayor información, consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>. Valor por defecto <cite>3</cite>.
+:type oem: {0, 1, 2, 3}, opcional</p></li>
+<li><p><strong>psm</strong> – Modo de segmentación de las páginas (page segmentation             modes, en inglés) de la librería <cite>Pytesseract</cite>. Para mayor             información consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.             Valor por defecto <cite>0</cite>.
+:type psm: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}, opcional</p></li>
+<li><p><strong>password</strong> – Contraseña del documento PDF que se quiere leer, en             caso de que se necesite. Valor por defecto <cite>None</cite>.
+:type password: str, opcional</p></li>
+<li><p><strong>enderezar</strong> – Permite enderezar el texto en la imagen para obtener mejores             resultados durante el proceso de extracción de texto,  solo si             <cite>ocr = True</cite> y <cite>preprocesamiento</cite> este entre <cite>1</cite> y <cite>5</cite>. Valor             por defecto <cite>False</cite>.
+:type enderezar: bool, opcional</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
@@ -507,7 +507,7 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 22, 2021.<br/>
+Actualizado por última vez en jun. 29, 2021.<br/>
 </p>
     </div>
     
