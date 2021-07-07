@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,14 +255,14 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#importar-funciones-necesarias-y-deficion-de-textos-de-prueba">
-   6.1. Importar funciones necesarias y defición de textos de prueba
+  <a class="reference internal nav-link" href="#importar-funciones-necesarias-y-definicion-de-textos-de-prueba">
+   6.1. Importar funciones necesarias y definición de textos de prueba
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -296,8 +302,8 @@
   <div class="section" id="stemming-de-textos">
 <span id="id1"></span><h1><span class="section-number">6. </span>Stemming de textos<a class="headerlink" href="#stemming-de-textos" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/stemming.html#module-stemming" title="stemming"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Stemming</span></code></a> de la librería. Este módulo permite aplicar <em>stemming</em> a textos. El <em>stemming</em> es un método para reducir todas las formas flexionadas de palabras a su «raíz» o «tallo» (<em>stem</em>, en inglés), cuando estas comparten una misma raíz. Por ejemplo, las palabras niños, niña y niñez tienen todas la misma raíz: «niñ». A diferencia de la lematización, en donde cada lema es una palabra que existe en el vocabulario del lenguaje correspondiente, las palabras raíz que se obtienen al aplicar <em>stemming</em> no necesariamente existen por sí solas como palabra. Aplicar <em>stemming</em> a textos puede simplificarlos, al unificar palabras que comparten la misma raíz, y evitando así tener un vocabulario más grande de lo necesario.</p>
-<div class="section" id="importar-funciones-necesarias-y-deficion-de-textos-de-prueba">
-<h2><span class="section-number">6.1. </span>Importar funciones necesarias y defición de textos de prueba<a class="headerlink" href="#importar-funciones-necesarias-y-deficion-de-textos-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="importar-funciones-necesarias-y-definicion-de-textos-de-prueba">
+<h2><span class="section-number">6.1. </span>Importar funciones necesarias y definición de textos de prueba<a class="headerlink" href="#importar-funciones-necesarias-y-definicion-de-textos-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En este caso se importa la función <a class="reference internal" href="../funciones/stemming.html#stemming.stem_texto" title="stemming.stem_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">stemming.stem_texto()</span></code></a>, que aplica <em>stemming</em> a un texto de entrada, y la clase <a class="reference internal" href="../funciones/stemming.html#stemming.Stemmer" title="stemming.Stemmer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stemmer</span></code></a>, que puede ser utilizada directamente, entre otras cosas, para agilizar el proceso de hacer <em>stemming</em> a una lista de varios textos. Adicionalmente, se definen algunos textos para desarrollar los ejemplos.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">contexto.stemming</span> <span class="kn">import</span> <span class="n">Stemmer</span><span class="p">,</span> <span class="n">stem_texto</span>
@@ -417,7 +423,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

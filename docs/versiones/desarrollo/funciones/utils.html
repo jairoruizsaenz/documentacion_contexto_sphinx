@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -259,7 +265,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -303,8 +309,8 @@
 <h2>Auxiliares<a class="headerlink" href="#auxiliares" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Aquí hay funciones para cargar y guardar archivos de formato Pickle y una función para verificar la existencia de un directorio escogido por un usuario.</p>
 <span class="target" id="module-utils.auxiliares"></span><dl class="py function">
-<dt id="utils.auxiliares.cargar_objeto">
-<code class="sig-prename descclassname"><span class="pre">utils.auxiliares.</span></code><code class="sig-name descname"><span class="pre">cargar_objeto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nombre_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.cargar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.auxiliares.cargar_objeto">
+<span class="sig-prename descclassname"><span class="pre">utils.auxiliares.</span></span><span class="sig-name descname"><span class="pre">cargar_objeto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nombre_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.cargar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Carga un objeto en Python, desde un archivo Pickle cuya ubicación         es determinada por el usuario.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -317,8 +323,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.auxiliares.guardar_objeto">
-<code class="sig-prename descclassname"><span class="pre">utils.auxiliares.</span></code><code class="sig-name descname"><span class="pre">guardar_objeto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objeto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombre_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.guardar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.auxiliares.guardar_objeto">
+<span class="sig-prename descclassname"><span class="pre">utils.auxiliares.</span></span><span class="sig-name descname"><span class="pre">guardar_objeto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objeto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombre_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.guardar_objeto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Guarda, en un archivo Pickle, un objeto de Python determinado por         el usuario.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -331,8 +337,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.auxiliares.verificar_crear_dir">
-<code class="sig-prename descclassname"><span class="pre">utils.auxiliares.</span></code><code class="sig-name descname"><span class="pre">verificar_crear_dir</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_directorio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.verificar_crear_dir" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.auxiliares.verificar_crear_dir">
+<span class="sig-prename descclassname"><span class="pre">utils.auxiliares.</span></span><span class="sig-name descname"><span class="pre">verificar_crear_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_directorio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.auxiliares.verificar_crear_dir" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Verifica si existe un directorio en la ubicación determinada por     el usuario. Si el directorio no existe, la función lo crea.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -346,12 +352,12 @@
 <h2>Tokenizacion<a class="headerlink" href="#tokenizacion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Esta sección contiene las funciones de tokenización de texto, las cuales se utilizan durante el preprocesamiento de un texto.</p>
 <span class="target" id="module-utils.tokenizacion"></span><dl class="py class">
-<dt id="utils.tokenizacion.TokenizadorEspacios">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">TokenizadorEspacios</span></code><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorEspacios">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">TokenizadorEspacios</span></span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorEspacios.destokenizar">
-<code class="sig-name descname"><span class="pre">destokenizar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorEspacios.destokenizar">
+<span class="sig-name descname"><span class="pre">destokenizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Realiza la función de detokenización (unir una lista de tokens,         produciendo un texto) sobre una o varias listas de tokens de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -364,8 +370,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorEspacios.tokenizar">
-<code class="sig-name descname"><span class="pre">tokenizar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorEspacios.tokenizar">
+<span class="sig-name descname"><span class="pre">tokenizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorEspacios.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Realiza la función de tokenización (separar un texto en componentes         sueltos, o tokens) sobre uno o varios textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -380,8 +386,8 @@
 </dd></dl>
 
 <dl class="py class">
-<dt id="utils.tokenizacion.TokenizadorNLTK">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">TokenizadorNLTK</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorNLTK">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">TokenizadorNLTK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Constructor por defecto de la clase TokenizadorNLTK. Esta clase se         apoya en la librería NLTK para definir acciones de tokenización y         detokenización (operación inversa en la que se pasa de tokens a         texto) de textos.</p>
 <dl class="field-list simple">
@@ -393,8 +399,8 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorNLTK.destokenizar">
-<code class="sig-name descname"><span class="pre">destokenizar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorNLTK.destokenizar">
+<span class="sig-name descname"><span class="pre">destokenizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_tokens</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Realiza la función de detokenización (unir una lista de tokens,         produciendo un texto) sobre una o varias listas de tokens de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -407,8 +413,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorNLTK.establecer_destokenizador">
-<code class="sig-name descname"><span class="pre">establecer_destokenizador</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destokenizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.establecer_destokenizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorNLTK.establecer_destokenizador">
+<span class="sig-name descname"><span class="pre">establecer_destokenizador</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destokenizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.establecer_destokenizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite definir o cambiar el detokenizador a utilizar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -418,8 +424,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorNLTK.establecer_tokenizador">
-<code class="sig-name descname"><span class="pre">establecer_tokenizador</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.establecer_tokenizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorNLTK.establecer_tokenizador">
+<span class="sig-name descname"><span class="pre">establecer_tokenizador</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.establecer_tokenizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite definir o cambiar el tokenizador a utilizar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -429,8 +435,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorNLTK.post_destokenizacion">
-<code class="sig-name descname"><span class="pre">post_destokenizacion</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.post_destokenizacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorNLTK.post_destokenizacion">
+<span class="sig-name descname"><span class="pre">post_destokenizacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.post_destokenizacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Hace algunos ajustes al texto, una vez ha pasado por la         detokenización, para que cumpla con las reglas de puntuación de los         idiomas español e inglés. Es posible que para otros idiomas sea         necesario incluir ajustes adicionales. Si el texto de entrada no         contiene signos de puntuación (por ejemplo, si fue pasado por alguna         función de limpieza previamente), la salida será igual a la entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -443,8 +449,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="utils.tokenizacion.TokenizadorNLTK.tokenizar">
-<code class="sig-name descname"><span class="pre">tokenizar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.TokenizadorNLTK.tokenizar">
+<span class="sig-name descname"><span class="pre">tokenizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.TokenizadorNLTK.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Realiza la función de tokenización (separar un texto en componentes         sueltos, o tokens) sobre uno o varios textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -459,8 +465,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.destokenizar">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">destokenizar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.destokenizar">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">destokenizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.destokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que aprovecha la clase TokenizadorNLTK para realizar la función     de detokenización (unir una lista de tokens, produciendo un texto) sobre     una o varias listas de tokens de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -476,8 +482,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.tokenizar">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">tokenizar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.tokenizar">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">tokenizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.tokenizar" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que aprovecha la clase TokenizadorNLTK para realizar la función de     tokenización (separar un texto en componentes sueltos, o tokens) sobre     uno o varios textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -494,11 +500,11 @@
 
 </div>
 <div class="section" id="limpieza-aux">
-<h2>Limpieza aux<a class="headerlink" href="#limpieza-aux" title="Enlazar permanentemente con este título">¶</a></h2>
+<span id="funciones-utils-limpieza-utils"></span><h2>Limpieza aux<a class="headerlink" href="#limpieza-aux" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Las funciones de esta sección se encargan de encontrar caracteres con ciertas características dentro de los textos, como números o letras repetidos, números o letras consecutivos y coincidencias de textos. También permite la eliminación de caracteres no deseados por el usuario, según varios criterios de selección.</p>
 <dl class="py function">
-<dt id="utils.tokenizacion.substrings_en_comun">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">substrings_en_comun</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitud_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.substrings_en_comun" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.substrings_en_comun">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">substrings_en_comun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitud_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.substrings_en_comun" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Encuentra los <em>substrings</em>, o cadena de caracteres internas, que tienen en común dos textos de entrada y cumplen con una longitud mínima.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -515,8 +521,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.detectar_coincidencias">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">detectar_coincidencias</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_textos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitud_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.detectar_coincidencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.detectar_coincidencias">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">detectar_coincidencias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_textos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitud_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.detectar_coincidencias" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Detecta y devuelve <em>substrings</em>, o cadenas de caracteres, que se repiten a lo largo de una lista de textos y que cumplan hasta tres condiciones, ajustadas por el usuario:</p>
 <blockquote>
 <div><ul class="simple">
@@ -541,8 +547,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.quitar_coincidenias">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">quitar_coincidenias</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_textos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitud_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.quitar_coincidenias" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.quitar_coincidenias">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">quitar_coincidenias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_textos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitud_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.quitar_coincidenias" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Detecta y remueve <em>substrings</em>, o cadenas de caracteres, que se repiten a lo largo de una lista de textos y que cumplan hasta tres condiciones, ajustadas por el usuario:</p>
 <blockquote>
 <div><ul class="simple">
@@ -568,8 +574,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.caracteres_repetidos">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">caracteres_repetidos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.caracteres_repetidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.caracteres_repetidos">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">caracteres_repetidos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.caracteres_repetidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Determina si en una palabra de entrada se repiten caracteres (letras o números) de forma seguida por lo menos un número de veces determinado por el usuario. Por ejemplo, si n=3 y palabra=”animaaal”, la función arrojara positivo, porque el carácter “a” aparece 3 veces de forma seguida.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -586,8 +592,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.caracteres_consecutivos">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">caracteres_consecutivos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.caracteres_consecutivos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.caracteres_consecutivos">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">caracteres_consecutivos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.caracteres_consecutivos" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Determina si en una palabra de entrada hay caracteres (letras o números) consecutivos, uno junto al otro, por lo menos un número de veces determinado por el usuario. Por ejemplo, si n=4 y palabra=“1234555”, la función va a arrojar positivo, porque hay cinco caracteres consecutivos (del 1 al 5) que aparecen uno junto al otro.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -604,8 +610,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.consonantes_consecutivas">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">consonantes_consecutivas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incluir_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.consonantes_consecutivas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.consonantes_consecutivas">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">consonantes_consecutivas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incluir_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.consonantes_consecutivas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Determina si en una palabra de entrada hay consonantes (letras distintas a vocales) seguidas, una junto a la otra, por lo menos un número de veces determinado por el usuario. Por ejemplo, si n=4 y palabra=”Abstracto”, la función va a arrojar positivo, porque hay cuatro consonantes seguidas (“bstr”) en la palabra.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -623,8 +629,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="utils.tokenizacion.quitar_palabras_atipicas">
-<code class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></code><code class="sig-name descname"><span class="pre">quitar_palabras_atipicas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_repetidas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_consecutivas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_consonantes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incluir_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.quitar_palabras_atipicas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="utils.tokenizacion.quitar_palabras_atipicas">
+<span class="sig-prename descclassname"><span class="pre">utils.tokenizacion.</span></span><span class="sig-name descname"><span class="pre">quitar_palabras_atipicas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_repetidas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_consecutivas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_consonantes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incluir_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.tokenizacion.quitar_palabras_atipicas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Para un texto de entrada, busca y elimina palabras que cumplan una o varias de las siguientes condiciones, ajustadas por el usuario:</p>
 <blockquote>
 <div><ul class="simple">
@@ -685,7 +691,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

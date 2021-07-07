@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,7 +255,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -313,7 +319,7 @@
                 
   <div class="section" id="correccion-ortografica">
 <span id="id1"></span><h1><span class="section-number">4. </span>Corrección ortográfica<a class="headerlink" href="#correccion-ortografica" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/correccion.html#module-correccion" title="correccion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Corrección</span></code></a> de la librería . Este módulo permite realizar corrección ortográfica de textos, lo que puede simplificar los documentos, al estandarizar palabras que deberían ser escritas de la misma forma y evitando así tener un vocabulario más grande de lo necesario.</p>
+<p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/correccion.html#module-correccion" title="correccion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Corrección</span></code></a> de la librería. Este módulo permite realizar corrección ortográfica de textos, lo que puede simplificar los documentos, al estandarizar palabras que deberían ser escritas de la misma forma y evitando así tener un vocabulario más grande de lo necesario.</p>
 <div class="section" id="importar-funciones-necesarias-y-definir-textos-de-prueba">
 <h2><span class="section-number">4.1. </span>Importar funciones necesarias y definir textos de prueba<a class="headerlink" href="#importar-funciones-necesarias-y-definir-textos-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En este caso, se importa la función <cite>corregir_texto</cite>, que aplica corrección ortográfica a un texto de entrada, y la clase <cite>Corrector</cite>, que tiene algunas funcionalidades adicionales que pueden ser de utilidad. Adicionalmente, se definen algunos textos con mala ortografía para desarrollar los ejemplos.</p>
@@ -382,7 +388,7 @@
 </div>
 <div class="section" id="modificar-el-diccionario-del-corrector-para-anadir-eliminar-o-cambiar-la-preferencia-de-las-palabras">
 <h2><span class="section-number">4.3. </span>Modificar el diccionario del corrector, para añadir, eliminar o cambiar la preferencia de las palabras<a class="headerlink" href="#modificar-el-diccionario-del-corrector-para-anadir-eliminar-o-cambiar-la-preferencia-de-las-palabras" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>La clase <cite>Corrector</cite> usa, para varios lenguajes, unos diccionarios predefinidos, que contienen el vocabulario «válido» o conocido, junto con la frecuencia de cada palabra. Estas frecuencias fueron obtenidas a partir de un corpus, o conjunto de documentos, determinado.</p>
+<p>La clase <cite>Corrector</cite> usa para varios lenguajes, unos diccionarios predefinidos, que contienen el vocabulario «válido» o conocido, junto con la frecuencia de cada palabra. Estas frecuencias fueron obtenidas a partir de un corpus o conjunto de documentos determinados.</p>
 <p>Es posible modificar estos diccionarios para alcanzar 3 propósitos distintos:</p>
 <div class="section" id="incluir-palabras-como-correctas-a-pesar-de-no-estar-en-el-diccionario-original">
 <h3><span class="section-number">4.3.1. </span>Incluir palabras como «correctas», a pesar de no estar en el diccionario original<a class="headerlink" href="#incluir-palabras-como-correctas-a-pesar-de-no-estar-en-el-diccionario-original" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -547,7 +553,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

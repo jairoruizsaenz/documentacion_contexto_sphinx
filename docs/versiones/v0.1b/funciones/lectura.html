@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -274,8 +274,8 @@
 <p>Código, funciones y clases relacionadas a la carga y lectura de
 diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <dl class="py class">
-<dt id="lectura.Lector">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">lectura.</span></code><code class="sig-name descname"><span class="pre">Lector</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">lectura.</span></span><span class="sig-name descname"><span class="pre">Lector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Constructor por defecto de la clase Lector. Esta clase se encarga de extraer         el texto de archivos de distintos tipos como Word, PDF, CSV, TXT, RTF e         imágenes.</p>
 <dl class="field-list simple">
@@ -284,8 +284,8 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="lectura.Lector.archivo_a_texto">
-<code class="sig-name descname"><span class="pre">archivo_a_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temp/img_dir/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.archivo_a_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.archivo_a_texto">
+<span class="sig-name descname"><span class="pre">archivo_a_texto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temp/img_dir/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.archivo_a_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Se lleva a cabo la lectura del texto de un archivo y permite escoger el tipo, si es por páginas,             la codificación, si se utiliza OCR, el tipo de preprocesamiento, entre otros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -320,8 +320,8 @@ Para mayor información, consultar la sección de <a class="reference internal" 
 </dd></dl>
 
 <dl class="py method">
-<dt id="lectura.Lector.establecer_ubicacion">
-<code class="sig-name descname"><span class="pre">establecer_ubicacion</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.establecer_ubicacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.establecer_ubicacion">
+<span class="sig-name descname"><span class="pre">establecer_ubicacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.establecer_ubicacion" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Define la ubicación del archivo que se desea leer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -331,8 +331,8 @@ Para mayor información, consultar la sección de <a class="reference internal" 
 </dd></dl>
 
 <dl class="py method">
-<dt id="lectura.Lector.leer_imagen">
-<code class="sig-name descname"><span class="pre">leer_imagen</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_imagen" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.leer_imagen">
+<span class="sig-name descname"><span class="pre">leer_imagen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_imagen" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Se lleva a cabo la lectura del texto de archivos de tipo imagen, con extensión “png”, “jpg” o “jpeg”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -358,8 +358,8 @@ información consultar la sección de <a class="reference internal" href="../sec
 </dd></dl>
 
 <dl class="py method">
-<dt id="lectura.Lector.leer_pdf">
-<code class="sig-name descname"><span class="pre">leer_pdf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.leer_pdf">
+<span class="sig-name descname"><span class="pre">leer_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_pdf" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.pdf”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -390,8 +390,8 @@ información consultar la sección de <a class="reference internal" href="../sec
 </dd></dl>
 
 <dl class="py method">
-<dt id="lectura.Lector.leer_rtf">
-<code class="sig-name descname"><span class="pre">leer_rtf</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_rtf" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.leer_rtf">
+<span class="sig-name descname"><span class="pre">leer_rtf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_rtf" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.rtf”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Devuelve</dt>
@@ -401,8 +401,8 @@ información consultar la sección de <a class="reference internal" href="../sec
 </dd></dl>
 
 <dl class="py method">
-<dt id="lectura.Lector.leer_txt">
-<code class="sig-name descname"><span class="pre">leer_txt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.leer_txt">
+<span class="sig-name descname"><span class="pre">leer_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_txt" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.txt”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -415,8 +415,8 @@ información consultar la sección de <a class="reference internal" href="../sec
 </dd></dl>
 
 <dl class="py method">
-<dt id="lectura.Lector.leer_word">
-<code class="sig-name descname"><span class="pre">leer_word</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.Lector.leer_word">
+<span class="sig-name descname"><span class="pre">leer_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.Lector.leer_word" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Se lleva a cabo la lectura del texto de archivos con extensión “.docx” o “.doc”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -435,8 +435,8 @@ información consultar la sección de <a class="reference internal" href="../sec
 </dd></dl>
 
 <dl class="py function">
-<dt id="lectura.leer_texto">
-<code class="sig-prename descclassname"><span class="pre">lectura.</span></code><code class="sig-name descname"><span class="pre">leer_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temp/img_dir/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.leer_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="lectura.leer_texto">
+<span class="sig-prename descclassname"><span class="pre">lectura.</span></span><span class="sig-name descname"><span class="pre">leer_texto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inferir'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extraer_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_medios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'temp/img_dir/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">por_paginas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ocr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preprocesamiento</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spa'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enderezar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lectura.leer_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que se encarga de extraer el texto de un archivo. Permite especificar la ruta del archivo,         escoger el tipo, si es por páginas, la codificación, si se utiliza OCR, el tipo de preprocesamiento, entre otros.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -502,7 +502,7 @@ Para mayor información, consultar la sección de <a class="reference internal" 
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

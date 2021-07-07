@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -266,7 +272,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -401,13 +407,13 @@
 <li><p>La cabra y el asno. El texto está en un archivo PDT digitalizado con extensión .pdf</p></li>
 <li><p>El zorro y el cuervo. El texto se encuentra en un archivo plano con extensión .txt</p></li>
 </ul>
-<p>La extracción de los textos de cada archivo tiene una metodología distina. <strong>ConTexto</strong> facilita el código de importación de textos con la función <a class="reference internal" href="../funciones/lectura.html#lectura.leer_texto" title="lectura.leer_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lectura.leer_texto()</span></code></a>.</p>
+<p>La extracción de los textos de cada archivo tiene una metodología distinta. <strong>ConTexto</strong> facilita el código de importación de textos con la función <a class="reference internal" href="../funciones/lectura.html#lectura.leer_texto" title="lectura.leer_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lectura.leer_texto()</span></code></a>.</p>
 <div class="section" id="definir-las-rutas-de-los-archivos-con-los-textos">
 <h3><span class="section-number">2.2.1. </span>Definir las rutas de los archivos con los textos<a class="headerlink" href="#definir-las-rutas-de-los-archivos-con-los-textos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En este paso se definen las rutas de los archivos que se van a importar.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>La carpeta <a class="reference external" href="https://github.com/ucd-dnp/ConTexto/tree/master/ejemplos/entrada">entrada</a> de la sección de ejemplos del <a class="reference external" href="https://github.com/ucd-dnp/ConTexto">Repositorio de GitHub de ConTexto</a> tiene insumos que servirán para correr varios ejemplos de la librería <strong>ConTexto</strong>. En este caso en particular, se va a utilizar los archivos <em>fábula_cabrito_y_lobo.docx</em>, <em>fábula_cabra_y_asno.pdf</em> y <em>fábula_zorro_y_cuervo.txt</em>.</p>
+<p>La carpeta <a class="reference external" href="https://github.com/ucd-dnp/ConTexto/tree/master/ejemplos/entrada">entrada</a> de la sección de ejemplos del <a class="reference external" href="https://github.com/ucd-dnp/ConTexto">Repositorio de GitHub de ConTexto</a> tiene insumos que servirán para correr varios ejemplos de la librería <strong>ConTexto</strong>. En este caso en particular, se van a utilizar los archivos <em>fábula_cabrito_y_lobo.docx</em>, <em>fábula_cabra_y_asno.pdf</em> y <em>fábula_zorro_y_cuervo.txt</em>.</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ruta_fabula_1</span> <span class="o">=</span> <span class="s2">&quot;entrada/fábula_cabrito_y_lobo.docx&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ruta_fabula_2</span> <span class="o">=</span> <span class="s2">&quot;entrada/fábula_cabra_y_asno.pdf&quot;</span>
@@ -444,7 +450,7 @@
 </div>
 <div class="section" id="preprocesamiento-de-textos">
 <h2><span class="section-number">2.3. </span>Preprocesamiento de textos<a class="headerlink" href="#preprocesamiento-de-textos" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>El preprocesamiento de los textos es un paso importante para reducir ruido del texto original que puedan entorpecer los análisis a realizar, y en general adecuar los textos de entrada para poder aprovecharlos mejor.</p>
+<p>El preprocesamiento de los textos es un paso importante para reducir el ruido del texto original que pueda entorpecer los análisis a realizar, y en general adecuar los textos de entrada para poder aprovecharlos mejor.</p>
 <p>En este caso, se utilizaron las funciones <a class="reference internal" href="../funciones/limpieza.html#limpieza.remover_acentos" title="limpieza.remover_acentos"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.remover_acentos()</span></code></a> para eliminar los acentos y <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> para el resto del preprocesamiento. Vale la pena mencionar que también es posible quitar los acentos desde la función <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> si se utiliza el parámetro <cite>quitar_acentos=True</cite>.</p>
 <div class="section" id="crear-una-lista-de-python-con-los-tres-textos">
 <h3><span class="section-number">2.3.1. </span>Crear una lista de Python con los tres textos<a class="headerlink" href="#crear-una-lista-de-python-con-los-tres-textos" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -504,7 +510,7 @@
 </div>
 <div class="section" id="vectorizacion-de-los-textos">
 <h2><span class="section-number">2.5. </span>Vectorización de los textos<a class="headerlink" href="#vectorizacion-de-los-textos" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>La vectorización de textos consiste en convertir el texto preprocesado a una representación numérica para luego poder aplicar operaciones matemáticas.</p>
+<p>La vectorización de textos consiste en convertir el texto preprocesado en una representación numérica para luego poder aplicar operaciones matemáticas.</p>
 <p>En este caso se vectorizarán los textos por medio de la metodología Bag Of Words (BOW) del módulo <a class="reference internal" href="../funciones/vectorizacion.html#module-vectorizacion" title="vectorizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Vectorización</span></code></a>. Este módulo también cuenta con otras metodologías como TF-IDF, hashing, Word2Vec y Doc2Vec.</p>
 <div class="section" id="inicializar-y-ajustar-vectorizador-bow">
 <h3><span class="section-number">2.5.1. </span>Inicializar y ajustar vectorizador BOW<a class="headerlink" href="#inicializar-y-ajustar-vectorizador-bow" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -610,7 +616,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

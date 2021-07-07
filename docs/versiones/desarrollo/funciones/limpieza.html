@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -279,8 +285,8 @@
   <span class="target" id="funciones-limpieza"></span><div class="section" id="module-limpieza">
 <span id="limpieza"></span><h1>Limpieza<a class="headerlink" href="#module-limpieza" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py function">
-<dt id="limpieza.cargar_stopwords">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">cargar_stopwords</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.cargar_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.cargar_stopwords">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">cargar_stopwords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.cargar_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función para cargar las listas de palabras y expresiones que se desean     eliminar de un texto a partir de un archivo plano.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -299,8 +305,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.limpieza_basica">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">limpieza_basica</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quitar_numeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignorar_mayus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.limpieza_basica" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.limpieza_basica">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">limpieza_basica</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quitar_numeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignorar_mayus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.limpieza_basica" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Limpieza básica del texto. Esta función realiza una limpieza básica del     texto de entrada, transforma todo el texto a letras minúsculas, quita     signos de puntuación y caracteres especiales, remueve espacios múltiples     dejando solo espacio sencillo y caracteres de salto de línea o     tabulaciones.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -317,8 +323,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.limpieza_texto">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">limpieza_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_expresiones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quitar_numeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quitar_acentos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignorar_mayus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">momento_stopwords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ambos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.limpieza_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.limpieza_texto">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">limpieza_texto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_expresiones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quitar_numeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quitar_acentos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignorar_mayus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">momento_stopwords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ambos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.limpieza_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Limpieza completa de texto. Esta función hace una limpieza exhaustiva del     texto de entrada. Es capaz de quitar palabras y expresiones contenidas en     <cite>lista_palabras</cite> y <cite>lista_expresiones</cite>, quita acentos de las palabras,     números y palabras de longitud menor a <cite>n_min</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -342,8 +348,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.lista_apellidos">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">lista_apellidos</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_apellidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.lista_apellidos">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">lista_apellidos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_apellidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Genera lista de apellidos más comunes del español.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Devuelve</dt>
@@ -353,8 +359,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.lista_geo_colombia">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">lista_geo_colombia</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'todos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_geo_colombia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.lista_geo_colombia">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">lista_geo_colombia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'todos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_geo_colombia" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Genera lista de nombres de municipios y departamentos de Colombia.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -367,8 +373,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.lista_nombres">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">lista_nombres</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'todos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_nombres" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.lista_nombres">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">lista_nombres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'todos'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_nombres" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Genera lista de nombres más comunes del español. Retorna lista con los     nombres más comunes, tanto para hombre y mujer del idioma español. La     función permite generar lista de nombres solo de mujeres o solo de     hombres con el parámetro <cite>tipo</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -381,12 +387,12 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.lista_stopwords">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">lista_stopwords</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.lista_stopwords">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">lista_stopwords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.lista_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Genera una lista de stopwords (palabras que se quieren quitar de un     texto). Función que genera una lista de stopwords de un idioma     predeterminado.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
-<dd class="field-odd"><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcio</em>) – Define el lenguaje para la generación de las         stopwords. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.         Valor por defecto <cite>“es”</cite>.</p>
+<dd class="field-odd"><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Define el lenguaje para la generación de las         stopwords. Para mayor información, consultar la sección de         <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.         Valor por defecto <cite>“es”</cite>.</p>
 </dd>
 <dt class="field-even">Devuelve</dt>
 <dd class="field-even"><p>(list) Lista de palabras stopwords del idioma seleccionado.</p>
@@ -395,8 +401,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.quitar_repetidos">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">quitar_repetidos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remover_espacios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.quitar_repetidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.quitar_repetidos">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">quitar_repetidos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'|'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remover_espacios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.quitar_repetidos" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función para quitar frases o palabras repetidas que están separadas por     un caracter en específico.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -413,8 +419,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.remover_acentos">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">remover_acentos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_acentos" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.remover_acentos">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">remover_acentos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_acentos" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Quita los acentos (tildes, diéresis, virgulilla) de un texto de entrada.     Esta reemplaza cada carácter con acento en el texto por su equivalente     sin acento.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -427,8 +433,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.remover_palabras_cortas">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">remover_palabras_cortas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_palabras_cortas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.remover_palabras_cortas">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">remover_palabras_cortas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_min</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_palabras_cortas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Quita las palabras en el texto con longitud estrictamente menor a <cite>n_min</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -444,8 +450,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="limpieza.remover_stopwords">
-<code class="sig-prename descclassname"><span class="pre">limpieza.</span></code><code class="sig-name descname"><span class="pre">remover_stopwords</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_expresiones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="limpieza.remover_stopwords">
+<span class="sig-prename descclassname"><span class="pre">limpieza.</span></span><span class="sig-name descname"><span class="pre">remover_stopwords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_palabras</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_expresiones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ubicacion_archivo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#limpieza.remover_stopwords" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Quita las palabras y expresiones determinadas de un texto. Esta función     quita del texto de entrada, palabras específicas contenidas en     <cite>lista_palabras</cite>, o expresiones de palabras contenidas en     <cite>lista_expresiones</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -495,7 +501,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,7 +255,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -368,7 +374,7 @@
 <p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/comparacion.html#module-comparacion" title="comparacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Comparación</span></code></a> de la librería. Este módulo permite calcular distintas métricas de distancia y similitud entre dos o más textos. La capacidad para cuantificar qué tan similares o diferentes son un grupo de textos o cadenas de caracteres entre sí puede ser muy útil para ciertos procesos como detección de textos atípicos, identificación de afinidad entre documentos y estandarización de valores <em>string</em>, entre otros.</p>
 <div class="section" id="importar-paquetes-necesarios-y-adecuar-textos-de-prueba">
 <h2><span class="section-number">8.1. </span>Importar paquetes necesarios y adecuar textos de prueba<a class="headerlink" href="#importar-paquetes-necesarios-y-adecuar-textos-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>El primer paso es importar las tres clases del módulo de <cite>comparacion</cite> con las que se va a trabajar y definir los textos para correr los ejemplos.</p>
+<p>El primer paso consiste en importar las tres clases del módulo de <cite>comparacion</cite> con las que se va a trabajar y definir los textos para correr los ejemplos.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">contexto.comparacion</span> <span class="kn">import</span> <span class="n">Similitud</span><span class="p">,</span> <span class="n">Distancia</span><span class="p">,</span> <span class="n">DiferenciaStrings</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">contexto.vectorizacion</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -520,7 +526,7 @@
 <span class="go">       [ True,  True,  True,  True]])</span>
 </pre></div>
 </div>
-<p>Mientras los vectorizadores utilizados sean basados en frecuencias, el cálculo de similitud Jaccard funcionará bien. Por el otro lado, los vectorizadores word2vec y doc2vec generan una representación densa, por lo que no dan buenos resultados al utilizarse en este caso.</p>
+<p>Mientras los vectorizadores utilizados sean basados en frecuencias, el cálculo de similitud Jaccard funcionará bien. Por otro lado, los vectorizadores word2vec y doc2vec generan una representación densa, por lo que no dan buenos resultados al utilizarse en este caso.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Cálculo utilizando vectorizadores basados en frecuencias</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">jaccard_tfidf</span> <span class="o">=</span> <span class="n">s_tfidf</span><span class="o">.</span><span class="n">jaccard</span><span class="p">(</span><span class="n">textos_prueba</span><span class="p">,</span> <span class="n">vectorizar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">jaccard_hashing</span> <span class="o">=</span> <span class="n">s_hashing</span><span class="o">.</span><span class="n">jaccard</span><span class="p">(</span><span class="n">textos_prueba</span><span class="p">,</span> <span class="n">vectorizar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -579,7 +585,7 @@
 <div class="section" id="inicializar-los-objetos-de-clase-distancia">
 <h3><span class="section-number">8.3.1. </span>Inicializar los objetos de clase <cite>Distancia</cite><a class="headerlink" href="#inicializar-los-objetos-de-clase-distancia" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Al inicializar los objetos de clase <code class="xref py py-class docutils literal notranslate"><span class="pre">Distancia</span></code> se pasa como parámetro un vectorizador para poder obtener las representaciones vectoriales de los textos de entrada. Si no se pasa ningún vectorizador, por defecto inicializará uno de la clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorWord2Vec" title="vectorizacion.VectorizadorWord2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorWord2Vec</span></code></a>, del idioma especificado por el usuario (por defecto: español). Si a los métodos del objeto de clase <code class="xref py py-class docutils literal notranslate"><span class="pre">Distancia</span></code> se pasan vectores en vez de textos como entrada, no importa qué vectorizador tenga, pues no lo utilizará.</p>
-<p>Es importante recalcar que si se pasa un vectorizador al objeto de Similitud, este ya debe estar ajustado, en caso de que aplique. Esto es particularmente relevante para los vectores de clases <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a> y <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorDoc2Vec" title="vectorizacion.VectorizadorDoc2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorDoc2Vec</span></code></a>.</p>
+<p>Es importante recalcar que si se pasa un vectorizador al objeto de Distancia, este ya debe estar ajustado, en caso de que aplique. Esto es particularmente relevante para los vectores de clases <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a> y <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorDoc2Vec" title="vectorizacion.VectorizadorDoc2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorDoc2Vec</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Inicializar objetos de clase Distancia</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d_bow</span> <span class="o">=</span> <span class="n">Distancia</span><span class="p">(</span><span class="n">v_bow</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d_tf</span> <span class="o">=</span> <span class="n">Distancia</span><span class="p">(</span><span class="n">v_tf</span><span class="p">)</span>
@@ -627,7 +633,7 @@
 <span class="go"> [0.13 0.12 0.18 0.  ]]</span>
 </pre></div>
 </div>
-<p>La distancia Minkowski es una generalización de las operaciones que se utilizan para calcular la distancia L1 o L2. El parámetro p permite definir el grado a utilizar en el cálculo de la distancia.</p>
+<p>La distancia Minkowski es una generalización de las operaciones que se utilizan para calcular la distancia <em>L1</em> o <em>L2</em>. El parámetro <em>p</em> permite definir el grado a utilizar en el cálculo de la distancia.</p>
 <p>Por ejemplo, si p=1, se calculará la distancia L1 y si p=2 se calculará la distancia L2.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Distancia Minkowski</span>
 
@@ -807,8 +813,8 @@
 </div>
 <div class="section" id="normalizacion-de-medidas-de-distancia">
 <h3><span class="section-number">8.4.3. </span>Normalización de medidas de distancia<a class="headerlink" href="#normalizacion-de-medidas-de-distancia" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Para los métodos de distancia (<a class="reference internal" href="../funciones/comparacion.html#comparacion.DiferenciaStrings.distancia_levenshtein" title="comparacion.DiferenciaStrings.distancia_levenshtein"><code class="xref py py-meth docutils literal notranslate"><span class="pre">distancia_levenshtein()</span></code></a>, <a class="reference internal" href="../funciones/comparacion.html#comparacion.DiferenciaStrings.distancia_damerau_levenshtein" title="comparacion.DiferenciaStrings.distancia_damerau_levenshtein"><code class="xref py py-meth docutils literal notranslate"><span class="pre">distancia_damerau_levenshtein()</span></code></a> y <a class="reference internal" href="../funciones/comparacion.html#comparacion.DiferenciaStrings.distancia_hamming" title="comparacion.DiferenciaStrings.distancia_hamming"><code class="xref py py-meth docutils literal notranslate"><span class="pre">distancia_hamming()</span></code></a>) es posible utilizar el parámetro norm, que por defecto es igual a None, para normalizar la distancia calculada.</p>
-<p>Si norm=1, se dividirá la distancia encontrada por la longitud (número de caracteres) del texto más corto de los dos a comparar. Si norm=2, se dividirá la distancia encontrada por la longitud (número de caracteres) del texto más largo. En este segundo caso se puede garantizar que el valor resultante será un número entre 0 y 1.</p>
+<p>Para los métodos de distancia (<a class="reference internal" href="../funciones/comparacion.html#comparacion.DiferenciaStrings.distancia_levenshtein" title="comparacion.DiferenciaStrings.distancia_levenshtein"><code class="xref py py-meth docutils literal notranslate"><span class="pre">distancia_levenshtein()</span></code></a>, <a class="reference internal" href="../funciones/comparacion.html#comparacion.DiferenciaStrings.distancia_damerau_levenshtein" title="comparacion.DiferenciaStrings.distancia_damerau_levenshtein"><code class="xref py py-meth docutils literal notranslate"><span class="pre">distancia_damerau_levenshtein()</span></code></a> y <a class="reference internal" href="../funciones/comparacion.html#comparacion.DiferenciaStrings.distancia_hamming" title="comparacion.DiferenciaStrings.distancia_hamming"><code class="xref py py-meth docutils literal notranslate"><span class="pre">distancia_hamming()</span></code></a>) es posible utilizar el parámetro <em>norm</em>, que por defecto es igual a <em>None</em>, para normalizar la distancia calculada.</p>
+<p>Si norm=1, se dividirá la distancia encontrada entre la longitud (número de caracteres) del texto más corto de los dos a comparar. Si norm=2, se dividirá la distancia encontrada entre la longitud (número de caracteres) del texto más largo. En este segundo caso se puede garantizar que el valor resultante será un número entre 0 y 1.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Diferencia entre lista de textos</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d1</span> <span class="o">=</span> <span class="n">dif_strings</span><span class="o">.</span><span class="n">distancia_damerau_levenshtein</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
 
@@ -905,7 +911,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

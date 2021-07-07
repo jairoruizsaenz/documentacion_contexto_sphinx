@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,7 +255,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -327,7 +333,7 @@
 <p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/lematizacion.html#module-lematizacion" title="lematizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Lematización</span></code></a> de la librería. Este módulo permite realizar lematización de textos, una operación que consiste en transformar las palabras de su forma flexionada (plural, femenino, conjugaciones, etc.) a su lema correspondiente, el cual es el representante de todas las formas flexionadas de una misma palabra. Por ejemplo, las palabras niños, niña y niñito tienen todas el mismo lema: niño. Realizar lematización sobre textos puede simplificarlos, al unificar palabras que comparten el mismo lema, y evitando así tener un vocabulario más grande de lo necesario.</p>
 <div class="section" id="definir-textos-de-prueba">
 <h2><span class="section-number">5.1. </span>Definir textos de prueba<a class="headerlink" href="#definir-textos-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>El módulo de lematización de <strong>ConTexto</strong> cuenta con dos lematizadores distintos, cada uno apoyado en una librería de NLP (Procesamiento del Lenguaje Natural) distinta: <a class="reference external" href="https://spacy.io/">spaCy</a> y <a class="reference external" href="https://stanfordnlp.github.io/stanza/">Stanza</a>. En este ejemplo se mostrará el uso de ambas clases, <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorSpacy" title="lematizacion.LematizadorSpacy"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorSpacy</span></code></a> y <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a>, y de la función <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.lematizar_texto" title="lematizacion.lematizar_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lematizacion.lematizar_texto()</span></code></a>, que puede utilizar cualquiera de los dos lematizadores.</p>
+<p>El módulo de <a class="reference internal" href="../funciones/lematizacion.html#module-lematizacion" title="lematizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Lematización</span></code></a> de <strong>ConTexto</strong> cuenta con dos lematizadores distintos, cada uno apoyado en una librería de NLP (Procesamiento del Lenguaje Natural) distinta: <a class="reference external" href="https://spacy.io/">spaCy</a> y <a class="reference external" href="https://stanfordnlp.github.io/stanza/">Stanza</a>. En este ejemplo se mostrará el uso de ambas clases, <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorSpacy" title="lematizacion.LematizadorSpacy"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorSpacy</span></code></a> y <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a>, y de la función <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.lematizar_texto" title="lematizacion.lematizar_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lematizacion.lematizar_texto()</span></code></a>, que puede utilizar cualquiera de los dos lematizadores.</p>
 <p>En primer lugar, se definen los textos que se utilizarán para correr los ejemplos.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">contexto.lematizacion</span> <span class="kn">import</span> <span class="n">LematizadorSpacy</span><span class="p">,</span> <span class="n">LematizadorStanza</span>
@@ -369,7 +375,7 @@
 <div class="section" id="agregar-lemas-personalizados-al-lematizadorspacy">
 <h3><span class="section-number">5.2.1. </span>Agregar lemas personalizados al <cite>LematizadorSpacy</cite><a class="headerlink" href="#agregar-lemas-personalizados-al-lematizadorspacy" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Los modelos cuentan con algunos diccionarios de lemas, que se utilizan para aplicar la lematización. Así, por ejemplo, el lematizador sabe que para la palabra “iba”, su lema debería ser “ir”.</p>
-<p>Es posible que el diccionario del lematizador no contenga todos los casos que nos interesan, por lo que es necesario complementar el lematizador. Esto se puede hacer desde un archivo JSON o desde un diccionario de Python.</p>
+<p>Es posible que el diccionario del lematizador no contenga todos los casos que nos interesan, por lo que es necesario complementarlo. Esto se puede hacer desde un archivo JSON o desde un diccionario de Python.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>La carpeta <a class="reference external" href="https://github.com/ucd-dnp/ConTexto/tree/master/ejemplos/entrada">entrada</a> de la sección de ejemplos del <a class="reference external" href="https://github.com/ucd-dnp/ConTexto">Repositorio de GitHub de ConTexto</a> tiene insumos que servirán para correr varios ejemplos de la librería <strong>ConTexto</strong>. En este caso en particular, se va a utilizar el archivo <cite>dict_lemas.json</cite>.</p>
@@ -450,7 +456,7 @@
 <p>El parámetro <em>libreria</em> de la función <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.lematizar_texto" title="lematizacion.lematizar_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lematizacion.lematizar_texto()</span></code></a> permite elegir la librería de lematización a utilizar. Esta función se encarga de aplicar lematización a todas las palabras de un texto de entrada. Si se define <em>liberia=”stanza”</em>, la función utilizará el lematizador de la clase <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a>. La primera vez que se seleccione un modelo de un lenguaje determinado, la función descargará el modelo correspondiente en el computador del usuario. Este proceso puede durar algunos minutos, dependiendo de la conexión a internet.</p>
 <div class="admonition warning">
 <p class="admonition-title">Advertencia</p>
-<p>Es importante recalcar que para poder utilizar el <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a> es necesario tener los paquetes <strong>torch, torhvision y stanza</strong> instalados, que no vienen en la versión de ConTexto instalable a través de pip. Para mayor información puede consultar la <a class="reference internal" href="../seccion_instalacion.html#seccion-instalacion"><span class="std std-ref">sección de instalación</span></a>.</p>
+<p>Es importante recalcar que para poder utilizar el <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a> es necesario tener los paquetes <strong>Torch, Torchvision y Stanza</strong> instalados, que no vienen en la versión de ConTexto instalable a través de pip. Para mayor información puede consultar la <a class="reference internal" href="../seccion_instalacion.html#seccion-instalacion"><span class="std std-ref">sección de instalación</span></a>.</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Lematización con librería Stanza ###</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">texto_lematizado</span> <span class="o">=</span> <span class="n">lematizar_texto</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">libreria</span><span class="o">=</span><span class="s1">&#39;stanza&#39;</span><span class="p">)</span>
@@ -582,7 +588,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

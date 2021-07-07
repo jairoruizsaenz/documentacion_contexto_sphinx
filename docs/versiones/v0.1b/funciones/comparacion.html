@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -272,13 +272,13 @@
   <div class="section" id="module-comparacion">
 <span id="comparacion"></span><h1>Comparación<a class="headerlink" href="#module-comparacion" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
-<dt id="comparacion.DiferenciaStrings">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">comparacion.</span></code><code class="sig-name descname"><span class="pre">DiferenciaStrings</span></code><a class="headerlink" href="#comparacion.DiferenciaStrings" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">comparacion.</span></span><span class="sig-name descname"><span class="pre">DiferenciaStrings</span></span><a class="headerlink" href="#comparacion.DiferenciaStrings" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Esta clase se recomienda para comparaciones de strings relativamente cortos, como nombres,         direcciones y otras cadenas de caracteres similares. Para textos más extensos, se recomiendan         las clases <a class="reference internal" href="#comparacion.Similitud" title="comparacion.Similitud"><code class="xref py py-meth docutils literal notranslate"><span class="pre">comparacion.Similitud()</span></code></a> o <a class="reference internal" href="#comparacion.Distancia" title="comparacion.Distancia"><code class="xref py py-meth docutils literal notranslate"><span class="pre">comparacion.Distancia()</span></code></a>.</p>
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.comparacion_lista">
-<code class="sig-name descname"><span class="pre">comparacion_lista</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'levenshtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_lista" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.comparacion_lista">
+<span class="sig-name descname"><span class="pre">comparacion_lista</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'levenshtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_lista" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite hacer comparaciones entre una o dos listas de textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -299,8 +299,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.comparacion_pares">
-<code class="sig-name descname"><span class="pre">comparacion_pares</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texto2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'levenshtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.comparacion_pares">
+<span class="sig-name descname"><span class="pre">comparacion_pares</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texto2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'levenshtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.comparacion_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite hacer comparaciones entre dos textos de entrada, de acuerdo a un tipo de             distancia o similitud determinado.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -321,8 +321,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.distancia_damerau_levenshtein">
-<code class="sig-name descname"><span class="pre">distancia_damerau_levenshtein</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_damerau_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.distancia_damerau_levenshtein">
+<span class="sig-name descname"><span class="pre">distancia_damerau_levenshtein</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_damerau_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite calcular la distancia de Damerau-Levenshtein entre una o dos listas de textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -342,8 +342,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.distancia_hamming">
-<code class="sig-name descname"><span class="pre">distancia_hamming</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.distancia_hamming">
+<span class="sig-name descname"><span class="pre">distancia_hamming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite calcular la distancia de Hamming entre una o dos listas de textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -363,8 +363,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.distancia_levenshtein">
-<code class="sig-name descname"><span class="pre">distancia_levenshtein</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.distancia_levenshtein">
+<span class="sig-name descname"><span class="pre">distancia_levenshtein</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.distancia_levenshtein" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite calcular la distancia de Levenshtein entre una o dos listas de textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -384,8 +384,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.similitud_jaro">
-<code class="sig-name descname"><span class="pre">similitud_jaro</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.similitud_jaro">
+<span class="sig-name descname"><span class="pre">similitud_jaro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite calcular la similitud de Jaro entre una o dos listas de textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -405,8 +405,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.DiferenciaStrings.similitud_jaro_winkler">
-<code class="sig-name descname"><span class="pre">similitud_jaro_winkler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro_winkler" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.DiferenciaStrings.similitud_jaro_winkler">
+<span class="sig-name descname"><span class="pre">similitud_jaro_winkler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.DiferenciaStrings.similitud_jaro_winkler" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite calcular la similitud de Jaro-Winkler entre una o dos listas de textos de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -428,8 +428,8 @@ si norm=2 se normaliza en función al texto de mayor extensión.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt id="comparacion.Distancia">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">comparacion.</span></code><code class="sig-name descname"><span class="pre">Distancia</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">comparacion.</span></span><span class="sig-name descname"><span class="pre">Distancia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="simple">
 <dt>Constructor de la clase Distacia. </dt><dd><p>Permite calcular la diferentes medidas de distancia entre textos y/o vectores.</p>
@@ -449,8 +449,8 @@ vectorizador. Para mayor información, consultar la sección de
 </dd>
 </dl>
 <dl class="py method">
-<dt id="comparacion.Distancia.distancia_pares">
-<code class="sig-name descname"><span class="pre">distancia_pares</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo_distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'l2'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.distancia_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.distancia_pares">
+<span class="sig-name descname"><span class="pre">distancia_pares</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo_distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'l2'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.distancia_pares" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite calcular diferentes métricas de distancias entre uno o dos grupos de             textos y/o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -469,8 +469,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.establecer_lenguaje">
-<code class="sig-name descname"><span class="pre">establecer_lenguaje</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.establecer_lenguaje">
+<span class="sig-name descname"><span class="pre">establecer_lenguaje</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Establece el lenguaje del objeto Distancia.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -480,8 +480,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.establecer_vectorizador">
-<code class="sig-name descname"><span class="pre">establecer_vectorizador</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.establecer_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.establecer_vectorizador">
+<span class="sig-name descname"><span class="pre">establecer_vectorizador</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.establecer_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Establece el vectorizador del objeto Distancia.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -491,8 +491,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.hamming">
-<code class="sig-name descname"><span class="pre">hamming</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.hamming">
+<span class="sig-name descname"><span class="pre">hamming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.hamming" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la distancia de Hamming entre uno o dos grupos de textos y/o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -508,8 +508,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.jaccard">
-<code class="sig-name descname"><span class="pre">jaccard</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.jaccard">
+<span class="sig-name descname"><span class="pre">jaccard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la distancia de Jaccard entre uno o dos grupos de textos y/o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -525,8 +525,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.l1">
-<code class="sig-name descname"><span class="pre">l1</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l1" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.l1">
+<span class="sig-name descname"><span class="pre">l1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l1" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la distancia L1, también conocida como la distancia Manhattan, entre uno o dos grupos de             textos y/o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -542,8 +542,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.l2">
-<code class="sig-name descname"><span class="pre">l2</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l2" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.l2">
+<span class="sig-name descname"><span class="pre">l2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.l2" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la distancia L2, también conocida como la distancia euclidiana, entre uno o dos grupos de             textos y/o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -559,8 +559,8 @@ cálculo de las distancias. También es posible ingresar directamente los vector
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Distancia.minkowski">
-<code class="sig-name descname"><span class="pre">minkowski</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.minkowski" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Distancia.minkowski">
+<span class="sig-name descname"><span class="pre">minkowski</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Distancia.minkowski" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la distancia de Minkowski entre uno o dos grupos de textos y/o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -580,8 +580,8 @@ y cuando p=2 la distancia calculada es equivalente a la distancia euclidiana (L2
 </dd></dl>
 
 <dl class="py class">
-<dt id="comparacion.Similitud">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">comparacion.</span></code><code class="sig-name descname"><span class="pre">Similitud</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Similitud">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">comparacion.</span></span><span class="sig-name descname"><span class="pre">Similitud</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="simple">
 <dt>Constructor de la clase Similitud. </dt><dd><p>Permite calcular la similitud coseno y de Jaccard entre textos y/o vectores.</p>
@@ -600,8 +600,8 @@ vectorizador. Para mayor información, consultar la sección de
 </dd>
 </dl>
 <dl class="py method">
-<dt id="comparacion.Similitud.coseno">
-<code class="sig-name descname"><span class="pre">coseno</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.coseno" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Similitud.coseno">
+<span class="sig-name descname"><span class="pre">coseno</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.coseno" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la similitud coseno entre uno o dos grupos de textos o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -618,8 +618,8 @@ cálculo de similitud. También es posible ingresar directamente los vectores   
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Similitud.establecer_lenguaje">
-<code class="sig-name descname"><span class="pre">establecer_lenguaje</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Similitud.establecer_lenguaje">
+<span class="sig-name descname"><span class="pre">establecer_lenguaje</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Establece el lenguaje del objeto Similitud.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -629,8 +629,8 @@ cálculo de similitud. También es posible ingresar directamente los vectores   
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Similitud.establecer_vectorizador">
-<code class="sig-name descname"><span class="pre">establecer_vectorizador</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Similitud.establecer_vectorizador">
+<span class="sig-name descname"><span class="pre">establecer_vectorizador</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vectorizador</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.establecer_vectorizador" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Establece el vectorizador del objeto Similitud.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -641,8 +641,8 @@ vectorizador al objeto de clase Similitud, este ya debe estar ajustado.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="comparacion.Similitud.jaccard">
-<code class="sig-name descname"><span class="pre">jaccard</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorizar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="comparacion.Similitud.jaccard">
+<span class="sig-name descname"><span class="pre">jaccard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorizar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#comparacion.Similitud.jaccard" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Calcula la similitud de Jaccard entre uno o dos grupos de textos o vectores de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -693,7 +693,7 @@ si se desean vectorizar los textos de entrada pertenecientes a lista1 y (opciona
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

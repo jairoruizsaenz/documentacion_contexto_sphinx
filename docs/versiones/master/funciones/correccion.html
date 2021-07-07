@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -272,8 +272,8 @@
   <div class="section" id="module-correccion">
 <span id="correccion"></span><h1>Corrección<a class="headerlink" href="#module-correccion" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
-<dt id="correccion.Corrector">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">correccion.</span></code><code class="sig-name descname"><span class="pre">Corrector</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diccionario</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">correccion.</span></span><span class="sig-name descname"><span class="pre">Corrector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diccionario</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Constructor por defecto de la clase Corrector. Esta clase se encarga         de realizar corrección ortográfica sobre textos.</p>
 <dl class="field-list simple">
@@ -291,8 +291,8 @@ entre una palabra incorrecta (o no reconocida) y las palabras del diccionario pa
 </dd>
 </dl>
 <dl class="py method">
-<dt id="correccion.Corrector.actualizar_diccionario">
-<code class="sig-name descname"><span class="pre">actualizar_diccionario</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diccionario</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.actualizar_diccionario" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.actualizar_diccionario">
+<span class="sig-name descname"><span class="pre">actualizar_diccionario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diccionario</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.actualizar_diccionario" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Actualiza el diccionario que contiene las palabras válidas o reconocidas disponibles para         realizar la corrección ortográfica. Las palabras contenidas en el argumento <em>diccionario</em>         de esta función serán añadidas (o sus frecuencias serán actualizadas) en el diccionario         que ya existe en el objeto de la clase Corrector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -303,8 +303,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.agregar_palabras">
-<code class="sig-name descname"><span class="pre">agregar_palabras</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabras</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.agregar_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.agregar_palabras">
+<span class="sig-name descname"><span class="pre">agregar_palabras</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabras</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.agregar_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Añade al diccionario del corrector una o más palabras proporcionadas en el argumento         <em>palabras</em>, haciendo que estas sean reconocidas como palabras válidas o         correctas al momento de hacer corrección ortográfica.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -314,8 +314,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.correccion_ortografia">
-<code class="sig-name descname"><span class="pre">correccion_ortografia</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpieza</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.correccion_ortografia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.correccion_ortografia">
+<span class="sig-name descname"><span class="pre">correccion_ortografia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpieza</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.correccion_ortografia" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Realiza corrección ortográfica sobre un texto de entrada, identificando las palabras         que no están en el diccionario del corrector y cambiándolas por su candidata más         frecuente o probable, siempre y cuando haya por lo menos una palabra candidata         que cumpla con la máxima distancia de Levenshtein permitida.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -332,8 +332,8 @@ básica (aplicando la función <cite>limpieza_basica</cite> del módulo <cite>li
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.establecer_distancia">
-<code class="sig-name descname"><span class="pre">establecer_distancia</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distancia</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.establecer_distancia" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.establecer_distancia">
+<span class="sig-name descname"><span class="pre">establecer_distancia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distancia</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.establecer_distancia" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Establece la distancia máxima que utilizará el algoritmo de corrección de ortografía         para determinar si hay palabras candidatas para corregir una palabra incorrecta o         no reconocida.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -344,8 +344,8 @@ entre una palabra incorrecta (o no reconocida) y las palabras del diccionario pa
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.establecer_lenguaje">
-<code class="sig-name descname"><span class="pre">establecer_lenguaje</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.establecer_lenguaje">
+<span class="sig-name descname"><span class="pre">establecer_lenguaje</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite definir o cambiar el lenguaje de los textos sobre los cuales         va a aplicarse el objeto de la clase Corrector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -356,8 +356,8 @@ entre una palabra incorrecta (o no reconocida) y las palabras del diccionario pa
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.frecuencia_palabra">
-<code class="sig-name descname"><span class="pre">frecuencia_palabra</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.frecuencia_palabra" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.frecuencia_palabra">
+<span class="sig-name descname"><span class="pre">frecuencia_palabra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.frecuencia_palabra" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Para una palabra de entrada, devuelve la frecuencia de la misma, de acuerdo al         diccionario del corrector. Si la palabra es desconocida (no se encuentra en         el diccionario), la frecuencia retornada será de cero.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -370,8 +370,8 @@ entre una palabra incorrecta (o no reconocida) y las palabras del diccionario pa
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.iniciar_corrector">
-<code class="sig-name descname"><span class="pre">iniciar_corrector</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diccionario</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.iniciar_corrector" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.iniciar_corrector">
+<span class="sig-name descname"><span class="pre">iniciar_corrector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diccionario</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.iniciar_corrector" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Inicializa el objeto de la clase <cite>SpellChecker</cite> de la librería spellchecker,         para el lenguaje definido previamente, y lo asigna al atributo «corrector» del         objeto de clase Corrector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -382,8 +382,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.palabras_candidatas">
-<code class="sig-name descname"><span class="pre">palabras_candidatas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.palabras_candidatas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.palabras_candidatas">
+<span class="sig-name descname"><span class="pre">palabras_candidatas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.palabras_candidatas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Para una palabra de entrada, retorna un conjunto de palabras que podrían ser utilizadas         para corregirla. Si la palabra de entrada es correcta (está dentro del diccionario         del corrector) o no tienen ninguna palabra candidata con una distancia menor o igual         a la establecida en el parámetro <em>distancia</em> de la clase Corrector, la función         devolverá la misma palabra de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -396,8 +396,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.palabras_conocidas">
-<code class="sig-name descname"><span class="pre">palabras_conocidas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.palabras_conocidas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.palabras_conocidas">
+<span class="sig-name descname"><span class="pre">palabras_conocidas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.palabras_conocidas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>A partir de un texto de entrada, devuelve un conjunto (objeto de clase <em>set</em> de         Python) con las palabras del texto que se reconocen por estar presentes en         el diccionario del corrector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -410,8 +410,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.palabras_desconocidas">
-<code class="sig-name descname"><span class="pre">palabras_desconocidas</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.palabras_desconocidas" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.palabras_desconocidas">
+<span class="sig-name descname"><span class="pre">palabras_desconocidas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.palabras_desconocidas" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>A partir de un texto de entrada, devuelve un conjunto (objeto de clase <em>set</em> de         Python) con las palabras del texto que no están incluidas en         el diccionario del corrector y por lo tanto no se reconocen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -424,8 +424,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.probabilidad_palabra">
-<code class="sig-name descname"><span class="pre">probabilidad_palabra</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.probabilidad_palabra" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.probabilidad_palabra">
+<span class="sig-name descname"><span class="pre">probabilidad_palabra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.probabilidad_palabra" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Para una palabra de entrada, devuelve la probabilidad de aparición de la misma,         entendida como su frecuencia sobre la suma de las frecuencias de todas las palabras        disponibles, de acuerdo al diccionario del corrector. Si la palabra es desconocida         (no se encuentra en el diccionario), la probabilidad retornada será de cero.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -438,8 +438,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py method">
-<dt id="correccion.Corrector.quitar_palabras">
-<code class="sig-name descname"><span class="pre">quitar_palabras</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabras</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.quitar_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.Corrector.quitar_palabras">
+<span class="sig-name descname"><span class="pre">quitar_palabras</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">palabras</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.Corrector.quitar_palabras" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Quita del diccionario del corrector una o más palabras proporcionadas en el argumento         <em>palabras</em>, haciendo que estas ya no sean reconocidas como palabras válidas o         correctas al momento de hacer corrección ortográfica.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -451,8 +451,8 @@ como válidas o correctas, y los valores del diccionario son las frecuencias de 
 </dd></dl>
 
 <dl class="py function">
-<dt id="correccion.corregir_texto">
-<code class="sig-prename descclassname"><span class="pre">correccion.</span></code><code class="sig-name descname"><span class="pre">corregir_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corrector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diccionario</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpieza</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.corregir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="correccion.corregir_texto">
+<span class="sig-prename descclassname"><span class="pre">correccion.</span></span><span class="sig-name descname"><span class="pre">corregir_texto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corrector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diccionario</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpieza</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#correccion.corregir_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que aprovecha la clase Corrector para realizar corrección         ortográfica sobre un texto de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -508,7 +508,7 @@ básica (aplicando la función <cite>limpieza_basica</cite> del módulo <cite>li
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

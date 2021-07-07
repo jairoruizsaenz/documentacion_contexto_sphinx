@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,14 +255,14 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#importar-paquetes-necesarios-y-adecuar-texto-de-prueba">
-   3.1. Importar paquetes necesarios y adecuar texto de prueba
+  <a class="reference internal nav-link" href="#importar-funciones-necesarias-y-adecuar-texto-de-prueba">
+   3.1. Importar funciones necesarias y adecuar texto de prueba
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -306,8 +312,8 @@
   <div class="section" id="analisis-exploratorio-y-visualizacion">
 <span id="exploracion-y-visualizacion"></span><h1><span class="section-number">3. </span>Análisis exploratorio y visualización<a class="headerlink" href="#analisis-exploratorio-y-visualizacion" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/exploracion.html#module-exploracion" title="exploracion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Exploración</span></code></a> de la librería. Este módulo permite obtener distintas visualizaciones de un texto o conjunto de textos, tales como nubes de palabras, gráficos de barras con los términos más frecuentes y redes de coocurrencias. Estas funciones son útiles para explorar uno o varios textos y tener mejor idea de qué contienen y sobre qué hablan.</p>
-<div class="section" id="importar-paquetes-necesarios-y-adecuar-texto-de-prueba">
-<h2><span class="section-number">3.1. </span>Importar paquetes necesarios y adecuar texto de prueba<a class="headerlink" href="#importar-paquetes-necesarios-y-adecuar-texto-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="importar-funciones-necesarias-y-adecuar-texto-de-prueba">
+<h2><span class="section-number">3.1. </span>Importar funciones necesarias y adecuar texto de prueba<a class="headerlink" href="#importar-funciones-necesarias-y-adecuar-texto-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Para este ejemplo, se va a trabajar con el texto de la novela <strong>«Don Quijote de la Mancha»</strong>, escrita por Miguel de Cervantes Saavedra. El texto completo de esta novela se encuentra en la carpeta <a class="reference external" href="https://github.com/ucd-dnp/ConTexto/tree/master/ejemplos/entrada">entrada</a> de la sección de ejemplos del <a class="reference external" href="https://github.com/ucd-dnp/ConTexto">Repositorio de GitHub de ConTexto</a>, y fue descargado desde la página del <a class="reference external" href="https://www.gutenberg.org">Proyecto Gutenberg</a>, que tiene a su disposición miles de libros de forma gratuita.</p>
@@ -322,7 +328,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ruta_cuento</span> <span class="o">=</span> <span class="s1">&#39;entrada/cervantes_don_quijote.txt&#39;</span>
 </pre></div>
 </div>
-<p>La función <a class="reference internal" href="../funciones/lectura.html#lectura.leer_texto" title="lectura.leer_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lectura.leer_texto()</span></code></a> del módulo <cite>lectura</cite> es utilizada para extraer el texto del archivo que contiene la novela. Luego, se realiza una limpieza estándar del texto, para que esté mejor adecuado para su exploración. Para esto, se utilizan las funciones <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> y <a class="reference internal" href="../funciones/limpieza.html#limpieza.lista_stopwords" title="limpieza.lista_stopwords"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.lista_stopwords()</span></code></a>, del módulo limpieza.</p>
+<p>La función <a class="reference internal" href="../funciones/lectura.html#lectura.leer_texto" title="lectura.leer_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lectura.leer_texto()</span></code></a> del módulo <cite>Lectura</cite> es utilizada para extraer el texto del archivo que contiene la novela. Luego, se realiza una limpieza estándar del texto, para que esté mejor adecuado para su exploración. Para esto, se utilizan las funciones <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> y <a class="reference internal" href="../funciones/limpieza.html#limpieza.lista_stopwords" title="limpieza.lista_stopwords"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.lista_stopwords()</span></code></a>, del módulo <cite>Limpieza</cite>.</p>
 <p>Finalmente, en el texto aparece en varias ocasiones la expresión «project gutenberg», el nombre del proyecto que pone a disposición la novela. Como esta información no está directamente relacionada al texto que nos interesa, se va a remover utilizando la función <a class="reference internal" href="../funciones/limpieza.html#limpieza.remover_stopwords" title="limpieza.remover_stopwords"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.remover_stopwords()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">texto_prueba</span> <span class="o">=</span> <span class="n">leer_texto</span><span class="p">(</span><span class="n">ruta_cuento</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">texto</span> <span class="o">=</span> <span class="n">limpieza_texto</span><span class="p">(</span><span class="n">texto_prueba</span><span class="p">,</span> <span class="n">quitar_numeros</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_min</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">lista_palabras</span><span class="o">=</span><span class="n">lista_stopwords</span><span class="p">())</span>
@@ -372,7 +378,7 @@
 </div>
 <p>La función de nubes de palabras tiene algunos parámetros que permiten personalizar la estética de la gráfica. En particular, se puede configurar:</p>
 <ul class="simple">
-<li><p>La forma de la nube: Para esto, se puede ingresar una imagen de referencia con la forma que uno quiera utilizar. Por defecto, esta forma es circular.</p></li>
+<li><p>La forma de la nube: Para esto, se puede ingresar una imagen de referencia con la forma que uno quiera utilizar. Por defecto esta forma es circular.</p></li>
 <li><p>El color de fondo</p></li>
 <li><p>El color y grosor del contorno: Esto permite delinear la forma de la nube de palabras</p></li>
 </ul>
@@ -412,7 +418,7 @@
 <div class="section" id="graficos-de-dispersion-lexica">
 <h2><span class="section-number">3.3. </span>Gráficos de dispersión léxica<a class="headerlink" href="#graficos-de-dispersion-lexica" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Además de la frecuencia, la importancia de una palabra se puede ponderar por su dispersión en el texto. La dispersión léxica es una medida de la homogeneidad de una palabra en diferentes partes del texto. Esta medida puede ser visualizada usando el gráfico de dispersión léxica, en donde en el eje horizontal se marca con una línea cada una de las ocurrencias de una palabra, y en el eje vertical se muestran las palabras de interés. La función <a class="reference internal" href="../funciones/exploracion.html#exploracion.graficar_dispersion" title="exploracion.graficar_dispersion"><code class="xref py py-func docutils literal notranslate"><span class="pre">exploracion.graficar_dispersion()</span></code></a> permite obtener estas gráficas.</p>
-<p>En el siguiente ejemplo se definen algunas palabras de interés y se hace el gráfico correspondiente. Palabras como <em>obispo</em> y <em>esparto</em> aparecen hacía al final del texto, mientras que palabras como <em>caballero</em> y <em>merced</em> aparecen en todo el texto.</p>
+<p>En el siguiente ejemplo se definen algunas palabras de interés y se hace el gráfico correspondiente. Palabras como <em>obispo</em> y <em>esparto</em> aparecen hacia al final del texto, mientras que palabras como <em>caballero</em> y <em>merced</em> aparecen en todo el texto.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">contexto.exploracion</span> <span class="kn">import</span> <span class="n">graficar_dispersion</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Se definen las palabras de interés</span>
@@ -448,7 +454,7 @@
 <div class="align-center figure">
 <img alt="" src="../_images/dispersion_plot_2.png" />
 </div>
-<p>En algunas ocasiones, graficar la dispersión léxica de palabras por si solas, hacen perder el contexto en las que aparecen. Una forma de solucionar este hecho es visualizar la aparición de n-gramas a través del texto.</p>
+<p>En algunas ocasiones, graficar la dispersión léxica de palabras por si solas, hace perder el contexto en las que aparecen. Una forma de solucionar este hecho es visualizar la aparición de n-gramas a través del texto.</p>
 <p>Para graficar la dispersión léxica de n-gramas con ConTexto, es necesario, calcular los n-gramas para cada texto y pasarlos como una lista de listas. En el siguiente ejemplo, se muestra la dispersión léxica para bi-gramas.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Diferentes textos en una lista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">textos</span> <span class="o">=</span> <span class="p">[</span>
@@ -551,7 +557,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

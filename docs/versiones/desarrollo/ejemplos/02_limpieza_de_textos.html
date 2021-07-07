@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,7 +255,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -326,7 +332,7 @@
                 
   <div class="section" id="limpieza-de-textos">
 <span id="id1"></span><h1><span class="section-number">2. </span>Limpieza de textos<a class="headerlink" href="#limpieza-de-textos" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/limpieza.html#module-limpieza" title="limpieza"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Limpieza</span></code></a> de la librería. También se muestran ejemplos de uso de las funciones de limpieza contenidas en el módulo auxiliar <cite>limpieza_aux</cite>, que hace parte de <cite>utils</cite>.</p>
+<p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/limpieza.html#module-limpieza" title="limpieza"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Limpieza</span></code></a> de la librería. También muestra ejemplos de uso de las funciones de limpieza contenidas en el módulo auxiliar <cite>limpieza_aux</cite>, que hace parte de <cite>utils</cite>.</p>
 <div class="section" id="funciones-de-limpieza-de-textos">
 <h2><span class="section-number">2.1. </span>Funciones de limpieza de textos<a class="headerlink" href="#funciones-de-limpieza-de-textos" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En esta sección se muestra cómo se pueden hacer distintos procesamientos de un texto de entrada para remover elementos como signos de puntuación, <em>stopwords</em>, números y acentos, que pueden llegar a entorpecer el análisis de un conjunto de documentos.</p>
@@ -371,7 +377,7 @@
 <span class="go">hola esto prueba para verificar limpieza hecha precision empeno calidad esperamos este todo desde amazonas hasta guajira andres desde john maria hasta ernesto esperamos todo funcione manera correcta</span>
 </pre></div>
 </div>
-<p>Utilizando la función <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> se puede, a la vez:</p>
+<p>Utilizando la función <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> se puede a la vez:</p>
 <ul class="simple">
 <li><p>Pasar todo el texto a minúsculas</p></li>
 <li><p>Quitar signos de puntuación</p></li>
@@ -461,7 +467,7 @@
 </div>
 <div class="section" id="funciones-auxiliares-para-limpieza-de-textos">
 <h2><span class="section-number">2.2. </span>Funciones auxiliares para limpieza de textos<a class="headerlink" href="#funciones-auxiliares-para-limpieza-de-textos" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Adicionalmente, el módulo auxiliar <cite>limpieza_aux</cite> contiene algunas funciones complementarias que permiten identificar y remover elementos adicionales que puedan entorpecer el análisis de un conjunto de textos.</p>
+<p>Adicionalmente, el módulo <a class="reference internal" href="../funciones/utils.html#funciones-utils-limpieza-utils"><span class="std std-ref">Limpieza auxiliar</span></a> contiene algunas funciones complementarias que permiten identificar y remover elementos adicionales que puedan entorpecer el análisis de un conjunto de textos.</p>
 <div class="section" id="importar-funciones-auxiliares-y-definir-textos-de-prueba">
 <h3><span class="section-number">2.2.1. </span>Importar funciones auxiliares y definir textos de prueba<a class="headerlink" href="#importar-funciones-auxiliares-y-definir-textos-de-prueba" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">contexto.utils.limpieza_aux</span> <span class="kn">import</span> <span class="n">substrings_en_comun</span><span class="p">,</span> <span class="n">detectar_coincidencias</span>
@@ -482,7 +488,7 @@
 <div class="section" id="detectar-y-quitar-coincidencias-entre-un-conjunto-de-textos">
 <h3><span class="section-number">2.2.2. </span>Detectar y quitar coincidencias entre un conjunto de textos<a class="headerlink" href="#detectar-y-quitar-coincidencias-entre-un-conjunto-de-textos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En ocasiones un documento puede tener un encabezado o pie de nota común en casi todas sus páginas. Esto puede entorpecer ciertos análisis, al darle un peso demasiado grande a estas coincidencias.</p>
-<p>Para evitar este problema, la función <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_coincidenias()</span></code> (que a su vez utiliza las funciones <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.substrings_en_comun()</span></code> y <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.detectar_coincidencias()</span></code>) permite, para un conjunto de textos, encontrar y remover coincidencias (cadenas de caracteres) que cumplan una o varias de estas condiciones:</p>
+<p>Para evitar este problema, la función <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.quitar_coincidenias" title="utils.tokenizacion.quitar_coincidenias"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_coincidenias()</span></code></a> (que a su vez utiliza las funciones <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.substrings_en_comun" title="utils.tokenizacion.substrings_en_comun"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.substrings_en_comun()</span></code></a> y <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.detectar_coincidencias" title="utils.tokenizacion.detectar_coincidencias"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.detectar_coincidencias()</span></code></a> permite, para un conjunto de textos, encontrar y remover coincidencias (cadenas de caracteres) que cumplan una o varias de estas condiciones:</p>
 <ul class="simple">
 <li><p>Que aparezcan en mínimo una proporción determinada de todos los textos</p></li>
 <li><p>Que su longitud (cantidad de caracteres) sea mayor o igual a un valor determinado</p></li>
@@ -512,7 +518,7 @@
 <div class="section" id="detectar-y-quitar-palabras-o-valores-atipicos">
 <h3><span class="section-number">2.2.3. </span>Detectar y quitar palabras o valores atípicos<a class="headerlink" href="#detectar-y-quitar-palabras-o-valores-atipicos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Si se está trabajando con un texto de mala calidad (por ejemplo, porque se aplicó OCR a un documento antiguo y mal escaneado), es posible que haya “ruido” en el texto, como palabras sin sentido, que puede afectar el análisis de este documento. Otro caso posible es trabajar con textos que tengan palabras o valores numéricos sospechosos (como “abcde” o “0000000”). En este caso, puede ser de utilidad poder detectar y/o remover estas palabras sospechosas o de ruido.</p>
-<p>Para evitar este problema, la función <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_palabras_atipicas()</span></code> (que a su vez utiliza las funciones <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_repetidos()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_consecutivos()</span></code> y <code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.consonantes_consecutivas()</span></code>) permite, para un conjunto de textos, encontrar y remover palabras que cumplan una o varias de estas condiciones:</p>
+<p>Para evitar este problema, la función <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.quitar_palabras_atipicas" title="utils.tokenizacion.quitar_palabras_atipicas"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.quitar_palabras_atipicas()</span></code></a> (que a su vez utiliza las funciones <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.caracteres_repetidos" title="utils.tokenizacion.caracteres_repetidos"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_repetidos()</span></code></a>, <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.caracteres_consecutivos" title="utils.tokenizacion.caracteres_consecutivos"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.caracteres_consecutivos()</span></code></a> y <a class="reference internal" href="../funciones/utils.html#utils.tokenizacion.consonantes_consecutivas" title="utils.tokenizacion.consonantes_consecutivas"><code class="xref py py-func docutils literal notranslate"><span class="pre">utils.limpieza_aux.consonantes_consecutivas()</span></code></a>) permite, para un conjunto de textos, encontrar y remover palabras que cumplan una o varias de estas condiciones:</p>
 <ul class="simple">
 <li><p>Que tengan un número o letra repetidos de forma seguida más veces de lo permitido</p></li>
 <li><p>Que tengan números o letras consecutivas de forma seguida en un número mayor de lo permitido</p></li>
@@ -613,7 +619,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

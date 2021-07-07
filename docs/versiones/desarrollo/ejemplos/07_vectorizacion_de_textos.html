@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -95,6 +95,12 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../_contribuciones.html">
   ¿Cómo contribuir?
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../_control_de_cambios.html">
+  Control de cambios
  </a>
 </li>
 
@@ -249,7 +255,7 @@
               <div class="toc-item">
                 
 <div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> En esta sección
+    <i class="fas fa-list"></i> On this page
 </div>
 
 <nav id="bd-toc-nav">
@@ -375,7 +381,7 @@
                 
   <div class="section" id="vectorizacion-de-textos">
 <span id="id1"></span><h1><span class="section-number">7. </span>Vectorización de textos<a class="headerlink" href="#vectorizacion-de-textos" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/vectorizacion.html#module-vectorizacion" title="vectorizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Vectorización</span></code></a> de la librería. Este módulo permite generar representaciones vectoriales o numéricas de textos a través de distintas técnicas. La capacidad de representar un texto de forma numérica es muy útil para análisis posteriores de textos, tales como comparaciones, agrupaciones, entrenamiento de modelos de clasificación, entre otros.</p>
+<p>Este ejemplo muestra las principales funcionalidades del módulo <a class="reference internal" href="../funciones/vectorizacion.html#module-vectorizacion" title="vectorizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Vectorización</span></code></a> de la librería. Este módulo permite generar representaciones vectoriales o numéricas de textos a través de distintas técnicas. La capacidad de representar un texto de forma numérica es muy útil para posteriores análisis de textos. Tales como comparaciones, agrupaciones, entrenamiento de modelos de clasificación, entre otros.</p>
 <div class="section" id="importar-paquetes-necesarios-y-adecuar-el-texto-de-prueba">
 <h2><span class="section-number">7.1. </span>Importar paquetes necesarios y adecuar el texto de prueba<a class="headerlink" href="#importar-paquetes-necesarios-y-adecuar-el-texto-de-prueba" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El primer paso es importar las funciones del módulo de <a class="reference internal" href="../funciones/vectorizacion.html#module-vectorizacion" title="vectorizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Vectorización</span></code></a> y definir los textos para correr los ejemplos. Adicionalmente, se importan y utilizan las funciones <a class="reference internal" href="../funciones/limpieza.html#limpieza.limpieza_texto" title="limpieza.limpieza_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.limpieza_texto()</span></code></a> y <a class="reference internal" href="../funciones/limpieza.html#limpieza.lista_stopwords" title="limpieza.lista_stopwords"><code class="xref py py-func docutils literal notranslate"><span class="pre">limpieza.lista_stopwords()</span></code></a> del módulo <a class="reference internal" href="../funciones/limpieza.html#module-limpieza" title="limpieza"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Limpieza</span></code></a>, para hacer un procesamiento previo de los textos antes de generar sus representaciones vectoriales.</p>
@@ -410,7 +416,7 @@
 <li><p>El rango de n-gramas que se desea tener en cuenta (solo palabras, palabras y bigramas, etc.).</p></li>
 <li><p>Si se quiere limitar el tamaño del vocabulario del vectorizador a los <em>n</em> términos más frecuentes. Esto puede ser útil cuando se tienen muchos textos de larga longitud, lo que puede llegar a generar un vocabulario demasiado grande si no se acota.</p></li>
 </ul>
-<p>Una vez se define el objeto del vectorizador, es necesario ajustarlo sobre un corpus, para que aprenda el vocabulario que va a utilizar. Al momento de ajustar el vectorizador se puede utilizar el parámetro <em>archivo_salida</em>. Si este parámetro se utiliza, el vectorizador ajustado va a quedar guardado como un objeto tipo <em>Pickle</em> en la ubicación definida por el usuario.</p>
+<p>Una vez se define el objeto del vectorizador, es necesario ajustarlo sobre un corpus para que aprenda el vocabulario que va a utilizar. Al momento de ajustar el vectorizador se puede utilizar el parámetro <em>archivo_salida</em>. Si este parámetro se utiliza, el vectorizador ajustado va a quedar guardado como un objeto tipo <em>Pickle</em> en la ubicación definida por el usuario.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Inicializar los vectorizadores</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Vectorizador BOW</span>
@@ -428,7 +434,7 @@
 </div>
 <div class="section" id="vocabulario-de-los-vectorizadores-ajustados">
 <h3><span class="section-number">7.2.2. </span>Vocabulario de los vectorizadores ajustados<a class="headerlink" href="#vocabulario-de-los-vectorizadores-ajustados" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Una vez cada vectorizador ha sido ajustado, se puede acceder a su vocabulario llamando el método <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias.vocabulario" title="vectorizacion.VectorizadorFrecuencias.vocabulario"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vocabulario()</span></code></a>. Esto retorna un DataFrame de Pandas con el término asignado a cada posición de los vectores resultantes. A continuación se muestran los términos de las primeras 10 posiciones para los 2 vectorizadores ajustados.</p>
+<p>Una vez cada vectorizador ha sido ajustado, se puede acceder a su vocabulario llamando el método <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias.vocabulario" title="vectorizacion.VectorizadorFrecuencias.vocabulario"><code class="xref py py-meth docutils literal notranslate"><span class="pre">vocabulario()</span></code></a>. Esto retorna un DataFrame de Pandas con el término asignado a cada posición de los vectores resultantes. A continuación se muestran los términos de las primeras 10 posiciones para los dos vectorizadores ajustados.</p>
 <p>Se puede observar que <cite>v_tfidf</cite> incluye términos y bigramas, tal y como se estableció al definir esa variable.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Vocabulario de un vectorizador entrenado</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
@@ -578,7 +584,7 @@ inversa.</p>
 </div>
 <div class="section" id="cargar-un-vectorizador-ajustado-previamente">
 <h3><span class="section-number">7.2.5. </span>Cargar un vectorizador ajustado previamente<a class="headerlink" href="#cargar-un-vectorizador-ajustado-previamente" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Previamente vimos cómo se puede guardar un vectorizador ajustado, por medio del parámetro <em>archivo_salida</em> de la función <cite>ajustar</cite>. Este vectorizador, ya ajustado, se puede cargar y utilizar, al momento de definir un nuevo objeto de la clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a>. Para cargar un vectorizador ajustado previamente se debe utilizar el parámetro <em>archivo_modelo</em>, especificando dónde está el archivo con el vectorizador ya ajustado. Al usar esta opción, los demás parámetros de inicialización no serán tenidos en cuenta, pues esos parámetros se tomarán del vectorizador cargado.</p>
+<p>Previamente vimos cómo se puede guardar un vectorizador ajustado, por medio del parámetro <em>archivo_salida</em> de la función <cite>ajustar</cite>. Este vectorizador, ya ajustado, se puede cargar y utilizar al momento de definir un nuevo objeto de la clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorFrecuencias" title="vectorizacion.VectorizadorFrecuencias"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorFrecuencias</span></code></a>. Para cargar un vectorizador ajustado previamente se debe utilizar el parámetro <em>archivo_modelo</em>, especificando dónde está el archivo con el vectorizador ya ajustado. Al usar esta opción, los demás parámetros de inicialización no serán tenidos en cuenta, pues esos parámetros se tomarán del vectorizador cargado.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v_bow_2</span> <span class="o">=</span> <span class="n">VectorizadorFrecuencias</span><span class="p">(</span><span class="n">archivo_modelo</span><span class="o">=</span><span class="s1">&#39;salida/v_bow.pk&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">v_tfidf_2</span> <span class="o">=</span> <span class="n">VectorizadorFrecuencias</span><span class="p">(</span><span class="n">archivo_modelo</span><span class="o">=</span><span class="s1">&#39;salida/v_tfidf.pk&#39;</span><span class="p">)</span>
 
@@ -599,7 +605,7 @@ inversa.</p>
 <div class="section" id="vectorizacion-por-medio-de-hashing">
 <h2><span class="section-number">7.3. </span>Vectorización por medio de <em>Hashing</em><a class="headerlink" href="#vectorizacion-por-medio-de-hashing" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorHash" title="vectorizacion.VectorizadorHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorHash</span></code></a> utiliza el <em>hashing trick</em> para determinar directamente (sin necesidad de ajustar sobre un corpus) la posición de cada término de un texto dentro de un vector numérico. Esta técnica es rápida y ligera en memoria, pues no requiere aprender ni guardar un vocabulario. Esto también tiene algunas desventajas; por ejemplo, a partir de un vector no se puede aplicar una transformada inversa para conocer qué palabras contenía el texto.</p>
-<p>Adicionalmente, cuando se consideran muchos textos, o textos muy grandes, existe la posibilidad de que se presenten “colisiones”. Una colisión se da cuando el vectorizador representa de la misma manera a dos términos distinitos, lo cual introduce ambiguedad en la vectorización y disminuye la calidad de la representación numérica de los textos. Para evitar este problema, se puede configurar el objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorHash" title="vectorizacion.VectorizadorHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorHash</span></code></a> para que tenga muchos más elementos (por medio del parámetro <em>n_elementos</em>) a medida que se trabaja con textos de mayor longitud y vocabulario.</p>
+<p>Adicionalmente, cuando se consideran muchos textos, o textos muy grandes, existe la posibilidad de que se presenten “colisiones”. Una colisión se da cuando el vectorizador representa de la misma manera a dos términos distintos, lo cual introduce ambigüedad en la vectorización y disminuye la calidad de la representación numérica de los textos. Para evitar este problema, se puede configurar el objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorHash" title="vectorizacion.VectorizadorHash"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorHash</span></code></a> para que tenga muchos más elementos (por medio del parámetro <em>n_elementos</em>) a medida que se trabaja con textos de mayor longitud y vocabulario.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">## Inicializar el vectorizador</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># En este caso se define que los vectores tendrán 50 elementos</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">v_hash</span> <span class="o">=</span> <span class="n">VectorizadorHash</span><span class="p">(</span><span class="n">n_elementos</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -656,7 +662,7 @@ inversa.</p>
 <div class="section" id="textos-con-palabras-desconocidas-no-incluidas-en-el-modelo">
 <h3><span class="section-number">7.4.2. </span>Textos con palabras desconocidas (no incluídas en el modelo)<a class="headerlink" href="#textos-con-palabras-desconocidas-no-incluidas-en-el-modelo" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Como se mencionó en la sección anterior, un texto se vectoriza sacando el promedio de los vectores de cada palabra. Por grande que sea el vocabulario del modelo pre-entrenado que se utiliza, es posible que un nuevo texto contenga palabras que no se encuentran en el vocabulario del modelo. En este caso, el método <cite>vectorizar</cite> del objeto de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorWord2Vec" title="vectorizacion.VectorizadorWord2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorWord2Vec</span></code></a> puede manejar las palabras desconocidas de dos formas distintas.</p>
-<p>El argumento booleano <em>quitar_desconocidas</em> en el método <cite>vectorizar</cite>, cuando se hace igual a True, hará que no se tengan en cuenta las palabras que no están incluídas en el modelo. De esta manera, el vector del texto será el promedio de solamente los vectores de palabras que están presentes en el vocabulario del modelo. Cuando este argumento es False (valor por defecto), para cada palabra desconocida se incluirá un vector de solo ceros, lo que afectará el vector promedio resultante.</p>
+<p>El argumento booleano <em>quitar_desconocidas</em> en el método <cite>vectorizar</cite>, cuando se hace igual a <em>True</em>, hará que no se tengan en cuenta las palabras que no están incluídas en el modelo. De esta manera, el vector del texto será el promedio de solamente los vectores de palabras que están presentes en el vocabulario del modelo. Cuando este argumento es <em>False</em> (valor por defecto), para cada palabra desconocida se incluirá un vector de solo ceros, lo que afectará el vector promedio resultante.</p>
 <p>A continuación se hace la vectorización de 2 textos distintos. En el primer texto todas las palabras hacen parte del vocabulario del modelo, por lo que el valor del parámetro <em>quitar_desconocidas</em> no va a afectar el vector de salida. Por otro lado, el segundo texto tiene 3 palabras desconocidas. En este caso, los valores del vector resultante van a ser ligeramente menores si se utiliza <em>quitar_desconocidas=False</em>, pues los vectores de solo ceros (correspondientes a las palabras desconocidas) afectarán el promedio del vector de salida.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">texto_1</span> <span class="o">=</span> <span class="s1">&#39;En este texto todas las palabras son conocidas, por lo que los resultados deberían ser iguales&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">texto_2</span> <span class="o">=</span> <span class="s1">&#39;En este texto hay asfafgf términos desconocidos FGs&lt;g gsi&lt;gi&lt;sbf&#39;</span>
@@ -1202,7 +1208,7 @@ inversa.</p>
 <a class="reference external" href="https://radimrehurek.com/gensim/">Gensim</a> para entrenar un vectorizador en un corpus o conjunto de textos, de manera que sea capaz de representar documentos mediante <em>embeddings</em>, o representaciones vectoriales densas. Estas <em>embeddings</em> son representaciones de un número de elementos definido por el usuario. Tanto para entrenar el vectorizador como para utilizarlo posteriormente, es necesario hacer un procesamiento sobre los textos de entrada. Las funciones internas de la clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorDoc2Vec" title="vectorizacion.VectorizadorDoc2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorDoc2Vec</span></code></a> se encargan de este procesamiento.</p>
 <div class="section" id="inicializar-y-entrenar-el-vectorizador">
 <h3><span class="section-number">7.5.1. </span>Inicializar y entrenar el vectorizador<a class="headerlink" href="#inicializar-y-entrenar-el-vectorizador" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Al igual que los vectorizadores basados en frecuencias (<a class="reference external" href="07_vectorizacion_de_textos.html#vectorizaciones-por-frecuencia-de-terminos">ver sección</a>) , los objetos de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorDoc2Vec" title="vectorizacion.VectorizadorDoc2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorDoc2Vec</span></code></a> deben ser entrenados o ajustados sobre un corpus de textos. El primer paso es inicializar el objeto del vectorizador; para esto, se deben definir los siguientes parámetros:</p>
+<p>Al igual que los vectorizadores basados en frecuencias (<a class="reference external" href="07_vectorizacion_de_textos.html#vectorizaciones-por-frecuencia-de-terminos">ver sección</a>), los objetos de clase <a class="reference internal" href="../funciones/vectorizacion.html#vectorizacion.VectorizadorDoc2Vec" title="vectorizacion.VectorizadorDoc2Vec"><code class="xref py py-class docutils literal notranslate"><span class="pre">VectorizadorDoc2Vec</span></code></a> deben ser entrenados o ajustados sobre un corpus de textos. El primer paso es inicializar el objeto del vectorizador, para esto se deben definir los siguientes parámetros:</p>
 <ul class="simple">
 <li><p>Número de elementos que tendrán los vectores</p></li>
 <li><p>Frecuencia mínima que debe tener cada término en el corpus para ser tenido en cuenta en el modelo. Esto se utiliza para evitar que términos muy poco frecuentes afecten el entrenamiento.</p></li>
@@ -1283,7 +1289,7 @@ inversa.</p>
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     

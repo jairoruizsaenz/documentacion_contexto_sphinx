@@ -22,14 +22,14 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -272,8 +272,8 @@
   <div class="section" id="module-stemming">
 <span id="stemming"></span><h1>Stemming<a class="headerlink" href="#module-stemming" title="Enlazar permanentemente con este título">¶</a></h1>
 <dl class="py class">
-<dt id="stemming.Stemmer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">stemming.</span></code><code class="sig-name descname"><span class="pre">Stemmer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="stemming.Stemmer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">stemming.</span></span><span class="sig-name descname"><span class="pre">Stemmer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizador</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Constructor por defecto de la clase Stemmer. Esta clase se encarga         de hacer la operación de <em>stemming</em>, o reducción de palabras a su         raíz, en textos.</p>
 <dl class="field-list simple">
@@ -290,8 +290,8 @@ a aplicar <em>stemming</em>. Para mayor información, consultar la sección de
 </dd>
 </dl>
 <dl class="py method">
-<dt id="stemming.Stemmer.establecer_lenguaje">
-<code class="sig-name descname"><span class="pre">establecer_lenguaje</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="stemming.Stemmer.establecer_lenguaje">
+<span class="sig-name descname"><span class="pre">establecer_lenguaje</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.establecer_lenguaje" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Permite definir o cambiar el lenguaje de los textos sobre los cuales         va a aplicarse el objeto de la case Stemmer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -303,14 +303,14 @@ a aplicar stemming. Para mayor información, consultar la sección de
 </dd></dl>
 
 <dl class="py method">
-<dt id="stemming.Stemmer.iniciar_stemmer">
-<code class="sig-name descname"><span class="pre">iniciar_stemmer</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.iniciar_stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="stemming.Stemmer.iniciar_stemmer">
+<span class="sig-name descname"><span class="pre">iniciar_stemmer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.iniciar_stemmer" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Inicializa el objeto de la clase <cite>SnowballStemmer</cite> de la librería NLTk,         para el lenguaje definido previamente, y lo asigna al atributo «stemmer»         del objeto de clase Stemmer.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="stemming.Stemmer.stemming">
-<code class="sig-name descname"><span class="pre">stemming</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.stemming" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="stemming.Stemmer.stemming">
+<span class="sig-name descname"><span class="pre">stemming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.Stemmer.stemming" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Aplica <em>stemming</em> sobre un texto de entrada, y devuelve el texto         resultante.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -328,8 +328,8 @@ a aplicar stemming. Para mayor información, consultar la sección de
 </dd></dl>
 
 <dl class="py function">
-<dt id="stemming.stem_texto">
-<code class="sig-prename descclassname"><span class="pre">stemming.</span></code><code class="sig-name descname"><span class="pre">stem_texto</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stemmer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.stem_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dt class="sig sig-object py" id="stemming.stem_texto">
+<span class="sig-prename descclassname"><span class="pre">stemming.</span></span><span class="sig-name descname"><span class="pre">stem_texto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenguaje</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limpiar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stemmer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stemming.stem_texto" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd><p>Función que aprovecha la clase Stemmer para realizar <em>stemming</em>, o     reducción de palabras a su raíz, en un texto de entrada.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parámetros</dt>
@@ -380,7 +380,7 @@ a aplicar <em>stemming</em>. Para mayor información, consultar la sección de
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jun. 29, 2021.<br/>
+Actualizado por última vez en jul. 07, 2021.<br/>
 </p>
     </div>
     
