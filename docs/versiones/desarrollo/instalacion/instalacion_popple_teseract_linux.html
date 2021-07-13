@@ -288,10 +288,30 @@
 </div>
 <div class="section" id="instalacion-de-tesseract">
 <h2><span class="section-number">2.1.2. </span>Instalación de Tesseract.<a class="headerlink" href="#instalacion-de-tesseract" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Para realizar la instalación de Tesseract solo se necesita ejecutar el siguiente comando:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tesseract</span><span class="o">-</span><span class="n">ocr</span>
+<ol class="arabic">
+<li><p>Para realizar la instalación de Tesseract se necesita ejecutar el siguiente comando:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tesseract</span><span class="o">-</span><span class="n">ocr</span>
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+<li><p>Añadir otros idiomas al reconocimiento óptico de caracteres (OCR).</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Para añadir otros idiomas al OCR se deben descargar los archivos de entrenamiento en el idioma deseado, los cuales se encuentran disponibles en:  <a class="reference external" href="https://github.com/tesseract-ocr/tessdata">https://github.com/tesseract-ocr/tessdata</a>. (Para el desarrollo de este manual se hará el ejemplo con el idioma español)</p></li>
+<li><p>Por defecto, en la instalación se cargan los archivos del idioma Inglés, sin embargo, estos corresponden a un corpus pequeño, por lo que se recomienda descargar nuevamente los archivos para este idioma desde el enlace mencionado anteriormente.</p></li>
+</ul>
+</div>
+<p>Para el idioma español se descargara el archivo <a class="reference external" href="https://github.com/tesseract-ocr/tessdata/blob/master/spa.traineddata">spa.traineddata</a>. El archivo descargado se debe copiar en la carpeta tessdata siguiendo la ruta de instalación de <em>Tesseract</em>, que por defecto para Linux es:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/usr/share/tesseract-ocr/4.00/tessdata/</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
 </div>
 </div>
 
@@ -325,7 +345,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jul. 07, 2021.<br/>
+Actualizado por última vez en jul. 13, 2021.<br/>
 </p>
     </div>
     

@@ -448,30 +448,25 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
 <dt class="field-odd">Parámetros</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ubicacion_archivo</strong> – (str) Ruta del archivo que se desea leer.</p></li>
-<li><p><strong>tipo</strong> – (str) {“inferir”, “txt”, “csv”, “pdf”, “rtf”, “doc”, “docx”,         “png”, “jpg”, “jpeg”} Valor por defecto: “inferir”. Se define el         tipo (o extensión) del archivo que se desea leer.</p></li>
-<li><p><strong>extraer_medios</strong> – (bool) {True, False} Valor por defecto: False.         Especifica si se desean extraer las imágenes dentro del archivo de         Word para ser guardadas aparte como archivos de imágenes. Funciona         únicamente para archivos “.docx” (no “.doc”) y si el parámetro         “por_paginas” es False.</p></li>
-<li><p><strong>dir_medios</strong> – (str) Valor por defecto: “temp/img_dir/”. Ruta de la         carpeta donde se guardan las imágenes del archivo Word cuyas imágenes         se extrajeron (se especificó extraer_medios=True).</p></li>
-<li><p><strong>por_paginas</strong> – (bool) {True, False} Valor por defecto: False. Se         define si se desea extraer el texto por páginas.</p></li>
-<li><p><strong>encoding</strong> – (str) Valor por defecto: “utf-8”. Especifica la         codificación del texto que se desea leer.</p></li>
-<li><p><strong>ocr</strong> – (bool) {True, False} Valor por defecto: False. Especifica si         se desea utilizar reconocimiento óptico de caracteres sobre el         archivo cuyo texto se quiere extraer. Se utiliza usualmente cuando el         archivo es una imagen o documento escaneado.</p></li>
-<li><p><strong>preprocesamiento</strong> – (int) {1,2,3,4,5} Valor por defecto: 3.         Especifica el nivel de preprocesamiento que se lleva a cabo antes de         extraer el texto del archivo. Aplica cuando se utiliza reconocimiento         óptico de caracteres (parámetro ocr es True). Las opciones son las         siguientes:
+<li><p><strong>tipo</strong> (<em>{'inferir'</em><em>, </em><em>'txt'</em><em>, </em><em>'csv'</em><em>, </em><em>'pdf'</em><em>, </em><em>'rtf'</em><em>, </em><em>'doc'</em><em>, </em><em>'docx'</em><em>,        </em><em>'png'</em><em>, </em><em>'jpg'</em><em>, </em><em>'jpeg'}</em><em>, </em><em>opcional</em>) – Se define el tipo (o extensión) del archivo que se desea         leer. Valor por defecto: <cite>“inferir”</cite>.</p></li>
+<li><p><strong>extraer_medios</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desean extraer las imágenes         dentro del archivo de Word para ser guardadas aparte como archivos         de imágenes. Funciona únicamente para archivos “.docx” (no “.doc”)         y si el parámetro “por_paginas” es <cite>False</cite>. Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>dir_medios</strong> (<em>str</em><em>, </em><em>opcional</em>) – Ruta de la carpeta donde se guardan las imágenes del         archivo Word cuyas imágenes se extrajeron (si         <cite>extraer_medios = True</cite>). Valor por defecto <cite>“temp/img_dir/”</cite>.</p></li>
+<li><p><strong>por_paginas</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Se define si se desea extraer el texto por páginas.         Valor por defecto <cite>False</cite>.</p></li>
+<li><p><strong>la codificación del texto que se desea leer.         Valor por defecto</strong> (<em>encoding:Especifica</em>) – <cite>“utf-8”</cite>.</p></li>
+<li><p><strong>ocr</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Especifica si se desea utilizar reconocimiento óptico de         caracteres sobre el texto se quiere extraer. Se utiliza usualmente         cuando el archivo es una imagen o documento escaneado. Valor por         defecto <cite>False</cite>.</p></li>
+<li><p><strong>preprocesamiento</strong> (<em>{1</em><em>,</em><em>2</em><em>,</em><em>3</em><em>,</em><em>4</em><em>,</em><em>5}</em><em>, </em><em>opcional</em>) – Especifica el nivel de preprocesamiento que se         lleva a cabo antes de extraer el texto del archivo. Aplica cuando se         utiliza reconocimiento óptico de caracteres ( <cite>ocr = True</cite>). Las         opciones son las siguientes:
 <ul>
 <li> 1: se convierte la imagen a escala de grises. </li>
 <li> 2: se convierte la imagen a escala de grises y se aplica                 blurring. </li>
 <li> 3: se convierte la imagen a escala de grises y se aplica el                 umbral de imagen con el método de OTSU. </li>
 <li> 4: se convierte la imagen a escala de grises y se aplica                 umbral adaptativo. </li>
 <li> 5: se convierte la imagen a escala de grises, se aplica                 umbral de imagen con el método de OTSU, blurring y umbral                 adaptativo. </li>
-</ul></p></li>
-<li><p><strong>lenguaje</strong> – Define el lenguaje del texto que se desea             extraer. Aplica cuando <cite>ocr = True</cite>. Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.
-:type lenguaje: {“es”, “en”, “fr”, “ge”}, opcional</p></li>
-<li><p><strong>oem</strong> – modo del motor OCR (OCR Engine mode en inglés). Para             mayor información, consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>. Valor por defecto <cite>2</cite>.
-:type oem: {0, 1, 2, 3}, opcional</p></li>
-<li><p><strong>psm</strong> – Modo de segmentación de las páginas (page segmentation             modes, en inglés) de la librería <cite>Pytesseract</cite>. Para mayor             información consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.             Valor por defecto <cite>1</cite>.
-:type psm: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}, opcional</p></li>
-<li><p><strong>password</strong> – Contraseña del documento PDF que se quiere leer, en             caso de que se necesite. Valor por defecto <cite>None</cite>.
-:type password: str, opcional</p></li>
-<li><p><strong>enderezar</strong> – Permite enderezar el texto en la imagen para obtener mejores             resultados durante el proceso de extracción de texto,  solo si             <cite>ocr = True</cite> y <cite>preprocesamiento</cite> este entre <cite>1</cite> y <cite>5</cite>. Valor             por defecto <cite>False</cite>.
-:type enderezar: bool, opcional</p></li>
+</ul>         Valor por defecto <cite>3</cite>.</p></li>
+<li><p><strong>lenguaje</strong> (<em>{'es'</em><em>, </em><em>'en'</em><em>, </em><em>'fr'</em><em>, </em><em>'ge'}</em><em>, </em><em>opcional</em>) – Define el lenguaje del texto que se desea             extraer. Aplica cuando <cite>ocr = True</cite>. Para mayor información,             consultar la sección de             <a class="reference internal" href="../seccion_lenguajes_soportados.html#seccion-lenguajes-soportados"><span class="std std-ref">Lenguajes soportados</span></a>.             Valor por defecto <cite>“es”</cite>.</p></li>
+<li><p><strong>oem</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3}</em><em>, </em><em>opcional</em>) – modo del motor OCR (OCR Engine mode en inglés). Para             mayor información, consultar la sección de             <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>. Valor por defecto <cite>2</cite>.</p></li>
+<li><p><strong>psm</strong> (<em>{0</em><em>, </em><em>1</em><em>, </em><em>2</em><em>, </em><em>3</em><em>, </em><em>4</em><em>, </em><em>5</em><em>, </em><em>6</em><em>, </em><em>7</em><em>, </em><em>8</em><em>, </em><em>9</em><em>, </em><em>10</em><em>, </em><em>11</em><em>, </em><em>12</em><em>, </em><em>13}</em><em>, </em><em>opcional</em>) – Modo de segmentación de las páginas (page segmentation             modes, en inglés) de la librería <cite>Pytesseract</cite>. Para mayor             información consultar la sección de <a class="reference internal" href="../seccion_ocr.html#seccion-ocr"><span class="std std-ref">OCR</span></a>.             Valor por defecto <cite>1</cite>.</p></li>
+<li><p><strong>password</strong> (<em>str</em><em>, </em><em>opcional</em>) – Contraseña del documento PDF que se quiere leer, en             caso de que se necesite. Valor por defecto <cite>None</cite>.</p></li>
+<li><p><strong>enderezar</strong> (<em>bool</em><em>, </em><em>opcional</em>) – Permite enderezar el texto en la imagen para obtener mejores             resultados durante el proceso de extracción de texto,  solo si             <cite>ocr = True</cite> y <cite>preprocesamiento</cite> este entre <cite>1</cite> y <cite>5</cite>. Valor             por defecto <cite>False</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Devuelve</dt>
@@ -512,7 +507,7 @@ diferentes tipos de archivo (word, txt, rtf, pdf, png, jpg inicialmente).</p>
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jul. 07, 2021.<br/>
+Actualizado por última vez en jul. 13, 2021.<br/>
 </p>
     </div>
     

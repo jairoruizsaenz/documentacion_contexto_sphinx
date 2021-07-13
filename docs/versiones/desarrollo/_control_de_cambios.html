@@ -184,9 +184,46 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-2-0-2021-07">
+   v0.2.0 (2021-07- )
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregado">
+     Agregado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modificado">
+     Modificado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#obsoleto">
+     Obsoleto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#borrado">
+     Borrado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arreglado">
+     Arreglado
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -204,8 +241,49 @@
                 
   <div class="section" id="control-de-cambios">
 <span id="id1"></span><h1>Control de cambios<a class="headerlink" href="#control-de-cambios" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat est sit amet lectus accumsan fringilla. Sed placerat urna et erat posuere porta. Curabitur quis feugiat risus. Proin sit amet lacus augue. Curabitur vitae felis ac orci vestibulum laoreet. Sed vitae tempor dolor. Morbi scelerisque lacinia egestas. Maecenas malesuada ultricies nulla, at bibendum enim ultrices ac. Phasellus blandit nunc non ante tincidunt vestibulum. Nullam vitae dictum tellus. Suspendisse tortor elit, malesuada non mauris non, malesuada egestas massa. Mauris et sagittis velit, a semper metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fringilla, dui non posuere ultricies, est ante semper ligula, quis lacinia metus sapien non ex. Maecenas nec nisl tempor, laoreet enim non, facilisis purus.</p>
-<p>Suspendisse tincidunt commodo commodo. Vestibulum lectus orci, porttitor ut accumsan vel, feugiat nec dolor. Quisque non orci scelerisque, pulvinar ipsum vitae, ornare erat. Vestibulum iaculis egestas cursus. Pellentesque massa erat, viverra accumsan nunc sit amet, placerat mollis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis rhoncus nisi. Sed consectetur ac risus pharetra porta. Praesent sapien eros, malesuada eu volutpat in, bibendum ac lectus. Proin non maximus elit. Maecenas metus nulla, pulvinar fringilla mauris nec, porta fermentum justo. Donec interdum vel leo ac ornare. Phasellus et arcu mauris.</p>
+<p>Todos los cambios importantes de la librería <em>ConTexto</em> serán documentados en esta sección.</p>
+<div class="section" id="v0-2-0-2021-07">
+<h2>v0.2.0 (2021-07- )<a class="headerlink" href="#v0-2-0-2021-07" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="agregado">
+<h3>Agregado<a class="headerlink" href="#agregado" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Se agregó función para generar <a class="reference internal" href="funciones/exploracion.html#exploracion.graficar_dispersion" title="exploracion.graficar_dispersion"><code class="xref py py-func docutils literal notranslate"><span class="pre">gráfico_de_dispersión_léxica</span></code></a> en el módulo de <a class="reference internal" href="funciones/exploracion.html#module-exploracion" title="exploracion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Exploración</span></code></a>.</p></li>
+<li><p>Se agregó <a class="reference internal" href="ejemplos/03_exploracion_y_visualizacion.html#graficos-de-dispersion-lexica"><span class="std std-ref">Ejemplo de gráfico de dispersión léxica</span></a> con palabras y bi-gramas a la sección de <a class="reference internal" href="seccion_ejemplos.html#seccion-ejemplos"><span class="std std-ref">ejemplos</span></a>.</p></li>
+<li><p>Se agregó compatibilidad para instalación por medio de conda.</p></li>
+<li><p>Se habilitó la librería <em>ConTexto</em> para la versión 3.9 de Python.</p></li>
+</ul>
+</div>
+<div class="section" id="modificado">
+<h3>Modificado<a class="headerlink" href="#modificado" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Se hace compatible con la versión 3.0.6 o mayor de <em>Spacy</em>.</p></li>
+<li><p>Se complementó la lista de stopwords.</p></li>
+<li><p>Se actualizó el <a class="reference internal" href="ejemplos/03_exploracion_y_visualizacion.html#exploracion-y-visualizacion"><span class="std std-ref">ejemplo de exploración y visualización</span></a> de textos.</p></li>
+<li><p>Se actualizó y modificó la <a class="reference internal" href="index.html#index"><span class="std std-ref">documentación</span></a> de la librería.</p></li>
+<li><p>Se modificó el gráfico de <a class="reference internal" href="funciones/exploracion.html#exploracion.graficar_coocurrencias" title="exploracion.graficar_coocurrencias"><code class="xref py py-func docutils literal notranslate"><span class="pre">co-ocurrencias</span></code></a>.</p></li>
+<li><p>Se modificó <a class="reference internal" href="ejemplos/03_exploracion_y_visualizacion.html#calcular-coocurrencias-y-graficarlas"><span class="std std-ref">ejemplo de gráfico de co-ocurrencias</span></a> con la modificación de la función <a class="reference internal" href="funciones/exploracion.html#exploracion.graficar_coocurrencias" title="exploracion.graficar_coocurrencias"><code class="xref py py-func docutils literal notranslate"><span class="pre">graficar_coocurrencias()</span></code></a> a la sección de <a class="reference internal" href="seccion_ejemplos.html#seccion-ejemplos"><span class="std std-ref">ejemplos</span></a>.</p></li>
+<li><p>Se modificó el instalador de <em>ConTexto</em>. Ya no es necesario realizar la instalación del paquete <em>Stanza</em> manualmente.</p></li>
+</ul>
+</div>
+<div class="section" id="obsoleto">
+<h3>Obsoleto<a class="headerlink" href="#obsoleto" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>No hay soporte para <em>Python</em> versión 3.6.1</p></li>
+</ul>
+</div>
+<div class="section" id="borrado">
+<h3>Borrado<a class="headerlink" href="#borrado" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Se eliminaron nombres repetidos en la lista de nombres.</p></li>
+</ul>
+</div>
+<div class="section" id="arreglado">
+<h3>Arreglado<a class="headerlink" href="#arreglado" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Se corrigieron errores en la parte <em>pre-OCR</em>.</p></li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -237,7 +315,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jul. 07, 2021.<br/>
+Actualizado por última vez en jul. 13, 2021.<br/>
 </p>
     </div>
     

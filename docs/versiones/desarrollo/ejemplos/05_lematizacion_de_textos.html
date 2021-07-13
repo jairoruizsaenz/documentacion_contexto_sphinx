@@ -454,10 +454,6 @@
 <div class="section" id="lematizacion-de-textos-utilizando-stanza">
 <h2><span class="section-number">5.3. </span>Lematización de textos utilizando Stanza<a class="headerlink" href="#lematizacion-de-textos-utilizando-stanza" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El parámetro <em>libreria</em> de la función <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.lematizar_texto" title="lematizacion.lematizar_texto"><code class="xref py py-func docutils literal notranslate"><span class="pre">lematizacion.lematizar_texto()</span></code></a> permite elegir la librería de lematización a utilizar. Esta función se encarga de aplicar lematización a todas las palabras de un texto de entrada. Si se define <em>liberia=”stanza”</em>, la función utilizará el lematizador de la clase <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a>. La primera vez que se seleccione un modelo de un lenguaje determinado, la función descargará el modelo correspondiente en el computador del usuario. Este proceso puede durar algunos minutos, dependiendo de la conexión a internet.</p>
-<div class="admonition warning">
-<p class="admonition-title">Advertencia</p>
-<p>Es importante recalcar que para poder utilizar el <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a> es necesario tener los paquetes <strong>Torch, Torchvision y Stanza</strong> instalados, que no vienen en la versión de ConTexto instalable a través de pip. Para mayor información puede consultar la <a class="reference internal" href="../seccion_instalacion.html#seccion-instalacion"><span class="std std-ref">sección de instalación</span></a>.</p>
-</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Lematización con librería Stanza ###</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">texto_lematizado</span> <span class="o">=</span> <span class="n">lematizar_texto</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">libreria</span><span class="o">=</span><span class="s1">&#39;stanza&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">texto_lematizado</span><span class="p">)</span>
@@ -474,7 +470,7 @@
 </div>
 <div class="section" id="agregar-lemas-personalizados-al-lematizadorstanza">
 <h3><span class="section-number">5.3.1. </span>Agregar lemas personalizados al <cite>LematizadorStanza</cite><a class="headerlink" href="#agregar-lemas-personalizados-al-lematizadorstanza" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Al igual que en el caso de spaCy, el <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a> permite añadir o modificar lemas, utilizando un archivo JSON o un diccionario de Python. Esto se hace con la función <code class="xref py py-func docutils literal notranslate"><span class="pre">lematizacion.modificar_lemmas()</span></code> y se puede utilizar el parámetro <em>archivo_salida</em> para determinar dónde se quiere guardar el modelo resultante.</p>
+<p>Al igual que en el caso de spaCy, el <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a> permite añadir o modificar lemas, utilizando un archivo JSON o un diccionario de Python. Esto se hace con la función <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza.modificar_lemmas" title="lematizacion.LematizadorStanza.modificar_lemmas"><code class="xref py py-func docutils literal notranslate"><span class="pre">modificar_lemmas</span></code></a> y se puede utilizar el parámetro <em>archivo_salida</em> para determinar dónde se quiere guardar el modelo resultante.</p>
 <p>De esta manera, este modelo puede ser luego cargado a un objeto de clase <a class="reference internal" href="../funciones/lematizacion.html#lematizacion.LematizadorStanza" title="lematizacion.LematizadorStanza"><code class="xref py py-class docutils literal notranslate"><span class="pre">LematizadorStanza</span></code></a> para seguirlo utilizando o modificando. Para cargar un modelo guardado previamente, es necesario utilizar el parámetro <em>modelo_lemas</em>, al definir el objeto lematizador.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
@@ -588,7 +584,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jul. 07, 2021.<br/>
+Actualizado por última vez en jul. 13, 2021.<br/>
 </p>
     </div>
     

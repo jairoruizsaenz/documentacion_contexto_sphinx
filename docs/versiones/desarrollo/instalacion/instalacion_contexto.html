@@ -219,24 +219,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   1.1. Instalación básica
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#instalacion-completa">
-   1.2. Instalación completa
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -254,29 +239,26 @@
                 
   <div class="section" id="instalacion-contexto">
 <span id="instalacion-basica"></span><h1><span class="section-number">1. </span>Instalación ConTexto<a class="headerlink" href="#instalacion-contexto" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">1.1. </span>Instalación básica<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Para la instalación de la librería se recomienda utilizar el gestor de paquetes <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Por buenas prácticas se sugiere antes de la instalación crear un entorno virtual que permita aislar las librerías y así evitar conflictos de versiones con el entorno de desarrollo base del computador. Esta instalación no presenta restricciones de arquitectura, es decir, funciona tanto para arquitecturas de 32 bits (no se han realizdo pruebas funcionales) como arquitecturas de 64 bits.</p>
+<p>Para la instalación de la librería se recomienda utilizar el gestor de paquetes <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Por buenas prácticas se sugiere antes de la instalación crear un entorno virtual que permita aislar las librerías y así evitar conflictos de versiones con el entorno de desarrollo base del computador.</p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install contexto</span>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="instalacion-completa">
-<h2><span class="section-number">1.2. </span>Instalación completa<a class="headerlink" href="#instalacion-completa" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Otra opción de instalación corresponde a utilizar los archivos compilados wheel que se encuentran cargados en el repositorio de GitHub de la librería. Al utilizar los archivos wheel se instalarán las dependencias de ConTexto, equivalente a utilizar el comando <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">contexto</span></code>, y adicionalmente se instalará el framework <a class="reference external" href="https://pytorch.org/">PyTorch</a> (con instalación para uso de CPU) y el paquete <a class="reference external" href="https://stanfordnlp.github.io/stanza/">Stanza</a>, estos últimos se utilizan en el módulo de <a class="reference internal" href="../funciones/lematizacion.html#module-lematizacion" title="lematizacion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Lematización</span></code></a>, sin embargo, su instalación no es de caracter obligatorio, ya que por defecto se utiliza el lematizador de <a class="reference external" href="https://spacy.io/">spaCy</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Advertencia</p>
-<ul class="simple">
-<li><p>La instalación utilizando los archivos wheel solo soportan Python en arquitecturas de 64 bits (x64) para Windows. Para Linux no se presenta esta restricción.</p></li>
-<li><p>Versión máxima soportada de Python v3.9.6</p></li>
-<li><p>Versión mínima soportada de Python v3.6.1</p></li>
-</ul>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install contexto -f https://ucd-dnp.github.io/ConTexto/contexto_stable.html</span>
+<p>Para versiones de <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">&lt;=</span> <span class="pre">3.8.4</span></code> es necesario actualizar el gestor de paquetes <code class="docutils literal notranslate"><span class="pre">pip</span></code> antes de la instalación de <em>ConTexto</em>. Para versiones superiores se recomienda hacer la actualización para evitar errores.</p>
+<p>Para actualizar el gestor de paquetes <code class="docutils literal notranslate"><span class="pre">pip</span></code> puede usar el siguiente comando:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m pip install --upgrade pip</span>
 </pre></div>
 </div>
+</div></blockquote>
+<ul class="simple">
+<li><p>Versiones soportadas de <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">&gt;=</span> <span class="pre">3.6.2</span></code>.</p></li>
+<li><p><em>ConTexto</em> está disponible para Windows x64 y Linux.</p></li>
+<li><p><em>ConTexto</em> no fue probada en arquitecturas de 32 bits para Windows, por lo que se podrían presentar errores.</p></li>
+</ul>
 </div>
 </div>
 
@@ -310,7 +292,7 @@
     
     <div class="footer-item">
       <p class="last-updated">
-Actualizado por última vez en jul. 07, 2021.<br/>
+Actualizado por última vez en jul. 13, 2021.<br/>
 </p>
     </div>
     
